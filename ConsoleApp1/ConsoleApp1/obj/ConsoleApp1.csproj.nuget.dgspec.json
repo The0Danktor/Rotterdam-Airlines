@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\codes\\test project\\Project-B\\Project-B.csproj": {}
+    "D:\\codes\\test project\\Project-B\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "D:\\codes\\test project\\Project-B\\Project-B.csproj": {
+    "D:\\codes\\test project\\Project-B\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\codes\\test project\\Project-B\\Project-B.csproj",
-        "projectName": "Project-B",
-        "projectPath": "D:\\codes\\test project\\Project-B\\Project-B.csproj",
+        "projectUniqueName": "D:\\codes\\test project\\Project-B\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectName": "ConsoleApp1",
+        "projectPath": "D:\\codes\\test project\\Project-B\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\jamie\\.nuget\\packages\\",
-        "outputPath": "D:\\codes\\test project\\Project-B\\obj\\",
+        "outputPath": "D:\\codes\\test project\\Project-B\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jamie\\AppData\\Roaming\\NuGet\\NuGet.Config",
