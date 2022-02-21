@@ -4,6 +4,8 @@ namespace Rotterdam_Airlines
 {
     internal class Program
     {
+        private static bool authorized = false;
+
         // PRINTS ALL THE OPTIONS OF THE MAIN MENU
         // TO THE CONSOLE.
         static void printMainMenu()
@@ -19,10 +21,25 @@ namespace Rotterdam_Airlines
             Console.WriteLine("8: Afsluiten");
             Console.WriteLine();
         }
+        static void printAccountMenu()
+        {
+            if(authorized == true)
+            {
+                Console.WriteLine();
+            } else
+            {
+                Console.WriteLine("0: Hoofdmenu");
+                Console.WriteLine();
+                Console.WriteLine("1: Inloggen");
+                Console.WriteLine("2: Registreren");
+                Console.WriteLine("3: Wachtwoord vergeten");
+                Console.WriteLine();
+            }
+        }
+
         static void Main(string[] args)
         {
-
-            while(true)
+            while (true)
             {
                 // PRINT WELCOME TEXT
                 Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
@@ -33,10 +50,10 @@ namespace Rotterdam_Airlines
 
                 // HANDLE USER INPUT
                 Console.Write("Maak een keuze: ");
-                string input = Console.ReadLine();
-                int choice = int.Parse(input);
+                string main_menu_input = Console.ReadLine();
+                int main_menu_choice = int.Parse(main_menu_input);
 
-                switch(choice)
+                switch(main_menu_choice)
                 {
                     case 1:
                         Console.WriteLine("1");
@@ -55,6 +72,28 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 6:
+                        Console.Clear();
+                        Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                        Console.WriteLine();
+
+                        printAccountMenu();
+
+                        Console.Write("Maak een keuze: ");
+                        string account_input = Console.ReadLine();
+                        int account_choice = int.Parse(account_input);
+
+                        switch(account_choice)
+                        {
+                            case 0:
+                                Console.Clear();
+                                break;
+                            case 1:
+                                Console.WriteLine("1");
+                                break;
+                            default:
+                                break;
+                        }
+
                         Console.Clear();
                         break;
                     case 7:
