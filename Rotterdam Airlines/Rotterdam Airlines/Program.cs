@@ -25,7 +25,11 @@ namespace Rotterdam_Airlines
         {
             if(authorized == true)
             {
+                Console.WriteLine("0: Hoofdmenu");
                 Console.WriteLine();
+                Console.WriteLine("1: Gegevens aanpassen");
+                Console.WriteLine("2: Overzicht boekingen");
+                Console.WriteLine("3: Uitloggen");
             } else
             {
                 Console.WriteLine("0: Hoofdmenu");
