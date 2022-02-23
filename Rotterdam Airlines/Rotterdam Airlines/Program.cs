@@ -109,8 +109,6 @@ namespace Rotterdam_Airlines
                     default:
                         Console.Clear();
                         break;
-                        //joo
-
                 }
 
             }
