@@ -21,6 +21,30 @@ namespace Rotterdam_Airlines
             Console.WriteLine("8: Afsluiten");
             Console.WriteLine();
         }
+        static void contact_info()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Contact");
+            Console.WriteLine();
+            Console.WriteLine("Adres");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Rotterdam Airlines");
+            Console.WriteLine("Driemanssteeweg 107");
+            Console.WriteLine("3011 WN Rotterdam");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Telefoonnummer");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("0104463544");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("E-mail");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("RotterdamAirlines2022@outlook.com");
+            Console.WriteLine();
+            Console.WriteLine("Klik op 'enter' om terug te gaan");
+            string contact_input = Console.ReadLine();
+        }
         static void printAccountMenu()
         {
             if(authorized == true)
@@ -101,6 +125,8 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 7:
+                        Console.Clear();
+                        contact_info();
                         Console.Clear();
                         break;
                     case 8:
