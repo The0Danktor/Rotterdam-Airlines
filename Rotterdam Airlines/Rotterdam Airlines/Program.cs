@@ -54,8 +54,13 @@ namespace Rotterdam_Airlines
 
         static void Main(string[] args)
         {
+            // CREATE DEFAULT USERS
+            Customer customer = new Customer("gast@rotterdamairlines.com", "32189ASDasd*#04ajd", "Gast", "N.V.T", "N.V.T", 'G', "N.V.T", "N.V.T");
+            Admin admin = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
+
             while (true)
             {
+
                 // PRINT LOGO
                 printLogo();
 
