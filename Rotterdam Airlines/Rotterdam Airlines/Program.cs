@@ -56,6 +56,7 @@ namespace Rotterdam_Airlines
         {
             while (true)
             {
+                // PRINT LOGO
                 printLogo();
 
                 // PRINT WELCOME TEXT
@@ -70,24 +71,31 @@ namespace Rotterdam_Airlines
                 string main_menu_input = Console.ReadLine();
                 int main_menu_choice = int.Parse(main_menu_input);
 
+                // HANDLE MENU
                 switch(main_menu_choice)
                 {
+                    // VLUCHT BOEKEN
                     case 1:
                         Console.WriteLine("1");
                         Console.Clear();
                         break;
+                    // OVERZICHT BOEKINGEN
                     case 2:
                         Console.Clear();
                         break;
+                    // MEDEDELINGEN
                     case 3:
                         Console.Clear();
                         break;
+                    // AANBIEDINGEN
                     case 4:
                         Console.Clear();
                         break;
+                    // INFORMATIE
                     case 5:
                         Console.Clear();
                         break;
+                    // ACCOUNT
                     case 6:
                         Console.Clear();
 
@@ -116,9 +124,11 @@ namespace Rotterdam_Airlines
 
                         Console.Clear();
                         break;
+                    // CONTACT
                     case 7:
                         Console.Clear();
                         break;
+                    // EXIT
                     case 8:
                         Environment.Exit(0);
                         break;
