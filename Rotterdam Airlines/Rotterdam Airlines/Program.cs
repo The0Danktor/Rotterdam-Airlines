@@ -6,6 +6,17 @@ namespace Rotterdam_Airlines
     {
         private static bool authorized = false;
 
+        static void printLogo()
+        {
+            Console.WriteLine(@" _____       _   _               _                          _      _ _                 ");
+            Console.WriteLine(@"|  __ \     | | | |             | |                   /\   (_)    | (_)                ");
+            Console.WriteLine(@"| |__) |___ | |_| |_ ___ _ __ __| | __ _ _ __ ___    /  \   _ _ __| |_ _ __   ___  ___ ");
+            Console.WriteLine(@"|  _  // _ \| __| __/ _ \ '__/ _` |/ _` | '_ ` _ \  / /\ \ | | '__| | | '_ \ / _ \/ __|");
+            Console.WriteLine(@"| | \ \ (_) | |_| ||  __/ | | (_| | (_| | | | | | |/ ____ \| | |  | | | | | |  __/\__ \");
+            Console.WriteLine(@"|_|  \_\___/ \__|\__\___|_|  \__,_|\__,_|_| |_| |_/_/    \_\_|_|  |_|_|_| |_|\___||___/");
+            Console.WriteLine();
+        }
+
         // PRINTS ALL THE OPTIONS OF THE MAIN MENU
         // TO THE CONSOLE.
         static void printMainMenu()
@@ -45,6 +56,8 @@ namespace Rotterdam_Airlines
         {
             while (true)
             {
+                printLogo();
+
                 // PRINT WELCOME TEXT
                 Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
                 Console.WriteLine();
@@ -77,6 +90,9 @@ namespace Rotterdam_Airlines
                         break;
                     case 6:
                         Console.Clear();
+
+                        printLogo();
+
                         Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
                         Console.WriteLine();
 
