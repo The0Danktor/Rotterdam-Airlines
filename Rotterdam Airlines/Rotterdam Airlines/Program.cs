@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
 
 namespace Rotterdam_Airlines
 {
@@ -8,12 +12,13 @@ namespace Rotterdam_Airlines
 
         static void printLogo()
         {
-            Console.WriteLine(@" _____       _   _               _                          _      _ _                 ");
-            Console.WriteLine(@"|  __ \     | | | |             | |                   /\   (_)    | (_)                ");
-            Console.WriteLine(@"| |__) |___ | |_| |_ ___ _ __ __| | __ _ _ __ ___    /  \   _ _ __| |_ _ __   ___  ___ ");
-            Console.WriteLine(@"|  _  // _ \| __| __/ _ \ '__/ _` |/ _` | '_ ` _ \  / /\ \ | | '__| | | '_ \ / _ \/ __|");
-            Console.WriteLine(@"| | \ \ (_) | |_| ||  __/ | | (_| | (_| | | | | | |/ ____ \| | |  | | | | | |  __/\__ \");
-            Console.WriteLine(@"|_|  \_\___/ \__|\__\___|_|  \__,_|\__,_|_| |_| |_/_/    \_\_|_|  |_|_|_| |_|\___||___/");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(@"     _____       _   _               _                          _      _ _                 ");
+            Console.WriteLine(@"    |  __ \     | | | |             | |                   /\   (_)    | (_)                ");
+            Console.WriteLine(@"    | |__) |___ | |_| |_ ___ _ __ __| | __ _ _ __ ___    /  \   _ _ __| |_ _ __   ___  ___ ");
+            Console.WriteLine(@"    |  _  // _ \| __| __/ _ \ '__/ _` |/ _` | '_ ` _ \  / /\ \ | | '__| | | '_ \ / _ \/ __|");
+            Console.WriteLine(@"    | | \ \ (_) | |_| ||  __/ | | (_| | (_| | | | | | |/ ____ \| | |  | | | | | |  __/\__ \");
+            Console.WriteLine(@"    |_|  \_\___/ \__|\__\___|_|  \__,_|\__,_|_| |_| |_/_/    \_\_|_|  |_|_|_| |_|\___||___/");
             Console.WriteLine();
         }
 
@@ -21,76 +26,66 @@ namespace Rotterdam_Airlines
         // TO THE CONSOLE.
         static void printMainMenu()
         {
-            Console.WriteLine("1: Vlucht boeken");
-            Console.WriteLine("2: Overzicht boekingen");
-            Console.WriteLine("3: Mededelingen");
-            Console.WriteLine("4: Aanbiedingen");
-            Console.WriteLine("5: Informatie");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("    1: Vlucht boeken");
+            Console.WriteLine("    2: Overzicht boekingen");
+            Console.WriteLine("    3: Mededelingen");
+            Console.WriteLine("    4: Aanbiedingen");
+            Console.WriteLine("    5: Informatie");
             Console.WriteLine();
-            Console.WriteLine("6: Account");
-            Console.WriteLine("7: Contact");
-            Console.WriteLine("8: Afsluiten");
+            Console.WriteLine("    6: Account");
+            Console.WriteLine("    7: Contact");
+            Console.WriteLine("    8: Afsluiten");
             Console.WriteLine();
         }
-        static void contact_info()
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Contact");
-            Console.WriteLine();
-            Console.WriteLine("Adres");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Rotterdam Airlines");
-            Console.WriteLine("Driemanssteeweg 107");
-            Console.WriteLine("3011 WN Rotterdam");
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Telefoonnummer");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("0104463544");
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("E-mail");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("RotterdamAirlines2022@outlook.com");
-            Console.WriteLine();
-            Console.WriteLine("Klik op 'enter' om terug te gaan");
-            string contact_input = Console.ReadLine();
-        }
+
         static void printAccountMenu()
         {
             if(authorized == true)
             {
-                Console.WriteLine("0: Hoofdmenu");
+                Console.WriteLine("    0: Hoofdmenu");
                 Console.WriteLine();
-                Console.WriteLine("1: Gegevens aanpassen");
-                Console.WriteLine("2: Overzicht boekingen");
-                Console.WriteLine("3: Uitloggen");
+                Console.WriteLine("    1: Gegevens aanpassen");
+                Console.WriteLine("    2: Overzicht boekingen");
+                Console.WriteLine("    3: Uitloggen");
             } else
             {
-                Console.WriteLine("0: Hoofdmenu");
+                Console.WriteLine("    0: Hoofdmenu");
                 Console.WriteLine();
-                Console.WriteLine("1: Inloggen");
-                Console.WriteLine("2: Registreren");
-                Console.WriteLine("3: Wachtwoord vergeten");
+                Console.WriteLine("    1: Inloggen");
+                Console.WriteLine("    2: Registreren");
+                Console.WriteLine("    3: Wachtwoord vergeten");
                 Console.WriteLine();
             }
         }
 
         static void Main(string[] args)
         {
+            // INITIATE EMAIL CLIENT
+            var smtpClient = new SmtpClient("smtp-mail.outlook.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential("RotterdamAirlines2022@outlook.com", "yks`PAha8\"5QyTN$"),
+                EnableSsl = true,
+            };
+
             while (true)
             {
                 printLogo();
 
                 // PRINT WELCOME TEXT
-                Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
 
                 // PRINT MAIN MENU
                 printMainMenu();
 
                 // HANDLE USER INPUT
-                Console.Write("Maak een keuze: ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("    Maak een keuze: ");
+                Console.ForegroundColor = ConsoleColor.White;
                 string main_menu_input = Console.ReadLine();
                 int main_menu_choice = int.Parse(main_menu_input);
 
@@ -112,17 +107,19 @@ namespace Rotterdam_Airlines
                     case 5:
                         Console.Clear();
                         break;
+
+                    // ACCOUNT
                     case 6:
                         Console.Clear();
 
                         printLogo();
 
-                        Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                        Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines.");
                         Console.WriteLine();
 
                         printAccountMenu();
 
-                        Console.Write("Maak een keuze: ");
+                        Console.Write("    Maak een keuze: ");
                         string account_input = Console.ReadLine();
                         int account_choice = int.Parse(account_input);
 
@@ -140,9 +137,35 @@ namespace Rotterdam_Airlines
 
                         Console.Clear();
                         break;
+
+                    // CONTACT
                     case 7:
                         Console.Clear();
-                        contact_info();
+                        printLogo();
+                        Contact.printContactInfo();
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("    Maak een keuze: ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        string contact_input = Console.ReadLine();
+                        int contact_choice = int.Parse(contact_input);
+
+                        switch (contact_choice)
+                        {
+                            case 0:
+                                Console.Clear();
+                                break;
+                            case 1:
+                                Console.Clear();
+                                printLogo();
+
+                                List<string> ContactInfo = Contact.getContactInfo();
+                                Contact.sendContactEmail(ContactInfo, smtpClient);
+
+                                break;
+                            default:
+                                break;
+                        }
+
                         Console.Clear();
                         break;
                     case 8:
