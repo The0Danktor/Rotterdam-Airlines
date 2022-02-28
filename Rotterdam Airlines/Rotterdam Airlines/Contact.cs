@@ -12,7 +12,7 @@ namespace Rotterdam_Airlines
         public Contact()
         { }
 
-        public static void printContactInfo()
+        public static void PrintContactInfo()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    # Rotterdam Airlines | Contact");
@@ -42,7 +42,7 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
         }
 
-        public static List<string> getContactInfo()
+        public static List<string> GetContactInfo()
         {
             List<string> ContactInfo = new List<string>();
             // FIRST NAME INPUT
@@ -135,7 +135,7 @@ namespace Rotterdam_Airlines
             return ContactInfo;
         }
 
-        public static void sendContactEmail(List<string> ContactInfo, SmtpClient smtpClient)
+        public static void SendEmail(List<string> ContactInfo, SmtpClient smtpClient)
         {
             string FirstName = ContactInfo.ElementAt(0);
             string LastName = ContactInfo.ElementAt(1);

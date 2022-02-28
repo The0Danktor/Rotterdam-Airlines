@@ -142,7 +142,7 @@ namespace Rotterdam_Airlines
                     case 7:
                         Console.Clear();
                         printLogo();
-                        Contact.printContactInfo();
+                        Contact.PrintContactInfo();
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.Write("    Maak een keuze: ");
                         Console.ForegroundColor = ConsoleColor.White;
@@ -158,8 +158,8 @@ namespace Rotterdam_Airlines
                                 Console.Clear();
                                 printLogo();
 
-                                List<string> ContactInfo = Contact.getContactInfo();
-                                Contact.sendContactEmail(ContactInfo, smtpClient);
+                                List<string> ContactInfo = Contact.GetContactInfo();
+                                Contact.SendEmail(ContactInfo, smtpClient);
 
                                 break;
                             default:
