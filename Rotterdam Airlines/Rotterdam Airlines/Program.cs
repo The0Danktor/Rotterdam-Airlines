@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Text.Json;
-
+using Newtonsoft.Json;
 namespace Rotterdam_Airlines
 {
     internal class Program
@@ -53,16 +52,16 @@ namespace Rotterdam_Airlines
                 Console.WriteLine();
             }
         }
-        /*static void loadJSON(myclass,string fileName)
+        static object[] loadJSON(string fileName)
         {
             string jsonString = File.ReadAllText(fileName);
-            object[] objects= JsonSerializer.Deserialize<Customer[]>(jsonString);
+            object[] objects= JsonConvert.DeserializeObject<Customer[]>(jsonString);
             Console.WriteLine(objects); 
-        }*/
+            return objects;
+        }
         static void saveJSON(string fileName,Array data)
         {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string jsonString = JsonSerializer.Serialize(data, options);
+            string jsonString = JsonConvert.SerializeObject(data,Formatting.Indented);
             File.WriteAllText(fileName, jsonString);
         }
 
@@ -70,10 +69,9 @@ namespace Rotterdam_Airlines
         {
             // define Json paths
             string CustomersJSON = @"D:\codes\test project\Project-B\Rotterdam Airlines\Rotterdam Airlines\JSON\customers.json";
+            
             // CREATE DEFAULT USERS
-            Customer customer = new Customer("gast@rotterdamairlines.com", "32189ASDasd*#04ajd", "Gast", "N.V.T", "N.V.T", 'G', "N.V.T", "N.V.T");
-            Customer customer2 = new Customer("gast@rotterdamairlines.com", "32189ASDasd*#04ajd", "Gast", "N.V.T", "N.V.T", 'G', "N.V.T", "N.V.T");
-            object[]customers = { customer, customer2};
+            object[] customers = loadJSON(CustomersJSON);
             Admin admin = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             saveJSON(CustomersJSON, customers);
             while (true)
