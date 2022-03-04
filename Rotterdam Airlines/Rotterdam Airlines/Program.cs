@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 namespace Rotterdam_Airlines
 {
@@ -52,26 +54,45 @@ namespace Rotterdam_Airlines
                 Console.WriteLine();
             }
         }
-        static object[] loadJSON(string fileName)
+        static List<Customer> loadJSON(string fileName)
         {
             string jsonString = File.ReadAllText(fileName);
-            object[] objects= JsonConvert.DeserializeObject<Customer[]>(jsonString);
+            List<Customer> objects= JsonConvert.DeserializeObject<List<Customer>>(jsonString);
             Console.WriteLine(objects); 
             return objects;
         }
-        static void saveJSON(string fileName,Array data)
+        static void saveJSON(string fileName, List<Customer> data)
         {
             string jsonString = JsonConvert.SerializeObject(data,Formatting.Indented);
             File.WriteAllText(fileName, jsonString);
         }
-
+        static Customer register(List<Customer> customers , string CustomersJSON)
+        {
+            customers[0].first_name = Console.ReadLine();
+            customers[0].last_name = Console.ReadLine();
+            customers[0].country = Console.ReadLine();
+            if (Console.ReadLine() == "1")
+            {
+                customers[0].gender = 'm';
+            }
+            else
+            {
+                customers[0].gender = 'f';
+            }
+            customers[0].birth_date = Console.ReadLine();
+            customers[0].phone_number = Console.ReadLine();
+            Console.WriteLine();
+            Console.ReadLine();
+            saveJSON(CustomersJSON, customers);
+            return customers[0];
+        }
         static void Main(string[] args)
         {
             // define Json paths
             string CustomersJSON = @"D:\codes\test project\Project-B\Rotterdam Airlines\Rotterdam Airlines\JSON\customers.json";
             
             // CREATE DEFAULT USERS
-            object[] customers = loadJSON(CustomersJSON);
+            List<Customer> customers = loadJSON(CustomersJSON);
             Admin admin = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             saveJSON(CustomersJSON, customers);
             while (true)
@@ -139,7 +160,8 @@ namespace Rotterdam_Airlines
                             case 1:
                                 Console.WriteLine("1");
                                 break;
-                            default:
+                            case 2:
+                                register(customers, CustomersJSON);
                                 break;
                         }
 
@@ -152,6 +174,7 @@ namespace Rotterdam_Airlines
                     // EXIT
                     case 8:
                         Environment.Exit(0);
+                        saveJSON(CustomersJSON, customers);
                         break;
                     default:
                         Console.Clear();
