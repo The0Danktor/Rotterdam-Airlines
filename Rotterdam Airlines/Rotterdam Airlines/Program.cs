@@ -54,6 +54,17 @@ namespace Rotterdam_Airlines
                 Console.WriteLine();
             }
         }
+        static void printRegisterMenu()
+        {
+            Console.WriteLine("0: terug");
+            Console.WriteLine("1: naam");
+            Console.WriteLine("2: achternaam");
+            Console.WriteLine("3: land");
+            Console.WriteLine("4: geslacht");
+            Console.WriteLine("5: geboortedatum");
+            Console.WriteLine("6: telefoon nummer");
+            Console.WriteLine("7: afronden");
+        }
         static List<Customer> loadJSON(string fileName)
         {
             string jsonString = File.ReadAllText(fileName);
@@ -66,25 +77,59 @@ namespace Rotterdam_Airlines
             string jsonString = JsonConvert.SerializeObject(data,Formatting.Indented);
             File.WriteAllText(fileName, jsonString);
         }
-        static Customer register(List<Customer> customers , string CustomersJSON)
+        static void register(List<Customer> customers , string CustomersJSON)
         {
-            customers[0].first_name = Console.ReadLine();
-            customers[0].last_name = Console.ReadLine();
-            customers[0].country = Console.ReadLine();
-            if (Console.ReadLine() == "1")
+            bool creating = true;
+            while (creating)
             {
-                customers[0].gender = 'm';
+                printLogo();
+                printRegisterMenu();
+                string register_input = Console.ReadLine();
+                int register_choice = int.Parse(register_input);
+                switch (register_choice)
+                {
+                    case 0:
+                        creating = false;
+                        break;
+                    
+                    case 1:
+                        customers[0].first_name = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 2:
+                        customers[0].last_name = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 3:
+                        customers[0].country = Console.ReadLine();
+                        Console.Clear();
+                        break ;
+                    case 4:
+                        if (Console.ReadLine() == "1")
+                        {
+                            customers[0].gender = 'm';
+                        }
+                        else
+                        {
+                            customers[0].gender = 'f';
+                        }
+                        Console.Clear();
+                        break;
+                    case 5:
+                        customers[0].birth_date = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 6:
+                        customers[0].phone_number = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 7:
+                        creating = false;
+                        saveJSON(CustomersJSON, customers);
+                        break;
+                }
             }
-            else
-            {
-                customers[0].gender = 'f';
-            }
-            customers[0].birth_date = Console.ReadLine();
-            customers[0].phone_number = Console.ReadLine();
-            Console.WriteLine();
-            Console.ReadLine();
-            saveJSON(CustomersJSON, customers);
-            return customers[0];
+            
         }
         static void Main(string[] args)
         {
@@ -161,6 +206,7 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine("1");
                                 break;
                             case 2:
+                                Console.Clear();
                                 register(customers, CustomersJSON);
                                 break;
                         }
