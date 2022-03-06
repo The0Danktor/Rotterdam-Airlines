@@ -23,6 +23,8 @@ namespace Rotterdam_Airlines
             this.gender = gender;
             this.birth_date = birth_date;
             this.phone_number = phone_number;
+            this.email = email;
+            this.password = password;
         }
 
         private string getFullName()

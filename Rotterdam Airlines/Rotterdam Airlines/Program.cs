@@ -57,13 +57,15 @@ namespace Rotterdam_Airlines
         static void printRegisterMenu()
         {
             Console.WriteLine("0: terug");
-            Console.WriteLine("1: naam");
-            Console.WriteLine("2: achternaam");
-            Console.WriteLine("3: land");
-            Console.WriteLine("4: geslacht");
-            Console.WriteLine("5: geboortedatum");
-            Console.WriteLine("6: telefoon nummer");
-            Console.WriteLine("7: afronden");
+            Console.WriteLine("1: email");
+            Console.WriteLine("2: wachtwoord");
+            Console.WriteLine("3: naam");
+            Console.WriteLine("4: achternaam");
+            Console.WriteLine("5: land");
+            Console.WriteLine("6: geslacht");
+            Console.WriteLine("7: geboortedatum");
+            Console.WriteLine("8: telefoon nummer");
+            Console.WriteLine("9: afronden");
         }
         static List<Customer> loadJSON(string fileName)
         {
@@ -91,20 +93,27 @@ namespace Rotterdam_Airlines
                     case 0:
                         creating = false;
                         break;
-                    
                     case 1:
-                        customers[0].first_name = Console.ReadLine();
+                        customers[0].email = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 2:
-                        customers[0].last_name = Console.ReadLine();
+                        customers[0].password = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 3:
+                        customers[0].first_name = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 4:
+                        customers[0].last_name = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 5:
                         customers[0].country = Console.ReadLine();
                         Console.Clear();
                         break ;
-                    case 4:
+                    case 6:
                         if (Console.ReadLine() == "1")
                         {
                             customers[0].gender = 'm';
@@ -115,15 +124,15 @@ namespace Rotterdam_Airlines
                         }
                         Console.Clear();
                         break;
-                    case 5:
+                    case 7:
                         customers[0].birth_date = Console.ReadLine();
                         Console.Clear();
                         break;
-                    case 6:
+                    case 8:
                         customers[0].phone_number = Console.ReadLine();
                         Console.Clear();
                         break;
-                    case 7:
+                    case 9:
                         creating = false;
                         saveJSON(CustomersJSON, customers);
                         break;

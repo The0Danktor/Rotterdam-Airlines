@@ -10,6 +10,8 @@ namespace Rotterdam_Airlines
     {
         public Admin(string email, string password) : base(email, password)
         {
+            this.email = email;
+            this.password = password;
         }
 
     }
