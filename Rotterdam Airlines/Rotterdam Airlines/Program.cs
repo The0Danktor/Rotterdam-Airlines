@@ -116,11 +116,11 @@ namespace Rotterdam_Airlines
                     case 6:
                         if (Console.ReadLine() == "1")
                         {
-                            customers[0].gender = 'm';
+                            customers[0].gender = "m";
                         }
                         else
                         {
-                            customers[0].gender = 'f';
+                            customers[0].gender = "f";
                         }
                         Console.Clear();
                         break;
@@ -144,8 +144,9 @@ namespace Rotterdam_Airlines
         {
             // define Json paths
             string CustomersJSON = @"D:\codes\test project\Project-B\Rotterdam Airlines\Rotterdam Airlines\JSON\customers.json";
-            
+
             // CREATE DEFAULT USERS
+            Customer CurrenctUser = new Customer(null,null,null,null,null,null,null,null);
             List<Customer> customers = loadJSON(CustomersJSON);
             Admin admin = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             saveJSON(CustomersJSON, customers);
