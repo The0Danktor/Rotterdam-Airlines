@@ -12,6 +12,8 @@ namespace Rotterdam_Airlines
         public Contact()
         { }
 
+        // PRINT DE CONTACTINFORMATIE VAN ROTTERDAMAIRLINES
+        // NAAR DE CONSOLE
         public static void PrintContactInfo()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -42,10 +44,11 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
         }
 
+        // VRAAGT DE GEBRUIKER OM INPUT VOOR
+        // DE CONTACTGEGEVENS
         public static List<string> GetContactInfo()
         {
             List<string> ContactInfo = new List<string>();
-            // FIRST NAME INPUT
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -67,7 +70,6 @@ namespace Rotterdam_Airlines
                 }
             }
 
-            // LAST NAME INPUT
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -110,7 +112,6 @@ namespace Rotterdam_Airlines
                 }
             }
 
-
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    Wat is het onderwerp van uw bericht?");
             Console.ForegroundColor = ConsoleColor.White;
@@ -135,6 +136,9 @@ namespace Rotterdam_Airlines
             return ContactInfo;
         }
 
+        // FUNCTIE KRIJGT EEN LIJST MET CONTACTGEGEVENS MEE EN
+        // STUURT VERVOLGENS EEN EMAIL NAAR DE INGEVOERDE EMAIL
+        // EN NAAR ROTTERDAMAIRLINES
         public static void SendEmail(List<string> ContactInfo, SmtpClient smtpClient)
         {
             string FirstName = ContactInfo.ElementAt(0);
