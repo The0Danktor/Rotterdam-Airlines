@@ -18,5 +18,25 @@
     "phone_number": "N.V.T",
     "email": "N.V.T",
     "password": "N.V.T"
+  },
+  {
+    "first_name": null,
+    "last_name": null,
+    "country": null,
+    "gender": null,
+    "birth_date": null,
+    "phone_number": null,
+    "email": null,
+    "password": null
+  },
+  {
+    "first_name": "bob",
+    "last_name": "ook bob",
+    "country": "groenland",
+    "gender": "vrouw",
+    "birth_date": "67-34-4574",
+    "phone_number": "112",
+    "email": "ok.ok@ok.ok",s
+    "password": "N1ce420"
   }
 ]

@@ -165,9 +165,9 @@ namespace Rotterdam_Airlines
                     case 9:
                         List<Customer> temp = loadJSON(CustomersJSON);
                         temp.Add(CurrenctUser);
-                        CurrenctUser.SetToDefault();
                         Console.WriteLine(temp);
                         saveJSON(CustomersJSON,temp);
+                        CurrenctUser.SetToDefault();
                         creating = false;
                         break;
                 }
