@@ -27,6 +27,18 @@ namespace Rotterdam_Airlines
             this.password = password;
         }
 
+        public void SetToDefault()
+        {
+            this.first_name = null;
+            this.last_name = null;
+            this.country = null;
+            this.gender = null;
+            this.birth_date = null;
+            this.phone_number = null;
+            this.email = null;
+            this.password = null;
+
+        }
         private string getFullName()
         {
             return $"{first_name} {last_name}";
