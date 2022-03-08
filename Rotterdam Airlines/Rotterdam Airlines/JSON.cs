@@ -10,8 +10,8 @@ namespace Rotterdam_Airlines
         static string CustomersJSON = @"..\..\..\json\customers.json";
         public static List<Customer> LoadCustomersJSON()
         {
-            string jsonString = File.ReadAllText(CustomersJSON);
-            List<Customer> objects = JsonConvert.DeserializeObject<List<Customer>>(CustomersJSON);
+            string JsonString = File.ReadAllText(CustomersJSON);
+            List<Customer> objects = JsonConvert.DeserializeObject<List<Customer>>(JsonString);
             return objects;
         }
         public static void SaveCustomersJSON(List<Customer> data)
