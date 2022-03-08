@@ -70,18 +70,8 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    9: Afronden       ");
             Console.WriteLine();
         }
-        static List<Customer> loadJSON(string fileName)
-        {
-            string jsonString = File.ReadAllText(fileName);
-            List<Customer> objects = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
-            return objects;
-        }
-        static void saveJSON(string fileName, List<Customer> data)
-        {
-            string jsonString = JsonConvert.SerializeObject(data,Formatting.Indented);
-            File.WriteAllText(fileName, jsonString);
-        }
-        static void register(Customer CurrenctUser, string CustomersJSON)
+
+        static void register(Customer CurrenctUser)
         {
             bool creating = true;
             while (creating)
@@ -99,35 +89,35 @@ namespace Rotterdam_Airlines
                     case 1:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw email in: ");
+                        Console.Write("Vul uw email in: ");
                         CurrenctUser.email = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 2:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw wachtwoord in: ");
+                        Console.Write("Vul uw wachtwoord in: ");
                         CurrenctUser.password = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 3:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw naam in: ");
+                        Console.Write("Vul uw naam in: ");
                         CurrenctUser.first_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 4:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw achternaam in: ");
+                        Console.Write("Vul uw achternaam in: ");
                         CurrenctUser.last_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 5:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw land in: ");
+                        Console.Write("Vul uw land in: ");
                         CurrenctUser.country = Console.ReadLine();
                         Console.Clear();
                         break ;
@@ -151,23 +141,27 @@ namespace Rotterdam_Airlines
                     case 7:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw geboortedatum in als dd-mm-jjjj: ");
+                        Console.Write("Vul uw geboortedatum in als dd-mm-jjjj: ");
                         CurrenctUser.birth_date = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 8:
                         Console.Clear();
                         printLogo();
-                        Console.Write("Vull uw telefoonnummer in: ");
+                        Console.Write("Vul uw telefoonnummer in: ");
                         CurrenctUser.phone_number = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 9:
-                        List<Customer> temp = loadJSON(CustomersJSON);
+                        List<Customer> temp = JSON.LoadCustomersJSON();
                         temp.Add(CurrenctUser);
                         Console.WriteLine(temp);
+<<<<<<< Updated upstream
                         CurrenctUser.SetToDefault();
                         saveJSON(CustomersJSON,temp);
+=======
+                        JSON.SaveCustomersJSON(temp);
+>>>>>>> Stashed changes
                         creating = false;
                         break;
                 }
@@ -176,9 +170,6 @@ namespace Rotterdam_Airlines
         }
         static void Main(string[] args)
         {
-            // DEFINE JSON PATHS
-            string CustomersJSON = @"..\..\..\json\customers.json";
-
             // CREATE DEFAULT USERS
             Customer CurrenctUser = new Customer(null,null,null,null,null,null,null,null);
             Admin admin = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
@@ -249,7 +240,7 @@ namespace Rotterdam_Airlines
                                 break;
                             case 2:
                                 Console.Clear();
-                                register(CurrenctUser, CustomersJSON);
+                                register(CurrenctUser);
                                 break;
                         }
 
