@@ -8,6 +8,10 @@ namespace Rotterdam_Airlines
 {
     class UserInterface
     {
+
+        public static ConsoleColor MainColor = ConsoleColor.Blue;
+        public static ConsoleColor DefaultColor = ConsoleColor.White;
+
         public UserInterface()
         { }
 
@@ -27,15 +31,15 @@ namespace Rotterdam_Airlines
         // TO THE CONSOLE.
         public static void PrintMainMenu()
         {
-            Console.WriteLine("1: Vlucht boeken");
-            Console.WriteLine("2: Overzicht boekingen");
-            Console.WriteLine("3: Mededelingen");
-            Console.WriteLine("4: Aanbiedingen");
-            Console.WriteLine("5: Informatie");
+            Console.WriteLine("    1: Vlucht boeken");
+            Console.WriteLine("    2: Overzicht boekingen");
+            Console.WriteLine("    3: Mededelingen");
+            Console.WriteLine("    4: Aanbiedingen");
+            Console.WriteLine("    5: Informatie");
             Console.WriteLine();
-            Console.WriteLine("6: Account");
-            Console.WriteLine("7: Contact");
-            Console.WriteLine("8: Afsluiten");
+            Console.WriteLine("    6: Account");
+            Console.WriteLine("    7: Contact");
+            Console.WriteLine("    8: Afsluiten");
             Console.WriteLine();
         }
 
@@ -77,5 +81,14 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
         }
 
+        public static void SetMainColor()
+        {
+            Console.ForegroundColor = MainColor;
+        }
+
+        public static void SetDefaultColor()
+        {
+            Console.ForegroundColor = DefaultColor;
+        }
     }
 }
