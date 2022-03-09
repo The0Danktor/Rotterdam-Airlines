@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.IO;
 using Newtonsoft.Json;
 namespace Rotterdam_Airlines
 {
@@ -10,6 +12,14 @@ namespace Rotterdam_Airlines
         static bool authorized = false;
         static void Main(string[] args)
         {
+
+            // INITIATE EMAIL CLIENT
+            var smtpClient = new SmtpClient("smtp-mail.outlook.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential("RotterdamAirlines2022@outlook.com", "yks`PAha8\"5QyTN$"),
+                EnableSsl = true,
+            };
             // CREATE DEFAULT USERS
             Customer CurrenctUser = new Customer(null,null,null,null,null,null,null,null);
             Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
@@ -20,7 +30,9 @@ namespace Rotterdam_Airlines
                 UserInterface.PrintLogo();
 
                 // PRINT WELCOME TEXT
-                Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
 
                 // PRINT MAIN MENU
@@ -64,12 +76,12 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         UserInterface.PrintLogo();
 
-                        Console.WriteLine("Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                        Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines.");
                         Console.WriteLine();
 
                         UserInterface.PrintAccountMenu(authorized);
 
-                        Console.Write("Maak een keuze: ");
+                        Console.Write("    Maak een keuze: ");
                         string account_input = Console.ReadLine();
                         int account_choice = int.Parse(account_input);
 
@@ -92,6 +104,32 @@ namespace Rotterdam_Airlines
 
                     // CONTACT
                     case 7:
+                        Console.Clear();
+                        printLogo();
+                        Contact.PrintContactInfo();
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("    Maak een keuze: ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        string contact_input = Console.ReadLine();
+                        int contact_choice = int.Parse(contact_input);
+
+                        switch (contact_choice)
+                        {
+                            case 0:
+                                Console.Clear();
+                                break;
+                            case 1:
+                                Console.Clear();
+                                printLogo();
+
+                                List<string> ContactInfo = Contact.GetContactInfo();
+                                Contact.SendEmail(ContactInfo, smtpClient);
+
+                                break;
+                            default:
+                                break;
+                        }
+
                         Console.Clear();
                         break;
 
