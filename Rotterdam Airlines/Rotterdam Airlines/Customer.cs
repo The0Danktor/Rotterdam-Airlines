@@ -43,5 +43,101 @@ namespace Rotterdam_Airlines
         {
             return $"{first_name} {last_name}";
         }
+
+        public static void RegisterCustomer(Customer CurrenctUser)
+        {
+            bool creating = true;
+            while (creating)
+            {
+                UserInterface.PrintLogo();
+                UserInterface.PrintRegisterMenu(CurrenctUser);
+                Console.Write("Maak een keuze: ");
+                string register_input = Console.ReadLine();
+                int register_choice = int.Parse(register_input);
+                switch (register_choice)
+                {
+                    case 0:
+                        creating = false;
+                        break;
+                    case 1:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.Write("Vul uw email in: ");
+                        CurrenctUser.email = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.Write("Vul uw wachtwoord in: ");
+                        CurrenctUser.password = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        UserInterface.PrintLogo(); ;
+                        Console.Write("Vul uw naam in: ");
+                        CurrenctUser.first_name = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.Write("Vul uw achternaam in: ");
+                        CurrenctUser.last_name = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.Write("Vul uw land in: ");
+                        CurrenctUser.country = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.WriteLine("1: man");
+                        Console.WriteLine("2: vrouw");
+                        Console.WriteLine();
+                        Console.Write("Maak een keuze: ");
+                        if (Console.ReadLine() == "1")
+                        {
+                            CurrenctUser.gender = "man";
+                        }
+                        else
+                        {
+                            CurrenctUser.gender = "vrouw";
+                        }
+                        Console.Clear();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.Write("Vul uw geboortedatum in als dd-mm-jjjj: ");
+                        CurrenctUser.birth_date = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        Console.Write("Vul uw telefoonnummer in: ");
+                        CurrenctUser.phone_number = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 9:
+                        List<Customer> temp = JSON.LoadCustomersJSON();
+                        temp.Add(CurrenctUser);
+                        Console.WriteLine(temp);
+
+                        CurrenctUser.SetToDefault();
+                        JSON.SaveCustomersJSON(temp);
+
+                        creating = false;
+                        break;
+                }
+            }
+
+        }
     }
 }
