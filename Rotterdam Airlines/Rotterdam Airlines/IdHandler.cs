@@ -122,7 +122,7 @@ namespace Rotterdam_Airlines
             //{ rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
             int[] getValues()
             {
-                return new int[] { 245, 213, 21, 64, 183, 123 };
+                return new int[] { rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
             }
 
             //CHECK AND SAVE ID
