@@ -50,6 +50,7 @@ namespace Rotterdam_Airlines
                     // VLUCHT BOEKEN
                     case 1:
                         Console.Clear();
+                        Console.WriteLine(IdHandler.getID());
                         break;
 
                     // OVERZICHT BOEKINGEN
