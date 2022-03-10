@@ -22,13 +22,14 @@ namespace Rotterdam_Airlines
         }
 
         static string IdJSON = @"..\..\..\json\id.json";
-        public static List<Hashtable> LoadIdJSON()
+        public static Hashtable LoadIdJSON()
         {
             string JsonString = File.ReadAllText(IdJSON);
-            List<Hashtable> objects = JsonConvert.DeserializeObject<List<Hashtable>>(JsonString);
-            return objects;
+            Dictionary<string,Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string,List<int>>>>>> objects = JsonConvert.DeserializeObject<Dictionary<string,Dictionary<string,Dictionary<string, Dictionary<string,Dictionary<string,List<int>>>>>>>(JsonString);
+            Hashtable ret = new Hashtable(objects);
+            return ret;
         }
-        public static void SaveIdJSON(List<Hashtable> data)
+        public static void SaveIdJSON(Hashtable data)
         {
             string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(IdJSON, jsonString);

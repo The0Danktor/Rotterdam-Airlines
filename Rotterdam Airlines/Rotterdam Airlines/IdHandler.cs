@@ -119,12 +119,12 @@ namespace Rotterdam_Airlines
         {
             //CREATE RANDOM ID
             Random rnd = new Random();
-            int[] values = { rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
-            //int[] values = { 208, 16, 67, rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
+            //int[] values = { rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
+            int[] values = { 208, 16, 67, rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
 
             //CHECK AND SAVE ID
-            List<Hashtable> jsonList = JSON.LoadIdJSON();
-            Hashtable jsonHashtable = jsonList[0];
+            Hashtable jsonHashtable = JSON.LoadIdJSON();
+            
 
 
             Hashtable getChild(Hashtable table, int[] values, int iteration)
@@ -152,18 +152,21 @@ namespace Rotterdam_Airlines
                     table[values[iteration]] = newtable;
                     return table;
                 }
-                Newtonsoft.Json.Linq.JObject child = (Newtonsoft.Json.Linq.JObject) table[key];
-                var children = child.Value<Newtonsoft.Json.Linq.JObject>(table[key]).Properties();
-                Console.WriteLine(children);
-                table[values[iteration]] = getChild((Hashtable) table[key], values, iteration+1);
+                //Newtonsoft.Json.Linq.JObject child = (Newtonsoft.Json.Linq.JObject) table[key];
+                //var children = child.Value<Newtonsoft.Json.Linq.JObject>(table[key]).Properties();
+                //Console.WriteLine(children);
+                
+                dynamic temp  = table[key];
+                Hashtable ntable = new Hashtable(temp);
+                Console.WriteLine(ntable);
+                table[values[iteration]] = getChild((Hashtable) ntable, values, iteration+1);
                 return table;
             }
 
             //trying to get this to work but it's more difficult then i thought due to stupid json >:(, commenting it out for now...
             //jsonHashtable = getChild(jsonHashtable, values, 0);
-
-            jsonList[0] = jsonHashtable;
-            JSON.SaveIdJSON(jsonList);
+            
+            JSON.SaveIdJSON(jsonHashtable);
 
             //ENCODE ID TO BASE64
             string id = encodeID(values);
