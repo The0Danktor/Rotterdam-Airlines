@@ -119,10 +119,10 @@ namespace Rotterdam_Airlines
         {
             //CREATE RANDOM ID
             Random rnd = new Random();
-            //int[] values = { rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
+            //{ rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
             int[] getValues()
             {
-                return new int[] { 34, 124, 234, 21, 42, rnd.Next(1, 256) };
+                return new int[] { rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
             }
 
             //CHECK AND SAVE ID
