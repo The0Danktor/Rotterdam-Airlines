@@ -120,53 +120,52 @@ namespace Rotterdam_Airlines
             //CREATE RANDOM ID
             Random rnd = new Random();
             //int[] values = { rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
-            int[] values = { 208, 16, 67, rnd.Next(1, 256), rnd.Next(1, 256), rnd.Next(1, 256) };
-
-            //CHECK AND SAVE ID
-            Hashtable jsonHashtable = JSON.LoadIdJSON();
-            
-
-
-            Hashtable getChild(Hashtable table, int[] values, int iteration)
+            int[] getValues()
             {
-                string key = values[iteration].ToString();
-                if (iteration >= 4)
-                {
-                    if (!table.ContainsKey(key))
-                    {
-                        List<int> list2 = new List<int>();
-                        list2.Add(values[5]);
-                        table[values[iteration]] = list2;
-                        return table;
-                    }
-                    List<int> list = (List<int>) table[values[iteration]];
-                    list.Add(values[5]);
-                    table[values[iteration]] = list;
-                    return table;
-                }
-
-                if (!table.ContainsKey(key))
-                {
-                    Hashtable newtable = new Hashtable();
-                    newtable = getChild(newtable, values, iteration+1);
-                    table[values[iteration]] = newtable;
-                    return table;
-                }
-                //Newtonsoft.Json.Linq.JObject child = (Newtonsoft.Json.Linq.JObject) table[key];
-                //var children = child.Value<Newtonsoft.Json.Linq.JObject>(table[key]).Properties();
-                //Console.WriteLine(children);
-                
-                dynamic temp  = table[key];
-                Hashtable ntable = new Hashtable(temp);
-                Console.WriteLine(ntable);
-                table[values[iteration]] = getChild((Hashtable) ntable, values, iteration+1);
-                return table;
+                return new int[] { 34, 124, 234, 21, 42, rnd.Next(1, 256) };
             }
 
-            //trying to get this to work but it's more difficult then i thought due to stupid json >:(, commenting it out for now...
-            //jsonHashtable = getChild(jsonHashtable, values, 0);
-            
-            JSON.SaveIdJSON(jsonHashtable);
+            //CHECK AND SAVE ID
+            Dictionary<string, List<int>> jsonDict = JSON.LoadIdJSON();
+
+            int[] idCheck()
+            {
+                int[] values = getValues();
+                string key = "";
+                for (int i = 0; i < 5; i++)
+                {
+                    int value = values[i];
+                    string s = value.ToString();
+                    if (s.Length == 1) { s = "00" + s; }
+                    if (s.Length == 2) { s = "0" + s; }
+                    key += s;
+                }
+
+                if (jsonDict.ContainsKey(key))
+                {
+                    List<int> usedValues = (List<int>)jsonDict[key];
+                    if (usedValues.Contains(values[5]))
+                    {
+                        values = idCheck();
+                        return values;
+                    }
+                    usedValues.Add(values[5]);
+                    usedValues.Sort();
+                    jsonDict[key] = usedValues;
+                }
+                else
+                {
+                    List<int> newValues = new List<int>();
+                    newValues.Add(values[5]);
+                    newValues.Sort();
+                    jsonDict[key] = newValues;
+                }
+                return values;
+            }
+
+            int[] values;
+            values = idCheck();
+            JSON.SaveIdJSON(jsonDict);
 
             //ENCODE ID TO BASE64
             string id = encodeID(values);
