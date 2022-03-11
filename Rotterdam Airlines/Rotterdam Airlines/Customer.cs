@@ -8,6 +8,7 @@ namespace Rotterdam_Airlines
 {
     class Customer : User
     {
+        public string UserId { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
         public string country { get; set; }
@@ -15,8 +16,10 @@ namespace Rotterdam_Airlines
         public string birth_date { get; set; }
         public string phone_number { get; set; }
 
-        public Customer(string email, string password, string first_name, string last_name, string country, string gender, string birth_date, string phone_number) : base(email, password)
+
+        public Customer(string UserId, string email, string password, string first_name, string last_name, string country, string gender, string birth_date, string phone_number) : base(email, password)
         {
+            this.UserId = UserId;
             this.first_name = first_name;
             this.last_name = last_name;
             this.country = country;
@@ -29,6 +32,7 @@ namespace Rotterdam_Airlines
 
         public void SetToDefault()
         {
+            this.UserId = null;
             this.first_name = null;
             this.last_name = null;
             this.country = null;
@@ -44,6 +48,10 @@ namespace Rotterdam_Airlines
             return $"{first_name} {last_name}";
         }
 
+        private void GetNewUserID()
+        {
+            this.UserId = IdHandler.getID();
+        }   
         public static void RegisterCustomer(Customer CurrenctUser)
         {
             bool creating = true;
@@ -129,9 +137,8 @@ namespace Rotterdam_Airlines
                         List<Customer> temp = JSON.LoadCustomersJSON();
                         temp.Add(CurrenctUser);
                         Console.WriteLine(temp);
-
-                        CurrenctUser.SetToDefault();
                         JSON.SaveCustomersJSON(temp);
+                        CurrenctUser.SetToDefault();
 
                         creating = false;
                         break;
