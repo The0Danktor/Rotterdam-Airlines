@@ -18,13 +18,15 @@ namespace Rotterdam_Airlines
         // PRINT HET LOGO NAAR DE CONSOLE
         public static void PrintLogo()
         {
-            Console.WriteLine(@" _____       _   _               _                          _      _ _                 ");
-            Console.WriteLine(@"|  __ \     | | | |             | |                   /\   (_)    | (_)                ");
-            Console.WriteLine(@"| |__) |___ | |_| |_ ___ _ __ __| | __ _ _ __ ___    /  \   _ _ __| |_ _ __   ___  ___ ");
-            Console.WriteLine(@"|  _  // _ \| __| __/ _ \ '__/ _` |/ _` | '_ ` _ \  / /\ \ | | '__| | | '_ \ / _ \/ __|");
-            Console.WriteLine(@"| | \ \ (_) | |_| ||  __/ | | (_| | (_| | | | | | |/ ____ \| | |  | | | | | |  __/\__ \");
-            Console.WriteLine(@"|_|  \_\___/ \__|\__\___|_|  \__,_|\__,_|_| |_| |_/_/    \_\_|_|  |_|_|_| |_|\___||___/");
+            SetDefaultColor();
+            Console.WriteLine(@"     _____       _   _               _                          _      _ _                 ");
+            Console.WriteLine(@"    |  __ \     | | | |             | |                   /\   (_)    | (_)                ");
+            Console.WriteLine(@"    | |__) |___ | |_| |_ ___ _ __ __| | __ _ _ __ ___    /  \   _ _ __| |_ _ __   ___  ___ ");
+            Console.WriteLine(@"    |  _  // _ \| __| __/ _ \ '__/ _` |/ _` | '_ ` _ \  / /\ \ | | '__| | | '_ \ / _ \/ __|");
+            Console.WriteLine(@"    | | \ \ (_) | |_| ||  __/ | | (_| | (_| | | | | | |/ ____ \| | |  | | | | | |  __/\__ \");
+            Console.WriteLine(@"    |_|  \_\___/ \__|\__\___|_|  \__,_|\__,_|_| |_| |_/_/    \_\_|_|  |_|_|_| |_|\___||___/");
             Console.WriteLine();
+            SetDefaultColor();
         }
 
         // PRINTS ALL THE OPTIONS OF THE MAIN MENU
@@ -45,6 +47,7 @@ namespace Rotterdam_Airlines
 
         public static void PrintAccountMenu(bool authorized)
         {
+            UserInterface.SetDefaultColor();
             if (authorized == true)
             {
                 Console.WriteLine("    [0] Hoofdmenu");
@@ -64,7 +67,7 @@ namespace Rotterdam_Airlines
             }
         }
 
-        public static void PrintRegisterMenu(Customer CurrenctUser)
+        public static void PrintRegisterMenu(Customer CurrentUser)
         {
             Console.WriteLine($"    [0] Terug          ");
             Console.WriteLine();
@@ -80,6 +83,27 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    [9] Afronden       ");
             Console.WriteLine();
         }
+        public static void PrintInfoMenu()
+        {
+            Console.WriteLine($"    [0] Hoofdmenu");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Faciliteiten");
+            Console.WriteLine($"    [2] Laatste nieuws");
+            Console.WriteLine($"    [3] Onze vliegtuigen");
+            Console.WriteLine($"    [4] Veelgestelde vragen");
+
+        }
+
+        public static void PrintFaciliteitenMenu()
+        {
+            Console.WriteLine($"    [0] Hoofdmenu");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Winkelen");
+            Console.WriteLine($"    [2] Eetgelegenheden");
+            Console.WriteLine($"    [3] Recreatie");
+
+        }
+
 
         public static void SetMainColor()
         {

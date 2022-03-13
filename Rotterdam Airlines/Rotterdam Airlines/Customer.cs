@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,6 +56,7 @@ namespace Rotterdam_Airlines
             this.UserId = IdHandler.getID();
         }   
         public static void RegisterCustomer(Customer CurrenctUser)
+
         {
             bool creating = true;
             while (creating)
@@ -63,6 +64,7 @@ namespace Rotterdam_Airlines
                 UserInterface.PrintLogo();
                 UserInterface.PrintRegisterMenu(CurrenctUser);
                 Console.Write("    Maak een keuze: ");
+
                 string register_input = Console.ReadLine();
                 int register_choice = int.Parse(register_input);
                 switch (register_choice)
@@ -71,7 +73,6 @@ namespace Rotterdam_Airlines
                         creating = false;
                         break;
                     case 1:
-
                         Console.Write("    Vul uw email in: ");
                         CurrenctUser.email = Console.ReadLine();
                         Console.Clear();
@@ -100,6 +101,7 @@ namespace Rotterdam_Airlines
                     case 5:
                         Console.Write("    Vul uw land in: ");
                         CurrenctUser.country = Console.ReadLine();
+
                         Console.Clear();
                         break;
                     case 6:
@@ -109,11 +111,11 @@ namespace Rotterdam_Airlines
                         Console.Write("    Maak een keuze: ");
                         if (Console.ReadLine() == "1")
                         {
-                            CurrenctUser.gender = "man";
+                            CurrentUser.gender = "man";
                         }
                         else
                         {
-                            CurrenctUser.gender = "vrouw";
+                            CurrentUser.gender = "vrouw";
                         }
                         Console.Clear();
                         break;
@@ -125,6 +127,7 @@ namespace Rotterdam_Airlines
                     case 8:
                         Console.Write("    Vul uw telefoonnummer in: ");
                         CurrenctUser.phone_number = Console.ReadLine();
+
                         Console.Clear();
                         break;
                     case 9:

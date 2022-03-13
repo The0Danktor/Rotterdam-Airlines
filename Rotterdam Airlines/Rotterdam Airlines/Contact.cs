@@ -16,31 +16,26 @@ namespace Rotterdam_Airlines
         // NAAR DE CONSOLE
         public static void PrintContactInfo()
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    # Rotterdam Airlines | Contact");
+            UserInterface.PrintLogo();
+            UserInterface.SetMainColor();
+            Console.WriteLine("    Rotterdam Airlines | Contact");
+            Console.WriteLine("    ────────────────────────────");
+            UserInterface.SetDefaultColor();
             Console.WriteLine();
-            Console.WriteLine("    Adres");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("    Rotterdam Airlines");
+            Console.WriteLine("    [0] Hoofdmenu");
+            Console.WriteLine();
+            Console.WriteLine("    [1] Contact opnemen");
+            Console.WriteLine();
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetMainColor();
+            Console.WriteLine("    Adres                    Telefoonnummer      E-mail");
+            UserInterface.SetDefaultColor();
+            Console.WriteLine("    Rotterdam Airlines       010 446 3444        RotterdamAirlines2022@outlook.com");
             Console.WriteLine("    Driemanssteeweg 107");
             Console.WriteLine("    3011 WN Rotterdam");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    Telefoonnummer");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("    010 446 3444");
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    E-mail");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("    RotterdamAirlines2022@outlook.com");
-            Console.WriteLine();
-            Console.WriteLine("    # ----------------------------------------------------------------------------------- #");
-            Console.WriteLine();
-            Console.WriteLine("    0: Hoofdmenu");
-            Console.WriteLine("    1: Contact opnemen");
-            Console.WriteLine();
-            Console.WriteLine("    # ----------------------------------------------------------------------------------- #");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
         }
 
@@ -49,90 +44,155 @@ namespace Rotterdam_Airlines
         public static List<string> GetContactInfo()
         {
             List<string> ContactInfo = new List<string>();
-            while (true)
+            bool Creating = true;
+
+            string contact_first_name = null;
+            string contact_last_name = null;
+            string contact_email = null;
+            string contact_subject = null;
+            string contact_message = null;
+
+            while (Creating)
             {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("    Wat is uw voornaam?");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.Write("    ");
-                string contact_first_name = Console.ReadLine();
+                UserInterface.PrintLogo();
+                UserInterface.SetMainColor();
+                Console.WriteLine("    Rotterdam Airlines | Contact Opnemen");
+                Console.WriteLine("    ────────────────────────────────────");
+                UserInterface.SetDefaultColor();
                 Console.WriteLine();
-                if (contact_first_name.All(Char.IsLetter))
+                Console.WriteLine("    [0] Hoofdmenu        ");
+                Console.WriteLine();
+                Console.WriteLine("    [1] Voornaam         " + contact_first_name);
+                Console.WriteLine("    [2] Achternaam       " + contact_last_name);
+                Console.WriteLine("    [3] Email            " + contact_email);
+                Console.WriteLine("    [4] Onderwerp        " + contact_subject);
+                Console.WriteLine("    [5] Bericht          " + contact_message);
+                Console.WriteLine();
+                Console.WriteLine("    [6] Versturen");
+                Console.WriteLine();
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                Console.WriteLine();
+
+                UserInterface.SetMainColor();
+                Console.Write("    Maak een keuze: ");
+                UserInterface.SetDefaultColor();
+                string Input = Console.ReadLine();
+                int Choice = int.Parse(Input);
+
+                switch (Choice)
                 {
-                    ContactInfo.Add(contact_first_name);
-                    break;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("    Onjuiste invoer. Probeer opniew. (U mag alleen letters gebruiken)");
-                    Console.WriteLine();
+                    case 0:
+                        Creating = false;
+                        Console.Clear();
+                        break;
+                    case 1:
+                        while (true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine();
+                            Console.WriteLine("    Wat is uw voornaam?");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write("    ");
+                            contact_first_name = Console.ReadLine();
+                            Console.WriteLine();
+                            if (contact_first_name.All(Char.IsLetter))
+                            {
+                                ContactInfo.Add(contact_first_name);
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (U mag alleen letters gebruiken)");
+                                Console.WriteLine();
+                            }
+                        }
+                        Console.Clear();
+                        break;
+                    case 2:
+                        while (true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine();
+                            Console.WriteLine("    Wat is uw achternaam? (+ tussenvoegsel!)");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write("    ");
+                            contact_last_name = Console.ReadLine();
+                            Console.WriteLine();
+                            if (contact_last_name.All(Char.IsNumber) == false)
+                            {
+                                ContactInfo.Add(contact_last_name);
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (U mag alleen letters gebruiken)");
+                                Console.WriteLine();
+                            }
+                        }
+                        Console.Clear();
+                        break;
+                    case 3:
+                        while (true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine();
+                            Console.WriteLine("    Wat is uw emailadres?");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write("    ");
+                            contact_email = Console.ReadLine();
+                            Console.WriteLine();
+                            if (contact_email.Contains("@") && contact_email.Contains("."))
+                            {
+                                ContactInfo.Add(contact_email);
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
+                                Console.WriteLine();
+                            }
+                        }
+                        Console.Clear();
+                        break;
+                    case 4:
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine();
+                        Console.WriteLine("    Wat is het onderwerp van uw bericht?");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("    ");
+                        contact_subject = Console.ReadLine();
+                        Console.WriteLine();
+                        ContactInfo.Add(contact_subject);
+                        Console.Clear();
+                        break;
+                    case 5:
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine();
+                        Console.WriteLine("    Wat is uw vraag/opmerking?");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("    ");
+                        contact_message = Console.ReadLine();
+                        Console.WriteLine();
+                        ContactInfo.Add(contact_message);
+                        Console.Clear();
+                        break;
+                    case 6:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine();
+                        Console.WriteLine("    Bedankt voor uw bericht! We doen ons best om u binnen 24 uur een antwoord te sturen.");
+                        Console.WriteLine("    Klik op 'ENTER' om het bericht te versturen en terug te gaan naar het hoofdmenu.");
+                        Console.ReadLine();
+                        Creating = false;
+                        Console.Clear();
+                        break;
+                    default:
+                        Console.Clear();
+                        break;
                 }
             }
-
-            while (true)
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("    Wat is uw achternaam?");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.Write("    ");
-                string contact_last_name = Console.ReadLine();
-                Console.WriteLine();
-                if (contact_last_name.All(Char.IsLetter))
-                {
-                    ContactInfo.Add(contact_last_name);
-                    break;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("    Onjuiste invoer. Probeer opniew. (U mag alleen letters gebruiken)");
-                    Console.WriteLine();
-                }
-            }
-
-            while (true)
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("    Wat is uw emailadres?");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.Write("    ");
-                string contact_email = Console.ReadLine();
-                Console.WriteLine();
-                if (contact_email.Contains("@") && contact_email.Contains("."))
-                {
-                    ContactInfo.Add(contact_email);
-                    break;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
-                    Console.WriteLine();
-                }
-            }
-
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    Wat is het onderwerp van uw bericht?");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("    ");
-            string contact_subject = Console.ReadLine();
-            Console.WriteLine();
-            ContactInfo.Add(contact_subject);
-
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    Wat is uw vraag/opmerking?");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("    ");
-            string contact_message = Console.ReadLine();
-            Console.WriteLine();
-            ContactInfo.Add(contact_message);
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("    Bedankt voor uw bericht! We doen ons best om u binnen 24 uur een antwoord te sturen.");
-            Console.WriteLine("    Klik op 'ENTER' om het bericht te versturen en terug te gaan naar het hoofdmenu.");
-            Console.ReadLine();
-
             return ContactInfo;
         }
 
