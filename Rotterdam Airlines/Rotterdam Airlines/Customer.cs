@@ -44,13 +44,13 @@ namespace Rotterdam_Airlines
             return $"{first_name} {last_name}";
         }
 
-        public static void RegisterCustomer(Customer CurrenctUser)
+        public static void RegisterCustomer(Customer CurrentUser)
         {
             bool creating = true;
             while (creating)
             {
                 UserInterface.PrintLogo();
-                UserInterface.PrintRegisterMenu(CurrenctUser);
+                UserInterface.PrintRegisterMenu(CurrentUser);
                 Console.Write("Maak een keuze: ");
                 string register_input = Console.ReadLine();
                 int register_choice = int.Parse(register_input);
@@ -63,35 +63,35 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         UserInterface.PrintLogo();
                         Console.Write("Vul uw email in: ");
-                        CurrenctUser.email = Console.ReadLine();
+                        CurrentUser.email = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 2:
                         Console.Clear();
                         UserInterface.PrintLogo();
                         Console.Write("Vul uw wachtwoord in: ");
-                        CurrenctUser.password = Console.ReadLine();
+                        CurrentUser.password = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 3:
                         Console.Clear();
                         UserInterface.PrintLogo(); ;
                         Console.Write("Vul uw naam in: ");
-                        CurrenctUser.first_name = Console.ReadLine();
+                        CurrentUser.first_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 4:
                         Console.Clear();
                         UserInterface.PrintLogo();
                         Console.Write("Vul uw achternaam in: ");
-                        CurrenctUser.last_name = Console.ReadLine();
+                        CurrentUser.last_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 5:
                         Console.Clear();
                         UserInterface.PrintLogo();
                         Console.Write("Vul uw land in: ");
-                        CurrenctUser.country = Console.ReadLine();
+                        CurrentUser.country = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 6:
@@ -103,11 +103,11 @@ namespace Rotterdam_Airlines
                         Console.Write("Maak een keuze: ");
                         if (Console.ReadLine() == "1")
                         {
-                            CurrenctUser.gender = "man";
+                            CurrentUser.gender = "man";
                         }
                         else
                         {
-                            CurrenctUser.gender = "vrouw";
+                            CurrentUser.gender = "vrouw";
                         }
                         Console.Clear();
                         break;
@@ -115,22 +115,22 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         UserInterface.PrintLogo();
                         Console.Write("Vul uw geboortedatum in als dd-mm-jjjj: ");
-                        CurrenctUser.birth_date = Console.ReadLine();
+                        CurrentUser.birth_date = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 8:
                         Console.Clear();
                         UserInterface.PrintLogo();
                         Console.Write("Vul uw telefoonnummer in: ");
-                        CurrenctUser.phone_number = Console.ReadLine();
+                        CurrentUser.phone_number = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 9:
                         List<Customer> temp = JSON.LoadCustomersJSON();
-                        temp.Add(CurrenctUser);
+                        temp.Add(CurrentUser);
                         Console.WriteLine(temp);
 
-                        CurrenctUser.SetToDefault();
+                        CurrentUser.SetToDefault();
                         JSON.SaveCustomersJSON(temp);
 
                         creating = false;

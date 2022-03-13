@@ -22,7 +22,7 @@ namespace Rotterdam_Airlines
             };
            
             // CREATE DEFAULT USERS
-            Customer CurrenctUser = new Customer(null,null,null,null,null,null,null,null);
+            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null);
             Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             
             while (true)
@@ -187,7 +187,7 @@ namespace Rotterdam_Airlines
                                 break;
                             case 2:
                                 Console.Clear();
-                                Customer.RegisterCustomer(CurrenctUser);
+                                Customer.RegisterCustomer(CurrentUser);
                                 break;
                         }
 

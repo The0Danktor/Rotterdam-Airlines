@@ -64,18 +64,18 @@ namespace Rotterdam_Airlines
             }
         }
 
-        public static void PrintRegisterMenu(Customer CurrenctUser)
+        public static void PrintRegisterMenu(Customer CurrentUser)
         {
             Console.WriteLine($"    0: Terug          ");
             Console.WriteLine();
-            Console.WriteLine($"    1: Email          - {CurrenctUser.email}");
-            Console.WriteLine($"    2: Wachtwoord     - {CurrenctUser.password}");
-            Console.WriteLine($"    3: Naam           - {CurrenctUser.first_name}");
-            Console.WriteLine($"    4: Achternaam     - {CurrenctUser.last_name}");
-            Console.WriteLine($"    5: Land           - {CurrenctUser.country}");
-            Console.WriteLine($"    6: Geslacht       - {CurrenctUser.gender}");
-            Console.WriteLine($"    7: Geboortedatum  - {CurrenctUser.birth_date}");
-            Console.WriteLine($"    8: Telefoonnummer - {CurrenctUser.phone_number}");
+            Console.WriteLine($"    1: Email          - {CurrentUser.email}");
+            Console.WriteLine($"    2: Wachtwoord     - {CurrentUser.password}");
+            Console.WriteLine($"    3: Naam           - {CurrentUser.first_name}");
+            Console.WriteLine($"    4: Achternaam     - {CurrentUser.last_name}");
+            Console.WriteLine($"    5: Land           - {CurrentUser.country}");
+            Console.WriteLine($"    6: Geslacht       - {CurrentUser.gender}");
+            Console.WriteLine($"    7: Geboortedatum  - {CurrentUser.birth_date}");
+            Console.WriteLine($"    8: Telefoonnummer - {CurrentUser.phone_number}");
             Console.WriteLine();
             Console.WriteLine($"    9: Afronden       ");
             Console.WriteLine();
