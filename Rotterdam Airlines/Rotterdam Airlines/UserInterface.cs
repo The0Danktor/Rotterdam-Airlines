@@ -47,26 +47,28 @@ namespace Rotterdam_Airlines
         {
             if (authorized == true)
             {
-                Console.WriteLine("0: Hoofdmenu");
+                Console.WriteLine("    0: Hoofdmenu");
                 Console.WriteLine();
-                Console.WriteLine("1: Gegevens aanpassen");
-                Console.WriteLine("2: Overzicht boekingen");
-                Console.WriteLine("3: Uitloggen");
+                Console.WriteLine("    1: Gegevens aanpassen");
+                Console.WriteLine("    2: Overzicht boekingen");
+                Console.WriteLine("    3: Uitloggen");
             }
             else
             {
-                Console.WriteLine("0: Hoofdmenu");
+                Console.WriteLine("    0: Hoofdmenu");
                 Console.WriteLine();
-                Console.WriteLine("1: Inloggen");
-                Console.WriteLine("2: Registreren");
-                Console.WriteLine("3: Wachtwoord vergeten");
+                Console.WriteLine("    1: Inloggen");
+                Console.WriteLine("    2: Registreren");
+                Console.WriteLine("    3: Wachtwoord vergeten");
                 Console.WriteLine();
             }
         }
 
         public static void PrintRegisterMenu(Customer CurrenctUser)
         {
+            SetMainColor();
             Console.WriteLine($"    0: Terug          ");
+            SetDefaultColor();
             Console.WriteLine();
             Console.WriteLine($"    1: Email          - {CurrenctUser.email}");
             Console.WriteLine($"    2: Wachtwoord     - {CurrenctUser.password}");

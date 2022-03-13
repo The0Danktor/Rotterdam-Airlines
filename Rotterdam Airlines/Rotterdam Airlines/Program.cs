@@ -76,8 +76,9 @@ namespace Rotterdam_Airlines
                     case 6:
                         Console.Clear();
                         UserInterface.PrintLogo();
-
-                        Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines.");
+                        UserInterface.SetMainColor();
+                        Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines."); 
+                        UserInterface.SetDefaultColor();
                         Console.WriteLine();
 
                         UserInterface.PrintAccountMenu(authorized);
