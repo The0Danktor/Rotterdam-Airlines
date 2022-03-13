@@ -62,7 +62,7 @@ namespace Rotterdam_Airlines
             {
                 UserInterface.PrintLogo();
                 UserInterface.PrintRegisterMenu(CurrenctUser);
-                Console.Write("Maak een keuze: ");
+                Console.Write("    Maak een keuze: ");
                 string register_input = Console.ReadLine();
                 int register_choice = int.Parse(register_input);
                 switch (register_choice)
@@ -72,40 +72,41 @@ namespace Rotterdam_Airlines
                         break;
                     case 1:
 
-                        Console.Write("Vul uw email in: ");
+                        Console.Write("    Vul uw email in: ");
                         CurrenctUser.email = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 2:
 
-                        Console.Write("Vul uw wachtwoord in: ");
+                        Console.Write("    Vul uw wachtwoord in: ");
                         CurrenctUser.password = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 3:
 
-                        Console.Write("Vul uw naam in: ");
+                        Console.Write("    Vul uw naam in: ");
                         CurrenctUser.first_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 4:
 
-                        Console.Write("Vul uw achternaam in: ");
-                        CurrenctUser.last_name = Console.ReadLine();
-                        Console.Write("Vul uw toussenvoegsel in (optioneel): ");
+                        Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
                         CurrenctUser.prefix = Console.ReadLine();
+                        Console.WriteLine();
+                        Console.Write("    Vul uw achternaam in: ");
+                        CurrenctUser.last_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 5:
-                        Console.Write("Vul uw land in: ");
+                        Console.Write("    Vul uw land in: ");
                         CurrenctUser.country = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 6:
-                        Console.WriteLine("1: man");
-                        Console.WriteLine("2: vrouw");
+                        Console.WriteLine("    1: man");
+                        Console.WriteLine("    2: vrouw");
                         Console.WriteLine();
-                        Console.Write("Maak een keuze: ");
+                        Console.Write("    Maak een keuze: ");
                         if (Console.ReadLine() == "1")
                         {
                             CurrenctUser.gender = "man";
@@ -117,12 +118,12 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 7:
-                        Console.Write("Vul uw geboortedatum in als dd-mm-jjjj: ");
+                        Console.Write("    Vul uw geboortedatum in als dd-mm-jjjj: ");
                         CurrenctUser.birth_date = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 8:
-                        Console.Write("Vul uw telefoonnummer in: ");
+                        Console.Write("    Vul uw telefoonnummer in: ");
                         CurrenctUser.phone_number = Console.ReadLine();
                         Console.Clear();
                         break;
