@@ -70,6 +70,97 @@ namespace Rotterdam_Airlines
                     // INFORMATIE
                     case 5:
                         Console.Clear();
+                        UserInterface.PrintLogo();
+
+                        Console.WriteLine("    Vind alle Informatie over Rotterdam Airlines.");
+                        Console.WriteLine();
+
+                        UserInterface.PrintInfoMenu();
+
+                        Console.WriteLine();
+                        Console.Write("    Maak een keuze: ");
+
+                        string informatie_input = Console.ReadLine();
+                        int informatie_choice = int.Parse(informatie_input);
+
+                        switch (informatie_choice)
+                        {
+                            case 0:
+                                Console.Clear();
+                                break;
+
+                            case 1:
+                                Console.Clear();
+                                UserInterface.PrintLogo();
+
+                                Console.WriteLine("    Vind alle Informatie over onze faciliteien.");
+                                Console.WriteLine();
+
+                                UserInterface.PrintFaciliteitenMenu();
+
+                                Console.WriteLine();
+                                Console.WriteLine("    Maak een keuze.");
+                                
+
+                                string faciliteiten_input = Console.ReadLine();
+                                int faciliteiten_choice = int.Parse(faciliteiten_input);
+
+                                
+                                switch (faciliteiten_choice)
+                                {
+                                    case 0:
+                                        Console.Clear();
+                                        break;
+
+                                    case 1:
+                                        Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Informatie.PrintWinkelen();
+                                        Console.ReadLine();
+                                        Console.Clear();
+                                        break;
+
+                                    case 2:
+                                        Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Informatie.PrintEetgelegenheden();
+                                        Console.ReadLine();
+                                        Console.Clear();
+                                        break;
+
+                                    case 3:
+                                        Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Informatie.PrintRecreatie();
+                                        Console.ReadLine();
+                                        Console.Clear();
+                                        break;
+
+                                }
+
+                                break;
+
+                            case 2:
+                                Console.Clear();
+                                break;
+
+                            case 3:
+                                Console.Clear();
+                                UserInterface.PrintLogo();
+                                Informatie.PrintOnzeVliegtuigen();
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+
+                            case 4:
+                                Console.Clear();
+                                UserInterface.PrintLogo();
+                                Informatie.PrintFAQ();
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+
+                        }
                         break;
 
                     // ACCOUNT

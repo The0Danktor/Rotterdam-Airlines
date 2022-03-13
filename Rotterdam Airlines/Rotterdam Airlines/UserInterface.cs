@@ -80,6 +80,27 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    9: Afronden       ");
             Console.WriteLine();
         }
+        public static void PrintInfoMenu()
+        {
+            Console.WriteLine($"    [0] Hoofdmenu");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Faciliteiten");
+            Console.WriteLine($"    [2] Laatste nieuws");
+            Console.WriteLine($"    [3] Onze vliegtuigen");
+            Console.WriteLine($"    [4] Veelgestelde vragen");
+
+        }
+
+        public static void PrintFaciliteitenMenu()
+        {
+            Console.WriteLine($"    [0] Hoofdmenu");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Winkelen");
+            Console.WriteLine($"    [2] Eetgelegenheden");
+            Console.WriteLine($"    [3] Recreatie");
+
+        }
+
 
         public static void SetMainColor()
         {
