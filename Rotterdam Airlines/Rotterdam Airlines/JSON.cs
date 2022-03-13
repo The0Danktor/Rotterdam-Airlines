@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -18,6 +19,19 @@ namespace Rotterdam_Airlines
         {
             string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(CustomersJSON, jsonString);
+        }
+
+        static string IdJSON = @"..\..\..\json\id.json";
+        public static Dictionary<string, List<int>> LoadIdJSON()
+        {
+            string JsonString = File.ReadAllText(IdJSON);
+            Dictionary<string, List<int>> objects = JsonConvert.DeserializeObject<Dictionary<string, List<int>>>(JsonString);
+            return objects;
+        }
+        public static void SaveIdJSON(Dictionary<string, List<int>> data)
+        {
+            string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(IdJSON, jsonString);
         }
     }
 }

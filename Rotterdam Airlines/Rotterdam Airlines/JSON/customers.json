@@ -1,22 +1,14 @@
 [
   {
-    "first_name": "Gast",
-    "last_name": "N.V.T",
-    "country": "N.V.T",
-    "gender": "G",
-    "birth_date": "N.V.T",
-    "phone_number": "N.V.T",
-    "email": "N.V.T",
-    "password": "N.V.T"
-  },
-  {
+    "UserId": "l-D5uPKU",
     "first_name": "test",
-    "last_name": "N.V.T",
-    "country": "N.V.T",
-    "gender": "G",
-    "birth_date": "N.V.T",
-    "phone_number": "N.V.T",
-    "email": "N.V.T",
-    "password": "N.V.T"
+    "prefix": "test",
+    "last_name": "test",
+    "country": "test",
+    "gender": "man",
+    "birth_date": "test",
+    "phone_number": "test",
+    "email": "test",
+    "password": "test"
   }
 ]
