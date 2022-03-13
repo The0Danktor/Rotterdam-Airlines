@@ -22,7 +22,7 @@ namespace Rotterdam_Airlines
             };
            
             // CREATE DEFAULT USERS
-            Customer CurrenctUser = new Customer(null,null,null,null,null,null,null,null,null);
+            Customer CurrenctUser = new Customer(null,null,null,null,null,null,null,null,null,null);
             Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             
             while (true)

@@ -31,15 +31,15 @@ namespace Rotterdam_Airlines
         // TO THE CONSOLE.
         public static void PrintMainMenu()
         {
-            Console.WriteLine("    1: Vlucht boeken");
-            Console.WriteLine("    2: Overzicht boekingen");
-            Console.WriteLine("    3: Mededelingen");
-            Console.WriteLine("    4: Aanbiedingen");
-            Console.WriteLine("    5: Informatie");
+            Console.WriteLine("    [1] Vlucht boeken");
+            Console.WriteLine("    [2] Overzicht boekingen");
+            Console.WriteLine("    [3] Mededelingen");
+            Console.WriteLine("    [4] Aanbiedingen");
+            Console.WriteLine("    [5] Informatie");
             Console.WriteLine();
-            Console.WriteLine("    6: Account");
-            Console.WriteLine("    7: Contact");
-            Console.WriteLine("    8: Afsluiten");
+            Console.WriteLine("    [6] Account");
+            Console.WriteLine("    [7] Contact");
+            Console.WriteLine("    [8] Afsluiten");
             Console.WriteLine();
         }
 
@@ -47,39 +47,37 @@ namespace Rotterdam_Airlines
         {
             if (authorized == true)
             {
-                Console.WriteLine("    0: Hoofdmenu");
+                Console.WriteLine("    [0] Hoofdmenu");
                 Console.WriteLine();
-                Console.WriteLine("    1: Gegevens aanpassen");
-                Console.WriteLine("    2: Overzicht boekingen");
-                Console.WriteLine("    3: Uitloggen");
+                Console.WriteLine("    [1] Gegevens aanpassen");
+                Console.WriteLine("    [2] Overzicht boekingen");
+                Console.WriteLine("    [3] Uitloggen");
             }
             else
             {
-                Console.WriteLine("    0: Hoofdmenu");
+                Console.WriteLine("    [0] Hoofdmenu");
                 Console.WriteLine();
-                Console.WriteLine("    1: Inloggen");
-                Console.WriteLine("    2: Registreren");
-                Console.WriteLine("    3: Wachtwoord vergeten");
+                Console.WriteLine("    [1] Inloggen");
+                Console.WriteLine("    [2] Registreren");
+                Console.WriteLine("    [3] Wachtwoord vergeten");
                 Console.WriteLine();
             }
         }
 
         public static void PrintRegisterMenu(Customer CurrenctUser)
         {
-            SetMainColor();
-            Console.WriteLine($"    0: Terug          ");
-            SetDefaultColor();
+            Console.WriteLine($"    [0] Terug          ");
             Console.WriteLine();
-            Console.WriteLine($"    1: Email          - {CurrenctUser.email}");
-            Console.WriteLine($"    2: Wachtwoord     - {CurrenctUser.password}");
-            Console.WriteLine($"    3: Naam           - {CurrenctUser.first_name}");
-            Console.WriteLine($"    4: Achternaam     - {CurrenctUser.last_name}");
-            Console.WriteLine($"    5: Land           - {CurrenctUser.country}");
-            Console.WriteLine($"    6: Geslacht       - {CurrenctUser.gender}");
-            Console.WriteLine($"    7: Geboortedatum  - {CurrenctUser.birth_date}");
-            Console.WriteLine($"    8: Telefoonnummer - {CurrenctUser.phone_number}");
+            Console.WriteLine($"    [1] Email                          - {CurrenctUser.email}");
+            Console.WriteLine($"    [2] Wachtwoord                     - {CurrenctUser.password}");
+            Console.WriteLine($"    [3] Naam                           - {CurrenctUser.first_name}");
+            Console.WriteLine($"    [4] Achternaam en tussenvoegsel    - {CurrenctUser.prefix} {CurrenctUser.last_name}");
+            Console.WriteLine($"    [5] Land                           - {CurrenctUser.country}");
+            Console.WriteLine($"    [6] Geslacht                       - {CurrenctUser.gender}");
+            Console.WriteLine($"    [7] Geboortedatum                  - {CurrenctUser.birth_date}");
+            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrenctUser.phone_number}");
             Console.WriteLine();
-            Console.WriteLine($"    9: Afronden       ");
+            Console.WriteLine($"    [9] Afronden       ");
             Console.WriteLine();
         }
 

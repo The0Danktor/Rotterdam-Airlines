@@ -10,6 +10,7 @@ namespace Rotterdam_Airlines
     {
         public string UserId { get; set; }
         public string first_name { get; set; }
+        public string prefix { get; set; }
         public string last_name { get; set; }
         public string country { get; set; }
         public string gender { get; set; }
@@ -17,10 +18,11 @@ namespace Rotterdam_Airlines
         public string phone_number { get; set; }
 
 
-        public Customer(string UserId, string email, string password, string first_name, string last_name, string country, string gender, string birth_date, string phone_number) : base(email, password)
+        public Customer(string UserId, string email, string password, string first_name, string prefix ,string last_name, string country, string gender, string birth_date, string phone_number) : base(email, password)
         {
             this.UserId = UserId;
             this.first_name = first_name;
+            this.prefix = prefix;
             this.last_name = last_name;
             this.country = country;
             this.gender = gender;
@@ -34,6 +36,7 @@ namespace Rotterdam_Airlines
         {
             this.UserId = null;
             this.first_name = null;
+            this.prefix=null;
             this.last_name = null;
             this.country = null;
             this.gender = null;
@@ -68,43 +71,37 @@ namespace Rotterdam_Airlines
                         creating = false;
                         break;
                     case 1:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
+
                         Console.Write("Vul uw email in: ");
                         CurrenctUser.email = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 2:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
+
                         Console.Write("Vul uw wachtwoord in: ");
                         CurrenctUser.password = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 3:
-                        Console.Clear();
-                        UserInterface.PrintLogo(); ;
+
                         Console.Write("Vul uw naam in: ");
                         CurrenctUser.first_name = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 4:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
+
                         Console.Write("Vul uw achternaam in: ");
                         CurrenctUser.last_name = Console.ReadLine();
+                        Console.Write("Vul uw toussenvoegsel in (optioneel): ");
+                        CurrenctUser.prefix = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 5:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
                         Console.Write("Vul uw land in: ");
                         CurrenctUser.country = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 6:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
                         Console.WriteLine("1: man");
                         Console.WriteLine("2: vrouw");
                         Console.WriteLine();
@@ -120,15 +117,11 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 7:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
                         Console.Write("Vul uw geboortedatum in als dd-mm-jjjj: ");
                         CurrenctUser.birth_date = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 8:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
                         Console.Write("Vul uw telefoonnummer in: ");
                         CurrenctUser.phone_number = Console.ReadLine();
                         Console.Clear();
@@ -136,7 +129,7 @@ namespace Rotterdam_Airlines
                     case 9:
                         List<Customer> temp = JSON.LoadCustomersJSON();
                         temp.Add(CurrenctUser);
-                        Console.WriteLine(temp);
+                        CurrenctUser.GetNewUserID();
                         JSON.SaveCustomersJSON(temp);
                         CurrenctUser.SetToDefault();
 
