@@ -70,19 +70,29 @@ namespace Rotterdam_Airlines
             this.UserId = IdHandler.getID();
         }
 
-        static public string hiddenpassword() 
+        static public string hiddenpassword(Customer CurrentUser ,string question) 
         {
             string test = "";
             string hidden = "";
             while (true) 
-            { 
-                
+            {
                 var temp = Console.ReadKey(true);
                 if (temp.Key != ConsoleKey.Enter && temp.Key != ConsoleKey.Backspace)
                 {
                     test += temp.KeyChar;
                     hidden += "*";
                     Console.Clear();
+                    UserInterface.PrintLogo();
+                    UserInterface.SetMainColor();
+                    Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                    Console.WriteLine("    ────────────────────────────────────────────────────");
+                    Console.WriteLine();
+                    UserInterface.SetDefaultColor();
+                    UserInterface.PrintRegisterMenu(CurrentUser);
+                    Console.Write("    Maak een keuze: ");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.Write(question);
                     Console.WriteLine(hidden);
                 }
                 else if (temp.Key == ConsoleKey.Backspace)
@@ -92,14 +102,22 @@ namespace Rotterdam_Airlines
                         test = test.Remove(test.Length - 1);
                         hidden = hidden.Remove(hidden.Length - 1);
                         Console.Clear();
+                        UserInterface.PrintLogo();
+                        UserInterface.SetMainColor();
+                        Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                        Console.WriteLine("    ────────────────────────────────────────────────────");
+                        Console.WriteLine();
+                        UserInterface.SetDefaultColor();
+                        UserInterface.PrintRegisterMenu(CurrentUser);
+                        Console.Write("    Maak een keuze: ");
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.Write(question);
                         Console.WriteLine(hidden);
                     }
                 }
                 else
                 {
-                    Console.WriteLine();
-                    Console.WriteLine(test);
-                    Console.ReadLine();
                     Console.Clear();
                     return test;
 
@@ -150,21 +168,68 @@ namespace Rotterdam_Airlines
                         }
                         break;
                     case 2:
+                        string TempPassword = "";
+                        string Temp2Password = "";
                         while (true)
                         {
                             Console.WriteLine();
                             Console.Write("    Vul uw wachtwoord in: ");
-                            string TempPassword = /*hiddenpassword()*/ Console.ReadLine();
+                            TempPassword = hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ");
                             if (TempPassword.Length >= 8) 
+                            {
+                                break;
+                            }
+                            else 
+                            {
+                                UserInterface.PrintLogo();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                                Console.WriteLine("    ────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetDefaultColor();
+                                UserInterface.PrintRegisterMenu(CurrentUser);
+                                Console.Write("    Maak een keuze: ");
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
+                        while (true)
+                        {
+                            UserInterface.PrintLogo();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                            Console.WriteLine("    ────────────────────────────────────────────────────");
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            UserInterface.PrintRegisterMenu(CurrentUser);
+                            Console.Write("    Maak een keuze: ");
+                            Console.WriteLine();
+                            Console.WriteLine();
+                            Console.Write("    Vul het zelfde wachtwoord in: ");
+                            Temp2Password = hiddenpassword(CurrentUser, "    Vul het zelfde wachtwoord in: ");
+                            if (TempPassword == Temp2Password)
                             {
                                 CurrentUser.password = TempPassword;
                                 Console.Clear();
                                 break;
                             }
-                            else 
+                            else
                             {
+                                UserInterface.PrintLogo();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                                Console.WriteLine("    ────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetDefaultColor();
+                                UserInterface.PrintRegisterMenu(CurrentUser);
+                                Console.Write("    Maak een keuze: ");
+                                Console.WriteLine();
+                                Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Het ingevoerde Wachtwoorden waren niet het zelfde)");
                                 UserInterface.SetDefaultColor();
                             }
                         }
