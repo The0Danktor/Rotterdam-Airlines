@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Rotterdam_Airlines
 {
@@ -32,6 +33,19 @@ namespace Rotterdam_Airlines
             this.password = password;
         }
 
+        public bool CheckNull()
+        {
+            return this.UserId != null &&
+                   this.first_name != null &&
+                   this.prefix != null &&
+                   this.last_name != null &&
+                   this.country != null &&
+                   this.gender != null &&
+                   this.birth_date != null &&
+                   this.phone_number != null &&
+                   this.email != null &&
+                   this.password != null;
+        }
         public void SetToDefault()
         {
             this.UserId = null;
@@ -54,7 +68,64 @@ namespace Rotterdam_Airlines
         private void GetNewUserID()
         {
             this.UserId = IdHandler.getID();
-        }   
+        }
+
+        static public string hiddenpassword(Customer CurrentUser ,string question) 
+        {
+            string test = "";
+            string hidden = "";
+            while (true) 
+            {
+                var temp = Console.ReadKey(true);
+                if (temp.Key != ConsoleKey.Enter && temp.Key != ConsoleKey.Backspace)
+                {
+                    test += temp.KeyChar;
+                    hidden += "*";
+                    /*Console.Clear();
+                    UserInterface.PrintLogo();
+                    UserInterface.SetMainColor();
+                    Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                    Console.WriteLine("    ────────────────────────────────────────────────────");
+                    Console.WriteLine();
+                    UserInterface.SetDefaultColor();
+                    UserInterface.PrintRegisterMenu(CurrentUser);
+                    Console.Write("    Maak een keuze: ");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.Write(question);
+                    Console.WriteLine(hidden);*/
+                    Console.Write("*");
+                }
+                else if (temp.Key == ConsoleKey.Backspace)
+                {
+                    if (test.Length > 0)
+                    {
+                        test = test.Remove(test.Length - 1);
+                        hidden = hidden.Remove(hidden.Length - 1);
+                        Console.Clear();
+                        UserInterface.PrintLogo();
+                        UserInterface.SetMainColor();
+                        Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                        Console.WriteLine("    ────────────────────────────────────────────────────");
+                        Console.WriteLine();
+                        UserInterface.SetDefaultColor();
+                        UserInterface.PrintRegisterMenu(CurrentUser);
+                        Console.Write("    Maak een keuze: ");
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.Write(question);
+                        Console.Write(hidden);
+                    }
+                }
+                else
+                {
+                    Console.Clear();
+                    return test;
+
+                }
+            }
+        }
+
         public static void RegisterCustomer(Customer CurrentUser)
 
         {
@@ -62,6 +133,11 @@ namespace Rotterdam_Airlines
             while (creating)
             {
                 UserInterface.PrintLogo();
+                UserInterface.SetMainColor();
+                Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine();
+                UserInterface.SetDefaultColor();
                 UserInterface.PrintRegisterMenu(CurrentUser);
                 Console.Write("    Maak een keuze: ");
 
@@ -73,30 +149,138 @@ namespace Rotterdam_Airlines
                         creating = false;
                         break;
                     case 1:
-                        Console.Write("    Vul uw email in: ");
-                        CurrentUser.email = Console.ReadLine();
-                        Console.Clear();
+                        while (true)
+                        {
+                            Console.WriteLine();
+                            Console.Write("    Vul uw email in: ");
+                            string TempEmail = Console.ReadLine();
+                            if (TempEmail.Contains("@") && TempEmail.Contains("."))
+                            {
+                                CurrentUser.email = TempEmail;
+                                Console.Clear();
+                                break ;
+                            }
+                            else 
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
                         break;
                     case 2:
-
-                        Console.Write("    Vul uw wachtwoord in: ");
-                        CurrentUser.password = Console.ReadLine();
-                        Console.Clear();
+                        string TempPassword = "";
+                        string Temp2Password = "";
+                        while (true)
+                        {
+                            Console.WriteLine();
+                            Console.Write("    Vul uw wachtwoord in: ");
+                            TempPassword = hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ");
+                            if (TempPassword.Length >= 8) 
+                            {
+                                break;
+                            }
+                            else 
+                            {
+                                UserInterface.PrintLogo();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                                Console.WriteLine("    ────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetDefaultColor();
+                                UserInterface.PrintRegisterMenu(CurrentUser);
+                                Console.Write("    Maak een keuze: ");
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
+                        while (true)
+                        {
+                            UserInterface.PrintLogo();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+                            Console.WriteLine("    ────────────────────────────────────────────────────");
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            UserInterface.PrintRegisterMenu(CurrentUser);
+                            Console.Write("    Maak een keuze: ");
+                            Console.WriteLine();
+                            Console.WriteLine();
+                            Console.Write("    Vul het zelfde wachtwoord in: ");
+                            Temp2Password = hiddenpassword(CurrentUser, "    Vul het zelfde wachtwoord in: ");
+                            if (TempPassword == Temp2Password)
+                            {
+                                CurrentUser.password = TempPassword;
+                                Console.Clear();
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Het ingevoerde Wachtwoorden waren niet het zelfde)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
                         break;
                     case 3:
-
-                        Console.Write("    Vul uw naam in: ");
-                        CurrentUser.first_name = Console.ReadLine();
-                        Console.Clear();
+                        while(true)
+                        {
+                            Console.WriteLine();
+                            Console.Write("    Vul uw naam in: ");
+                            string TempFirstName = Console.ReadLine();
+                            if (TempFirstName.All(char.IsLetter))
+                            { 
+                                CurrentUser.first_name = TempFirstName;
+                                Console.Clear();
+                                break;
+                            }
+                            else 
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
                         break;
                     case 4:
-
-                        Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
-                        CurrentUser.prefix = Console.ReadLine();
-                        Console.WriteLine();
-                        Console.Write("    Vul uw achternaam in: ");
-                        CurrentUser.last_name = Console.ReadLine();
-                        Console.Clear();
+                        while (true)
+                        {
+                            Console.WriteLine();
+                            Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
+                            string TempPrefix = Console.ReadLine();
+                            if (!TempPrefix.All(char.IsNumber))
+                            { 
+                                CurrentUser.prefix = TempPrefix;
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
+                        while (true) 
+                        { 
+                            Console.WriteLine();
+                            Console.Write("    Vul uw achternaam in: ");
+                            string TempLastName = Console.ReadLine();
+                            if (TempLastName.All(char.IsLetter)) 
+                            { 
+                                CurrentUser.last_name = TempLastName;
+                                Console.Clear();
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
                         break;
                     case 5:
                         Console.Write("    Vul uw land in: ");
@@ -105,39 +289,113 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 6:
-                        Console.WriteLine("    1: man");
-                        Console.WriteLine("    2: vrouw");
-                        Console.WriteLine();
-                        Console.Write("    Maak een keuze: ");
-                        if (Console.ReadLine() == "1")
+                        while(true)
                         {
-                            CurrentUser.gender = "man";
+                            Console.WriteLine("    [1] man");
+                            Console.WriteLine("    [2] vrouw");
+                            Console.WriteLine("    [3] overig");
+                            Console.WriteLine();
+                            Console.Write("    Maak een keuze: ");
+                            string TempInput = Console.ReadLine();
+                            if (TempInput == "1")
+                            {
+                                CurrentUser.gender = "man";
+                                Console.Clear();
+                                break;
+                            }
+                            else if(TempInput == "2")
+                            {
+                                CurrentUser.gender = "vrouw";
+                                Console.Clear();
+                                break;
+                            }
+                            else if(TempInput == "3")
+                            {
+                                CurrentUser.gender = "overig";
+                                Console.Clear();
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor= ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
+                        break;
+                    case 7:
+                        while(true)
+                        {
+                            Console.WriteLine();
+                            Console.Write("    Vul uw geboortedatum in als dd-mm-jjjj: ");
+                            string TempBirthDate = Console.ReadLine();
+                            var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
+                            DateTime scheduleDate;
+                            bool validDate = DateTime.TryParseExact(
+                            TempBirthDate,
+                            dateFormats,
+                            DateTimeFormatInfo.InvariantInfo,
+                            DateTimeStyles.None,
+                            out scheduleDate);
+                            DateTime today = DateTime.Today;
+                            if (validDate) 
+                            {
+                                if (today.Year - scheduleDate.Year >= 18)
+                                {
+                                    CurrentUser.birth_date = TempBirthDate;
+                                    Console.Clear();
+                                    break;
+                                }
+                                else
+                                { 
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken.");
+                                    UserInterface.SetDefaultColor();
+                                }
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
+                        break;
+                    case 8:
+                        while (true) 
+                        { 
+                            Console.Write("    Vul uw telefoonnummer in: ");
+                            string TempPhoneNumber = Console.ReadLine();
+                            if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
+                            {
+                                CurrentUser.phone_number = TempPhoneNumber;
+                                Console.Clear();
+                                break;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
+                                UserInterface.SetDefaultColor();
+                            }
+                        }
+                        break;
+                    case 9:
+                        if (CurrentUser.CheckNull()) 
+                        {
+                            List<Customer> temp = JSON.LoadCustomersJSON();
+                            temp.Add(CurrentUser);
+                            CurrentUser.GetNewUserID();
+                            JSON.SaveCustomersJSON(temp);
+                            CurrentUser.SetToDefault();
+                            creating = false;
                         }
                         else
                         {
-                            CurrentUser.gender = "vrouw";
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("    Niet alle velden zijn ingevuld.");
                         }
-                        Console.Clear();
-                        break;
-                    case 7:
-                        Console.Write("    Vul uw geboortedatum in als dd-mm-jjjj: ");
-                        CurrentUser.birth_date = Console.ReadLine();
-                        Console.Clear();
-                        break;
-                    case 8:
-                        Console.Write("    Vul uw telefoonnummer in: ");
-                        CurrentUser.phone_number = Console.ReadLine();
-
-                        Console.Clear();
-                        break;
-                    case 9:
-                        List<Customer> temp = JSON.LoadCustomersJSON();
-                        temp.Add(CurrentUser);
-                        CurrentUser.GetNewUserID();
-                        JSON.SaveCustomersJSON(temp);
-                        CurrentUser.SetToDefault();
-
-                        creating = false;
                         break;
                 }
             }
