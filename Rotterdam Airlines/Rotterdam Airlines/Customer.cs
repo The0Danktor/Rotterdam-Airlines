@@ -68,7 +68,45 @@ namespace Rotterdam_Airlines
         private void GetNewUserID()
         {
             this.UserId = IdHandler.getID();
-        }   
+        }
+
+        static public string hiddenpassword() 
+        {
+            string test = "";
+            string hidden = "";
+            while (true) 
+            { 
+                
+                var temp = Console.ReadKey(true);
+                if (temp.Key != ConsoleKey.Enter && temp.Key != ConsoleKey.Backspace)
+                {
+                    test += temp.KeyChar;
+                    hidden += "*";
+                    Console.Clear();
+                    Console.WriteLine(hidden);
+                }
+                else if (temp.Key == ConsoleKey.Backspace)
+                {
+                    if (test.Length > 0)
+                    {
+                        test = test.Remove(test.Length - 1);
+                        hidden = hidden.Remove(hidden.Length - 1);
+                        Console.Clear();
+                        Console.WriteLine(hidden);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(test);
+                    Console.ReadLine();
+                    Console.Clear();
+                    return test;
+
+                }
+            }
+        }
+
         public static void RegisterCustomer(Customer CurrentUser)
 
         {
@@ -116,7 +154,7 @@ namespace Rotterdam_Airlines
                         {
                             Console.WriteLine();
                             Console.Write("    Vul uw wachtwoord in: ");
-                            string TempPassword = Console.ReadLine();
+                            string TempPassword = /*hiddenpassword()*/ Console.ReadLine();
                             if (TempPassword.Length >= 8) 
                             {
                                 CurrentUser.password = TempPassword;
