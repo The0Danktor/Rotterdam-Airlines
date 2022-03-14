@@ -300,8 +300,9 @@ namespace Rotterdam_Airlines
                     case 6:
                         while(true)
                         {
-                            Console.WriteLine("    1: man");
-                            Console.WriteLine("    2: vrouw");
+                            Console.WriteLine("    [1] man");
+                            Console.WriteLine("    [2] vrouw");
+                            Console.WriteLine("    [3} overig");
                             Console.WriteLine();
                             Console.Write("    Maak een keuze: ");
                             string TempInput = Console.ReadLine();
@@ -314,6 +315,12 @@ namespace Rotterdam_Airlines
                             else if(TempInput == "2")
                             {
                                 CurrentUser.gender = "vrouw";
+                                Console.Clear();
+                                break;
+                            }
+                            else if(TempInput == "3")
+                            {
+                                CurrentUser.gender = "overig";
                                 Console.Clear();
                                 break;
                             }
