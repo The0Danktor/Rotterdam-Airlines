@@ -33,6 +33,19 @@ namespace Rotterdam_Airlines
             this.password = password;
         }
 
+        public bool CheckNull()
+        {
+            return this.UserId != null &&
+                   this.first_name != null &&
+                   this.prefix != null &&
+                   this.last_name != null &&
+                   this.country != null &&
+                   this.gender != null &&
+                   this.birth_date != null &&
+                   this.phone_number != null &&
+                   this.email != null &&
+                   this.password != null;
+        }
         public void SetToDefault()
         {
             this.UserId = null;
@@ -223,11 +236,21 @@ namespace Rotterdam_Airlines
                             DateTimeFormatInfo.InvariantInfo,
                             DateTimeStyles.None,
                             out scheduleDate);
-                            if (validDate) 
-                            { 
-                                CurrentUser.birth_date = TempBirthDate;
-                                Console.Clear();
-                                break;
+                            DateTime today = DateTime.Today;
+                            if (validDate && today.Year - scheduleDate.Year >= 18) 
+                            {
+                                if (today.Year - scheduleDate.Year >= 18)
+                                {
+                                    CurrentUser.birth_date = TempBirthDate;
+                                    Console.Clear();
+                                    break;
+                                }
+                                else
+                                { 
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken.");
+                                    UserInterface.SetDefaultColor();
+                                }
                             }
                             else
                             {
@@ -257,13 +280,21 @@ namespace Rotterdam_Airlines
                         }
                         break;
                     case 9:
-                        List<Customer> temp = JSON.LoadCustomersJSON();
-                        temp.Add(CurrentUser);
-                        CurrentUser.GetNewUserID();
-                        JSON.SaveCustomersJSON(temp);
-                        CurrentUser.SetToDefault();
-
-                        creating = false;
+                        if (CurrentUser.CheckNull()) 
+                        {
+                            List<Customer> temp = JSON.LoadCustomersJSON();
+                            temp.Add(CurrentUser);
+                            CurrentUser.GetNewUserID();
+                            JSON.SaveCustomersJSON(temp);
+                            CurrentUser.SetToDefault();
+                            creating = false;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("    Niet alle velden zijn ingevuld.");
+                        }
                         break;
                 }
             }
