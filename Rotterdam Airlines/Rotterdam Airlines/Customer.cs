@@ -17,11 +17,12 @@ namespace Rotterdam_Airlines
         public string gender { get; set; }
         public string birth_date { get; set; }
         public string phone_number { get; set; }
-
-
-        public Customer(string UserId, string email, string password, string first_name, string prefix ,string last_name, string country, string gender, string birth_date, string phone_number) : base(email, password)
+        List<string>  BookingList { get; set; }
+        public Customer(string UserId, string email, string password, string first_name, string prefix ,string last_name, string country, string gender, string birth_date, string phone_number,List<string>BookingList = null) : base(email, password)
         {
             this.UserId = UserId;
+            this.email = email;
+            this.password = password;
             this.first_name = first_name;
             this.prefix = prefix;
             this.last_name = last_name;
@@ -29,8 +30,7 @@ namespace Rotterdam_Airlines
             this.gender = gender;
             this.birth_date = birth_date;
             this.phone_number = phone_number;
-            this.email = email;
-            this.password = password;
+            this.BookingList = BookingList;
         }
 
         public bool CheckNull()
