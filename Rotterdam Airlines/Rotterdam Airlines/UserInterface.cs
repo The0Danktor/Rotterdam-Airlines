@@ -74,7 +74,7 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    [1] Email                          - {CurrentUser.email}");
             Console.WriteLine($"    [2] Wachtwoord                     - {CurrentUser.password}");
             Console.WriteLine($"    [3] Naam                           - {CurrentUser.first_name}");
-            Console.WriteLine($"    [4] Achternaam en tussenvoegsel    - {CurrentUser.prefix} {CurrentUser.last_name}");
+            Console.WriteLine($"    [4] Achternaam en tussenvoegsel    - {CurrentUser.last_name},{CurrentUser.prefix}");
             Console.WriteLine($"    [5] Land                           - {CurrentUser.country}");
             Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.gender}");
             Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.birth_date}");

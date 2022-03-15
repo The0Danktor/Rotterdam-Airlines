@@ -80,19 +80,6 @@ namespace Rotterdam_Airlines
                 {
                     test += temp.KeyChar;
                     hidden += "*";
-                    /*Console.Clear();
-                    UserInterface.PrintLogo();
-                    UserInterface.SetMainColor();
-                    Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
-                    Console.WriteLine("    ────────────────────────────────────────────────────");
-                    Console.WriteLine();
-                    UserInterface.SetDefaultColor();
-                    UserInterface.PrintRegisterMenu(CurrentUser);
-                    Console.Write("    Maak een keuze: ");
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.Write(question);
-                    Console.WriteLine(hidden);*/
                     Console.Write("*");
                 }
                 else if (temp.Key == ConsoleKey.Backspace)
