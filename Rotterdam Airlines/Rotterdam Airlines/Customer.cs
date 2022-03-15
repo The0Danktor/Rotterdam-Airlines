@@ -35,8 +35,7 @@ namespace Rotterdam_Airlines
 
         public bool CheckNull()
         {
-            return this.UserId != null &&
-                   this.first_name != null &&
+            return this.first_name != null &&
                    this.prefix != null &&
                    this.last_name != null &&
                    this.country != null &&
