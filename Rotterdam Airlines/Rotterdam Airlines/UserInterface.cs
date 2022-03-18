@@ -31,15 +31,17 @@ namespace Rotterdam_Airlines
 
         // PRINTS ALL THE OPTIONS OF THE MAIN MENU
         // TO THE CONSOLE.
-        public static void PrintMainMenu()
+        public static void PrintMainMenu(bool authorized)
         {
+            
             Console.WriteLine("    [1] Vlucht boeken");
             Console.WriteLine("    [2] Overzicht boekingen");
             Console.WriteLine("    [3] Mededelingen");
             Console.WriteLine("    [4] Aanbiedingen");
             Console.WriteLine("    [5] Informatie");
             Console.WriteLine();
-            Console.WriteLine("    [6] Account");
+            if (authorized) {Console.WriteLine("    [6] Admin Menu");}
+            else { Console.WriteLine("    [6] Account");}
             Console.WriteLine("    [7] Contact");
             Console.WriteLine("    [8] Afsluiten");
             Console.WriteLine();
@@ -50,6 +52,12 @@ namespace Rotterdam_Airlines
             UserInterface.SetDefaultColor();
             if (authorized == true)
             {
+                PrintLogo();
+                SetMainColor();
+                Console.WriteLine("    Rotterdam Airlines | Admin menu");
+                Console.WriteLine("    ────────────────────────────────────────────────────");
+                SetDefaultColor();
+                Console.WriteLine();
                 Console.WriteLine("    [0] Hoofdmenu");
                 Console.WriteLine();
                 Console.WriteLine("    [1] Gegevens aanpassen");
@@ -58,6 +66,12 @@ namespace Rotterdam_Airlines
             }
             else
             {
+                PrintLogo();
+                SetMainColor();
+                Console.WriteLine("    Rotterdam Airlines | Account");
+                Console.WriteLine("    ────────────────────────────────────────────────────");
+                SetDefaultColor();
+                Console.WriteLine();
                 Console.WriteLine("    [0] Hoofdmenu");
                 Console.WriteLine();
                 Console.WriteLine("    [1] Inloggen");

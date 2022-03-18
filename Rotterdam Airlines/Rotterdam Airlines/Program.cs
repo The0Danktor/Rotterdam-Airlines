@@ -38,7 +38,7 @@ namespace Rotterdam_Airlines
                 Console.WriteLine();
 
                 // PRINT MAIN MENU
-                UserInterface.PrintMainMenu();
+                UserInterface.PrintMainMenu(authorized);
 
                 // HANDLE USER INPUT
                 Console.WriteLine("    ────────────────────────────────────────────────────");
@@ -170,12 +170,6 @@ namespace Rotterdam_Airlines
                     // ACCOUNT
                     case 6:
                         Console.Clear();
-                        UserInterface.PrintLogo();
-                        UserInterface.SetMainColor();
-                        Console.WriteLine("    Rotterdam Airlines | Account");
-                        Console.WriteLine("    ────────────────────────────────────────────────────");
-                        Console.WriteLine();
-
                         UserInterface.PrintAccountMenu(authorized);
                         Console.WriteLine("    ────────────────────────────────────────────────────");
                         Console.WriteLine();
@@ -199,6 +193,11 @@ namespace Rotterdam_Airlines
                                 if (Email == AdminUser.email) 
                                 {
                                     UserFound = true;
+                                    string Password = Console.ReadLine();
+                                    if (AdminUser.password == Password)
+                                    {
+                                        authorized = true; 
+                                    }
                                 }
                                 else 
                                 { 
