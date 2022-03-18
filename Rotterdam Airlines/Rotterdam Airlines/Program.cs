@@ -116,7 +116,6 @@ namespace Rotterdam_Airlines
                                     case 0:
                                         Console.Clear();
                                         break;
-
                                     case 1:
                                         Console.Clear();
                                         UserInterface.PrintLogo();
@@ -189,14 +188,45 @@ namespace Rotterdam_Airlines
                         switch(account_choice)
                         {
                             case 0:
-                                Console.Clear();
+                                Console.WriteLine("1");
                                 break;
                             case 1:
-                                Console.WriteLine("1");
+                                Console.Clear();
+                                Console.Write("Vull uw email in: ");
+                                string Email = Console.ReadLine();
+                                List<Customer>Customers = JSON.LoadCustomersJSON();
+                                bool UserFound = false;
+                                if (Email == AdminUser.email) 
+                                {
+                                    UserFound = true;
+                                }
+                                else 
+                                { 
+                                    foreach (Customer customer in Customers){
+                                        if (Email == customer.email) {
+                                            Customer TempUser = customer;
+                                            UserFound = true;
+                                        }
+                                    }
+                                }
+                                if (UserFound) 
+                                {
+                                    Console.WriteLine("hallo");
+                                }
+                                else
+                                {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("Geen gebruiker gevonden met deze emailadress");
+                                    UserInterface.SetDefaultColor();
+                                }
+                                Console.ReadLine();
                                 break;
                             case 2:
                                 Console.Clear();
                                 Customer.RegisterCustomer(CurrentUser);
+                                break;
+                            case 3:
+                                Console.Clear();
                                 break;
                         }
 
