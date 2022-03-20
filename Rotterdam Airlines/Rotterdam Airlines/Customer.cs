@@ -69,7 +69,7 @@ namespace Rotterdam_Airlines
             this.UserId = IdHandler.getID();
         }
 
-        static public string hiddenpassword(Customer CurrentUser ,string question) 
+        static public string hiddenpassword(Customer CurrentUser, string question) 
         {
             string test = "";
             string hidden = "";

@@ -16,7 +16,8 @@ namespace Rotterdam_Airlines
         private string Destination { set; get; }
         private DateTime Departure { set; get; }
         private string Gate { set; get; }
-        public static List<Flight> Flights = new List<Flight>();
+        private bool Cancelled = false;
+    public static List<Flight> Flights = new List<Flight>();
 
         public Flight(string flightCode, string flightNumber, string planeType, string airline, string destination, DateTime departure, string gate)
         {
