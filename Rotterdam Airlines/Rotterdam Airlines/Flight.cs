@@ -29,5 +29,10 @@ namespace Rotterdam_Airlines
             this.Gate = gate;
             Flights.Add(this);
         }
+
+        public static List<Flight> GetFlights()
+        {
+            return Flights;
+        }
     }
 }

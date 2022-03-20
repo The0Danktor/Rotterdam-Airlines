@@ -398,7 +398,278 @@ namespace Rotterdam_Airlines
                         break;
                 }
             }
+        }
 
+        public static string[][] GenerateBookingSteps()
+        {
+            string[][] GenerateBookingSteps =
+            {
+                new string[] { "Vlucht Selecteren", "X" },
+                new string[] { "Persoonsgegevens", "X" },
+                new string[] { "Contactgegevens", "X" },
+                new string[] { "Bagage", "X" },
+                new string[] { "Stoelen", "X" },
+                new string[] { "Bevestigen", "X" }
+            };
+
+            return GenerateBookingSteps;
+        }
+
+        public static void BookFlight(Customer Customer)
+        {
+            bool BookingFlight = true;
+            string[][] BookingSteps = GenerateBookingSteps();
+
+            // BOOKING INFO
+            Flight BookingSelectedFlight;
+            string[] BookingSelectedLuggage;
+            List<BookingPerson> BookingPersonData = new List<BookingPerson>();
+            Customer BookingCustomer = Customer;
+
+            // FILTERS
+            string FilterDestination = "";
+            string FilterDate = "";
+            int FilterPersons = 1;
+            double FilterPrice = 1000;
+
+            void PrintBookingStatus()
+            {
+                UserInterface.SetMainColor();
+                Console.Write("    Vlucht Boeken | ");
+                for(int i = 0; i < BookingSteps.Length; i++)
+                {
+                    if(BookingSteps[i][1] == "Y")
+                    {
+                        UserInterface.SetMainColor();
+                        Console.Write(BookingSteps[i][0]);
+                        UserInterface.SetDefaultColor();
+                        if(i != BookingSteps.Length - 1) { Console.Write(" - "); }
+                    } else
+                    {
+                        UserInterface.SetDefaultColor();
+                        Console.Write(BookingSteps[i][0]);
+                        if (i != BookingSteps.Length - 1) { Console.Write(" - "); }
+                    }
+                }
+            }
+
+            bool BackToMainMenu()
+            {
+                Console.WriteLine();
+                Console.WriteLine("    Weet je zeker dat je terug naar het hoofdmenu wilt gaan?\n    Je boeking wordt niet opgeslagen!");
+                Console.WriteLine();
+                Console.WriteLine("    [0] Nee");
+                Console.WriteLine("    [1] Ja");
+                Console.WriteLine();
+                UserInterface.SetMainColor();
+                Console.Write("    Maak een keuze: ");
+                UserInterface.SetDefaultColor();
+                int InputConfirm = int.Parse(Console.ReadLine());
+                if (InputConfirm == 1)
+                {
+                    return false;
+                } else
+                {
+                    return true;
+                }
+            }
+
+            // BOOK FLIGHT MENU
+            while (BookingFlight)
+            {
+                Console.Clear();
+                UserInterface.SetDefaultColor();
+                UserInterface.PrintLogo();
+                PrintBookingStatus();
+                Console.WriteLine();
+                UserInterface.SetMainColor();
+                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                UserInterface.SetDefaultColor();
+                Console.WriteLine();
+                Console.WriteLine("    [0] Hoofdmenu");
+                Console.WriteLine();
+                Console.WriteLine("    [1] Vlucht Selecteren");
+                Console.WriteLine("    [3] Persoonsgegevens");
+                Console.WriteLine("    [4] Contactgegevens");
+                Console.WriteLine("    [5] Bagage Toevoegen");
+                Console.WriteLine("    [6] Stoelen Kiezen");
+                Console.WriteLine();
+                Console.WriteLine("    [6] Boeking Overzicht");
+                Console.WriteLine("    [7] Boeking Bevestigen");
+                Console.WriteLine();
+                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                Console.WriteLine();
+                UserInterface.SetMainColor();
+                Console.Write("    Maak een keuze: ");
+                UserInterface.SetDefaultColor();
+
+                int Input = int.Parse(Console.ReadLine());
+
+                switch (Input)
+                {
+                    // HOOFDMENU
+                    case 0:
+                        BookingFlight = BackToMainMenu();
+                        Console.Clear();
+                        break;
+
+                    // VLUCHT SELECTEREN
+                    case 1:
+                        BookingSteps[0][1] = "Y";
+                        bool SelectingFlight = true;
+                        while(SelectingFlight)
+                        {
+                            int CurrentPage = 1;
+                            List<Flight> Flights = Flight.GetFlights();
+
+                            Console.Clear();
+                            UserInterface.SetDefaultColor();
+                            UserInterface.PrintLogo();
+                            PrintBookingStatus();
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    [0] Hoofdmenu");
+                            Console.WriteLine("    [1] Terug");
+                            Console.WriteLine();
+                            Console.WriteLine("    [2] Filters Aanpassen");
+                            Console.WriteLine("    [3] Vorige Pagina");
+                            Console.WriteLine("    [4] Volgende Pagina");
+                            Console.WriteLine();
+                            Console.WriteLine("    [5] Vluchtcode Invoeren");
+                            Console.WriteLine();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.Write("    Maak een keuze: ");
+                            UserInterface.SetDefaultColor();
+
+                            int InputSelectFlight = int.Parse(Console.ReadLine());
+
+                            switch (InputSelectFlight)
+                            {
+                                case 0:
+                                    SelectingFlight = BackToMainMenu();
+                                    BookingFlight = SelectingFlight;
+                                    Console.Clear();
+                                    break;
+
+                                case 1:
+                                    SelectingFlight = false;
+                                    BookingSteps[0][1] = "X";
+                                    Console.Clear();
+                                    break;
+
+                                case 2:
+                                    bool ChangingFilters = true;
+                                    while (ChangingFilters)
+                                    {
+                                        Console.Clear();
+                                        UserInterface.SetDefaultColor();
+                                        UserInterface.PrintLogo();
+                                        PrintBookingStatus();
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                        UserInterface.SetDefaultColor();
+                                        Console.WriteLine();
+                                        Console.WriteLine("    [0] Hoofdmenu");
+                                        Console.WriteLine("    [1] Terug");
+                                        Console.WriteLine();
+                                        Console.WriteLine("    [2] Bestemming           " + FilterDestination);
+                                        Console.WriteLine("    [3] Datum                " + FilterDate);
+                                        Console.WriteLine("    [4] Aantal Personen      " + FilterPersons);
+                                        Console.WriteLine("    [5] Maximum Prijs        " + FilterPrice);
+                                        Console.WriteLine();
+                                        Console.WriteLine("    [6] Filters Bevestigen");
+                                        Console.WriteLine();
+                                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Maak een keuze: ");
+                                        UserInterface.SetDefaultColor();
+
+                                        int InputSelectFlightFilter = int.Parse(Console.ReadLine());
+
+                                        switch (InputSelectFlightFilter)
+                                        {
+                                            case 0:
+                                                ChangingFilters = BackToMainMenu();
+                                                SelectingFlight = ChangingFilters;
+                                                BookingFlight = ChangingFilters;
+                                                Console.Clear();
+                                                break;
+                                            case 1:
+                                                ChangingFilters = false;
+                                                Console.Clear();
+                                                break;
+                                            case 2:
+                                                Console.Clear();
+                                                break;
+                                            case 3:
+                                                Console.Clear();
+                                                break;
+                                            case 4:
+                                                Console.Clear();
+                                                break;
+                                            case 5:
+                                                Console.Clear();
+                                                break;
+                                            case 6:
+                                                ChangingFilters = false;
+                                                Console.Clear();
+                                                break;
+                                            default:
+                                                Console.Clear();
+                                                break;
+                                        }
+                                    }
+                                    Console.Clear();
+                                    break;
+
+                                case 3:
+                                    if (CurrentPage != 1) { CurrentPage -= 1; }
+                                    Console.Clear();
+                                    break;
+                                case 4:
+                                    CurrentPage += 1;
+                                    Console.Clear();
+                                    break;
+
+                                case 5:
+                                    bool EnteringFlightCode = true;
+                                    while(EnteringFlightCode)
+                                    {
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Vul een vluchtcode in: ");
+                                        UserInterface.SetDefaultColor();
+                                        string InputFlightCode = Console.ReadLine();
+                                        // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
+                                        EnteringFlightCode = false;
+                                        SelectingFlight = false;
+                                    }
+
+                                    Console.Clear();
+                                    break;
+
+                                default:
+                                    Console.Clear();
+                                    break;
+                            }
+                        }
+                        BookingSteps[0][1] = "X";
+                        Console.Clear();
+                        break;
+
+                    // DEFAULT
+                    default:
+                        Console.Clear();
+                        break;
+                }
+            }
         }
     }
 }
