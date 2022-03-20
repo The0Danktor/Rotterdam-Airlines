@@ -427,8 +427,8 @@ namespace Rotterdam_Airlines
             Customer BookingCustomer = Customer;
 
             // FILTERS
-            string FilterDestination = "";
-            string FilterDate = "";
+            string FilterDestination = "-";
+            string FilterDate = "-";
             int FilterPersons = 1;
             double FilterPrice = 1000;
 
@@ -456,7 +456,9 @@ namespace Rotterdam_Airlines
             bool BackToMainMenu()
             {
                 Console.WriteLine();
+                UserInterface.SetErrorColor();
                 Console.WriteLine("    Weet je zeker dat je terug naar het hoofdmenu wilt gaan?\n    Je boeking wordt niet opgeslagen!");
+                UserInterface.SetDefaultColor();
                 Console.WriteLine();
                 Console.WriteLine("    [0] Nee");
                 Console.WriteLine("    [1] Ja");
