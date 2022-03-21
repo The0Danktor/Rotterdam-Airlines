@@ -69,6 +69,50 @@ namespace Rotterdam_Airlines
             this.UserId = IdHandler.getID();
         }
 
+        static public object Login(Admin AdminUser)
+        {
+            while (true) 
+            { 
+                Console.Clear();
+                Console.Write("Vull uw email in: ");
+                string Email = Console.ReadLine();
+                List<Customer> Customers = JSON.LoadCustomersJSON();
+                bool UserFound = false;
+                if (Email == AdminUser.email && !UserFound)
+                {
+                    UserFound = true;
+                    string Password = Console.ReadLine();
+                    if (AdminUser.password == Password)
+                    {
+                        return AdminUser;
+                    }
+                }
+                else
+                {
+                    foreach (Customer customer in Customers)
+                    {
+                        if (Email == customer.email)
+                        {
+                            Customer TempUser = customer;
+                            UserFound = true;
+                            string Password = Console.ReadLine();
+                            if (TempUser.password == Password)
+                            {
+                                return TempUser;
+                            }
+                        }
+                    }
+                }
+                    if(!UserFound)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan");
+                        UserInterface.SetDefaultColor();
+                        Console.ReadKey(true);
+                    }
+               }
+           }
+
         static public string hiddenpassword(Customer CurrentUser ,string question) 
         {
             string test = "";

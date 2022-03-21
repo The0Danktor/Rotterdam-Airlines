@@ -185,40 +185,7 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine("1");
                                 break;
                             case 1:
-                                Console.Clear();
-                                Console.Write("Vull uw email in: ");
-                                string Email = Console.ReadLine();
-                                List<Customer>Customers = JSON.LoadCustomersJSON();
-                                bool UserFound = false;
-                                if (Email == AdminUser.email) 
-                                {
-                                    UserFound = true;
-                                    string Password = Console.ReadLine();
-                                    if (AdminUser.password == Password)
-                                    {
-                                        authorized = true; 
-                                    }
-                                }
-                                else 
-                                { 
-                                    foreach (Customer customer in Customers){
-                                        if (Email == customer.email) {
-                                            Customer TempUser = customer;
-                                            UserFound = true;
-                                        }
-                                    }
-                                }
-                                if (UserFound) 
-                                {
-                                    Console.WriteLine("hallo");
-                                }
-                                else
-                                {
-                                    Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("Geen gebruiker gevonden met deze emailadress");
-                                    UserInterface.SetDefaultColor();
-                                }
-                                Console.ReadLine();
+                                Customer.Login(AdminUser);
                                 break;
                             case 2:
                                 Console.Clear();
