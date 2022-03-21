@@ -185,7 +185,16 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine("1");
                                 break;
                             case 1:
-                                Customer.Login(AdminUser);
+                                Type check = typeof(Customer);
+                                object LoginInformation = Customer.Login(AdminUser);
+                                if(LoginInformation.GetType().Equals(check))
+                                {
+                                    CurrentUser = (Customer)LoginInformation; 
+                                }
+                                else
+                                {
+                                    authorized = true;
+                                }
                                 break;
                             case 2:
                                 Console.Clear();
