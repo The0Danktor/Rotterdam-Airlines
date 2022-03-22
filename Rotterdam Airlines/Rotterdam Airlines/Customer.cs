@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Collections;
 
 namespace Rotterdam_Airlines
 {
@@ -425,6 +426,14 @@ namespace Rotterdam_Airlines
             string[] BookingSelectedLuggage;
             List<BookingPerson> BookingPersonData = new List<BookingPerson>();
             Customer BookingCustomer = Customer;
+
+            Hashtable Filter = new Hashtable()
+            {
+                {"Bestemming", ""},
+                {"Datum", "doomsday"},
+                {"Aantal Personen", 2},
+                {"Maximum Prijs", 1000}
+            };
 
             // FILTERS
             string FilterDestination = "-";
