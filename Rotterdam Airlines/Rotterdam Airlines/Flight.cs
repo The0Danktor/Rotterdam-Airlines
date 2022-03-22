@@ -9,15 +9,15 @@ namespace Rotterdam_Airlines
 {
     class Flight
     {
-        private string FlightCode { set; get; }
-        private string FlightNumber { set; get; }
-        private string PlaneType { set; get; }
-        private string Airline { set; get; }
-        private string Destination { set; get; }
-        private DateTime Departure { set; get; }
-        private string Gate { set; get; }
+        public string FlightCode { set; get; }
+        public string FlightNumber { set; get; }
+        public string PlaneType { set; get; }
+        public string Airline { set; get; }
+        public string Destination { set; get; }
+        public DateTime Departure { set; get; }
+        public string Gate { set; get; }
 
-        private bool Cancelled = false;
+        public bool Cancelled = false;
 
         public static List<Flight> Flights = new List<Flight>();
 
