@@ -14,14 +14,16 @@ namespace Rotterdam_Airlines
         private string PlaneType { set; get; }
         private string Airline { set; get; }
         private string Destination { set; get; }
-        private DateTime Departure { set; get; }
+        private string DepartureHour { set; get; }
         private string Gate { set; get; }
-        private bool Cancelled = false;
-    public static List<Flight> Flights = new List<Flight>();
 
-        public Flight(string flightCode, string flightNumber, string planeType, string airline, string destination, DateTime departure, string gate)
+        private bool Cancelled = false;
+
+        public static List<Flight> Flights = new List<Flight>();
+
+        public Flight(string flightNumber, string planeType, string airline, string destination, string departure, string gate)
         {
-            this.FlightCode = flightCode;
+            this.FlightCode = "todo";
             this.FlightNumber = flightNumber;
             this.PlaneType = planeType;
             this.Airline = airline;
@@ -35,5 +37,7 @@ namespace Rotterdam_Airlines
         {
             return Flights;
         }
+
+        DateTime DepartureTest = new DateTime();
     }
 }

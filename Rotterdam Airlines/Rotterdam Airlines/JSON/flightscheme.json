@@ -1,0 +1,11 @@
+[
+    {
+        "FlightNumber": "RAS737PO",
+        "PlaneType": "Boeing 737",
+        "Airline": "Rotterdam Airlines",
+        "Destination": "Porto",
+        "Departure": "0",
+        "Gate": "1",
+        "Cancelled": false
+    }
+]
