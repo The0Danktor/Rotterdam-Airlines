@@ -39,24 +39,36 @@ namespace Rotterdam_Airlines
             return Flights;
         }
 
-        public static void GenerateFlights(DateTime date)
+        //GENERATES A SCHEDULE FOR A SPECIFIED DAY
+        private static void GenerateFlights(DateTime date)
         {
             List<Hashtable> jsonScheme = JSON.LoadFlightschemeJSON();
-            List<Flight> jsonFlights = JSON.LoadFlightsJSON();
+            Flights = JSON.LoadFlightsJSON();
 
             foreach (Hashtable table in jsonScheme)
             {
-                int extraHour = Convert.ToInt32(table["Departure"]);
-                DateTime newDeparture = date;
-                newDeparture.AddHours(extraHour);
+                double extraHour = (double) Convert.ToInt32(table["Departure"]);
+                DateTime newDeparture = date.AddHours(extraHour);
                 Flight flight = new Flight((string) table["FlightNumber"], (string) table["PlaneType"], (string) table["Airline"], (string) table["Destination"], newDeparture, (string) table["Gate"], false);
-                Flights.Add(flight);
               
             }
-            Console.WriteLine(Flights[1].FlightCode);
             JSON.SaveFlightsJSON(Flights);
             JSON.SaveFlightschemeJSON(jsonScheme);
-         
+        }
+
+        //GENERATES SCHEDULE FOR THE UPCOMMING 2 WEEKS
+        public static void GenerateFlightWeeks()
+        {
+            Flights = JSON.LoadFlightsJSON();
+
+            Flight last = Flights[Flights.Count - 1];
+            DateTime changeDate = last.Departure.Date;
+            DateTime finalDate = DateTime.Today.AddDays(13);
+            while (changeDate < finalDate)
+            {
+                changeDate = changeDate.AddDays(1);
+                GenerateFlights(changeDate);
+            };
         }
     }
 }

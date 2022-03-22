@@ -60,8 +60,8 @@ namespace Rotterdam_Airlines
 
                     // OVERZICHT BOEKINGEN
                     case 2:
-                        Flight.GenerateFlights(DateTime.Today);
-                        //Console.Clear();
+                        //Flight.GenerateFlightWeeks();
+                        Console.Clear();
                         break;
 
                     // MEDEDELINGEN
