@@ -122,11 +122,11 @@ namespace Rotterdam_Airlines
                 changeDate = DateTime.Today;
             }
 
-            DateTime finalDate = DateTime.Today.AddDays(18);
+            DateTime finalDate = DateTime.Today.AddDays(14);
             while (changeDate < finalDate)
             {
-                changeDate = changeDate.AddDays(1);
                 GenerateFlights(changeDate);
+                changeDate = changeDate.AddDays(1);
             };
         }
     }
