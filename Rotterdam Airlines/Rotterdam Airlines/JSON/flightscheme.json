@@ -1,164 +1,164 @@
 [
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 0,
-    "PlaneType": "Boeing 737",
     "Destination": "Porto",
     "FlightNumber": "RAS737PO",
-    "Gate": "1",
-    "Cancelled": false
+    "PlaneType": "Boeing 737",
+    "Departure": 0,
+    "Cancelled": false,
+    "Gate": "1"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 0,
-    "PlaneType": "Airbus 330",
     "Destination": "Valencia",
     "FlightNumber": "RAS3030VA",
-    "Gate": "2",
-    "Cancelled": false
+    "PlaneType": "Airbus 330",
+    "Departure": 0,
+    "Cancelled": false,
+    "Gate": "2"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 0,
-    "PlaneType": "Boeing 787",
     "Destination": "Sevilla",
     "FlightNumber": "RAS787SE",
-    "Gate": "3",
-    "Cancelled": false
+    "PlaneType": "Boeing 787",
+    "Departure": 0,
+    "Cancelled": false,
+    "Gate": "3"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 4,
-    "PlaneType": "Boeing 737",
     "Destination": "Barcelona",
     "FlightNumber": "RAS737BA",
-    "Gate": "1",
-    "Cancelled": false
+    "PlaneType": "Boeing 737",
+    "Departure": 4,
+    "Cancelled": false,
+    "Gate": "1"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 4,
-    "PlaneType": "Airbus 330",
     "Destination": "Dusseldorf",
     "FlightNumber": "RAS330DU",
-    "Gate": "2",
-    "Cancelled": false
+    "PlaneType": "Airbus 330",
+    "Departure": 4,
+    "Cancelled": false,
+    "Gate": "2"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 4,
-    "PlaneType": "Boeing 787",
     "Destination": "Oslo",
     "FlightNumber": "RAS787OS",
-    "Gate": "3",
-    "Cancelled": false
+    "PlaneType": "Boeing 787",
+    "Departure": 4,
+    "Cancelled": false,
+    "Gate": "3"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 8,
-    "PlaneType": "Boeing 737",
     "Destination": "Malaga",
     "FlightNumber": "RAS737MA",
-    "Gate": "1",
-    "Cancelled": false
+    "PlaneType": "Boeing 737",
+    "Departure": 8,
+    "Cancelled": false,
+    "Gate": "1"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 8,
-    "PlaneType": "Airbus 330",
     "Destination": "Brussel",
     "FlightNumber": "RAS330BU",
-    "Gate": "2",
-    "Cancelled": false
+    "PlaneType": "Airbus 330",
+    "Departure": 8,
+    "Cancelled": false,
+    "Gate": "2"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 8,
-    "PlaneType": "Boeing 787",
     "Destination": "Zurich",
     "FlightNumber": "RAS787ZU",
-    "Gate": "3",
-    "Cancelled": false
+    "PlaneType": "Boeing 787",
+    "Departure": 8,
+    "Cancelled": false,
+    "Gate": "3"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 12,
-    "PlaneType": "Boeing 737",
     "Destination": "Rome",
     "FlightNumber": "RAS737RO",
-    "Gate": "1",
-    "Cancelled": false
+    "PlaneType": "Boeing 737",
+    "Departure": 12,
+    "Cancelled": false,
+    "Gate": "1"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 12,
-    "PlaneType": "Airbus 330",
     "Destination": "Wenen",
     "FlightNumber": "RAS330WE",
-    "Gate": "2",
-    "Cancelled": false
+    "PlaneType": "Airbus 330",
+    "Departure": 12,
+    "Cancelled": false,
+    "Gate": "2"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 12,
-    "PlaneType": "Boeing 787",
     "Destination": "Madrid",
     "FlightNumber": "RAS787MA",
-    "Gate": "3",
-    "Cancelled": false
+    "PlaneType": "Boeing 787",
+    "Departure": 12,
+    "Cancelled": false,
+    "Gate": "3"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 16,
-    "PlaneType": "Boeing 737",
     "Destination": "Praag",
     "FlightNumber": "RAS737PR",
-    "Gate": "1",
-    "Cancelled": false
+    "PlaneType": "Boeing 737",
+    "Departure": 16,
+    "Cancelled": false,
+    "Gate": "1"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 16,
-    "PlaneType": "Airbus 330",
     "Destination": "Dublin",
     "FlightNumber": "RAS330DU",
-    "Gate": "2",
-    "Cancelled": false
+    "PlaneType": "Airbus 330",
+    "Departure": 16,
+    "Cancelled": false,
+    "Gate": "2"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 16,
-    "PlaneType": "Boeing 787",
     "Destination": "Lyon",
     "FlightNumber": "RAS787LY",
-    "Gate": "3",
-    "Cancelled": false
+    "PlaneType": "Boeing 787",
+    "Departure": 16,
+    "Cancelled": false,
+    "Gate": "3"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 20,
-    "PlaneType": "Boeing 737",
     "Destination": "Munchen",
     "FlightNumber": "RAS737MU",
-    "Gate": "1",
-    "Cancelled": false
+    "PlaneType": "Boeing 737",
+    "Departure": 20,
+    "Cancelled": false,
+    "Gate": "1"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 20,
-    "PlaneType": "Airbus 330",
     "Destination": "Kopenhagen",
     "FlightNumber": "RAS330KO",
-    "Gate": "2",
-    "Cancelled": false
+    "PlaneType": "Airbus 330",
+    "Departure": 20,
+    "Cancelled": false,
+    "Gate": "2"
   },
   {
     "Airline": "Rotterdam Airlines",
-    "Departure": 20,
-    "PlaneType": "Boeing 787",
     "Destination": "Londen",
     "FlightNumber": "RAS787LO",
-    "Gate": "3",
-    "Cancelled": false
+    "PlaneType": "Boeing 787",
+    "Departure": 20,
+    "Cancelled": false,
+    "Gate": "3"
   }
 ]

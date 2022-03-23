@@ -12,6 +12,12 @@ namespace Rotterdam_Airlines
         static bool authorized = false;
         static void Main(string[] args)
         {
+            // LOAD ALL FLIGHTS WHICH ARE IN THE FLIGHTS.JSON TO THE FLIGHT LIST
+            Flight.GenerateFlightWeeks();
+
+            // CREATE DEFAULT USERS
+            Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null);
+            Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
 
             // INITIATE EMAIL CLIENT
             var smtpClient = new SmtpClient("smtp-mail.outlook.com")
@@ -20,10 +26,6 @@ namespace Rotterdam_Airlines
                 Credentials = new NetworkCredential("RotterdamAirlines2022@outlook.com", "yks`PAha8\"5QyTN$"),
                 EnableSsl = true,
             };
-           
-            // CREATE DEFAULT USERS
-            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null,null,null);
-            Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             
             while (true)
             {
@@ -39,7 +41,6 @@ namespace Rotterdam_Airlines
 
                 // PRINT MAIN MENU
                 UserInterface.PrintMainMenu();
-
                 // HANDLE USER INPUT
                 Console.WriteLine("    ────────────────────────────────────────────────────");
                 Console.WriteLine();
@@ -60,13 +61,11 @@ namespace Rotterdam_Airlines
 
                     // OVERZICHT BOEKINGEN
                     case 2:
-                        //Flight.GenerateFlightWeeks();
                         Console.Clear();
                         break;
 
                     // MEDEDELINGEN
                     case 3:
-                        Console.Clear();
                         break;
 
                     // AANBIEDINGEN

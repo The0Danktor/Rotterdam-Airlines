@@ -1,367 +1,7 @@
 [
   {
     "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-03-22T00:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-03-22T00:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-03-22T00:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-03-22T04:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-03-22T04:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-03-22T04:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-03-22T08:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-03-22T08:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-03-22T08:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-03-22T12:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-03-22T12:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-03-22T12:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-03-22T16:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-03-22T16:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-03-22T16:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-03-22T20:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-03-22T20:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-03-22T20:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-03-23T00:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-03-23T00:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-03-23T00:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-03-23T04:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-03-23T04:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-03-23T04:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-03-23T08:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-03-23T08:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-03-23T08:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-03-23T12:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-03-23T12:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-03-23T12:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-03-23T16:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-03-23T16:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-03-23T16:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-03-23T20:00:00+01:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-03-23T20:00:00+01:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-03-23T20:00:00+01:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000001",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -371,7 +11,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000002",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -381,7 +21,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000003",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -391,7 +31,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000004",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -401,7 +41,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000005",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -411,7 +51,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000006",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -421,7 +61,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000007",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -431,7 +71,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000008",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -441,7 +81,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000009",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -451,7 +91,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000010",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -461,7 +101,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000011",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -471,7 +111,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000012",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -481,7 +121,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000013",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -491,7 +131,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000014",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -501,7 +141,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000015",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -511,7 +151,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000016",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -521,7 +161,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000017",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -531,7 +171,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000018",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -541,7 +181,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000019",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -551,7 +191,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000020",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -561,7 +201,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000021",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -571,7 +211,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000022",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -581,7 +221,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000023",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -591,7 +231,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000024",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -601,7 +241,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000025",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -611,7 +251,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000026",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -621,7 +261,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000027",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -631,7 +271,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000028",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -641,7 +281,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000029",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -651,7 +291,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000030",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -661,7 +301,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000031",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -671,7 +311,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000032",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -681,7 +321,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000033",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -691,7 +331,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000034",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -701,7 +341,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000035",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -711,7 +351,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000036",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -721,7 +361,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000037",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -731,7 +371,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000038",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -741,7 +381,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000039",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -751,7 +391,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000040",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -761,7 +401,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000041",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -771,7 +411,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000042",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -781,7 +421,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000043",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -791,7 +431,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000044",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -801,7 +441,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000045",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -811,7 +451,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000046",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -821,7 +461,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000047",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -831,7 +471,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000048",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -841,7 +481,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000049",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -851,7 +491,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000050",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -861,7 +501,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000051",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -871,7 +511,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000052",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -881,7 +521,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000053",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -891,7 +531,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000054",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -901,7 +541,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000055",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -911,7 +551,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000056",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -921,7 +561,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000057",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -931,7 +571,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000058",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -941,7 +581,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000059",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -951,7 +591,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000060",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -961,7 +601,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000061",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -971,7 +611,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000062",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -981,7 +621,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000063",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -991,7 +631,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000064",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1001,7 +641,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000065",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1011,7 +651,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000066",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1021,7 +661,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000067",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1031,7 +671,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000068",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1041,7 +681,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000069",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1051,7 +691,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000070",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1061,7 +701,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000071",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1071,7 +711,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000072",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1081,7 +721,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000073",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1091,7 +731,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000074",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1101,7 +741,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000075",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1111,7 +751,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000076",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1121,7 +761,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000077",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1131,7 +771,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000078",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1141,7 +781,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000079",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1151,7 +791,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000080",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1161,7 +801,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000081",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1171,7 +811,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000082",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1181,7 +821,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000083",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1191,7 +831,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000084",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1201,7 +841,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000085",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1211,7 +851,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000086",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1221,7 +861,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000087",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1231,7 +871,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000088",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1241,7 +881,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000089",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1251,7 +891,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000090",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1261,7 +901,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000091",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1271,7 +911,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000092",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1281,7 +921,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000093",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1291,7 +931,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000094",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1301,7 +941,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000095",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1311,7 +951,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000096",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1321,7 +961,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000097",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1331,7 +971,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000098",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1341,7 +981,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000099",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1351,7 +991,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000100",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1361,7 +1001,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000101",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1371,7 +1011,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000102",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1381,7 +1021,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000103",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1391,7 +1031,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000104",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1401,7 +1041,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000105",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1411,7 +1051,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000106",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1421,7 +1061,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000107",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1431,7 +1071,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000108",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1441,7 +1081,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000109",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1451,7 +1091,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000110",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1461,7 +1101,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000111",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1471,7 +1111,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000112",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1481,7 +1121,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000113",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1491,7 +1131,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000114",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1501,7 +1141,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000115",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1511,7 +1151,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000116",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1521,7 +1161,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000117",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1531,7 +1171,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000118",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1541,7 +1181,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000119",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1551,7 +1191,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000120",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1561,7 +1201,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000121",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1571,7 +1211,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000122",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1581,7 +1221,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000123",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1591,7 +1231,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000124",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1601,7 +1241,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000125",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1611,7 +1251,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000126",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1621,7 +1261,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000127",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1631,7 +1271,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000128",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1641,7 +1281,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000129",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1651,7 +1291,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000130",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1661,7 +1301,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000131",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1671,7 +1311,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000132",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1681,7 +1321,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000133",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1691,7 +1331,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000134",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1701,7 +1341,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000135",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1711,7 +1351,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000136",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1721,7 +1361,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000137",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1731,7 +1371,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000138",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1741,7 +1381,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000139",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1751,7 +1391,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000140",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1761,7 +1401,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000141",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1771,7 +1411,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000142",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1781,7 +1421,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000143",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1791,7 +1431,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000144",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1801,7 +1441,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000145",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1811,7 +1451,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000146",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1821,7 +1461,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000147",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1831,7 +1471,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000148",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1841,7 +1481,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000149",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1851,7 +1491,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000150",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1861,7 +1501,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000151",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1871,7 +1511,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000152",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1881,7 +1521,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000153",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1891,7 +1531,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000154",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1901,7 +1541,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000155",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1911,7 +1551,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000156",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1921,7 +1561,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000157",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1931,7 +1571,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000158",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1941,7 +1581,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000159",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1951,7 +1591,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000160",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1961,7 +1601,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000161",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -1971,7 +1611,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000162",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -1981,7 +1621,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000163",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -1991,7 +1631,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000164",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2001,7 +1641,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000165",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2011,7 +1651,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000166",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2021,7 +1661,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000167",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2031,7 +1671,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000168",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2041,7 +1681,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000169",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2051,7 +1691,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000170",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2061,7 +1701,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000171",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2071,7 +1711,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000172",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2081,7 +1721,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000173",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2091,7 +1731,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000174",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2101,7 +1741,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000175",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2111,7 +1751,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000176",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2121,7 +1761,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000177",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2131,7 +1771,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000178",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2141,7 +1781,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000179",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2151,7 +1791,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000180",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2161,7 +1801,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000181",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2171,7 +1811,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000182",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2181,7 +1821,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000183",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2191,7 +1831,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000184",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2201,7 +1841,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000185",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2211,7 +1851,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000186",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2221,7 +1861,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000187",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2231,7 +1871,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000188",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2241,7 +1881,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000189",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2251,7 +1891,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000190",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2261,7 +1901,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000191",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2271,7 +1911,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000192",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2281,7 +1921,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000193",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2291,7 +1931,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000194",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2301,7 +1941,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000195",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2311,7 +1951,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000196",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2321,7 +1961,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000197",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2331,7 +1971,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000198",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2341,7 +1981,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000199",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2351,7 +1991,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000200",
     "FlightNumber": "RAS3030VA",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2361,7 +2001,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000201",
     "FlightNumber": "RAS787SE",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2371,7 +2011,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000202",
     "FlightNumber": "RAS737BA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2381,7 +2021,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000203",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2391,7 +2031,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000204",
     "FlightNumber": "RAS787OS",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2401,7 +2041,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000205",
     "FlightNumber": "RAS737MA",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2411,7 +2051,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000206",
     "FlightNumber": "RAS330BU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2421,7 +2061,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000207",
     "FlightNumber": "RAS787ZU",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2431,7 +2071,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000208",
     "FlightNumber": "RAS737RO",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2441,7 +2081,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000209",
     "FlightNumber": "RAS330WE",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2451,7 +2091,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000210",
     "FlightNumber": "RAS787MA",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2461,7 +2101,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000211",
     "FlightNumber": "RAS737PR",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2471,7 +2111,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000212",
     "FlightNumber": "RAS330DU",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2481,7 +2121,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000213",
     "FlightNumber": "RAS787LY",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
@@ -2491,7 +2131,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000214",
     "FlightNumber": "RAS737MU",
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
@@ -2501,7 +2141,7 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000215",
     "FlightNumber": "RAS330KO",
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
@@ -2511,12 +2151,372 @@
   },
   {
     "Cancelled": false,
-    "FlightCode": "todo",
+    "FlightCode": "000216",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
     "Departure": "2022-04-04T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000217",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-05T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000218",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-05T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000219",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-05T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000220",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-05T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000221",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-05T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000222",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-05T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000223",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-05T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000224",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-05T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000225",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-05T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000226",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-05T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000227",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-05T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000228",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-05T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000229",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-05T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000230",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-05T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000231",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-05T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000232",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-05T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000233",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-05T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000234",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-05T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000235",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-06T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000236",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-06T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000237",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-06T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000238",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-06T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000239",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-06T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000240",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-06T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000241",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-06T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000242",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-06T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000243",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-06T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000244",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-06T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000245",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-06T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000246",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-06T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000247",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-06T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000248",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-06T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000249",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-06T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000250",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-06T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000251",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-06T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000252",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-06T20:00:00+02:00",
     "Gate": "3"
   }
 ]

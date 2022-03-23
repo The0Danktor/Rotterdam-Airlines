@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace Rotterdam_Airlines
 {
@@ -401,45 +402,44 @@ namespace Rotterdam_Airlines
             }
         }
 
-        public static string[][] GenerateBookingSteps()
-        {
-            string[][] GenerateBookingSteps =
-            {
-                new string[] { "Vlucht Selecteren", "X" },
-                new string[] { "Persoonsgegevens", "X" },
-                new string[] { "Contactgegevens", "X" },
-                new string[] { "Bagage", "X" },
-                new string[] { "Stoelen", "X" },
-                new string[] { "Bevestigen", "X" }
-            };
-
-            return GenerateBookingSteps;
-        }
-
         public static void BookFlight(Customer Customer)
         {
             bool BookingFlight = true;
             string[][] BookingSteps = GenerateBookingSteps();
 
             // BOOKING INFO
-            Flight BookingSelectedFlight;
             string[] BookingSelectedLuggage;
             List<BookingPerson> BookingPersonData = new List<BookingPerson>();
             Customer BookingCustomer = Customer;
+            Flight BookingSelectedFlight = null;
+            bool FlightSelected = false;
 
-            Hashtable Filter = new Hashtable()
+            List<Flight> FilteredFlights = Flight.GetFlights();
+
+            // FILTERS
+            Hashtable Filters = new Hashtable()
             {
                 {"Bestemming", ""},
-                {"Datum", "doomsday"},
-                {"Aantal Personen", 2},
+                {"Datum", ""},
+                {"Aantal Personen", 1},
                 {"Maximum Prijs", 1000}
             };
 
-            // FILTERS
-            string FilterDestination = "-";
-            string FilterDate = "-";
-            int FilterPersons = 1;
-            double FilterPrice = 1000;
+            // LOCAL FUNCTIONS
+            string[][] GenerateBookingSteps()
+            {
+                string[][] GenerateBookingSteps =
+                {
+                new string[] { "Vlucht Selecteren", "X" },
+                new string[] { "Persoonsgegevens", "X" },
+                new string[] { "Contactgegevens", "X" },
+                new string[] { "Bagage", "X" },
+                new string[] { "Stoelen", "X" },
+                new string[] { "Bevestigen", "X" }
+                };
+
+                return GenerateBookingSteps;
+            }
 
             void PrintBookingStatus()
             {
@@ -485,6 +485,26 @@ namespace Rotterdam_Airlines
                 }
             }
 
+            void PrintFlightOverview()
+            {
+                if(FlightSelected == true)
+                {
+                    CultureInfo Dutch = new CultureInfo("nl-NL", false);
+                    TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
+                    DateTime DepartureInfo = BookingSelectedFlight.Departure;
+                    string Departure = DepartureInfo.ToString("MMMM", Dutch);
+                    Departure = textInfo.ToTitleCase(Departure);
+                    UserInterface.SetMainColor();
+                    Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
+                    UserInterface.SetDefaultColor();
+                    Console.WriteLine();
+                    Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
+                    Console.WriteLine();
+                    Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                    Console.WriteLine();
+                }
+            }
+
             // BOOK FLIGHT MENU
             while (BookingFlight)
             {
@@ -500,16 +520,17 @@ namespace Rotterdam_Airlines
                 Console.WriteLine("    [0] Hoofdmenu");
                 Console.WriteLine();
                 Console.WriteLine("    [1] Vlucht Selecteren");
-                Console.WriteLine("    [3] Persoonsgegevens");
-                Console.WriteLine("    [4] Contactgegevens");
-                Console.WriteLine("    [5] Bagage Toevoegen");
-                Console.WriteLine("    [6] Stoelen Kiezen");
+                Console.WriteLine("    [2] Persoonsgegevens");
+                Console.WriteLine("    [3] Contactgegevens");
+                Console.WriteLine("    [4] Bagage Toevoegen");
+                Console.WriteLine("    [5] Stoelen Kiezen");
                 Console.WriteLine();
                 Console.WriteLine("    [6] Boeking Overzicht");
                 Console.WriteLine("    [7] Boeking Bevestigen");
                 Console.WriteLine();
                 Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                 Console.WriteLine();
+                PrintFlightOverview();
                 UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
@@ -528,10 +549,38 @@ namespace Rotterdam_Airlines
                     case 1:
                         BookingSteps[0][1] = "Y";
                         bool SelectingFlight = true;
-                        while(SelectingFlight)
+                        int CurrentPage = 0;
+                        double MaxPagesDec = FilteredFlights.Count / 10;
+                        int MaxPages = (int)Math.Ceiling(MaxPagesDec);
+
+                        while (SelectingFlight)
                         {
-                            int CurrentPage = 1;
-                            List<Flight> Flights = Flight.GetFlights();
+
+                            void PrintFlightsOverview()
+                            {
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
+                                Console.WriteLine();
+                                UserInterface.SetDefaultColor();
+
+                                for (int i = 0; i < 10; i++)
+                                {
+                                    int index = i + (CurrentPage * 10);
+                                    try
+                                    {
+                                        CultureInfo Dutch = new CultureInfo("nl-NL", false);
+                                        TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
+                                        DateTime DepartureInfo = FilteredFlights[index].Departure;
+                                        string Departure = DepartureInfo.ToString("MMMM", Dutch);
+                                        Departure = textInfo.ToTitleCase(Departure);
+                                        Console.WriteLine("    " + FilteredFlights[index].FlightCode + "\t  " + FilteredFlights[index].FlightNumber + "\t   " + FilteredFlights[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
+                                    } 
+                                    catch(System.ArgumentOutOfRangeException)
+                                    {
+                                        Console.Write("");
+                                    }
+                                }
+                            }
 
                             Console.Clear();
                             UserInterface.SetDefaultColor();
@@ -553,6 +602,10 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine();
+                            PrintFlightsOverview();
+                            Console.WriteLine("");
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine("");
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
@@ -589,10 +642,10 @@ namespace Rotterdam_Airlines
                                         Console.WriteLine("    [0] Hoofdmenu");
                                         Console.WriteLine("    [1] Terug");
                                         Console.WriteLine();
-                                        Console.WriteLine("    [2] Bestemming           " + FilterDestination);
-                                        Console.WriteLine("    [3] Datum                " + FilterDate);
-                                        Console.WriteLine("    [4] Aantal Personen      " + FilterPersons);
-                                        Console.WriteLine("    [5] Maximum Prijs        " + FilterPrice);
+                                        Console.WriteLine("    [2] Bestemming           " + Filters["Bestemming"]);
+                                        Console.WriteLine("    [3] Datum                " + Filters["Datum"]);
+                                        Console.WriteLine("    [4] Aantal Personen      " + Filters["Aantal Personen"]);
+                                        Console.WriteLine("    [5] Maximum Prijs        " + Filters["Maximum Prijs"]);
                                         Console.WriteLine();
                                         Console.WriteLine("    [6] Filters Bevestigen");
                                         Console.WriteLine();
@@ -639,14 +692,15 @@ namespace Rotterdam_Airlines
                                     }
                                     Console.Clear();
                                     break;
-
+                                
+                                // VORIGE PAGINA
                                 case 3:
-                                    if (CurrentPage != 1) { CurrentPage -= 1; }
-                                    Console.Clear();
+                                    if (CurrentPage != 0) {CurrentPage--;} else {CurrentPage = MaxPages;} Console.Clear();
                                     break;
+                                
+                                // VOLGENDE PAGINA
                                 case 4:
-                                    CurrentPage += 1;
-                                    Console.Clear();
+                                    if (CurrentPage + 1 > MaxPages) {CurrentPage = 0;} else {CurrentPage++;} Console.Clear();
                                     break;
 
                                 case 5:
@@ -658,6 +712,13 @@ namespace Rotterdam_Airlines
                                         Console.Write("    Vul een vluchtcode in: ");
                                         UserInterface.SetDefaultColor();
                                         string InputFlightCode = Console.ReadLine();
+                                        if(Flight.FlightExists(InputFlightCode))
+                                        {
+                                            int index = Flight.GetFlightIndex(InputFlightCode);
+                                            BookingSelectedFlight = Flight.Flights[index];
+                                            FlightSelected = true;
+                                        }
+
                                         // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
                                         EnteringFlightCode = false;
                                         SelectingFlight = false;
