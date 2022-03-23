@@ -43,6 +43,7 @@ namespace Rotterdam_Airlines
             return Flights;
         }
 
+        // CHECKS IF A FLIGHT EXISTS WITH A SPECIFIC FLIGHTCODE
         public static bool FlightExists(string flightCode)
         {
             bool found = false;
@@ -56,6 +57,7 @@ namespace Rotterdam_Airlines
             return found;
         }
 
+        // GETS FLIGHT INDEX FOR A SPECFIC FLIGHTCODE
         public static int GetFlightIndex(string flightCode)
         {
             int index = 0;
@@ -67,6 +69,21 @@ namespace Rotterdam_Airlines
                 }
             }
             return index;
+        }
+
+        public static List<string> GetFlightDestinations()
+        {
+            List<string> destinations = new List<string>();
+
+            for(int i = 0; i < Flights.Count; i++)
+            {
+                if (!destinations.Contains(Flights[i].Destination))
+                {
+                    destinations.Add(Flights[i].Destination);
+                }
+            }
+
+            return destinations;
         }
 
         //GENERATES A SCHEDULE FOR A SPECIFIED DAY

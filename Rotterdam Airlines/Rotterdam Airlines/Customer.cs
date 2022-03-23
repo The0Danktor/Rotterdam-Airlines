@@ -670,15 +670,102 @@ namespace Rotterdam_Airlines
                                                 Console.Clear();
                                                 break;
                                             case 2:
+                                                Console.WriteLine();
+                                                UserInterface.SetMainColor();
+                                                Console.WriteLine("    Bestemmingen:");
+                                                List<string> destinations = Flight.GetFlightDestinations();
+                                                UserInterface.SetDefaultColor();
+                                                Console.Write("    ");
+                                                for(int i = 0; i < destinations.Count; i++)
+                                                {
+                                                    Console.Write(destinations[i]);
+                                                    if(i != destinations.Count - 1) { Console.Write(", "); } else { Console.Write("."); }
+                                                    if (i == 10 || i == 20 || i == 30) { Console.WriteLine(); Console.Write("    "); }
+                                                }
+                                                Console.WriteLine();
+                                                UserInterface.SetMainColor();
+                                                Console.WriteLine();
+                                                Console.Write("    Kies een bestemming: ");
+                                                UserInterface.SetDefaultColor();
+                                                string InputDestination = Console.ReadLine();
+                                                if(destinations.Contains(InputDestination)) { Filters["Bestemming"] = InputDestination;  } else
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("    De ingevoerde bestemming is niet gevonden!");
+                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                    UserInterface.SetDefaultColor();
+                                                    Console.ReadKey();
+                                                }
                                                 Console.Clear();
                                                 break;
+
                                             case 3:
+                                                Console.WriteLine();
+                                                UserInterface.SetMainColor();
+                                                Console.Write("    Kies een datum (DAG-MAAND-JAAR): ");
+                                                UserInterface.SetDefaultColor();
+                                                string InputDate = Console.ReadLine();
+                                                DateTime dDate;
+                                                if(DateTime.TryParse(InputDate, out dDate)) { Filters["Datum"] = InputDate; } 
+                                                else 
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("    De ingevoerde datum is niet correct. Heeft u het correcte format gebruikt? (DAG-MAAND-JAAR)");
+                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                    UserInterface.SetDefaultColor();
+                                                    Console.ReadKey();
+                                                }
+
                                                 Console.Clear();
                                                 break;
                                             case 4:
+                                                Console.WriteLine();
+                                                UserInterface.SetMainColor();
+                                                Console.Write("    Kies het aantal personen: ");
+                                                UserInterface.SetDefaultColor();
+                                                string InputPersons = Console.ReadLine();
+                                                try 
+                                                {
+                                                    if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); }
+                                                    else
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt voor maximaal 4 personen tegelijk boeken.");
+                                                        Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                        UserInterface.SetDefaultColor();
+                                                        Console.ReadKey();
+                                                    }
+                                                }
+                                                catch
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt alleen een nummer invoeren.");
+                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                    UserInterface.SetDefaultColor();
+                                                    Console.ReadKey();
+                                                }
+
                                                 Console.Clear();
                                                 break;
                                             case 5:
+                                                Console.WriteLine();
+                                                UserInterface.SetMainColor();
+                                                Console.Write("    Kies een maximumprijs: ");
+                                                UserInterface.SetDefaultColor();
+                                                string InputPrice = Console.ReadLine();
+                                                try { Filters["Maximum Prijs"] = Int32.Parse(InputPrice); } catch 
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("    De ingevoerde prijs is niet correct. U kunt alleen een nummer invoeren.");
+                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                    UserInterface.SetDefaultColor();
+                                                    Console.ReadKey();
+                                                }
                                                 Console.Clear();
                                                 break;
                                             case 6:
