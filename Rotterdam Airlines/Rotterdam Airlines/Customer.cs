@@ -717,11 +717,20 @@ namespace Rotterdam_Airlines
                                             int index = Flight.GetFlightIndex(InputFlightCode);
                                             BookingSelectedFlight = Flight.Flights[index];
                                             FlightSelected = true;
+                                            EnteringFlightCode = false;
+                                            SelectingFlight = false;
+                                        } else
+                                        {
+                                            UserInterface.SetErrorColor();
+                                            Console.WriteLine();
+                                            Console.WriteLine("    De ingevoerde vluchtcode is niet gevonden!");
+                                            Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                            UserInterface.SetDefaultColor();
+                                            Console.ReadKey();
+                                            EnteringFlightCode = false;
                                         }
 
                                         // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
-                                        EnteringFlightCode = false;
-                                        SelectingFlight = false;
                                     }
 
                                     Console.Clear();
