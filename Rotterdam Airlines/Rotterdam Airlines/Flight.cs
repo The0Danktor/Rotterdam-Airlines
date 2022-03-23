@@ -20,7 +20,7 @@ namespace Rotterdam_Airlines
         public bool Cancelled = false;
 
         // LIST OF FLIGHTS
-        public static List<Flight> Flights = JSON.LoadFlightsJSON();
+        public static List<Flight> Flights = new List<Flight>();
 
         // CONSTRUCTOR
         public Flight(string flightCode, string flightNumber, string planeType, string airline, string destination, DateTime departure, string gate, bool cancelled)
@@ -33,6 +33,7 @@ namespace Rotterdam_Airlines
             this.Departure = departure;
             this.Gate = gate;
             this.Cancelled = cancelled;
+            Flights.Add(this);
         }
 
         // RETURNS THE LIST OF FLIGHTS WHICH
