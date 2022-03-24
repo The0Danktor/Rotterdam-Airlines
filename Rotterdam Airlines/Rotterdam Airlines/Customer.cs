@@ -73,47 +73,65 @@ namespace Rotterdam_Airlines
             this.UserId = IdHandler.getID();
         }
 
-        static public object Login(Admin AdminUser)
+        static public object Login(Admin AdminUser , Customer CurrentUser)
         {
+                string Email = "" ;
+                string Password = "" ;
             while (true) 
-            { 
-                Console.Clear();
-                Console.Write("Vull uw email in: ");
-                string Email = Console.ReadLine();
-                List<Customer> Customers = JSON.LoadCustomersJSON();
+            {
+                UserInterface.PrintInlogMenu(Email,Password);
+                string InlogInput = Console.ReadLine();
+                int InlogChoice = int.Parse(InlogInput);
                 bool UserFound = false;
-                if (Email == AdminUser.email && !UserFound)
+                switch (InlogChoice)
                 {
-                    UserFound = true;
-                    string Password = Console.ReadLine();
-                    if (AdminUser.password == Password)
-                    {
-                        return AdminUser;
-                    } 
-                }
-                else
-                {
-                    foreach (Customer customer in Customers)
-                    {
-                        if (Email == customer.email)
+                    case 0:
+                        return CurrentUser;
+                    case 1:
+                        Console.Write("    Vul uw email in: ");
+                        Email = Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    case 2:
+                        Console.WriteLine("    Vul uw wachtwoord in");
+                        Password = Console.ReadLine();
+                        Console.Clear();
+                        break;
+
+                    case 3:
+                        List<Customer> Customers = JSON.LoadCustomersJSON();
+                        if (Email == AdminUser.email && !UserFound)
                         {
-                            Customer TempUser = customer;
                             UserFound = true;
-                            string Password = Console.ReadLine();
-                            if (TempUser.password == Password)
+                            if (AdminUser.password == Password)
                             {
-                                return TempUser;
+                                return AdminUser;
                             }
                         }
-                    }
+                        else
+                        {
+                            foreach (Customer customer in Customers)
+                            {
+                                if (Email == customer.email)
+                                {
+                                    Customer TempUser = customer;
+                                    UserFound = true;
+                                    if (TempUser.password == Password)
+                                    {
+                                        return TempUser;
+                                    }
+                                }
+                            }
+                        }
+                        if (!UserFound)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
+                            UserInterface.SetDefaultColor();
+                            Console.ReadKey(true);
+                        }
+                        break;
                 }
-                    if(!UserFound)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
-                        UserInterface.SetDefaultColor();
-                        Console.ReadKey(true);
-                    }
                }
            }
 
@@ -423,6 +441,7 @@ namespace Rotterdam_Airlines
                         {
                             List<Customer> temp = JSON.LoadCustomersJSON();
                             temp.Add(CurrentUser);
+                            CurrentUser.IsGuest = false;
                             CurrentUser.GetNewUserID();
                             JSON.SaveCustomersJSON(temp);
                             CurrentUser.SetToDefault();

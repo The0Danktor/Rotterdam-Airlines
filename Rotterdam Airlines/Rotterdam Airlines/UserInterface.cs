@@ -55,7 +55,7 @@ namespace Rotterdam_Airlines
 
         public static void PrintAccountMenu(bool authorized,Customer CurrentUser)
         {
-            UserInterface.SetDefaultColor();
+            SetDefaultColor();
             if (!CurrentUser.IsGuest)
             {
                 PrintLogo();
@@ -87,6 +87,27 @@ namespace Rotterdam_Airlines
             }
         }
 
+        public static void PrintInlogMenu(string Email, string Password)
+        {
+            PrintLogo();
+            SetMainColor();
+            Console.WriteLine("    Rotterdam Airlines | Account | Inloggen");
+            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine();
+            SetDefaultColor();
+            Console.WriteLine($"    [0] Terug");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Email                          - {Email}");
+            Console.WriteLine($"    [2] Password                       - {Password}");
+            Console.WriteLine();
+            Console.WriteLine($"    [3] Inloggen");
+            Console.WriteLine();
+            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine();
+            SetMainColor();
+            Console.Write("    Maak een keuze: ");
+            SetDefaultColor();
+        }
         public static void PrintRegisterMenu(Customer CurrentUser)
         {
             Console.WriteLine($"    [0] Annuleren         ");

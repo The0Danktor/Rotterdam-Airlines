@@ -188,35 +188,54 @@ namespace Rotterdam_Airlines
                         UserInterface.SetDefaultColor();
                         string account_input = Console.ReadLine();
                         int account_choice = int.Parse(account_input);
-                        if (CurrentUser.IsGuest)
-                        {
-                            switch(account_choice)
+                            // Options for when no one is logged in
+                            if (CurrentUser.IsGuest)
                             {
-                                case 0:
-                                    Console.WriteLine("1");
-                                    break;
-                                case 1:
-                                    Type check = typeof(Customer);
-                                    object LoginInformation = Customer.Login(AdminUser);
-                                    if(LoginInformation.GetType().Equals(check))
-                                    {
-                                        CurrentUser = (Customer)LoginInformation; 
-                                    }
-                                    else
-                                    {
-                                        authorized = true;
-                                    }
-                                    break;
-                                case 2:
-                                    Console.Clear();
-                                    Customer.RegisterCustomer(CurrentUser);
-                                    break;
-                                case 3:
-                                    Console.Clear();
-                                    break;
-                            }
+                                switch (account_choice)
+                                {
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        Console.Clear();
+                                        Type check = typeof(Customer);
+                                        object LoginInformation = Customer.Login(AdminUser, CurrentUser);
+                                        if (LoginInformation.GetType().Equals(check))
+                                        {
+                                            CurrentUser = (Customer)LoginInformation;
+                                        }
+                                        else
+                                        {
+                                            authorized = true;
+                                        }
+                                        break;
+                                    case 2:
+                                        Console.Clear();
+                                        Customer.RegisterCustomer(CurrentUser);
+                                        break;
+                                    case 3:
+                                        Console.Clear();
+                                        break;
+                                }
 
-                        }
+                            }
+                            // Options for when a admin is logged in 
+                            else if (authorized) { }
+                            // Options for when a user is logged in 
+                            else 
+                            {
+                                switch (account_choice)
+                                {
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        CurrentUser.SetToDefault();
+                                        break;
+                                }
+                            }
                             Console.Clear();
                             break;
 

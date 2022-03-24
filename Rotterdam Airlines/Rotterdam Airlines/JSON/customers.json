@@ -11,9 +11,10 @@
     "BookingList": [
       "test",
       "test",
+      "test",
       "test"
     ],
-    "IsGuest": true,
+    "IsGuest": false,
     "email": "test@test.",
     "password": "testtest"
   }
