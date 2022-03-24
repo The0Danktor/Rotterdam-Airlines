@@ -17,8 +17,9 @@ namespace Rotterdam_Airlines
         public string gender { get; set; }
         public string birth_date { get; set; }
         public string phone_number { get; set; }
-        List<string>  BookingList { get; set; }
-        public Customer(string UserId, string email, string password, string first_name, string prefix ,string last_name, string country, string gender, string birth_date, string phone_number,List<string>BookingList = null) : base(email, password)
+        public List<string> BookingList { get; set; }
+        public bool IsGuest { get; set; }
+        public Customer(string UserId, string email, string password, string first_name, string prefix, string last_name, string country, string gender, string birth_date, string phone_number, List<string> BookingList,bool IsGuest = false) : base(email, password)
         {
             this.UserId = UserId;
             this.email = email;
@@ -31,6 +32,7 @@ namespace Rotterdam_Airlines
             this.birth_date = birth_date;
             this.phone_number = phone_number;
             this.BookingList = BookingList;
+            this.IsGuest = IsGuest;
         }
 
         public bool CheckNull()
@@ -57,6 +59,8 @@ namespace Rotterdam_Airlines
             this.phone_number = null;
             this.email = null;
             this.password = null;
+            this.BookingList = new List<string> ();
+            this.IsGuest= true;
 
         }
         private string getFullName()
@@ -106,7 +110,7 @@ namespace Rotterdam_Airlines
                     if(!UserFound)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan");
+                        Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
                         UserInterface.SetDefaultColor();
                         Console.ReadKey(true);
                     }
@@ -281,7 +285,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
                             string TempPrefix = Console.ReadLine();
-                            if (!TempPrefix.All(char.IsNumber))
+                            if (!TempPrefix.All(char.IsNumber) || TempPrefix == "")
                             { 
                                 CurrentUser.prefix = TempPrefix;
                                 break;
@@ -370,7 +374,7 @@ namespace Rotterdam_Airlines
                             DateTime today = DateTime.Today;
                             if (validDate) 
                             {
-                                if (today.Year - scheduleDate.Year >= 18)
+                                if ((today.Subtract(scheduleDate).Days/365.242199) >= 18)
                                 {
                                     CurrentUser.birth_date = TempBirthDate;
                                     Console.Clear();
@@ -379,8 +383,11 @@ namespace Rotterdam_Airlines
                                 else
                                 { 
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken.");
+                                    Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                     UserInterface.SetDefaultColor();
+                                    Console.ReadKey(true);
+                                    Console.Clear();
+                                    break;
                                 }
                             }
                             else
@@ -388,6 +395,7 @@ namespace Rotterdam_Airlines
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                 UserInterface.SetDefaultColor();
+                                
                             }
                         }
                         break;
