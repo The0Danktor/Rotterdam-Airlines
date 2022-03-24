@@ -114,6 +114,14 @@ namespace Rotterdam_Airlines
                             {
                                 return AdminUser;
                             }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Verkeerd wachtwoord ingevuld Druk op een willekeurige toets om door te gaan ");
+                                UserInterface.SetDefaultColor();
+                                Console.ReadKey(true);
+                                Console.Clear();
+                            }
                         }
                         else
                         {
@@ -127,6 +135,14 @@ namespace Rotterdam_Airlines
                                     {
                                         return TempUser;
                                     }
+                                    else
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        Console.WriteLine("Verkeerd wachtwoord ingevuld Druk op een willekeurige toets om door te gaan ");
+                                        UserInterface.SetDefaultColor();
+                                        Console.ReadKey(true);
+                                        Console.Clear();
+                                    }
                                 }
                             }
                         }
@@ -136,6 +152,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);
+                            Console.Clear();
                         }
                         break;
                 }
