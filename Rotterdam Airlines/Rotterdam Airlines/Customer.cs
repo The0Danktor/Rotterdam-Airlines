@@ -537,7 +537,9 @@ namespace Rotterdam_Airlines
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
 
-                int Input = int.Parse(Console.ReadLine());
+                int Input = 100;
+
+                try { Input = int.Parse(Console.ReadLine()); } catch { }
 
                 switch (Input)
                 {
@@ -597,10 +599,11 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    [1] Terug");
                             Console.WriteLine();
                             Console.WriteLine("    [2] Filters Aanpassen");
-                            Console.WriteLine("    [3] Vorige Pagina");
-                            Console.WriteLine("    [4] Volgende Pagina");
+                            Console.WriteLine("    [3] Sorteren");
+                            Console.WriteLine("    [4] Vorige Pagina");
+                            Console.WriteLine("    [5] Volgende Pagina");
                             Console.WriteLine();
-                            Console.WriteLine("    [5] Vluchtcode Invoeren");
+                            Console.WriteLine("    [6] Vluchtcode Invoeren");
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine();
@@ -612,7 +615,8 @@ namespace Rotterdam_Airlines
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
 
-                            int InputSelectFlight = int.Parse(Console.ReadLine());
+                            int InputSelectFlight = 100;
+                            try { InputSelectFlight = int.Parse(Console.ReadLine()); } catch { }
 
                             switch (InputSelectFlight)
                             {
@@ -657,7 +661,8 @@ namespace Rotterdam_Airlines
                                         Console.Write("    Maak een keuze: ");
                                         UserInterface.SetDefaultColor();
 
-                                        int InputSelectFlightFilter = int.Parse(Console.ReadLine());
+                                        int InputSelectFlightFilter = 100;
+                                        try { InputSelectFlightFilter = int.Parse(Console.ReadLine()); } catch { }
 
                                         switch (InputSelectFlightFilter)
                                         {
@@ -796,18 +801,22 @@ namespace Rotterdam_Airlines
                                     }
                                     Console.Clear();
                                     break;
+
+                                // SORTEREN
+                                case 3:
+                                    break;
                                 
                                 // VORIGE PAGINA
-                                case 3:
+                                case 4:
                                     if (CurrentPage != 0) {CurrentPage--;} else {CurrentPage = MaxPages;} Console.Clear();
                                     break;
                                 
                                 // VOLGENDE PAGINA
-                                case 4:
+                                case 5:
                                     if (CurrentPage + 1 > MaxPages) {CurrentPage = 0;} else {CurrentPage++;} Console.Clear();
                                     break;
 
-                                case 5:
+                                case 6:
                                     bool EnteringFlightCode = true;
                                     while(EnteringFlightCode)
                                     {
