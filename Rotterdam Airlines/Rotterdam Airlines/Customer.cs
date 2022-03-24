@@ -416,11 +416,13 @@ namespace Rotterdam_Airlines
 
             List<Flight> FilteredFlights = Flight.GetFlights();
 
+            List<string> destinations = Flight.GetFlightDestinations();
+
             // FILTERS
             Hashtable Filters = new Hashtable()
             {
                 {"Bestemming", ""},
-                {"Datum", ""},
+                {"Datum", "" },
                 {"Aantal Personen", 1},
                 {"Maximum Prijs", 1000}
             };
@@ -555,7 +557,7 @@ namespace Rotterdam_Airlines
 
                         while (SelectingFlight)
                         {
-
+                            List<Flight> ModifiedFilteredFlights = FilterHandler.filterList(FilteredFlights, Filters, "");
                             void PrintFlightsOverview()
                             {
                                 UserInterface.SetMainColor();
@@ -570,10 +572,10 @@ namespace Rotterdam_Airlines
                                     {
                                         CultureInfo Dutch = new CultureInfo("nl-NL", false);
                                         TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
-                                        DateTime DepartureInfo = FilteredFlights[index].Departure;
+                                        DateTime DepartureInfo = ModifiedFilteredFlights[index].Departure;
                                         string Departure = DepartureInfo.ToString("MMMM", Dutch);
                                         Departure = textInfo.ToTitleCase(Departure);
-                                        Console.WriteLine("    " + FilteredFlights[index].FlightCode + "\t  " + FilteredFlights[index].FlightNumber + "\t   " + FilteredFlights[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
+                                        Console.WriteLine("    " + ModifiedFilteredFlights[index].FlightCode + "\t  " + ModifiedFilteredFlights[index].FlightNumber + "\t   " + ModifiedFilteredFlights[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
                                     } 
                                     catch(System.ArgumentOutOfRangeException)
                                     {
@@ -674,7 +676,8 @@ namespace Rotterdam_Airlines
                                                 Console.WriteLine();
                                                 UserInterface.SetMainColor();
                                                 Console.WriteLine("    Bestemmingen:");
-                                                List<string> destinations = Flight.GetFlightDestinations();
+                                                
+                                                Console.WriteLine(destinations.Count);
                                                 UserInterface.SetDefaultColor();
                                                 Console.Write("    ");
                                                 for (int i = 0; i < destinations.Count; i++)
