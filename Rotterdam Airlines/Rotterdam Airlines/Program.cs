@@ -32,7 +32,13 @@ namespace Rotterdam_Airlines
 
                 // PRINT WELCOME TEXT
                 UserInterface.SetMainColor();
-                Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines");
+                if (!CurrentUser.IsGuest == true)
+                {
+                    Console.WriteLine($"    Welkom {CurrentUser.first_name} bij het boekingsysteem van Rotterdam Airlines");
+                } else
+                {
+                    Console.WriteLine($"    Welkom bij het boekingsysteem van Rotterdam Airlines");
+                }
                 Console.WriteLine("    ────────────────────────────────────────────────────");
                 UserInterface.SetDefaultColor();
                 Console.WriteLine();

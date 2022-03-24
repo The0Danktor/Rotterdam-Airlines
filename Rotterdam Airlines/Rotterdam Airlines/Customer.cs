@@ -191,8 +191,11 @@ namespace Rotterdam_Airlines
                 Console.WriteLine();
                 UserInterface.SetDefaultColor();
                 UserInterface.PrintRegisterMenu(CurrentUser);
+                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine();
+                UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
-
+                UserInterface.SetDefaultColor();
                 string register_input = Console.ReadLine();
                 int register_choice = int.Parse(register_input);
                 switch (register_choice)
