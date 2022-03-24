@@ -98,7 +98,12 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    [0] Terug");
             Console.WriteLine();
             Console.WriteLine($"    [1] Email                          - {Email}");
-            Console.WriteLine($"    [2] Password                       - {Password}");
+            string HiddenPassword = "";
+            for(int i = 0; Password.Length > i ; i++)
+            {
+                HiddenPassword += "*";
+            }
+            Console.WriteLine($"    [2] Password                       - {HiddenPassword}");
             Console.WriteLine();
             Console.WriteLine($"    [3] Inloggen");
             Console.WriteLine();
@@ -110,12 +115,26 @@ namespace Rotterdam_Airlines
         }
         public static void PrintRegisterMenu(Customer CurrentUser)
         {
+            UserInterface.PrintLogo();
+            UserInterface.SetMainColor();
+            Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
+            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetDefaultColor();
             Console.WriteLine($"    [0] Annuleren         ");
             Console.WriteLine();
             Console.WriteLine($"    [1] Email                          - {CurrentUser.email}");
-            Console.WriteLine($"    [2] Wachtwoord                     - {CurrentUser.password}");
+            string HiddenPassword = "";
+            if(CurrentUser.password != null)
+            {
+                for (int i = 0; CurrentUser.password.Length > i; i++)
+                {
+                     HiddenPassword += "*";
+                }
+            }
+            Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
             Console.WriteLine($"    [3] Naam                           - {CurrentUser.first_name}");
-            Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name},{CurrentUser.prefix}");
+            Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name}, {CurrentUser.prefix}");
             Console.WriteLine($"    [5] Land                           - {CurrentUser.country}");
             Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.gender}");
             Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.birth_date}");
@@ -123,6 +142,11 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
             Console.WriteLine($"    [9] Account Creëren       ");
             Console.WriteLine();
+            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetMainColor();
+            Console.Write("    Maak een keuze: ");
+            UserInterface.SetDefaultColor();
         }
         public static void PrintInfoMenu()
         {

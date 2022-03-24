@@ -75,6 +75,7 @@ namespace Rotterdam_Airlines
 
         static public object Login(Admin AdminUser , Customer CurrentUser)
         {
+            
                 string Email = "" ;
                 string Password = "" ;
             while (true) 
@@ -88,13 +89,19 @@ namespace Rotterdam_Airlines
                     case 0:
                         return CurrentUser;
                     case 1:
+                        Console.WriteLine();
+                        UserInterface.SetMainColor();
                         Console.Write("    Vul uw email in: ");
+                        UserInterface.SetDefaultColor();
                         Email = Console.ReadLine();
                         Console.Clear();
                         break;
                     case 2:
-                        Console.WriteLine("    Vul uw wachtwoord in");
-                        Password = Console.ReadLine();
+                        Console.WriteLine();
+                        UserInterface.SetMainColor();
+                        Console.Write("    Vul uw wachtwoord in: ");
+                        UserInterface.SetDefaultColor();
+                        Password = hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ", true, Email, Password);
                         Console.Clear();
                         break;
 
@@ -135,44 +142,51 @@ namespace Rotterdam_Airlines
                }
            }
 
-        static public string hiddenpassword(Customer CurrentUser ,string question) 
+        static public string hiddenpassword(Customer CurrentUser, string question, bool inlog = false, string email = "" ,string password = "") 
         {
-            string test = "";
+            string HiddenPassword = "";
             string hidden = "";
             while (true) 
             {
                 var temp = Console.ReadKey(true);
-                if (temp.Key != ConsoleKey.Enter && temp.Key != ConsoleKey.Backspace)
+                if (temp.Key != ConsoleKey.Enter && temp.Key != ConsoleKey.Backspace && temp.Key != ConsoleKey.Escape)
                 {
-                    test += temp.KeyChar;
+                    HiddenPassword += temp.KeyChar;
                     hidden += "*";
                     Console.Write("*");
                 }
+                else if (temp.Key == ConsoleKey.Escape)
+                {
+                    Console.Clear();
+                    return "break";
+                }
                 else if (temp.Key == ConsoleKey.Backspace)
                 {
-                    if (test.Length > 0)
+                    if (HiddenPassword.Length > 0)
                     {
-                        test = test.Remove(test.Length - 1);
+                        HiddenPassword = HiddenPassword.Remove(HiddenPassword.Length - 1);
                         hidden = hidden.Remove(hidden.Length - 1);
                         Console.Clear();
-                        UserInterface.PrintLogo();
+                        if (!inlog)
+                        {
+                            UserInterface.PrintRegisterMenu(CurrentUser);
+                        }
+                        else
+                        {
+                            UserInterface.PrintInlogMenu(email, password);
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine();
                         UserInterface.SetMainColor();
-                        Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
-                        Console.WriteLine("    ────────────────────────────────────────────────────");
-                        Console.WriteLine();
-                        UserInterface.SetDefaultColor();
-                        UserInterface.PrintRegisterMenu(CurrentUser);
-                        Console.Write("    Maak een keuze: ");
-                        Console.WriteLine();
-                        Console.WriteLine();
                         Console.Write(question);
+                        UserInterface.SetDefaultColor();
                         Console.Write(hidden);
                     }
                 }
                 else
                 {
                     Console.Clear();
-                    return test;
+                    return HiddenPassword;
 
                 }
             }
@@ -181,21 +195,13 @@ namespace Rotterdam_Airlines
         public static void RegisterCustomer(Customer CurrentUser)
 
         {
+            TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
             bool creating = true;
             while (creating)
             {
-                UserInterface.PrintLogo();
-                UserInterface.SetMainColor();
-                Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
-                Console.WriteLine("    ────────────────────────────────────────────────────");
-                Console.WriteLine();
-                UserInterface.SetDefaultColor();
+
                 UserInterface.PrintRegisterMenu(CurrentUser);
-                Console.WriteLine("    ────────────────────────────────────────────────────");
-                Console.WriteLine();
-                UserInterface.SetMainColor();
-                Console.Write("    Maak een keuze: ");
-                UserInterface.SetDefaultColor();
+
                 string register_input = Console.ReadLine();
                 int register_choice = int.Parse(register_input);
                 switch (register_choice)
@@ -207,7 +213,9 @@ namespace Rotterdam_Airlines
                         while (true)
                         {
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw email in: ");
+                            UserInterface.SetDefaultColor();
                             string TempEmail = Console.ReadLine();
                             if (TempEmail.Contains("@") && TempEmail.Contains("."))
                             {
@@ -226,47 +234,40 @@ namespace Rotterdam_Airlines
                     case 2:
                         string TempPassword = "";
                         string Temp2Password = "";
+                        bool secondeinput = true;
                         while (true)
                         {
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw wachtwoord in: ");
+                            UserInterface.SetDefaultColor();
                             TempPassword = hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ");
-                            if (TempPassword.Length >= 8) 
+                            if (TempPassword == "break") { secondeinput = false; break; }
+                            else if (TempPassword.Length >= 8 ) 
                             {
                                 break;
                             }
                             else 
                             {
-                                UserInterface.PrintLogo();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
-                                Console.WriteLine("    ────────────────────────────────────────────────────");
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
                                 UserInterface.PrintRegisterMenu(CurrentUser);
-                                Console.Write("    Maak een keuze: ");
-                                Console.WriteLine();
                                 Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
+                                Console.WriteLine();
                                 UserInterface.SetDefaultColor();
                             }
                         }
-                        while (true)
+                        while (secondeinput)
                         {
-                            UserInterface.PrintLogo();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
-                            Console.WriteLine("    ────────────────────────────────────────────────────");
-                            Console.WriteLine();
-                            UserInterface.SetDefaultColor();
                             UserInterface.PrintRegisterMenu(CurrentUser);
-                            Console.Write("    Maak een keuze: ");
                             Console.WriteLine();
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul het zelfde wachtwoord in: ");
+                            UserInterface.SetDefaultColor();
                             Temp2Password = hiddenpassword(CurrentUser, "    Vul het zelfde wachtwoord in: ");
-                            if (TempPassword == Temp2Password)
+                            if (Temp2Password == "break") { break;}
+                            else if (TempPassword == Temp2Password)
                             {
                                 CurrentUser.password = TempPassword;
                                 Console.Clear();
@@ -274,6 +275,8 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
+                                UserInterface.PrintRegisterMenu(CurrentUser);
+                                Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Het ingevoerde Wachtwoorden waren niet het zelfde)");
                                 UserInterface.SetDefaultColor();
@@ -284,11 +287,13 @@ namespace Rotterdam_Airlines
                         while(true)
                         {
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw naam in: ");
+                            UserInterface.SetDefaultColor();
                             string TempFirstName = Console.ReadLine();
                             if (TempFirstName.All(char.IsLetter))
                             { 
-                                CurrentUser.first_name = TempFirstName;
+                                CurrentUser.first_name = textInfo.ToTitleCase(TempFirstName.ToLower());
                                 Console.Clear();
                                 break;
                             }
@@ -304,7 +309,9 @@ namespace Rotterdam_Airlines
                         while (true)
                         {
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
+                            UserInterface.SetDefaultColor();
                             string TempPrefix = Console.ReadLine();
                             if (!TempPrefix.All(char.IsNumber) || TempPrefix == "")
                             { 
@@ -321,11 +328,13 @@ namespace Rotterdam_Airlines
                         while (true) 
                         { 
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw achternaam in: ");
+                            UserInterface.SetDefaultColor();
                             string TempLastName = Console.ReadLine();
                             if (TempLastName.All(char.IsLetter)) 
                             { 
-                                CurrentUser.last_name = TempLastName;
+                                CurrentUser.last_name = textInfo.ToTitleCase(TempLastName.ToLower());
                                 Console.Clear();
                                 break;
                             }
@@ -338,19 +347,23 @@ namespace Rotterdam_Airlines
                         }
                         break;
                     case 5:
+                        UserInterface.SetMainColor();
                         Console.Write("    Vul uw land in: ");
-                        CurrentUser.country = Console.ReadLine();
+                        UserInterface.SetDefaultColor();
+                        CurrentUser.country = textInfo.ToTitleCase(Console.ReadLine().ToLower());
 
                         Console.Clear();
                         break;
                     case 6:
                         while(true)
                         {
-                            Console.WriteLine("    [1] man");
-                            Console.WriteLine("    [2] vrouw");
-                            Console.WriteLine("    [3] overig");
+                            Console.WriteLine("    [1] Man");
+                            Console.WriteLine("    [2] Vrouw");
+                            Console.WriteLine("    [3] Overig");
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
+                            UserInterface.SetDefaultColor();
                             string TempInput = Console.ReadLine();
                             if (TempInput == "1")
                             {
@@ -382,7 +395,9 @@ namespace Rotterdam_Airlines
                         while(true)
                         {
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw geboortedatum in als dd-mm-jjjj: ");
+                            UserInterface.SetDefaultColor();
                             string TempBirthDate = Console.ReadLine();
                             var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
                             DateTime scheduleDate;
@@ -422,8 +437,11 @@ namespace Rotterdam_Airlines
                         break;
                     case 8:
                         while (true) 
-                        { 
+                        {
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
                             Console.Write("    Vul uw telefoonnummer in: ");
+                            UserInterface.SetDefaultColor();
                             string TempPhoneNumber = Console.ReadLine();
                             if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
                             {
