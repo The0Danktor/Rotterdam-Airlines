@@ -559,7 +559,7 @@ namespace Rotterdam_Airlines
                             void PrintFlightsOverview()
                             {
                                 UserInterface.SetMainColor();
-                                Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
+                                Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek                              Pagina " + (CurrentPage + 1) + "/" + (MaxPages + 1));
                                 Console.WriteLine();
                                 UserInterface.SetDefaultColor();
 
@@ -670,101 +670,115 @@ namespace Rotterdam_Airlines
                                                 Console.Clear();
                                                 break;
                                             case 2:
+                                                bool EnteringDestination = true;
                                                 Console.WriteLine();
                                                 UserInterface.SetMainColor();
                                                 Console.WriteLine("    Bestemmingen:");
                                                 List<string> destinations = Flight.GetFlightDestinations();
                                                 UserInterface.SetDefaultColor();
                                                 Console.Write("    ");
-                                                for(int i = 0; i < destinations.Count; i++)
+                                                for (int i = 0; i < destinations.Count; i++)
                                                 {
                                                     Console.Write(destinations[i]);
-                                                    if(i != destinations.Count - 1) { Console.Write(", "); } else { Console.Write("."); }
+                                                    if (i != destinations.Count - 1) { Console.Write(", "); } else { Console.Write("."); }
                                                     if (i == 10 || i == 20 || i == 30) { Console.WriteLine(); Console.Write("    "); }
                                                 }
                                                 Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.WriteLine();
-                                                Console.Write("    Kies een bestemming: ");
-                                                UserInterface.SetDefaultColor();
-                                                string InputDestination = Console.ReadLine();
-                                                if(destinations.Contains(InputDestination)) { Filters["Bestemming"] = InputDestination;  } else
+                                                while (EnteringDestination)
                                                 {
-                                                    UserInterface.SetErrorColor();
+                                                    UserInterface.SetMainColor();
                                                     Console.WriteLine();
-                                                    Console.WriteLine("    De ingevoerde bestemming is niet gevonden!");
-                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                    Console.Write("    Kies een bestemming: ");
                                                     UserInterface.SetDefaultColor();
-                                                    Console.ReadKey();
-                                                }
-                                                Console.Clear();
-                                                break;
-
-                                            case 3:
-                                                Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.Write("    Kies een datum (DAG-MAAND-JAAR): ");
-                                                UserInterface.SetDefaultColor();
-                                                string InputDate = Console.ReadLine();
-                                                DateTime dDate;
-                                                if(DateTime.TryParse(InputDate, out dDate)) { Filters["Datum"] = InputDate; } 
-                                                else 
-                                                {
-                                                    UserInterface.SetErrorColor();
-                                                    Console.WriteLine();
-                                                    Console.WriteLine("    De ingevoerde datum is niet correct. Heeft u het correcte format gebruikt? (DAG-MAAND-JAAR)");
-                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
-                                                    UserInterface.SetDefaultColor();
-                                                    Console.ReadKey();
-                                                }
-
-                                                Console.Clear();
-                                                break;
-                                            case 4:
-                                                Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.Write("    Kies het aantal personen: ");
-                                                UserInterface.SetDefaultColor();
-                                                string InputPersons = Console.ReadLine();
-                                                try 
-                                                {
-                                                    if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); }
+                                                    string InputDestination = Console.ReadLine();
+                                                    InputDestination = InputDestination.ToLower();
+                                                    TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
+                                                    InputDestination = textInfo.ToTitleCase(InputDestination);
+                                                    if (destinations.Contains(InputDestination)) { Filters["Bestemming"] = InputDestination; EnteringDestination = false; }
                                                     else
                                                     {
                                                         UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt voor maximaal 4 personen tegelijk boeken.");
-                                                        Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                        Console.WriteLine("    De ingevoerde bestemming is niet gevonden!");
                                                         UserInterface.SetDefaultColor();
-                                                        Console.ReadKey();
                                                     }
                                                 }
-                                                catch
+
+                                                Console.Clear();
+                                                break;
+
+                                            case 3:
+                                                bool EnteringDate = true;
+                                                while(EnteringDate)
                                                 {
-                                                    UserInterface.SetErrorColor();
                                                     Console.WriteLine();
-                                                    Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt alleen een nummer invoeren.");
-                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Kies een datum (DD-MM-JJJJ): ");
                                                     UserInterface.SetDefaultColor();
-                                                    Console.ReadKey();
+                                                    string InputDate = Console.ReadLine();
+                                                    DateTime dDate;
+                                                    if (DateTime.TryParse(InputDate, out dDate)) { Filters["Datum"] = InputDate; EnteringDate = false; }
+                                                    else
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    De ingevoerde datum is niet correct. Heeft u het correcte format gebruikt? (DD-MM-JJJJ)");
+                                                        UserInterface.SetDefaultColor();
+                                                    }
+                                                }
+
+
+                                                Console.Clear();
+                                                break;
+                                            case 4:
+                                                bool EnteringPersons = true;
+                                                while(EnteringPersons)
+                                                {
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Kies het aantal personen: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string InputPersons = Console.ReadLine();
+                                                    try
+                                                    {
+                                                        if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); EnteringPersons = false; }
+                                                        else
+                                                        {
+                                                            UserInterface.SetErrorColor();
+                                                            Console.WriteLine();
+                                                            Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt voor maximaal 4 personen tegelijk boeken.");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    catch
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt alleen een nummer invoeren.");
+                                                        UserInterface.SetDefaultColor();
+                                                    }
                                                 }
 
                                                 Console.Clear();
                                                 break;
                                             case 5:
+                                                bool EnteringPrice = true;
+                                                while (EnteringPrice)
+                                                {
                                                 Console.WriteLine();
                                                 UserInterface.SetMainColor();
                                                 Console.Write("    Kies een maximumprijs: ");
                                                 UserInterface.SetDefaultColor();
                                                 string InputPrice = Console.ReadLine();
-                                                try { Filters["Maximum Prijs"] = Int32.Parse(InputPrice); } catch 
-                                                {
-                                                    UserInterface.SetErrorColor();
-                                                    Console.WriteLine();
-                                                    Console.WriteLine("    De ingevoerde prijs is niet correct. U kunt alleen een nummer invoeren.");
-                                                    Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
-                                                    UserInterface.SetDefaultColor();
-                                                    Console.ReadKey();
+
+                                                    try { Filters["Maximum Prijs"] = Int32.Parse(InputPrice); EnteringPrice = false; }
+                                                    catch
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    De ingevoerde prijs is niet correct. U kunt alleen een nummer invoeren.");
+                                                        UserInterface.SetDefaultColor();
+                                                    }
                                                 }
                                                 Console.Clear();
                                                 break;
@@ -810,11 +824,8 @@ namespace Rotterdam_Airlines
                                         {
                                             UserInterface.SetErrorColor();
                                             Console.WriteLine();
-                                            Console.WriteLine("    De ingevoerde vluchtcode is niet gevonden!");
-                                            Console.WriteLine("    Klik op ENTER om terug te gaan en het opnieuw te proberen.");
+                                            Console.WriteLine("    De ingevoerde vluchtcode is niet gevonden! Probeer het opnieuw.");
                                             UserInterface.SetDefaultColor();
-                                            Console.ReadKey();
-                                            EnteringFlightCode = false;
                                         }
 
                                         // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT

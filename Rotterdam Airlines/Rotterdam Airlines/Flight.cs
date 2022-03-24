@@ -119,7 +119,6 @@ namespace Rotterdam_Airlines
             }
 
             JSON.SaveFlightsJSON(Flights);
-            JSON.SaveFlightschemeJSON(jsonScheme);
         }
 
         //GENERATES SCHEDULE FOR THE UPCOMMING 2 WEEKS
@@ -142,8 +141,8 @@ namespace Rotterdam_Airlines
             DateTime finalDate = DateTime.Today.AddDays(14);
             while (changeDate < finalDate)
             {
-                GenerateFlights(changeDate);
                 changeDate = changeDate.AddDays(1);
+                GenerateFlights(changeDate);
             };
         }
     }
