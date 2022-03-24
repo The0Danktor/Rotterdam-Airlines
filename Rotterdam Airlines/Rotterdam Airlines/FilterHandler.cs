@@ -12,7 +12,14 @@ namespace Rotterdam_Airlines
     {
         public static List<Flight> filterList(List<Flight> flights, Hashtable filters, string sortingMethod)
         {
-            foreach (Flight flight in flights.ToList())
+            List<Flight> ReturnList = new List<Flight>();
+
+            for(int i = 0; i < flights.Count; i++)
+            {
+                ReturnList.Add(flights[i]);
+            }
+
+            foreach (Flight flight in ReturnList.ToList())
             {
                 //REMOVE FLIGHT WITH UNWANTED DESTINATION
                 if ((string) filters["Bestemming"] != "")
@@ -21,7 +28,7 @@ namespace Rotterdam_Airlines
                     string wantedDestination = (string)filters["Bestemming"];
                     if (wantedDestination != destination)
                     {
-                        flights.Remove(flight);
+                        ReturnList.Remove(flight);
                     }
                 }
 
@@ -35,7 +42,7 @@ namespace Rotterdam_Airlines
                     bool validDate = DateTime.TryParseExact(wantedDateString, dateFormats, DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out wantedDate);
                     if (validDate && date != wantedDate)
                     {
-                        flights.Remove(flight);
+                        ReturnList.Remove(flight);
                     }
                 }
 
@@ -45,7 +52,7 @@ namespace Rotterdam_Airlines
                 //REMOVE FLIGHTS THAT ARE TOO EXPENSIVE
                 //wip
             }
-            return flights;
+            return ReturnList;
         }
     }
 }
