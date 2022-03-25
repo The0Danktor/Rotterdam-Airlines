@@ -202,6 +202,7 @@ namespace Rotterdam_Airlines
                                 break;
                             case 3:
                                 Console.Clear();
+                                List<string> wwVergeten = wwVergeten.GetEmail();
                                 break;
                         }
 
