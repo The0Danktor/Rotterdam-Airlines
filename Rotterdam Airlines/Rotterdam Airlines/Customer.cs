@@ -590,7 +590,6 @@ namespace Rotterdam_Airlines
                             MaxPages = (int)Math.Ceiling(MaxPagesDec);
                             Console.Clear();
                             UserInterface.SetDefaultColor();
-                            Console.WriteLine(FilteredFlights.Count);
                             UserInterface.PrintLogo();
                             PrintBookingStatus();
                             Console.WriteLine();
