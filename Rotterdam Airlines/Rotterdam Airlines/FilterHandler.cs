@@ -35,11 +35,13 @@ namespace Rotterdam_Airlines
                 //REMOVE FLIGHTS ON UNWANTED DATE
                 if ((string) filters["Datum"] != "")
                 {
-                    DateTime date = flight.Departure;
-                    string wantedDateString = (string)filters["Datum"];
-                    var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
+                    DateTime date = flight.Departure.Date;
+                    string wantedDateString = (string)filters["Datum"]; 
                     DateTime wantedDate;
-                    bool validDate = DateTime.TryParseExact(wantedDateString, dateFormats, DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out wantedDate);
+                    //commented out because TryParseExact() didn't work so im using TryParse() instead. This change works fine but leaving this code here just incase
+                    //var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
+                    //bool validDate = DateTime.TryParseExact(wantedDateString, dateFormats, DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out wantedDate);
+                    bool validDate = DateTime.TryParse(wantedDateString, out wantedDate);
                     if (validDate && date != wantedDate)
                     {
                         ReturnList.Remove(flight);
