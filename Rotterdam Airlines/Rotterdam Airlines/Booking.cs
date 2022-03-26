@@ -14,7 +14,7 @@ namespace Rotterdam_Airlines
         private string CustomerEmail { get; set; }
 
         // BOOKING DATA
-        private Flight Flight { get; set; }
+        private string FlightCode { get; set; }
         private string BookingID { get; set; }
         private double BookingPrice { get; set; }
         private double BookingDiscount { get; set; }
@@ -25,12 +25,12 @@ namespace Rotterdam_Airlines
         // ALL BOOKINGS
         private static List<Booking> Bookings = new List<Booking>();
 
-        public Booking(string customerID, string customerPhoneNumber, string customerEmail, Flight flight, string bookingID, double bookingPrice, double bookingDiscount, List<BookingPerson> bookingPersons)
+        public Booking(string customerID, string customerPhoneNumber, string customerEmail, string flightCode, string bookingID, double bookingPrice, double bookingDiscount, List<BookingPerson> bookingPersons)
         {
             CustomerID = customerID;
             CustomerPhoneNumber = customerPhoneNumber;
             CustomerEmail = customerEmail;
-            Flight = flight;
+            FlightCode = flightCode;
             BookingID = bookingID;
             BookingPrice = bookingPrice;
             BookingDiscount = bookingDiscount;
