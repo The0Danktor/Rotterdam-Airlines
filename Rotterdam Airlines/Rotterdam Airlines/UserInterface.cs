@@ -60,8 +60,8 @@ namespace Rotterdam_Airlines
             {
                 PrintLogo();
                 SetMainColor();
-                Console.WriteLine($"    Rotterdam Airlines | Account {CurrentUser.first_name}");
-                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine($"    Rotterdam Airlines | Account ({CurrentUser.first_name})");
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 SetDefaultColor();
                 Console.WriteLine();
                 Console.WriteLine("    [0] Hoofdmenu");
@@ -69,13 +69,14 @@ namespace Rotterdam_Airlines
                 Console.WriteLine("    [1] Gegevens aanpassen");
                 Console.WriteLine("    [2] Overzicht boekingen");
                 Console.WriteLine("    [3] Uitloggen");
+                Console.WriteLine();
             }
             else
             {
                 PrintLogo();
                 SetMainColor();
                 Console.WriteLine("    Rotterdam Airlines | Account");
-                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 SetDefaultColor();
                 Console.WriteLine();
                 Console.WriteLine("    [0] Hoofdmenu");
@@ -92,7 +93,7 @@ namespace Rotterdam_Airlines
             PrintLogo();
             SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Account | Inloggen");
-            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             SetDefaultColor();
             Console.WriteLine($"    [0] Terug");
@@ -107,7 +108,7 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
             Console.WriteLine($"    [3] Inloggen");
             Console.WriteLine();
-            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             SetMainColor();
             Console.Write("    Maak een keuze: ");
@@ -118,7 +119,7 @@ namespace Rotterdam_Airlines
             UserInterface.PrintLogo();
             UserInterface.SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Account | Registreren");
-            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
             Console.WriteLine($"    [0] Annuleren         ");
@@ -134,7 +135,8 @@ namespace Rotterdam_Airlines
             }
             Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
             Console.WriteLine($"    [3] Naam                           - {CurrentUser.first_name}");
-            Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name}, {CurrentUser.prefix}");
+            if(CurrentUser.prefix == null || CurrentUser.prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name} {CurrentUser.prefix}"); } 
+            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name}, {CurrentUser.prefix}"); }
             Console.WriteLine($"    [5] Land                           - {CurrentUser.country}");
             Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.gender}");
             Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.birth_date}");
@@ -142,7 +144,7 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
             Console.WriteLine($"    [9] Account Creëren       ");
             Console.WriteLine();
-            Console.WriteLine("    ────────────────────────────────────────────────────");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetMainColor();
             Console.Write("    Maak een keuze: ");

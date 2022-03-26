@@ -39,7 +39,7 @@ namespace Rotterdam_Airlines
                 {
                     Console.WriteLine($"    Welkom bij het boekingsysteem van Rotterdam Airlines");
                 }
-                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 UserInterface.SetDefaultColor();
                 Console.WriteLine();
 
@@ -47,7 +47,7 @@ namespace Rotterdam_Airlines
                 UserInterface.PrintMainMenu(authorized);
 
                 // HANDLE USER INPUT
-                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 Console.WriteLine();
                 UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
