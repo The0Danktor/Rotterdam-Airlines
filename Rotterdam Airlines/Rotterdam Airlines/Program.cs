@@ -12,6 +12,12 @@ namespace Rotterdam_Airlines
         static bool authorized = false;
         static void Main(string[] args)
         {
+            // LOAD ALL FLIGHTS WHICH ARE IN THE FLIGHTS.JSON TO THE FLIGHT LIST
+            Flight.GenerateFlightWeeks();
+
+            // CREATE DEFAULT USERS
+            Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null);
+            Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
 
             // INITIATE EMAIL CLIENT
             var smtpClient = new SmtpClient("smtp-mail.outlook.com")
@@ -75,10 +81,8 @@ namespace Rotterdam_Airlines
                             // VLUCHT BOEKEN
                             case 1:
                                 Console.Clear();
-
-                                List<Customer> test = JSON.LoadCustomersJSON();
-                                test[0].BookingList.Add("test");
-                                JSON.SaveCustomersJSON(test);
+                                Customer.BookFlight(CurrentUser);
+                                Console.Clear();
                                 break;
 
                             // OVERZICHT BOEKINGEN
@@ -187,7 +191,6 @@ namespace Rotterdam_Airlines
                                         Console.ReadLine();
                                         Console.Clear();
                                         break;
-
                                 }
                                 break;
 
