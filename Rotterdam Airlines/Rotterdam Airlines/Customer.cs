@@ -655,7 +655,8 @@ namespace Rotterdam_Airlines
                                         Console.WriteLine("    [4] Aantal Personen      " + Filters["Aantal Personen"]);
                                         Console.WriteLine("    [5] Maximum Prijs        " + Filters["Maximum Prijs"]);
                                         Console.WriteLine();
-                                        Console.WriteLine("    [6] Filters Bevestigen");
+                                        Console.WriteLine("    [6] Filters Resetten");
+                                        Console.WriteLine("    [7] Filters Bevestigen");
                                         Console.WriteLine();
                                         Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                         Console.WriteLine();
@@ -791,6 +792,13 @@ namespace Rotterdam_Airlines
                                                 Console.Clear();
                                                 break;
                                             case 6:
+                                                Filters["Bestemming"] = "";
+                                                Filters["Datum"] = "";
+                                                Filters["Aantal Personen"] = 1;
+                                                Filters["Maximum Prijs"] = 1000;
+                                                Console.Clear();
+                                                break;
+                                            case 7:
                                                 ChangingFilters = false;
                                                 Console.Clear();
                                                 break;
