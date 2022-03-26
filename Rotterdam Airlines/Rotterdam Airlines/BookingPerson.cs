@@ -9,6 +9,7 @@ namespace Rotterdam_Airlines
     class BookingPerson
     {
         // CUSTOMER PERSON DATA
+        private string CustomerFlightNumber { get; set; }
         private string CustomerFirstName { get; set; }
         private string CustomerMiddleName { get; set; }
         private string CustomerLastName { get; set; }
@@ -16,8 +17,9 @@ namespace Rotterdam_Airlines
         private string CustomerGender { get; set; }
         private string CustomerCountry { get; set; }
 
-        public BookingPerson(string customerFirstName, string customerMiddleName, string customerLastName, string customerBirthDate, string customerGender, string customerCountry)
+        public BookingPerson(string customerFlightNumber, string customerFirstName, string customerMiddleName, string customerLastName, string customerBirthDate, string customerGender, string customerCountry)
         {
+            CustomerFlightNumber = customerFlightNumber;
             CustomerFirstName = customerFirstName;
             CustomerMiddleName = customerMiddleName;
             CustomerLastName = customerLastName;
