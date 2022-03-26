@@ -22,7 +22,7 @@ namespace Rotterdam_Airlines
             };
            
             // CREATE DEFAULT USERS
-            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null,null,null);
+            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null,null,null,new List<string>(),true);
             Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
             
             while (true)
@@ -32,8 +32,14 @@ namespace Rotterdam_Airlines
 
                 // PRINT WELCOME TEXT
                 UserInterface.SetMainColor();
-                Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines");
-                Console.WriteLine("    ────────────────────────────────────────────────────");
+                if (!CurrentUser.IsGuest == true)
+                {
+                    Console.WriteLine($"    Welkom {CurrentUser.first_name} bij het boekingsysteem van Rotterdam Airlines");
+                } else
+                {
+                    Console.WriteLine($"    Welkom bij het boekingsysteem van Rotterdam Airlines");
+                }
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 UserInterface.SetDefaultColor();
                 Console.WriteLine();
 
@@ -41,12 +47,18 @@ namespace Rotterdam_Airlines
                 UserInterface.PrintMainMenu(authorized);
 
                 // HANDLE USER INPUT
-                Console.WriteLine("    ────────────────────────────────────────────────────");
+                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 Console.WriteLine();
                 UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
                 string MainMenuInput = Console.ReadLine();
+                if (!MainMenuInput.All(char.IsNumber))
+                {
+                    Console.Clear();
+                }
+                else
+                {
                 int MainMenuChoice = int.Parse(MainMenuInput);
 
                 // HANDLE MENU
@@ -55,6 +67,10 @@ namespace Rotterdam_Airlines
                     // VLUCHT BOEKEN
                     case 1:
                         Console.Clear();
+                        
+                        List<Customer> test = JSON.LoadCustomersJSON();
+                            test[0].BookingList.Add("test");
+                            JSON.SaveCustomersJSON(test);
                         break;
 
                     // OVERZICHT BOEKINGEN
@@ -170,7 +186,7 @@ namespace Rotterdam_Airlines
                     // ACCOUNT
                     case 6:
                         Console.Clear();
-                        UserInterface.PrintAccountMenu(authorized);
+                        UserInterface.PrintAccountMenu(authorized,CurrentUser);
                         Console.WriteLine("    ────────────────────────────────────────────────────");
                         Console.WriteLine();
                         UserInterface.SetMainColor();
@@ -178,59 +194,56 @@ namespace Rotterdam_Airlines
                         UserInterface.SetDefaultColor();
                         string account_input = Console.ReadLine();
                         int account_choice = int.Parse(account_input);
-
-                        switch(account_choice)
-                        {
-                            case 0:
-                                Console.WriteLine("1");
-                                break;
-                            case 1:
-                                Console.Clear();
-                                Console.Write("Vul uw email in: ");
-                                string Email = Console.ReadLine();
-                                List<Customer>Customers = JSON.LoadCustomersJSON();
-                                bool UserFound = false;
-                                if (Email == AdminUser.email) 
+                            // Options for when no one is logged in
+                            if (CurrentUser.IsGuest)
+                            {
+                                switch (account_choice)
                                 {
-                                    UserFound = true;
-                                    string Password = Console.ReadLine();
-                                    if (AdminUser.password == Password)
-                                    {
-                                        authorized = true; 
-                                    }
-                                }
-                                else 
-                                { 
-                                    foreach (Customer customer in Customers){
-                                        if (Email == customer.email) {
-                                            Customer TempUser = customer;
-                                            UserFound = true;
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        Console.Clear();
+                                        Type check = typeof(Customer);
+                                        object LoginInformation = Customer.Login(AdminUser, CurrentUser);
+                                        if (LoginInformation.GetType().Equals(check))
+                                        {
+                                            CurrentUser = (Customer)LoginInformation;
                                         }
-                                    }
+                                        else
+                                        {
+                                            authorized = true;
+                                        }
+                                        break;
+                                    case 2:
+                                        Console.Clear();
+                                        Customer.RegisterCustomer(CurrentUser);
+                                        break;
+                                    case 3:
+                                        Console.Clear();
+                                        break;
                                 }
-                                if (UserFound) 
-                                {
-                                    Console.WriteLine("hallo");
-                                }
-                                else
-                                {
-                                    Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("Geen gebruiker gevonden met deze emailadres");
-                                    UserInterface.SetDefaultColor();
-                                }
-                                Console.ReadLine();
-                                break;
-                            case 2:
-                                Console.Clear();
-                                Customer.RegisterCustomer(CurrentUser);
-                                break;
-                            case 3:
-                                Console.Clear();
-                                break;
-                        }
 
-                        Console.Clear();
-                        break;
+                            }
+                            // Options for when a admin is logged in 
+                            else if (authorized) { }
+                            // Options for when a user is logged in 
+                            else 
+                            {
+                                switch (account_choice)
+                                {
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        CurrentUser.SetToDefault();
+                                        break;
+                                }
+                            }
+                            Console.Clear();
+                            break;
 
                     // CONTACT
                     case 7:
@@ -278,6 +291,7 @@ namespace Rotterdam_Airlines
                     default:
                         Console.Clear();
                         break;
+                }
                 }
             }
         }
