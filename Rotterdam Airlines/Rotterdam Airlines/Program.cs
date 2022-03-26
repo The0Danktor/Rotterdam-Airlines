@@ -186,7 +186,7 @@ namespace Rotterdam_Airlines
                                 break;
                             case 1:
                                 Console.Clear();
-                                Console.Write("Vull uw email in: ");
+                                Console.Write("Vul uw email in: ");
                                 string Email = Console.ReadLine();
                                 List<Customer>Customers = JSON.LoadCustomersJSON();
                                 bool UserFound = false;
@@ -215,7 +215,7 @@ namespace Rotterdam_Airlines
                                 else
                                 {
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("Geen gebruiker gevonden met deze emailadress");
+                                    Console.WriteLine("Geen gebruiker gevonden met deze emailadres");
                                     UserInterface.SetDefaultColor();
                                 }
                                 Console.ReadLine();
@@ -265,6 +265,13 @@ namespace Rotterdam_Airlines
                     // EXIT
                     case 8:
                         Environment.Exit(0);
+                        break;
+
+                    // Admin Test
+                    case 9:
+                        Console.Clear();
+                        Admin.PrintAdminMainScreen();
+                        Console.Clear();
                         break;
 
                     // DEFAULT
