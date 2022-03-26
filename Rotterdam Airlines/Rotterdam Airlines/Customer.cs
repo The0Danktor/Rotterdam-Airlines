@@ -78,8 +78,8 @@ namespace Rotterdam_Airlines
         static public object Login(Admin AdminUser , Customer CurrentUser)
         {
             
-                string Email = "" ;
-                string Password = "" ;
+            string Email = "" ;
+            string Password = "" ;
             while (true) 
             {
                 UserInterface.PrintInlogMenu(Email,Password);
