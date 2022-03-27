@@ -82,9 +82,10 @@ namespace Rotterdam_Airlines
             string Password = "" ;
             while (true) 
             {
+                Console.Clear();
                 UserInterface.PrintInlogMenu(Email,Password);
-                string InlogInput = Console.ReadLine();
-                int InlogChoice = int.Parse(InlogInput);
+                int InlogChoice = 100;
+                try { InlogChoice = int.Parse(Console.ReadLine()); } catch { }
                 bool UserFound = false;
                 switch (InlogChoice)
                 {
@@ -235,11 +236,10 @@ namespace Rotterdam_Airlines
             bool creating = true;
             while (creating)
             {
-
+                Console.Clear();
                 UserInterface.PrintRegisterMenu(CurrentUser);
-
-                string register_input = Console.ReadLine();
-                int register_choice = int.Parse(register_input);
+                int register_choice = 100;
+                try { register_choice = int.Parse(Console.ReadLine()); } catch { }
                 switch (register_choice)
                 {
                     case 0:
@@ -306,9 +306,9 @@ namespace Rotterdam_Airlines
                             {
                                 UserInterface.PrintRegisterMenu(CurrentUser);
                                 Console.WriteLine();
+                                Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
-                                Console.WriteLine();
                                 UserInterface.SetDefaultColor();
                             }
                         }
@@ -333,8 +333,11 @@ namespace Rotterdam_Airlines
                                 UserInterface.PrintRegisterMenu(CurrentUser);
                                 Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Het ingevoerde Wachtwoorden waren niet het zelfde)");
+                                Console.WriteLine();
+                                Console.WriteLine("    Onjuiste invoer. De ingevoerde wachtwoorden waren niet hetzelfde.\n    Klik op ENTER om het opnieuw te proberen.");
                                 UserInterface.SetDefaultColor();
+                                Console.ReadKey();
+                                Console.Clear();
                             }
                         }
                         break;
@@ -429,6 +432,7 @@ namespace Rotterdam_Airlines
                     case 6:
                         while(true)
                         {
+                            Console.WriteLine();
                             Console.WriteLine("    [1] Man");
                             Console.WriteLine("    [2] Vrouw");
                             Console.WriteLine("    [3] Overig");
@@ -439,19 +443,19 @@ namespace Rotterdam_Airlines
                             string TempInput = Console.ReadLine();
                             if (TempInput == "1")
                             {
-                                CurrentUser.gender = "man";
+                                CurrentUser.gender = "Man";
                                 Console.Clear();
                                 break;
                             }
                             else if(TempInput == "2")
                             {
-                                CurrentUser.gender = "vrouw";
+                                CurrentUser.gender = "Vrouw";
                                 Console.Clear();
                                 break;
                             }
                             else if(TempInput == "3")
                             {
-                                CurrentUser.gender = "overig";
+                                CurrentUser.gender = "Overig";
                                 Console.Clear();
                                 break;
                             }
@@ -626,7 +630,8 @@ namespace Rotterdam_Airlines
                 UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
-                int InputConfirm = int.Parse(Console.ReadLine());
+                int InputConfirm = 100;
+                try { InputConfirm = int.Parse(Console.ReadLine()); } catch { }
                 if (InputConfirm == 1)
                 {
                     return false;
