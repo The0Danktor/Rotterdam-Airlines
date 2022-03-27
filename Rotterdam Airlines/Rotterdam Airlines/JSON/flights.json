@@ -1,0 +1,3062 @@
+[
+  {
+    "Cancelled": false,
+    "FlightCode": "000001",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-25T00:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000002",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-25T00:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000003",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-25T00:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000004",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-25T04:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000005",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-25T04:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000006",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-25T04:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000007",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-25T08:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000008",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-25T08:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000009",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-25T08:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000010",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-25T12:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000011",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-25T12:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000012",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-25T12:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000013",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-25T16:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000014",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-25T16:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000015",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-25T16:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000016",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-25T20:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000017",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-25T20:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000018",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-25T20:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000019",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-26T00:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000020",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-26T00:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000021",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-26T00:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000022",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-26T04:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000023",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-26T04:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000024",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-26T04:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000025",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-26T08:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000026",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-26T08:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000027",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-26T08:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000028",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-26T12:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000029",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-26T12:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000030",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-26T12:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000031",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-26T16:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000032",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-26T16:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000033",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-26T16:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000034",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-26T20:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000035",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-26T20:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000036",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-26T20:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000037",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-27T00:00:00+01:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000038",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-27T00:00:00+01:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000039",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-27T00:00:00+01:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000040",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-27T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000041",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-27T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000042",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-27T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000043",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-27T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000044",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-27T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000045",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-27T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000046",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-27T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000047",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-27T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000048",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-27T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000049",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-27T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000050",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-27T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000051",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-27T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000052",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-27T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000053",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-27T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000054",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-27T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000055",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-28T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000056",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-28T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000057",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-28T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000058",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-28T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000059",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-28T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000060",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-28T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000061",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-28T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000062",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-28T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000063",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-28T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000064",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-28T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000065",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-28T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000066",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-28T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000067",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-28T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000068",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-28T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000069",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-28T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000070",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-28T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000071",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-28T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000072",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-28T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000073",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-29T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000074",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-29T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000075",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-29T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000076",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-29T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000077",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-29T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000078",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-29T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000079",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-29T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000080",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-29T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000081",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-29T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000082",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-29T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000083",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-29T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000084",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-29T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000085",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-29T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000086",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-29T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000087",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-29T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000088",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-29T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000089",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-29T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000090",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-29T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000091",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-30T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000092",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-30T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000093",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-30T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000094",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-30T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000095",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-30T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000096",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-30T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000097",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-30T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000098",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-30T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000099",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-30T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000100",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-30T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000101",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-30T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000102",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-30T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000103",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-30T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000104",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-30T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000105",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-30T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000106",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-30T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000107",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-30T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000108",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-30T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000109",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-03-31T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000110",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-03-31T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000111",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-03-31T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000112",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-03-31T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000113",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-03-31T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000114",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-03-31T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000115",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-03-31T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000116",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-03-31T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000117",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-03-31T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000118",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-03-31T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000119",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-03-31T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000120",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-03-31T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000121",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-03-31T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000122",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-03-31T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000123",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-03-31T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000124",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-03-31T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000125",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-03-31T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000126",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-03-31T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000127",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-01T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000128",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-01T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000129",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-01T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000130",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-01T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000131",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-01T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000132",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-01T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000133",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-01T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000134",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-01T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000135",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-01T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000136",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-01T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000137",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-01T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000138",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-01T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000139",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-01T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000140",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-01T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000141",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-01T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000142",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-01T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000143",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-01T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000144",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-01T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000145",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-02T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000146",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-02T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000147",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-02T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000148",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-02T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000149",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-02T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000150",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-02T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000151",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-02T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000152",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-02T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000153",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-02T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000154",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-02T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000155",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-02T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000156",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-02T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000157",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-02T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000158",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-02T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000159",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-02T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000160",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-02T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000161",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-02T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000162",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-02T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000163",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-03T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000164",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-03T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000165",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-03T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000166",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-03T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000167",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-03T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000168",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-03T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000169",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-03T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000170",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-03T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000171",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-03T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000172",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-03T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000173",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-03T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000174",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-03T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000175",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-03T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000176",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-03T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000177",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-03T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000178",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-03T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000179",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-03T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000180",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-03T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000181",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-04T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000182",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-04T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000183",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-04T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000184",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-04T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000185",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-04T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000186",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-04T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000187",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-04T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000188",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-04T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000189",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-04T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000190",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-04T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000191",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-04T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000192",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-04T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000193",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-04T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000194",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-04T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000195",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-04T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000196",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-04T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000197",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-04T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000198",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-04T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000199",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-05T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000200",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-05T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000201",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-05T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000202",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-05T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000203",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-05T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000204",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-05T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000205",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-05T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000206",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-05T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000207",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-05T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000208",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-05T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000209",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-05T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000210",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-05T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000211",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-05T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000212",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-05T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000213",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-05T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000214",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-05T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000215",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-05T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000216",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-05T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000217",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-06T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000218",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-06T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000219",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-06T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000220",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-06T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000221",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-06T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000222",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-06T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000223",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-06T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000224",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-06T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000225",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-06T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000226",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-06T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000227",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-06T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000228",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-06T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000229",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-06T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000230",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-06T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000231",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-06T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000232",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-06T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000233",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-06T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000234",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-06T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000235",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-07T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000236",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-07T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000237",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-07T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000238",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-07T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000239",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-07T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000240",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-07T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000241",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-07T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000242",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-07T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000243",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-07T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000244",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-07T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000245",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-07T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000246",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-07T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000247",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-07T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000248",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-07T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000249",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-07T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000250",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-07T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000251",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-07T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000252",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-07T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000253",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-08T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000254",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-08T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000255",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-08T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000256",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-08T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000257",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-08T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000258",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-08T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000259",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-08T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000260",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-08T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000261",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-08T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000262",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-08T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000263",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-08T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000264",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-08T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000265",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-08T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000266",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-08T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000267",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-08T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000268",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-08T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000269",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-08T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000270",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-08T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000271",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-09T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000272",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-09T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000273",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-09T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000274",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-09T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000275",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-09T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000276",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-09T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000277",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-09T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000278",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-09T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000279",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-09T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000280",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-09T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000281",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-09T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000282",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-09T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000283",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-09T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000284",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-09T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000285",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-09T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000286",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-09T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000287",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-09T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000288",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-09T20:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000289",
+    "FlightNumber": "RAS737PO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Porto",
+    "Departure": "2022-04-10T00:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000290",
+    "FlightNumber": "RAS3030VA",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Valencia",
+    "Departure": "2022-04-10T00:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000291",
+    "FlightNumber": "RAS787SE",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Sevilla",
+    "Departure": "2022-04-10T00:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000292",
+    "FlightNumber": "RAS737BA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Barcelona",
+    "Departure": "2022-04-10T04:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000293",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dusseldorf",
+    "Departure": "2022-04-10T04:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000294",
+    "FlightNumber": "RAS787OS",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Oslo",
+    "Departure": "2022-04-10T04:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000295",
+    "FlightNumber": "RAS737MA",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Malaga",
+    "Departure": "2022-04-10T08:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000296",
+    "FlightNumber": "RAS330BU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Brussel",
+    "Departure": "2022-04-10T08:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000297",
+    "FlightNumber": "RAS787ZU",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Zurich",
+    "Departure": "2022-04-10T08:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000298",
+    "FlightNumber": "RAS737RO",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Rome",
+    "Departure": "2022-04-10T12:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000299",
+    "FlightNumber": "RAS330WE",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Wenen",
+    "Departure": "2022-04-10T12:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000300",
+    "FlightNumber": "RAS787MA",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Madrid",
+    "Departure": "2022-04-10T12:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000301",
+    "FlightNumber": "RAS737PR",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Praag",
+    "Departure": "2022-04-10T16:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000302",
+    "FlightNumber": "RAS330DU",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Dublin",
+    "Departure": "2022-04-10T16:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000303",
+    "FlightNumber": "RAS787LY",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Lyon",
+    "Departure": "2022-04-10T16:00:00+02:00",
+    "Gate": "3"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000304",
+    "FlightNumber": "RAS737MU",
+    "PlaneType": "Boeing 737",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Munchen",
+    "Departure": "2022-04-10T20:00:00+02:00",
+    "Gate": "1"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000305",
+    "FlightNumber": "RAS330KO",
+    "PlaneType": "Airbus 330",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Kopenhagen",
+    "Departure": "2022-04-10T20:00:00+02:00",
+    "Gate": "2"
+  },
+  {
+    "Cancelled": false,
+    "FlightCode": "000306",
+    "FlightNumber": "RAS787LO",
+    "PlaneType": "Boeing 787",
+    "Airline": "Rotterdam Airlines",
+    "Destination": "Londen",
+    "Departure": "2022-04-10T20:00:00+02:00",
+    "Gate": "3"
+  }
+]
