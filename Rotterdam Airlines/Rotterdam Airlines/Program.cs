@@ -287,12 +287,6 @@ namespace Rotterdam_Airlines
                             Environment.Exit(0);
                             break;
 
-                        // Admin Test
-                        case 9:
-                            Console.Clear();
-                            Console.Clear();
-                            break;
-
                         // DEFAULT
                         default:
                             Console.Clear();
