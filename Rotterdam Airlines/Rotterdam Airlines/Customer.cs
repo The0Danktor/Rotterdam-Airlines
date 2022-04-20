@@ -12,13 +12,13 @@ namespace Rotterdam_Airlines
     class Customer : User
     {
         public string UserId { get; set; }
-        public string first_name { get; set; }
-        public string prefix { get; set; }
-        public string last_name { get; set; }
-        public string country { get; set; }
-        public string gender { get; set; }
-        public string birth_date { get; set; }
-        public string phone_number { get; set; }
+        public string First_name { get; set; }
+        public string Prefix { get; set; }
+        public string Last_name { get; set; }
+        public string Country { get; set; }
+        public string Gender { get; set; }
+        public string Birth_date { get; set; }
+        public string Phone_number { get; set; }
         public List<string> BookingList { get; set; }
         public bool IsGuest { get; set; }
         public Customer(string UserId, string email, string password, string first_name, string prefix, string last_name, string country, string gender, string birth_date, string phone_number, List<string> BookingList,bool IsGuest = false) : base(email, password)
@@ -26,48 +26,48 @@ namespace Rotterdam_Airlines
             this.UserId = UserId;
             this.email = email;
             this.password = password;
-            this.first_name = first_name;
-            this.prefix = prefix;
-            this.last_name = last_name;
-            this.country = country;
-            this.gender = gender;
-            this.birth_date = birth_date;
-            this.phone_number = phone_number;
+            this.First_name = first_name;
+            this.Prefix = prefix;
+            this.Last_name = last_name;
+            this.Country = country;
+            this.Gender = gender;
+            this.Birth_date = birth_date;
+            this.Phone_number = phone_number;
             this.BookingList = BookingList;
             this.IsGuest = IsGuest;
         }
 
         public bool CheckNull()
         {
-            return this.first_name != null &&
-                   this.prefix != null &&
-                   this.last_name != null &&
-                   this.country != null &&
-                   this.gender != null &&
-                   this.birth_date != null &&
-                   this.phone_number != null &&
+            return this.First_name != null &&
+                   this.Prefix != null &&
+                   this.Last_name != null &&
+                   this.Country != null &&
+                   this.Gender != null &&
+                   this.Birth_date != null &&
+                   this.Phone_number != null &&
                    this.email != null &&
                    this.password != null;
         }
         public void SetToDefault()
         {
             this.UserId = null;
-            this.first_name = null;
-            this.prefix=null;
-            this.last_name = null;
-            this.country = null;
-            this.gender = null;
-            this.birth_date = null;
-            this.phone_number = null;
+            this.First_name = null;
+            this.Prefix=null;
+            this.Last_name = null;
+            this.Country = null;
+            this.Gender = null;
+            this.Birth_date = null;
+            this.Phone_number = null;
             this.email = null;
             this.password = null;
             this.BookingList = new List<string> ();
             this.IsGuest= true;
 
         }
-        private string getFullName()
+        private string GetFullName()
         {
-            return $"{first_name} {last_name}";
+            return $"{First_name} {Last_name}";
         }
 
         private void GetNewUserID()
@@ -104,7 +104,7 @@ namespace Rotterdam_Airlines
                         UserInterface.SetMainColor();
                         Console.Write("    Vul uw wachtwoord in: ");
                         UserInterface.SetDefaultColor();
-                        Password = hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ", true, Email, Password);
+                        Password = Hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ", true, Email, Password);
                         Console.Clear();
                         break;
 
@@ -164,7 +164,7 @@ namespace Rotterdam_Airlines
                }
            }
 
-        static public string hiddenpassword(Customer CurrentUser, string question, bool inlog = false, string email = "" ,string password = "") 
+        static public string Hiddenpassword(Customer CurrentUser, string question, bool inlog = false, string email = "" ,string password = "") 
         {
             string HiddenPassword = "";
             string hidden = "";
@@ -296,7 +296,7 @@ namespace Rotterdam_Airlines
                             UserInterface.SetMainColor();
                             Console.Write("    Vul uw wachtwoord in: ");
                             UserInterface.SetDefaultColor();
-                            TempPassword = hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ");
+                            TempPassword = Hiddenpassword(CurrentUser, "    Vul uw wachtwoord in: ");
                             if (TempPassword == "break") { secondeinput = false; break; }
                             else if (TempPassword.Length >= 8 ) 
                             {
@@ -320,7 +320,7 @@ namespace Rotterdam_Airlines
                             UserInterface.SetMainColor();
                             Console.Write("    Vul het zelfde wachtwoord in: ");
                             UserInterface.SetDefaultColor();
-                            Temp2Password = hiddenpassword(CurrentUser, "    Vul het zelfde wachtwoord in: ");
+                            Temp2Password = Hiddenpassword(CurrentUser, "    Vul het zelfde wachtwoord in: ");
                             if (Temp2Password == "break") { break;}
                             else if (TempPassword == Temp2Password)
                             {
@@ -351,7 +351,7 @@ namespace Rotterdam_Airlines
                             string TempFirstName = Console.ReadLine();
                             if (TempFirstName.All(char.IsLetter))
                             { 
-                                CurrentUser.first_name = textInfo.ToTitleCase(TempFirstName.ToLower());
+                                CurrentUser.First_name = textInfo.ToTitleCase(TempFirstName.ToLower());
                                 Console.Clear();
                                 break;
                             }
@@ -373,7 +373,7 @@ namespace Rotterdam_Airlines
                             string TempPrefix = Console.ReadLine();
                             if (!TempPrefix.All(char.IsNumber) || TempPrefix == "")
                             { 
-                                CurrentUser.prefix = TempPrefix;
+                                CurrentUser.Prefix = TempPrefix;
                                 break;
                             }
                             else
@@ -392,7 +392,7 @@ namespace Rotterdam_Airlines
                             string TempLastName = Console.ReadLine();
                             if (TempLastName.All(char.IsLetter)) 
                             { 
-                                CurrentUser.last_name = textInfo.ToTitleCase(TempLastName.ToLower());
+                                CurrentUser.Last_name = textInfo.ToTitleCase(TempLastName.ToLower());
                                 Console.Clear();
                                 break;
                             }
@@ -423,7 +423,7 @@ namespace Rotterdam_Airlines
                                 UserInterface.SetDefaultColor();
                             } else
                             {
-                                CurrentUser.country = InputCountry;
+                                CurrentUser.Country = InputCountry;
                                 break;
                             }
                         }
@@ -443,19 +443,19 @@ namespace Rotterdam_Airlines
                             string TempInput = Console.ReadLine();
                             if (TempInput == "1")
                             {
-                                CurrentUser.gender = "Man";
+                                CurrentUser.Gender = "Man";
                                 Console.Clear();
                                 break;
                             }
                             else if(TempInput == "2")
                             {
-                                CurrentUser.gender = "Vrouw";
+                                CurrentUser.Gender = "Vrouw";
                                 Console.Clear();
                                 break;
                             }
                             else if(TempInput == "3")
                             {
-                                CurrentUser.gender = "Overig";
+                                CurrentUser.Gender = "Overig";
                                 Console.Clear();
                                 break;
                             }
@@ -488,7 +488,7 @@ namespace Rotterdam_Airlines
                             {
                                 if ((today.Subtract(scheduleDate).Days/365.242199) >= 18)
                                 {
-                                    CurrentUser.birth_date = TempBirthDate;
+                                    CurrentUser.Birth_date = TempBirthDate;
                                     Console.Clear();
                                     break;
                                 }
@@ -521,7 +521,7 @@ namespace Rotterdam_Airlines
                             string TempPhoneNumber = Console.ReadLine();
                             if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
                             {
-                                CurrentUser.phone_number = TempPhoneNumber;
+                                CurrentUser.Phone_number = TempPhoneNumber;
                                 Console.Clear();
                                 break;
                             }

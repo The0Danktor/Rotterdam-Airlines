@@ -62,7 +62,7 @@ namespace Rotterdam_Airlines
             {
                 PrintLogo();
                 SetMainColor();
-                Console.WriteLine($"    Rotterdam Airlines | Account ({CurrentUser.first_name})");
+                Console.WriteLine($"    Rotterdam Airlines | Account ({CurrentUser.First_name})");
                 Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 SetDefaultColor();
                 Console.WriteLine();
@@ -136,13 +136,13 @@ namespace Rotterdam_Airlines
                 }
             }
             Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
-            Console.WriteLine($"    [3] Naam                           - {CurrentUser.first_name}");
-            if(CurrentUser.prefix == null || CurrentUser.prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name} {CurrentUser.prefix}"); } 
-            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name}, {CurrentUser.prefix}"); }
-            Console.WriteLine($"    [5] Land                           - {CurrentUser.country}");
-            Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.gender}");
-            Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.birth_date}");
-            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrentUser.phone_number}");
+            Console.WriteLine($"    [3] Naam                           - {CurrentUser.First_name}");
+            if(CurrentUser.Prefix == null || CurrentUser.Prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name} {CurrentUser.Prefix}"); } 
+            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name}, {CurrentUser.Prefix}"); }
+            Console.WriteLine($"    [5] Land                           - {CurrentUser.Country}");
+            Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.Gender}");
+            Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.Birth_date}");
+            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrentUser.Phone_number}");
             Console.WriteLine();
             Console.WriteLine($"    [9] Account Creëren       ");
             Console.WriteLine();
