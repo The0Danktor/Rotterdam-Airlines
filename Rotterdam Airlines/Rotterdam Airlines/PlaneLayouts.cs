@@ -14,8 +14,8 @@ namespace Rotterdam_Airlines
             if (flight == null) 
             {
                 list = new string[13] {
-                    "               ╭─────────┰──────────┸────────────────────┸──────────╮                   ╭╯     ╭╯     ",
-                    "          ╭────╯         ┃                                          ╰──────────╮       ╭╯      │      ",
+                    "                ╭────────┰──────────┸────────────────────┸──────────╮                   ╭╯     ╭╯     ",
+                    "          ╭─────╯        ┃                                          ╰──────────╮       ╭╯      │      ",
                     "      ╭───╯              ┃                                                     ╰───┰╮ ╭╯      ╭╯      ",
                     "   ╭──╯     ╭╮           ┃                                                         ┃╰─┴────╮  │       ",
                     " ╭─╯      ╭─╯│           ┃                      Uh Oh...                           ┃       ╰──┴╮      ",
@@ -25,15 +25,15 @@ namespace Rotterdam_Airlines
                     " ╰─╮      ╰─╮│           ┃           Selecteer eerst een vlucht om                 ┃       ╭──┬╯      ",
                     "   ╰──╮     ╰╯           ┃           stoelen uit te kiezen!                        ┃╭─┬────╯  │       ",
                     "      ╰───╮              ┃                                                     ╭───┸╯ ╰╮      ╰╮      ",
-                    "          ╰────╮         ┃                                          ╭──────────╯       ╰╮      │      ",
-                    "               ╰─────────┸──────────┰────────────────────┰──────────╯                   ╰╮     ╰╮     "
+                    "          ╰─────╮        ┃                                          ╭──────────╯       ╰╮      │      ",
+                    "                ╰────────┸──────────┰────────────────────┰──────────╯                   ╰╮     ╰╮     "
                 };
             }
             else if (flight.PlaneType == "Boeing 737")
             {
                 list = new string[13] {
-                    "               ╭─────────┰────═────────────────────────────────────┸─────────═────═────────┸───────────────────────────────────╮                           ╭╯     ╭╯     ",
-                    "          ╭────╯         ┃    ▲                                              ▲    ▲                                            ╰─────────────═──╮         ╭╯      │      ",
+                    "                ╭────────┰────═────────────────────────────────────┸─────────═────═────────┸───────────────────────────────────╮                           ╭╯     ╭╯     ",
+                    "          ╭─────╯        ┃    ▲                                              ▲    ▲                                            ╰─────────────═──╮         ╭╯      │      ",
                     "      ╭───╯              ┃            XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮ ▲  ╰─────┰╮ ╭╯      ╭╯      ",
                     "   ╭──╯     ╭╮           ┃            XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   │          ┃╰─┴────╮  │       ",
                     " ╭─╯      ╭─╯│           ┃            XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯          ┃       ╰──┴╮      ",
@@ -43,15 +43,15 @@ namespace Rotterdam_Airlines
                     " ╰─╮      ╰─╮│           ┃  ╭───╮  XX XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮          ┃       ╭──┬╯      ",
                     "   ╰──╮     ╰╯           ┃  │   │  XX XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   │          ┃╭─┬────╯  │       ",
                     "      ╰───╮              ┃  ╰───╯  XX XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯ ▼  ╭─────┸╯ ╰╮      ╰╮      ",
-                    "          ╰────╮         ┃    ▼                                              ▼    ▼                                            ╭─────────────═──╯         ╰╮      │      ",
-                    "               ╰─────────┸────═────────────────────────────────────┰─────────═────═────────┰───────────────────────────────────╯                           ╰╮     ╰╮     ",
+                    "          ╰─────╮        ┃    ▼                                              ▼    ▼                                            ╭─────────────═──╯         ╰╮      │      ",
+                    "                ╰────────┸────═────────────────────────────────────┰─────────═────═────────┰───────────────────────────────────╯                           ╰╮     ╰╮     ",
                 };
             }
             else if (flight.PlaneType == "Airbus 330")
             {
                 list = new string[13] {
-                    "               ╭──────═──┰───────────────────────────═──────────────────────┸─────────────────────────────────┸───────┬─═───────────────────────────╮                           ╭╯     ╭╯     ",
-                    "          ╭────╯      ▲  ┃         XX XX XX XX ╭───╮ ▲  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮│ ▲  XX XX XX XX XX XX XX XX  ╰────────────────╮         ╭╯      │      ",
+                    "                ╭─────═──┰───────────────────────────═──────────────────────┸─────────────────────────────────┸───────┬─═───────────────────────────╮                           ╭╯     ╭╯     ",
+                    "          ╭─────╯     ▲  ┃         XX XX XX XX ╭───╮ ▲  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮│ ▲  XX XX XX XX XX XX XX XX  ╰────────────────╮         ╭╯      │      ",
                     "      ╭───╯              ┃  XX XX  XX XX XX XX │   │    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   ││    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX╰──═──┰╮ ╭╯      ╭╯      ",
                     "   ╭──╯     ╭╮           ┃  XX XX  XX XX XX XX ╰───╯    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯╵    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX   ▲  ┃╰─┴────╮  │       ",
                     " ╭─╯      ╭─╯│           ┃                                                                                         ╭───╮                                                   ┃       ╰──┴╮      ",
@@ -61,15 +61,15 @@ namespace Rotterdam_Airlines
                     " ╰─╮      ╰─╮│           ┃                                                                                         ╰───╯                                                   ┃       ╭──┬╯      ",
                     "   ╰──╮     ╰╯           ┃  XX XX  XX XX XX XX ╭───╮    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮╷    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX   ▼  ┃╭─┬────╯  │       ",
                     "      ╰───╮              ┃  XX XX  XX XX XX XX │   │    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   ││    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX╭──═──┸╯ ╰╮      ╰╮      ",
-                    "          ╰────╮      ▼  ┃         XX XX XX XX ╰───╯ ▼  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯│ ▼  XX XX XX XX XX XX XX XX  ╭────────────────╯         ╰╮      │      ",
-                    "               ╰──────═──┸───────────────────────────═──────────────────────┰─────────────────────────────────┰───────┴─═───────────────────────────╯                           ╰╮     ╰╮     ",
+                    "          ╰─────╮     ▼  ┃         XX XX XX XX ╰───╯ ▼  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯│ ▼  XX XX XX XX XX XX XX XX  ╭────────────────╯         ╰╮      │      ",
+                    "                ╰─────═──┸───────────────────────────═──────────────────────┰─────────────────────────────────┰───────┴─═───────────────────────────╯                           ╰╮     ╰╮     ",
                 };
             }
             else if (flight.PlaneType == "Boeing 787")
             {
                 list = new string[13] {
-                    "               ╭──────═──┰───────────────────────═─┬────┸──────┬────────────────────────────────┸─────═────────────────────────────────┬───────═─╮                   ╭╯     ╭╯     ",
-                    "          ╭────╯      ▲  ┃╭───╮            ╭───╮ ▲ │           │ XX XX XX XX XX XX XX XX XX XX ╭───╮  ▲  XX XX XX XX XX XX XX XX XX XX │ ╭───╮ ▲ ╰──────────╮       ╭╯      │      ",
+                    "                ╭─────═──┰───────────────────────═─┬────┸──────┬────────────────────────────────┸─────═────────────────────────────────┬───────═─╮                   ╭╯     ╭╯     ",
+                    "          ╭─────╯     ▲  ┃╭───╮            ╭───╮ ▲ │           │ XX XX XX XX XX XX XX XX XX XX ╭───╮  ▲  XX XX XX XX XX XX XX XX XX XX │ ╭───╮ ▲ ╰──────────╮       ╭╯      │      ",
                     "      ╭───╯              ┃│   │  XX XX XX  │   │   │ XX XX XX  │ XX XX XX XX XX XX XX XX XX XX │   │     XX XX XX XX XX XX XX XX XX XX │ │   │              ╰───┰╮ ╭╯      ╭╯      ",
                     "   ╭──╯     ╭╮           ┃│   │  XX XX XX  ╰───╯   ╵ XX XX XX  ╵ XX XX XX XX XX XX XX XX XX XX ╰───╯     XX XX XX XX XX XX XX XX XX XX ╵ ╰───╯                  ┃╰─┴────╮  │       ",
                     " ╭─╯      ╭─╯│           ┃╰───╯                                                                                                                                 ┃       ╰──┴╮      ",
@@ -79,8 +79,8 @@ namespace Rotterdam_Airlines
                     " ╰─╮      ╰─╮│           ┃                                                                                                                                      ┃       ╭──┬╯      ",
                     "   ╰──╮     ╰╯           ┃       XX XX XX  ╭───╮   ╷ XX XX XX  ╷ XX XX XX XX XX XX XX XX XX XX ╭───╮     XX XX XX XX XX XX XX XX XX XX ╷ ╭───╮                  ┃╭─┬────╯  │       ",
                     "      ╰───╮              ┃       XX XX XX  │   │   │ XX XX XX  │ XX XX XX XX XX XX XX XX XX XX │   │     XX XX XX XX XX XX XX XX XX XX │ │   │              ╭───┸╯ ╰╮      ╰╮      ",
-                    "          ╰────╮      ▼  ┃                 ╰───╯ ▼ │           │ XX XX XX XX XX XX XX XX XX XX ╰───╯  ▼  XX XX XX XX XX XX XX XX XX XX │ ╰───╯ ▼ ╭──────────╯       ╰╮      │      ",
-                    "               ╰──────═──┸───────────────────────═─┴────┰──────┴────────────────────────────────┰─────═────────────────────────────────┴───────═─╯                   ╰╮     ╰╮     ",
+                    "          ╰─────╮     ▼  ┃                 ╰───╯ ▼ │           │ XX XX XX XX XX XX XX XX XX XX ╰───╯  ▼  XX XX XX XX XX XX XX XX XX XX │ ╰───╯ ▼ ╭──────────╯       ╰╮      │      ",
+                    "                ╰─────═──┸───────────────────────═─┴────┰──────┴────────────────────────────────┰─────═────────────────────────────────┴───────═─╯                   ╰╮     ╰╮     ",
                 };
             }
             return list;
