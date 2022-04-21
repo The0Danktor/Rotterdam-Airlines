@@ -557,6 +557,43 @@ namespace Rotterdam_Airlines
 
         public static void BookFlight(Admin AdminUser ,Customer CurrentUser)
         {
+            if (CurrentUser.IsGuest)
+            {
+                bool chaning_account = true;
+                Customer OldUser = CurrentUser;
+                while (chaning_account)
+                {
+
+                    Console.Clear();
+                    Console.WriteLine("[1] Inloggen");
+                    Console.WriteLine("[2] Registreren");
+                    Console.WriteLine("[3] Verder gaan als gast");
+                    int InputContactGegevens = 100;
+                    try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
+                    switch (InputContactGegevens)
+                    {
+                        case 1:
+                            CurrentUser = (Customer)Login(AdminUser, CurrentUser);
+                            if (!(CurrentUser == OldUser)) { 
+                            chaning_account = false;
+                            }
+                            break;
+                        case 2:
+                            var oldtemp = JSON.LoadCustomersJSON();
+                            RegisterCustomer(CurrentUser);
+                            var temp = JSON.LoadCustomersJSON();
+                            if (!(temp.Count == oldtemp.Count))
+                            {
+                                CurrentUser = temp[temp.Count -1];
+                                chaning_account = false;
+                            }
+                            break;
+                        case 3:
+                            chaning_account = false;
+                            break;
+                    }
+                }
+            }
             bool BookingFlight = true;
             string[][] BookingSteps = GenerateBookingSteps();
 
@@ -663,8 +700,7 @@ namespace Rotterdam_Airlines
 
             // BOOK FLIGHT MENU
             while (BookingFlight)
-            {
-
+            {      
                 Console.Clear();
                 UserInterface.SetDefaultColor();
                 UserInterface.PrintLogo();
@@ -1018,115 +1054,102 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 3:
-                        if (CurrentUser.IsGuest)
+                        bool EmailExists(string email)
+                        {
+                            bool EmailExists = false;
+                            List<Customer> customers = JSON.LoadCustomersJSON();
+                            for (int i = 0; i < customers.Count; i++)
+                            {
+                                if (customers[i].email == email)
+                                {
+                                    EmailExists = true;
+                                    break;
+                                }
+                            }
+                            return EmailExists;
+                        }
+                        bool ChangingContactGegevens = true;
+                        while (ChangingContactGegevens)
                         {
                             Console.Clear();
-                            Console.WriteLine("[1] Inloggen");
-                            Console.WriteLine("[2] Registreren");
-                            Console.WriteLine("[3] Verder gaan als gast");
+                            Console.WriteLine($"[1] Email       {CurrentUser.email}");
+                            Console.WriteLine($"[2] Telefoon Nummer     {CurrentUser.Phone_number}");
+                            Console.WriteLine($"[3] Terug");
                             int InputContactGegevens = 100;
                             try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
                             switch (InputContactGegevens)
                             {
                                 case 1:
-                                    CurrentUser = (Customer)Login(AdminUser , CurrentUser);
-                                    break;
-                                case 2:
-                                    RegisterCustomer(CurrentUser);
-                                    var temp = JSON.LoadCustomersJSON();
-                                    CurrentUser = temp[-1];
-                                    break;
-                                case 3:
-                                    bool EmailExists(string email)
+                                    while (true)
                                     {
-                                        bool EmailExists = false;
-                                        List<Customer> customers = JSON.LoadCustomersJSON();
-                                        for (int i = 0; i < customers.Count; i++)
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Vul uw email in: ");
+                                        UserInterface.SetDefaultColor();
+                                        string TempEmail = Console.ReadLine();
+
+                                        try
                                         {
-                                            if (customers[i].email == email)
+                                            if (EmailExists(TempEmail))
                                             {
-                                                EmailExists = true;
-                                                break;
-                                            }
-                                        }
-                                        return EmailExists;
-                                    }
-                                    Console.WriteLine($"[1] Email       {CurrentUser.email}");
-                                    Console.WriteLine($"[2] Telefoon Nummer     {CurrentUser.Phone_number}");
-                                    InputContactGegevens = 100;
-                                    try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
-                                    switch (InputContactGegevens)
-                                    {
-                                        case 1:
-                                            while (true)
-                                            {
+                                                Console.ForegroundColor = ConsoleColor.Red;
                                                 Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.Write("    Vul uw email in: ");
+                                                Console.WriteLine("    Er bestaat al een account met deze email. Vul een andere email in.");
                                                 UserInterface.SetDefaultColor();
-                                                string TempEmail = Console.ReadLine();
-
-                                                try
-                                                {
-                                                    if (EmailExists(TempEmail))
-                                                    {
-                                                        Console.ForegroundColor = ConsoleColor.Red;
-                                                        Console.WriteLine();
-                                                        Console.WriteLine("    Er bestaat al een account met deze email. Vul een andere email in.");
-                                                        UserInterface.SetDefaultColor();
-                                                    }
-                                                    else
-                                                    {
-                                                        if (TempEmail.Contains("@") && TempEmail.Contains("."))
-                                                        {
-                                                            CurrentUser.email = TempEmail;
-                                                            Console.Clear();
-                                                            break;
-                                                        }
-                                                        else
-                                                        {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
-                                                            UserInterface.SetDefaultColor();
-                                                        }
-                                                    }
-                                                }
-                                                catch
-                                                {
-                                                    Console.ForegroundColor = ConsoleColor.Red;
-                                                    Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
-                                                    UserInterface.SetDefaultColor();
-                                                }
                                             }
-                                            break;
-
-                                        case 2:
-                                            while (true)
+                                            else
                                             {
-                                                Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.Write("    Vul uw telefoonnummer in: ");
-                                                UserInterface.SetDefaultColor();
-                                                string TempPhoneNumber = Console.ReadLine();
-                                                if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
+                                                if (TempEmail.Contains("@") && TempEmail.Contains("."))
                                                 {
-                                                    CurrentUser.Phone_number = TempPhoneNumber;
+                                                    CurrentUser.email = TempEmail;
                                                     Console.Clear();
                                                     break;
                                                 }
                                                 else
                                                 {
                                                     Console.ForegroundColor = ConsoleColor.Red;
-                                                    Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
+                                                    Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
                                                     UserInterface.SetDefaultColor();
                                                 }
                                             }
-                                            break;
-
+                                        }
+                                        catch
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
+                                            UserInterface.SetDefaultColor();
+                                        }
                                     }
                                     break;
+
+                                case 2:
+                                    while (true)
+                                    {
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Vul uw telefoonnummer in: ");
+                                        UserInterface.SetDefaultColor();
+                                        string TempPhoneNumber = Console.ReadLine();
+                                        if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
+                                        {
+                                            CurrentUser.Phone_number = TempPhoneNumber;
+                                            Console.Clear();
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
+                                            UserInterface.SetDefaultColor();
+                                        }
+                                    }
+                                    break;
+                                case 3:
+                                    ChangingContactGegevens = false;
+                                    break;
+
                             }
-                            
+
                         }
                         break;
                     // DEFAULT
