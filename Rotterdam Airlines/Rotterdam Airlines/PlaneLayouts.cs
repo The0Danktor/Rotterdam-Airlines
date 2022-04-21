@@ -4,24 +4,84 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rotterdam_Airlines.JSON
+namespace Rotterdam_Airlines
 {
     internal class PlaneLayouts
     {
-        public string[] PlaneLayout(Flight flight)
+        public static string[] getLayout(Flight flight)
         {
-            string[] list = new string[5];
-            if (flight.PlaneType == "Boeing 737")
+            string[] list = new string[13];
+            if (flight == null) 
             {
-
+                list = new string[13] {
+                    "               ╭─────────┰──────────┸────────────────────┸──────────╮                   ╭╯     ╭╯     ",
+                    "          ╭────╯         ┃                                          ╰──────────╮       ╭╯      │      ",
+                    "      ╭───╯              ┃                                                     ╰───┰╮ ╭╯      ╭╯      ",
+                    "   ╭──╯     ╭╮           ┃                                                         ┃╰─┴────╮  │       ",
+                    " ╭─╯      ╭─╯│           ┃                      Uh Oh...                           ┃       ╰──┴╮      ",
+                    "╭╯       ╭╯ ╭╯           ┃                                                         ┃           ╰╮     ",
+                    "│        │  │            ┃           Er is geen vlucht geselecteerd!               ┃    ════════╪═════",
+                    "╰╮       ╰╮ ╰╮           ┃                                                         ┃           ╭╯     ",
+                    " ╰─╮      ╰─╮│           ┃           Selecteer eerst een vlucht om                 ┃       ╭──┬╯      ",
+                    "   ╰──╮     ╰╯           ┃           stoelen uit te kiezen!                        ┃╭─┬────╯  │       ",
+                    "      ╰───╮              ┃                                                     ╭───┸╯ ╰╮      ╰╮      ",
+                    "          ╰────╮         ┃                                          ╭──────────╯       ╰╮      │      ",
+                    "               ╰─────────┸──────────┰────────────────────┰──────────╯                   ╰╮     ╰╮     "
+                };
             }
-            if (flight.PlaneType == "Airbus 330")
+            else if (flight.PlaneType == "Boeing 737")
             {
-
+                list = new string[13] {
+                    "               ╭─────────┰────═────────────────────────────────────┸─────────═────═────────┸───────────────────────────────────╮                           ╭╯     ╭╯     ",
+                    "          ╭────╯         ┃    ▲                                              ▲    ▲                                            ╰─────────────═──╮         ╭╯      │      ",
+                    "      ╭───╯              ┃            XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮ ▲  ╰─────┰╮ ╭╯      ╭╯      ",
+                    "   ╭──╯     ╭╮           ┃            XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   │          ┃╰─┴────╮  │       ",
+                    " ╭─╯      ╭─╯│           ┃            XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯          ┃       ╰──┴╮      ",
+                    "╭╯       ╭╯ ╭╯           ┃                                                                                                                            ┃           ╰╮     ",
+                    "│        │  │            ┃                                                                                                                            ┃    ════════╪═════",
+                    "╰╮       ╰╮ ╰╮           ┃                                                                                                                            ┃           ╭╯     ",
+                    " ╰─╮      ╰─╮│           ┃  ╭───╮  XX XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮          ┃       ╭──┬╯      ",
+                    "   ╰──╮     ╰╯           ┃  │   │  XX XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   │          ┃╭─┬────╯  │       ",
+                    "      ╰───╮              ┃  ╰───╯  XX XX XX XX XX XX XX XX XX XX XX XX XX XX   XX   XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯ ▼  ╭─────┸╯ ╰╮      ╰╮      ",
+                    "          ╰────╮         ┃    ▼                                              ▼    ▼                                            ╭─────────────═──╯         ╰╮      │      ",
+                    "               ╰─────────┸────═────────────────────────────────────┰─────────═────═────────┰───────────────────────────────────╯                           ╰╮     ╰╮     ",
+                };
             }
-            if (flight.PlaneType == "Boeing 787")
+            else if (flight.PlaneType == "Airbus 330")
             {
-
+                list = new string[13] {
+                    "               ╭──────═──┰───────────────────────────═──────────────────────┸─────────────────────────────────┸───────┬─═───────────────────────────╮                           ╭╯     ╭╯     ",
+                    "          ╭────╯      ▲  ┃         XX XX XX XX ╭───╮ ▲  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮│ ▲  XX XX XX XX XX XX XX XX  ╰────────────────╮         ╭╯      │      ",
+                    "      ╭───╯              ┃  XX XX  XX XX XX XX │   │    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   ││    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX╰──═──┰╮ ╭╯      ╭╯      ",
+                    "   ╭──╯     ╭╮           ┃  XX XX  XX XX XX XX ╰───╯    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯╵    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX   ▲  ┃╰─┴────╮  │       ",
+                    " ╭─╯      ╭─╯│           ┃                                                                                         ╭───╮                                                   ┃       ╰──┴╮      ",
+                    "╭╯       ╭╯ ╭╯           ┃  XX XX   XX XX XX XX XX XX  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   │  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX     ┃           ╰╮     ",
+                    "│        │  │            ┃  XX XX   XX XX XX XX XX XX  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ├───┤  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX     ┃    ════════╪═════",
+                    "╰╮       ╰╮ ╰╮           ┃          XX XX XX XX XX XX  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   │  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX     ┃           ╭╯     ",
+                    " ╰─╮      ╰─╮│           ┃                                                                                         ╰───╯                                                   ┃       ╭──┬╯      ",
+                    "   ╰──╮     ╰╯           ┃  XX XX  XX XX XX XX ╭───╮    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╭───╮╷    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX   ▼  ┃╭─┬────╯  │       ",
+                    "      ╰───╮              ┃  XX XX  XX XX XX XX │   │    XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX │   ││    XX XX XX XX XX XX XX XX  XX XX XX XX XX XX╭──═──┸╯ ╰╮      ╰╮      ",
+                    "          ╰────╮      ▼  ┃         XX XX XX XX ╰───╯ ▼  XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ╰───╯│ ▼  XX XX XX XX XX XX XX XX  ╭────────────────╯         ╰╮      │      ",
+                    "               ╰──────═──┸───────────────────────────═──────────────────────┰─────────────────────────────────┰───────┴─═───────────────────────────╯                           ╰╮     ╰╮     ",
+                };
+            }
+            else if (flight.PlaneType == "Boeing 787")
+            {
+                list = new string[13] {
+                    "               ╭──────═──┰───────────────────────═─┬────┸──────┬────────────────────────────────┸─────═────────────────────────────────┬───────═─╮                   ╭╯     ╭╯     ",
+                    "          ╭────╯      ▲  ┃╭───╮            ╭───╮ ▲ │           │ XX XX XX XX XX XX XX XX XX XX ╭───╮  ▲  XX XX XX XX XX XX XX XX XX XX │ ╭───╮ ▲ ╰──────────╮       ╭╯      │      ",
+                    "      ╭───╯              ┃│   │  XX XX XX  │   │   │ XX XX XX  │ XX XX XX XX XX XX XX XX XX XX │   │     XX XX XX XX XX XX XX XX XX XX │ │   │              ╰───┰╮ ╭╯      ╭╯      ",
+                    "   ╭──╯     ╭╮           ┃│   │  XX XX XX  ╰───╯   ╵ XX XX XX  ╵ XX XX XX XX XX XX XX XX XX XX ╰───╯     XX XX XX XX XX XX XX XX XX XX ╵ ╰───╯                  ┃╰─┴────╮  │       ",
+                    " ╭─╯      ╭─╯│           ┃╰───╯                                                                                                                                 ┃       ╰──┴╮      ",
+                    "╭╯       ╭╯ ╭╯           ┃    ╷    XX XX XX            XX XX XX    XX XX XX XX XX XX XX XX XX ╷         XX XX XX XX XX XX XX XX XX XX XX XX                     ┃           ╰╮     ",
+                    "│        │  │            ┃    │    XX XX XX            XX XX XX    XX XX XX XX XX XX XX XX XX │         XX XX XX XX XX XX XX XX XX XX XX XX                     ┃    ════════╪═════",
+                    "╰╮       ╰╮ ╰╮           ┃    ╵                                    XX XX XX XX XX XX XX XX XX ╵         XX XX XX XX XX XX XX XX XX XX XX XX                     ┃           ╭╯     ",
+                    " ╰─╮      ╰─╮│           ┃                                                                                                                                      ┃       ╭──┬╯      ",
+                    "   ╰──╮     ╰╯           ┃       XX XX XX  ╭───╮   ╷ XX XX XX  ╷ XX XX XX XX XX XX XX XX XX XX ╭───╮     XX XX XX XX XX XX XX XX XX XX ╷ ╭───╮                  ┃╭─┬────╯  │       ",
+                    "      ╰───╮              ┃       XX XX XX  │   │   │ XX XX XX  │ XX XX XX XX XX XX XX XX XX XX │   │     XX XX XX XX XX XX XX XX XX XX │ │   │              ╭───┸╯ ╰╮      ╰╮      ",
+                    "          ╰────╮      ▼  ┃                 ╰───╯ ▼ │           │ XX XX XX XX XX XX XX XX XX XX ╰───╯  ▼  XX XX XX XX XX XX XX XX XX XX │ ╰───╯ ▼ ╭──────────╯       ╰╮      │      ",
+                    "               ╰──────═──┸───────────────────────═─┴────┰──────┴────────────────────────────────┰─────═────────────────────────────────┴───────═─╯                   ╰╮     ╰╮     ",
+                };
             }
             return list;
         }

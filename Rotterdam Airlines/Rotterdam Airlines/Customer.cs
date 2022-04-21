@@ -1029,12 +1029,81 @@ namespace Rotterdam_Airlines
 
                     // STOELEN KIEZEN
                     case 5:
-                        Console.Clear();
-                        UserInterface.SetDefaultColor();
-                        UserInterface.PrintLogo();
-                        int InputTest = 100;
-                        try { InputTest = int.Parse(Console.ReadLine()); } catch { }
+                        BookingSteps[4][1] = "Y";
+                        bool SelectingSeats = true;
+                        int CurrentSlice = 0;
+                        string[] layout = PlaneLayouts.getLayout(BookingSelectedFlight);
+                        string line = layout[0];
+                        int maxSliceLength = line.Length - 102;
+                        
+                        void printPlane()
+                        {
+                            foreach (string line_ in layout) {
+                                Console.OutputEncoding = System.Text.Encoding.UTF8;
+                                Console.WriteLine("    " + line_.Substring(CurrentSlice, 102));
+                            }
+                        }
 
+                        while (SelectingSeats)
+                        {
+                            Console.Clear();
+                            UserInterface.SetDefaultColor();
+                            UserInterface.PrintLogo();
+                            PrintBookingStatus();
+                            Console.WriteLine("");
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("");
+                            Console.WriteLine("    [0] Hoofdmenu");
+                            Console.WriteLine("    [1] Terug");
+                            Console.WriteLine("");
+                            Console.WriteLine("    [2] Scrol naar rechts");
+                            Console.WriteLine("    [3] Scrol naar links");
+                            Console.WriteLine("");
+                            Console.WriteLine("    [4] Stoelcode Invoeren");
+                            Console.WriteLine();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine("");
+                            printPlane();
+                            Console.WriteLine("");
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine("");
+                            UserInterface.SetMainColor();
+                            Console.Write("    Maak een keuze: ");
+                            UserInterface.SetDefaultColor();
+
+                            int InputSelectSeat = 100;
+                            try { InputSelectSeat = int.Parse(Console.ReadLine()); } catch { }
+
+                            switch (InputSelectSeat)
+                            {
+                                case 0:
+                                    SelectingFlight = BackToMainMenu();
+                                    BookingFlight = SelectingFlight;
+                                    Console.Clear();
+                                    break;
+
+                                case 1:
+                                    SelectingSeats = false;
+                                    BookingSteps[4][1] = "X";
+                                    Console.Clear();
+                                    break;
+
+                                case 2:
+                                    CurrentSlice -= 5;
+                                    if (CurrentSlice <= 0) { CurrentSlice = 0; }
+                                    break;
+                                case 3:
+                                    CurrentSlice += 5;
+                                    if (CurrentSlice >= maxSliceLength) { CurrentSlice = maxSliceLength; }
+                                    break;
+                                case 4:
+                                    break;
+                            }
+                        }
+                        BookingSteps[4][1] = "X";
+                        Console.Clear();
                         break;
 
                     // DEFAULT
