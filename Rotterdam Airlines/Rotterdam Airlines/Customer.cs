@@ -1018,6 +1018,25 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
 
+                    case 2:
+                        break;
+
+                    case 3:
+                        break;
+
+                    case 4:
+                        break;
+
+                    // STOELEN KIEZEN
+                    case 5:
+                        Console.Clear();
+                        UserInterface.SetDefaultColor();
+                        UserInterface.PrintLogo();
+                        int InputTest = 100;
+                        try { InputTest = int.Parse(Console.ReadLine()); } catch { }
+
+                        break;
+
                     // DEFAULT
                     default:
                         Console.Clear();
