@@ -24,8 +24,8 @@ namespace Rotterdam_Airlines
         public Customer(string UserId, string email, string password, string first_name, string prefix, string last_name, string country, string gender, string birth_date, string phone_number, List<string> BookingList,bool IsGuest = false) : base(email, password)
         {
             this.UserId = UserId;
-            this.email = email;
-            this.password = password;
+            this.Email = email;
+            this.Password = password;
             this.First_name = first_name;
             this.Prefix = prefix;
             this.Last_name = last_name;
@@ -46,8 +46,8 @@ namespace Rotterdam_Airlines
                    this.Gender != null &&
                    this.Birth_date != null &&
                    this.Phone_number != null &&
-                   this.email != null &&
-                   this.password != null;
+                   this.Email != null &&
+                   this.Password != null;
         }
         public void SetToDefault()
         {
@@ -59,8 +59,8 @@ namespace Rotterdam_Airlines
             this.Gender = null;
             this.Birth_date = null;
             this.Phone_number = null;
-            this.email = null;
-            this.password = null;
+            this.Email = null;
+            this.Password = null;
             this.BookingList = new List<string> ();
             this.IsGuest= true;
 
@@ -110,10 +110,10 @@ namespace Rotterdam_Airlines
 
                     case 3:
                         List<Customer> Customers = JSON.LoadCustomersJSON();
-                        if (Email == AdminUser.email && !UserFound)
+                        if (Email == AdminUser.Email && !UserFound)
                         {
                             UserFound = true;
-                            if (AdminUser.password == Password)
+                            if (AdminUser.Password == Password)
                             {
                                 return AdminUser;
                             }
@@ -131,11 +131,11 @@ namespace Rotterdam_Airlines
                         {
                             foreach (Customer customer in Customers)
                             {
-                                if (Email == customer.email)
+                                if (Email == customer.Email)
                                 {
                                     Customer TempUser = customer;
                                     UserFound = true;
-                                    if (TempUser.password == Password)
+                                    if (TempUser.Password == Password)
                                     {
                                         return TempUser;
                                     }
@@ -223,7 +223,7 @@ namespace Rotterdam_Airlines
                 List<Customer> customers = JSON.LoadCustomersJSON();
                 for (int i = 0; i < customers.Count; i++)
                 {
-                    if(customers[i].email == email)
+                    if(customers[i].Email == email)
                     {
                         EmailExists = true;
                         break;
@@ -267,7 +267,7 @@ namespace Rotterdam_Airlines
                                 {
                                     if (TempEmail.Contains("@") && TempEmail.Contains("."))
                                     {
-                                        CurrentUser.email = TempEmail;
+                                        CurrentUser.Email = TempEmail;
                                         Console.Clear();
                                         break;
                                     }
@@ -324,7 +324,7 @@ namespace Rotterdam_Airlines
                             if (Temp2Password == "break") { break;}
                             else if (TempPassword == Temp2Password)
                             {
-                                CurrentUser.password = TempPassword;
+                                CurrentUser.Password = TempPassword;
                                 Console.Clear();
                                 break;
                             }
@@ -1060,7 +1060,7 @@ namespace Rotterdam_Airlines
                             List<Customer> customers = JSON.LoadCustomersJSON();
                             for (int i = 0; i < customers.Count; i++)
                             {
-                                if (customers[i].email == email)
+                                if (customers[i].Email == email)
                                 {
                                     EmailExists = true;
                                     break;
@@ -1072,7 +1072,7 @@ namespace Rotterdam_Airlines
                         while (ChangingContactGegevens)
                         {
                             Console.Clear();
-                            Console.WriteLine($"[1] Email       {CurrentUser.email}");
+                            Console.WriteLine($"[1] Email       {CurrentUser.Email}");
                             Console.WriteLine($"[2] Telefoon Nummer     {CurrentUser.Phone_number}");
                             Console.WriteLine($"[3] Terug");
                             int InputContactGegevens = 100;
@@ -1101,7 +1101,7 @@ namespace Rotterdam_Airlines
                                             {
                                                 if (TempEmail.Contains("@") && TempEmail.Contains("."))
                                                 {
-                                                    CurrentUser.email = TempEmail;
+                                                    CurrentUser.Email = TempEmail;
                                                     Console.Clear();
                                                     break;
                                                 }

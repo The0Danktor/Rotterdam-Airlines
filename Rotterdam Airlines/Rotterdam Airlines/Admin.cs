@@ -10,8 +10,8 @@ namespace Rotterdam_Airlines
     {
         public Admin(string email, string password) : base(email, password)
         {
-            this.email = email;
-            this.password = password;
+            this.Email = email;
+            this.Password = password;
         }
 
         private static bool RemoveUser()
@@ -23,7 +23,7 @@ namespace Rotterdam_Airlines
 
             foreach (var user in user_list)
             {
-                if (input == user_list[count].email)
+                if (input == user_list[count].Email)
                 {
                     email_check = true;
                     int choice = count;
@@ -58,7 +58,7 @@ namespace Rotterdam_Airlines
 
             foreach (var user in user_list)
             {
-                if (input == user_list[count].email)
+                if (input == user_list[count].Email)
                 {
                     email_check = true;
                     int choice = count;
@@ -73,8 +73,8 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
                     Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
                     Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                    Console.WriteLine("    Email:                " + user_list[choice].email);
-                    Console.WriteLine("    Wachtwoord:           " + user_list[choice].password);
+                    Console.WriteLine("    Email:                " + user_list[choice].Email);
+                    Console.WriteLine("    Wachtwoord:           " + user_list[choice].Password);
                     return true; 
                 }
                 count += 1;

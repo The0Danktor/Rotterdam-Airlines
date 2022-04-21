@@ -126,11 +126,11 @@ namespace Rotterdam_Airlines
             UserInterface.SetDefaultColor();
             Console.WriteLine($"    [0] Annuleren         ");
             Console.WriteLine();
-            Console.WriteLine($"    [1] Email                          - {CurrentUser.email}");
+            Console.WriteLine($"    [1] Email                          - {CurrentUser.Email}");
             string HiddenPassword = "";
-            if(CurrentUser.password != null)
+            if(CurrentUser.Password != null)
             {
-                for (int i = 0; CurrentUser.password.Length > i; i++)
+                for (int i = 0; CurrentUser.Password.Length > i; i++)
                 {
                      HiddenPassword += "*";
                 }
