@@ -72,7 +72,7 @@ namespace Rotterdam_Airlines
                         // VLUCHT BOEKEN
                         case 1:
                             Console.Clear();
-                            Customer.BookFlight(CurrentUser);
+                            Customer.BookFlight(AdminUser, CurrentUser);
                             Console.Clear();
                             break;
 
