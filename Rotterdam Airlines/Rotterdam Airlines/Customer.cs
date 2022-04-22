@@ -1068,6 +1068,7 @@ namespace Rotterdam_Airlines
                             printPlane();
                             Console.WriteLine("");
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine("    □ = Restroom     ▼ = Exit / Entrance     XX = Seat");
                             Console.WriteLine("");
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
