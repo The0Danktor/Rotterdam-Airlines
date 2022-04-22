@@ -18,7 +18,9 @@ namespace Rotterdam_Airlines
         {
             List <Customer> user_list = JSON.LoadCustomersJSON();
             int count = 0;
+            int user_count = 0;
             bool email_check = false;
+            bool check = false;
 
             string input = Console.ReadLine();
             if (input == "0")
@@ -26,16 +28,61 @@ namespace Rotterdam_Airlines
                 return true;
             }
 
+            foreach (var user in user_list)
+            {
+                if (input == user_list[user_count].email)
+                {
+                    check = true;
+                    break;
+                }
+                user_count += 1;
+            }
+            if (check == false)
+            {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("    Er bestaat geen gebruiker met deze email");
+                return false;
+            }
+
             Console.Clear();
             Admin.PrintRemoveUserConfirmScreen();
+            foreach (var user in user_list)
+            {
+                if (input == user_list[count].email)
+                {
+                    check = true;
+                    int choice = count;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                    Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
+                    Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
+                    Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
+                    Console.WriteLine("    Land:                 " + user_list[choice].country);
+                    Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
+                    Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
+                    Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
+                    Console.WriteLine("    Email:                " + user_list[choice].email);
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                    Console.WriteLine();
+                    break;
+                }
+                count += 1;
+            }
+            Console.WriteLine("    Weet u zeker dat u deze gebruiker wilt verwijderen?");
+            Console.Write("    ");
+            Console.ForegroundColor = ConsoleColor.White;
             string confirm_input = Console.ReadLine();
-            if (confirm_input == "1" || confirm_input == "0" || confirm_input == "2")
+
+            if (confirm_input == "0" || confirm_input == "1" || confirm_input == "2")
             {
                 int confirm = int.Parse(confirm_input);
 
                 foreach (var user in user_list)
                 {
-                    if (input == user_list[count].email && confirm == 1)
+                    if (input == user_list[count].email && confirm == 2)
                     {
                         email_check = true;
                         int choice = count;
@@ -52,7 +99,7 @@ namespace Rotterdam_Airlines
                     count += 1;
                 }
 
-                if (email_check == false && confirm == 1)
+                if (email_check == false && confirm == 2)
                 {
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -63,7 +110,7 @@ namespace Rotterdam_Airlines
                 {
                     return true;
                 }
-                else if (confirm == 2)
+                else if (confirm == 1)
                 {
                     return false;
                 }
@@ -232,7 +279,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (input == user_list[number].first_name)
+                        if (user_input == user_list[number].first_name)
                         {
                             user_count += 1;
                         }
@@ -689,7 +736,6 @@ namespace Rotterdam_Airlines
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("    Maak een keuze: ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("    ");
 
             bool admin_bool = true;
             string input = Console.ReadLine();
@@ -857,14 +903,12 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("    [0] Hoofdmenu");
-            Console.WriteLine("    [1] Gebruiker Verwijderen");
-            Console.WriteLine("    [2] Terug");
+            Console.WriteLine("    [1] Terug");
+            Console.WriteLine("    [2] Gebruiker Verwijderen");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.WriteLine("    Weet je zeker dat je deze gebruiker wilt verwijderen?");
-            Console.Write("    ");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
