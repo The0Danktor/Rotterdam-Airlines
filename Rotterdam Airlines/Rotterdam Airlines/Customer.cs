@@ -1058,8 +1058,8 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    [0] Hoofdmenu");
                             Console.WriteLine("    [1] Terug");
                             Console.WriteLine("");
-                            Console.WriteLine("    [2] Scrol naar rechts");
-                            Console.WriteLine("    [3] Scrol naar links");
+                            Console.WriteLine("    [2] Scrol naar links");
+                            Console.WriteLine("    [3] Scrol naar rechts");
                             Console.WriteLine("");
                             Console.WriteLine("    [4] Stoelcode Invoeren");
                             Console.WriteLine();
@@ -1092,11 +1092,11 @@ namespace Rotterdam_Airlines
                                     break;
 
                                 case 2:
-                                    CurrentSlice -= 5;
+                                    CurrentSlice -= 10;
                                     if (CurrentSlice <= 0) { CurrentSlice = 0; }
                                     break;
                                 case 3:
-                                    CurrentSlice += 5;
+                                    CurrentSlice += 10;
                                     if (CurrentSlice >= maxSliceLength) { CurrentSlice = maxSliceLength; }
                                     break;
                                 case 4:
