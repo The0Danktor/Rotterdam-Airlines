@@ -1053,6 +1053,30 @@ namespace Rotterdam_Airlines
                         BookingSteps[0][1] = "X";
                         Console.Clear();
                         break;
+                    case 2:
+                        int NumberOfPassengers = 1;
+                        int InputSelectingNumberOfPassengers = 100;
+                        try { InputSelectingNumberOfPassengers = int.Parse(Console.ReadLine()); } catch { }
+                        switch (InputSelectingNumberOfPassengers)
+                        {
+                            case 1:
+                                NumberOfPassengers = 1;
+                                break;
+                            case 2:
+                                NumberOfPassengers = 2;
+                                break;
+                            case 3:
+                                NumberOfPassengers = 3;
+                                break;
+                            case 4:
+                                NumberOfPassengers = 4;
+                                break;
+                        }
+                        if(NumberOfPassengers == 1)
+                        {
+                            break;
+                        }
+                        break;
                     case 3:
                         bool EmailExists(string email)
                         {
