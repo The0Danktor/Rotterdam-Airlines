@@ -80,6 +80,15 @@ namespace Rotterdam_Airlines
             {
                 int confirm = int.Parse(confirm_input);
 
+                if (confirm == 0)
+                {
+                    return true;
+                }
+                else if (confirm == 1)
+                {
+                    return false;
+                }
+
                 foreach (var user in user_list)
                 {
                     if (input == user_list[count].email && confirm == 2)
@@ -104,14 +113,6 @@ namespace Rotterdam_Airlines
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Er bestaat geen gebruiker met deze email");
-                    return false;
-                }
-                else if (confirm == 0)
-                {
-                    return true;
-                }
-                else if (confirm == 1)
-                {
                     return false;
                 }
             }
@@ -179,7 +180,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[number].email || user_input == user_list[number].first_name || user_input == user_list[number].prefix || user_input == user_list[number].last_name || user_input == user_list[number].country || user_input == user_list[number].gender || user_input == user_list[number].birth_date || user_input == user_list[number].phone_number || user_input == user_list[number].UserId)
+                        if (user_input == user_list[count].email || user_input == user_list[count].first_name || user_input == user_list[count].prefix || user_input == user_list[count].last_name || user_input == user_list[count].country || user_input == user_list[count].gender || user_input == user_list[count].birth_date || user_input == user_list[count].phone_number || user_input == user_list[count].UserId)
                         {
                             check = true;
                             int choice = count;
@@ -696,13 +697,6 @@ namespace Rotterdam_Airlines
                         count += 1;
                     }
                 }
-                else
-                {
-                    Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("   Verkeerde input");
-                    Console.ReadLine();
-                }
                 if (check == false)
                 {
                     Console.WriteLine();
@@ -710,7 +704,14 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    Er bestaan geen gebruikers met deze gegevens");
                     return false;
                 }
-            } 
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("    Verkeerde input");
+                Console.ReadLine();
+            }
             return false;
         }
 
@@ -936,7 +937,7 @@ namespace Rotterdam_Airlines
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.WriteLine("    Maak een keuze: ");
+            Console.Write("    Maak een keuze: ");
             Console.ForegroundColor = ConsoleColor.White;
         }
 

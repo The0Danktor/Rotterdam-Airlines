@@ -21,18 +21,32 @@
     "email": "test@test.",
     "password": "testtest"
   },
-  {
-    "UserId": "LxEk5Dbk",
-    "first_name": "Lucas",
-    "prefix": "de",
-    "last_name": "Leest",
-    "country": "dad",
-    "gender": "overig",
-    "birth_date": "17-08-2002",
-    "phone_number": "0634998880",
-    "BookingList": [],
-    "IsGuest": false,
-    "email": "lucas2002prins@gmail.com",
-    "password": "jamiedepamie"
-  }
+    {
+        "UserId": "LxEk5Dbk",
+        "first_name": "Lucas",
+        "prefix": "de",
+        "last_name": "Leest",
+        "country": "dad",
+        "gender": "overig",
+        "birth_date": "17-08-2002",
+        "phone_number": "0634998880",
+        "BookingList": [],
+        "IsGuest": false,
+        "email": "lucas2002prins@gmail.com",
+        "password": "jamiedepamie"
+    },
+    {
+        "UserId": "LxEk5Dbk",
+        "first_name": "Lucas",
+        "prefix": "de",
+        "last_name": "Leest",
+        "country": "dad",
+        "gender": "overig",
+        "birth_date": "17-08-2002",
+        "phone_number": "0634998880",
+        "BookingList": [],
+        "IsGuest": false,
+        "email": "test123",
+        "password": "jamiedepamie"
+    }
 ]
