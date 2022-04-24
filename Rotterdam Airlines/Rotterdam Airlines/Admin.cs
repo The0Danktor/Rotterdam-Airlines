@@ -775,7 +775,7 @@ namespace Rotterdam_Airlines
                             {
                                 Console.Clear();
                                 string screen = "Gebruiker Verwijderen";
-                                string question = "Wat is de email van de gebruiker die u wilt opzoeken?";
+                                string question = "Wat is de email van de gebruiker die u wilt verwijderen?";
                                 PrintAdminSubScreen(screen, question);
                                 if (Admin.RemoveUser())
                                 {
