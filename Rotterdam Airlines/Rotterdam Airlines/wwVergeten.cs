@@ -1,110 +1,91 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Rotterdam_Airlines
 {
-    class wwVergeten
-    {        
-        
-        public static List<string> GetEmail()
+    class WwVergeten
+    {
+
+        public static void ChangePassword(SmtpClient smtpClient)
         {
-            List<string> wwVergeten = new List<string>();    
-            bool Invullen = true;
-
-            string wwVer_email = null;
-            string wwVer_code = null;
-
-            while (Invullen)
+            Console.Write("    Vul uw email in: ");
+            List<Customer> customers = JSON.LoadCustomersJSON();
+            string inputemail = Console.ReadLine();
+            string currentemail;
+            foreach (Customer customer in customers)
             {
-                UserInterface.PrintLogo();
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("    ────────────────────────────");
-                Console.WriteLine();
-                Console.WriteLine("    [0] Hoofdmenu");
-                Console.WriteLine();
-                Console.WriteLine("    [1] Email" + wwVer_email);
-                Console.WriteLine("    [2] Code" + wwVer_code);
-                Console.WriteLine("    [3] Stuur code");
-                Console.WriteLine("    [4] Pas wachtwoord aan");
-
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write("    Maak een keuze: ");
-                Console.ForegroundColor = ConsoleColor.White;
-                
-                string wwaanpassen_input = Console.ReadLine();
-                int wwaanpassen_choice = int.Parse(wwaanpassen_input);
-
-                switch (wwaanpassen_choice)
+                if (customer.email == inputemail)
                 {
-                    case 0:
-                        Invullen = false;
-                        Console.Clear();
-                        break;
+                    currentemail = customer.email;
+                    Random rd = new Random();
+                    int RandCode = rd.Next(100000, 999999);
+                    WwVergeten.SendCodeMail(currentemail,  smtpClient, RandCode);
+                    WwVergeten.CheckChangeCode(RandCode, currentemail);
 
-                    case 1:
-                        while (true)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.Write("    Vul uw email in :");
-                            wwVer_email = Console.ReadLine();
-                            Console.WriteLine();
-                            if (wwVer_email.Contains("@") && wwVer_email.Contains("."))
-                            {
-                                wwVergeten.Add(wwVer_email);
-                                break;
-                            }
-                            else
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
-                                Console.WriteLine();
-                            }
-
-                        }
-                        Console.Clear();
-                        break;
-
-                    case 2:
-                        while (true)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.Write("    Vul uw email in :");
-                            wwVer_code = Console.ReadLine();
-                            Console.WriteLine();
-                            if (wwVer_code == TruewwVer_code)
-                            {
-                                wwVergeten.Add(wwVer_code);
-                                break;
-                            }
-                            else
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Code is onjuist)");
-                                Console.WriteLine();
-
-                            }
-
-                        }
-
-                        Console.Clear();
-                        break;
+                }
+                else
+                {
+                    Console.WriteLine("    niet bestande email ingevoerd");
+                }
+            }
+        }
 
 
+        public static void SendCodeMail(string currentEmail, SmtpClient smtpClient, int RandCode)
+        {
+            
+            var currentemail = new MailMessage
+
+            {
+
+                From = new MailAddress("RotterdamAirlines2022@outlook.com"),
+                Subject = "Code",
+                Body = String.Format("<h4><b>code:</b> {0} {1}</h4>\n<h4><b>Email:</b> {2}</h4>\n<h4><b>Subject:</b>", RandCode, currentEmail),
+                IsBodyHtml = true,
+            };
+            currentemail.To.Add("RotterdamAirlines2022@outlook.com");
+            currentemail.To.Add(currentEmail);
+            smtpClient.Send(currentemail);
+
+        }
+
+
+        public static void CheckChangeCode(int Truecode, string EmailChangable)
+        {
+            Console.Write("    Vul de code in: ");
+            List<Customer> customers = JSON.LoadCustomersJSON();
+            string inputcode = Console.ReadLine();
+            int InputCode = int.Parse(inputcode);
+            int y = 0;
+            if (Truecode == InputCode)
+            {
+                Console.WriteLine("    Kies een wachtwoord: ");
+                string InputFirstPassword = Console.ReadLine();
+                Console.WriteLine("    Vul het wachtwoord nog een keer in : ");
+                string InputSecondPassword = Console.ReadLine();
+                foreach (Customer customer in customers)
+                {
+                    if (customer.email == EmailChangable)
+                    {
+
+                        customers[y].password = InputFirstPassword;
+                    }
+                
+                    y++;
                 }
 
             }
+            else
+            {
+                Console.WriteLine("    Code is onjuist, probeer opniew");
+            }
 
         }
-        
-        
+   
     }
+
 }

@@ -76,14 +76,19 @@ namespace Rotterdam_Airlines
                     case 5:
                         Console.Clear();
                         UserInterface.PrintLogo();
-
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("    Vind alle Informatie over Rotterdam Airlines.");
+                        Console.WriteLine("    ─────────────────────────────────────────────");
                         Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.White;
 
                         UserInterface.PrintInfoMenu();
 
                         Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("    ───────────────────────────────────────────");
                         Console.Write("    Maak een keuze: ");
+                        Console.ForegroundColor = ConsoleColor.White;
 
                         string informatie_input = Console.ReadLine();
                         int informatie_choice = int.Parse(informatie_input);
@@ -97,15 +102,19 @@ namespace Rotterdam_Airlines
                             case 1:
                                 Console.Clear();
                                 UserInterface.PrintLogo();
-
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("    Vind alle Informatie over onze faciliteien.");
+                                Console.WriteLine("    ───────────────────────────────────────────");
                                 Console.WriteLine();
+                                Console.ForegroundColor = ConsoleColor.White;
 
                                 UserInterface.PrintFaciliteitenMenu();
 
                                 Console.WriteLine();
-                                Console.WriteLine("    Maak een keuze.");
-                                
+                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.WriteLine("    ───────────────────────────────────────────");
+                                Console.Write("    Maak een keuze: ");
+                                Console.ForegroundColor = ConsoleColor.White;
 
                                 string faciliteiten_input = Console.ReadLine();
                                 int faciliteiten_choice = int.Parse(faciliteiten_input);
@@ -202,7 +211,8 @@ namespace Rotterdam_Airlines
                                 break;
                             case 3:
                                 Console.Clear();
-                                List<string> wwVergeten = wwVergeten.GetEmail();
+                                UserInterface.PrintLogo();
+                                Customer.ChangePassword(smtpClient);
                                 break;
                         }
 
