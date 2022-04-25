@@ -502,13 +502,13 @@ namespace Rotterdam_Airlines
                 {
                     if (customer.email == EmailChangable)
                     {
-                        customers[1].password = InputSecondPassword;
+                        customers[y].password = InputSecondPassword;
                         Console.WriteLine("    Wachtwoord succesvol aangepast!");
                     }
                     y++;
 
                 }
-
+                JSON.SaveCustomersJSON(customers);
             }
             else
             {
