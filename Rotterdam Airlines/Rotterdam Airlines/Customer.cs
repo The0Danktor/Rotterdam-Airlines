@@ -1038,10 +1038,14 @@ namespace Rotterdam_Airlines
                         
                         void printPlane()
                         {
+                            int i = 20;
                             foreach (string line_ in layout) {
                                 Console.OutputEncoding = System.Text.Encoding.UTF8;
-                                Console.WriteLine("    " + line_.Substring(CurrentSlice, 102));
+                                Console.SetCursorPosition(0, i);
+                                Console.Write("    " + line_.Substring(CurrentSlice, 102));
+                                i += 1;
                             }
+                            Console.SetCursorPosition(20, 37);
                         }
 
                         while (SelectingSeats)
@@ -1065,42 +1069,66 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine("");
-                            printPlane();
                             Console.WriteLine("");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("    ──────────────────────────────────────|Use arrow keys to scroll|──────────────────────────────────────");
                             Console.WriteLine("    □ = Restroom     ▼ = Exit / Entrance     XX = Seat");
                             Console.WriteLine("");
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
+                            printPlane();
 
-                            int InputSelectSeat = 100;
-                            try { InputSelectSeat = int.Parse(Console.ReadLine()); } catch { }
+                            //int InputSelectSeat = 100;
+                            //try { InputSelectSeat = int.Parse(Console.ReadLine()); } catch { }
 
-                            switch (InputSelectSeat)
+                            bool running = true;
+                            while (running)
                             {
-                                case 0:
-                                    SelectingFlight = BackToMainMenu();
-                                    BookingFlight = SelectingFlight;
-                                    Console.Clear();
-                                    break;
+                                var InputSelectSeat = Console.ReadKey(true);
+                                switch (InputSelectSeat.Key)
+                                {
+                                    case ConsoleKey.D0:
+                                        SelectingFlight = BackToMainMenu();
+                                        BookingFlight = SelectingFlight;
+                                        Console.Clear();
+                                        running = false;
+                                        break;
 
-                                case 1:
-                                    SelectingSeats = false;
-                                    BookingSteps[4][1] = "X";
-                                    Console.Clear();
-                                    break;
-
-                                case 2:
-                                    CurrentSlice -= 10;
-                                    if (CurrentSlice <= 0) { CurrentSlice = 0; }
-                                    break;
-                                case 3:
-                                    CurrentSlice += 10;
-                                    if (CurrentSlice >= maxSliceLength) { CurrentSlice = maxSliceLength; }
-                                    break;
-                                case 4:
-                                    break;
+                                    case ConsoleKey.D1:
+                                        SelectingSeats = false;
+                                        BookingSteps[4][1] = "X";
+                                        Console.Clear();
+                                        running = false;
+                                        break;
+                                    case ConsoleKey.LeftArrow:
+                                    case ConsoleKey.D2:
+                                        CurrentSlice -= 1;
+                                        if (CurrentSlice <= 0) { CurrentSlice = 0; }
+                                        printPlane();
+                                        break;
+                                    case ConsoleKey.RightArrow:
+                                    case ConsoleKey.D3:
+                                        CurrentSlice += 1;
+                                        if (CurrentSlice >= maxSliceLength) { CurrentSlice = maxSliceLength; }
+                                        printPlane();
+                                        break;
+                                    case ConsoleKey.D4:
+                                        running = false;
+                                        break;
+                                }
                             }
                         }
                         BookingSteps[4][1] = "X";
