@@ -1072,6 +1072,7 @@ namespace Rotterdam_Airlines
                         string[] layout = PlaneLayouts.getLayout(BookingSelectedFlight);
                         string line = layout[0];
                         int maxSliceLength = line.Length - 102;
+                        List<string> backup = new List<string>(BookingSelectedSeats);
 
                         List<Seat> seats = new List<Seat>();
                         if (BookingSelectedFlight != null)
@@ -1082,7 +1083,7 @@ namespace Rotterdam_Airlines
                         void printPlane()
                         {
                             if (oldSlice == CurrentSlice) { return; }
-                            int i = 17;
+                            int i = 19;
                             foreach (string line_ in layout) {
                                 Console.OutputEncoding = System.Text.Encoding.UTF8;
                                 Console.SetCursorPosition(0, i);
@@ -1140,7 +1141,7 @@ namespace Rotterdam_Airlines
                                 }
                                 i += 1;
                             }
-                            Console.SetCursorPosition(20, 35);
+                            Console.SetCursorPosition(20, 37);
                             oldSlice = CurrentSlice;
                         }
 
@@ -1159,6 +1160,8 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    [1] Terug");
                             Console.WriteLine("");
                             Console.WriteLine("    [2] Stoel selecteren / Stoel deselecteren");
+                            Console.WriteLine("");
+                            Console.WriteLine("    [3] Bevestig selectie");
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine("");
@@ -1204,6 +1207,15 @@ namespace Rotterdam_Airlines
 
                                     // BACK TO PREV
                                     case ConsoleKey.D1:
+                                        BookingSelectedSeats = new List<string>(backup);
+                                        SelectingSeats = false;
+                                        BookingSteps[4][1] = "X";
+                                        Console.Clear();
+                                        running = false;
+                                        break;
+
+                                    // BACK TO PREV WITH CHANGES
+                                    case ConsoleKey.D3:
                                         SelectingSeats = false;
                                         BookingSteps[4][1] = "X";
                                         Console.Clear();
