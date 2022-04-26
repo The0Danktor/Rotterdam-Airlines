@@ -704,7 +704,7 @@ namespace Rotterdam_Airlines
             // BOOK FLIGHT MENU
             while (BookingFlight)
             {       
-            if (BookingSelectedFlight == null && !CurrentUser.IsGuest && BookingPersonData.Count == 0) { BookingPersonData.Add(new BookingPerson(BookingSelectedFlight.FlightCode, CurrentUser.First_name, CurrentUser.Prefix, CurrentUser.Last_name, CurrentUser.Birth_date, CurrentUser.Gender, CurrentUser.Country)); }
+            if (BookingSelectedFlight != null && !CurrentUser.IsGuest && BookingPersonData.Count == 0) { BookingPersonData.Add(new BookingPerson(BookingSelectedFlight.FlightCode, CurrentUser.First_name, CurrentUser.Prefix, CurrentUser.Last_name, CurrentUser.Birth_date, CurrentUser.Gender, CurrentUser.Country)); }
                 Console.Clear();
                 UserInterface.SetDefaultColor();
                 UserInterface.PrintLogo();
