@@ -7,7 +7,7 @@ namespace Rotterdam_Airlines
 {
     class JSON
     {
-        // DEFINE JSON PATHS
+        // CUSTOMER JSON
         static string CustomersJSON = @"..\..\..\json\customers.json";
         public static List<Customer> LoadCustomersJSON()
         {
