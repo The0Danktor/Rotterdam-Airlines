@@ -572,6 +572,10 @@ namespace Rotterdam_Airlines
             List<Flight> FilteredFlights = Flight.GetFlights();
             List<string> FlightDestinations = Flight.GetFlightDestinations();
 
+            // IMPORT SEAT JSON AT START FOR CONVENIENCE
+            Dictionary<string, List<Seat>> seatJson = JSON.LoadSeatsJSON();
+            // JSON.SaveSeatsJSON(dict);
+
             // FILTERS
             Hashtable Filters = new Hashtable()
             {
@@ -658,6 +662,36 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
                     Console.WriteLine();
                     Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+
+                    // ADD SELECTED SEATS IF ANY
+                    if (BookingSelectedSeats.Count > 0)
+                    {
+                        foreach (string seatStr in BookingSelectedSeats)
+                        {
+                            Seat getSeat = null;
+                            foreach (Seat seat in seatJson[BookingSelectedFlight.FlightCode])
+                            {
+                                if (seat.Id == seatStr)
+                                {
+                                    getSeat = seat;
+                                    break;
+                                }
+                            }
+                            string spec = "";
+                            if (getSeat.Special != "normal")
+                            {
+                                spec = ",    " + getSeat.Special;
+                            }
+                            Console.WriteLine($"    Stoel      {getSeat.Id},    {getSeat.SeatClass},    {getSeat.Price}{spec}");
+                            UserInterface.SetMainColor();
+                            var pos = Console.GetCursorPosition();
+                            Console.SetCursorPosition(pos.Item1 + 4, pos.Item2 - 1);
+                            Console.Write("Stoel");
+                            UserInterface.SetDefaultColor();
+                            Console.SetCursorPosition(pos.Item1, pos.Item2);
+                        }
+                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                    }
                     Console.WriteLine();
                 }
             }
@@ -1034,17 +1068,15 @@ namespace Rotterdam_Airlines
                         BookingSteps[4][1] = "Y";
                         bool SelectingSeats = true;
                         int CurrentSlice = 0;
-                        int oldSlice = 1;
+                        int oldSlice = -1;
                         string[] layout = PlaneLayouts.getLayout(BookingSelectedFlight);
                         string line = layout[0];
                         int maxSliceLength = line.Length - 102;
 
-                        Dictionary<string, List<Seat>> dict = JSON.LoadSeatsJSON();
-                        // JSON.SaveSeatsJSON(dict);
                         List<Seat> seats = new List<Seat>();
                         if (BookingSelectedFlight != null)
                         {
-                            seats = dict[BookingSelectedFlight.FlightCode];
+                            seats = seatJson[BookingSelectedFlight.FlightCode];
                         }
 
                         void printPlane()
@@ -1099,9 +1131,10 @@ namespace Rotterdam_Airlines
                                     int Index = line_.Substring(CurrentSlice, 102).IndexOf(seat);
                                     if (Index != -1)
                                     {
-                                        Console.ForegroundColor = ConsoleColor.Blue;
+                                        Console.BackgroundColor = ConsoleColor.Blue;
                                         Console.SetCursorPosition(Index + 4, i);
                                         Console.Write(seat);
+                                        Console.BackgroundColor = ConsoleColor.Black;
                                         UserInterface.SetDefaultColor();
                                     }
                                 }
@@ -1198,7 +1231,7 @@ namespace Rotterdam_Airlines
                                         {
                                             Console.WriteLine();
                                             UserInterface.SetMainColor();
-                                            Console.Write("    Vul een seat id in: ");
+                                            Console.Write("    Vul een stoel id in: ");
                                             UserInterface.SetDefaultColor();
 
                                             string InputId = Console.ReadLine();
@@ -1211,7 +1244,6 @@ namespace Rotterdam_Airlines
                                                     break;
                                                 }
                                             }
-                                            
                                             if (editSeat != null)
                                             {
                                                 // CHECK IF SELECTED
@@ -1222,19 +1254,27 @@ namespace Rotterdam_Airlines
                                                     break;
                                                 }
 
+                                                // IF CAN'T GET ANY MORE
+                                                if (BookingSelectedSeats.Count >= 4)
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine("    U kunt maximaal maar 4 stoelen tegelijk reserveren");
+                                                    var _ = Console.ReadKey(true);
+                                                    break;
+                                                }
+
                                                 // IF NOT SELECTED
                                                 string[] list = editSeat.Description.Split(".");
 
                                                 Console.WriteLine("");
                                                 Console.WriteLine($"    ─────────────────────────────────────────────────|{editSeat.Id}|─────────────────────────────────────────────────");
-                                                Console.WriteLine($"    Geselecteerde stoel: {editSeat.Id} voor vlucht {BookingSelectedFlight.FlightCode} naar {BookingSelectedFlight.Destination}");
+                                                Console.WriteLine($"    Geselecteerde stoel: {editSeat.Id} voor vlucht {BookingSelectedFlight.FlightNumber} naar {BookingSelectedFlight.Destination}");
                                                 Console.WriteLine("");
                                                 Console.WriteLine($"    Stoel beschrijving:");
                                                 foreach (string str in list)
                                                 {
                                                     Console.WriteLine("    " + str);
                                                 }
-                                                Console.WriteLine("");
                                                 if (editSeat.Special != "normal")
                                                 {
                                                     Console.WriteLine($"    Bijzonderheden: {editSeat.Special}");
@@ -1243,8 +1283,7 @@ namespace Rotterdam_Airlines
                                                 var InputConfirmId = Console.ReadKey(true);
                                                 switch (InputConfirmId.Key)
                                                 {
-                                                    case ConsoleKey.D1:
-                                                    case ConsoleKey.Y:
+                                                    case ConsoleKey.Enter:
                                                         BookingSelectedSeats.Add(editSeat.Id);
                                                         EnteringId = false;
                                                         break;
@@ -1263,7 +1302,7 @@ namespace Rotterdam_Airlines
 
                                             // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
                                         }
-
+                                        oldSlice = -1;
                                         Console.Clear();
                                         running = false;
                                         break;
