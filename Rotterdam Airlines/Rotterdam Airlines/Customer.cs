@@ -562,7 +562,7 @@ namespace Rotterdam_Airlines
 
             // BOOKING INFO
             string[] BookingSelectedLuggage;
-            List<Seat> BookingSelectedSeats = new List<Seat>();
+            List<string> BookingSelectedSeats = new List<string>();
             List<BookingPerson> BookingPersonData = new List<BookingPerson>();
             Customer BookingCustomer = Customer;
             Flight BookingSelectedFlight = null;
@@ -993,7 +993,7 @@ namespace Rotterdam_Airlines
                                         {
                                             int index = Flight.GetFlightIndex(InputFlightCode);
                                             BookingSelectedFlight = Flight.Flights[index];
-                                            BookingSelectedSeats = new List<Seat>();
+                                            BookingSelectedSeats = new List<string>();
                                             FlightSelected = true;
                                             EnteringFlightCode = false;
                                             SelectingFlight = false;
@@ -1034,11 +1034,13 @@ namespace Rotterdam_Airlines
                         BookingSteps[4][1] = "Y";
                         bool SelectingSeats = true;
                         int CurrentSlice = 0;
+                        int oldSlice = 1;
                         string[] layout = PlaneLayouts.getLayout(BookingSelectedFlight);
                         string line = layout[0];
                         int maxSliceLength = line.Length - 102;
 
                         Dictionary<string, List<Seat>> dict = JSON.LoadSeatsJSON();
+                        // JSON.SaveSeatsJSON(dict);
                         List<Seat> seats = new List<Seat>();
                         if (BookingSelectedFlight != null)
                         {
@@ -1047,6 +1049,7 @@ namespace Rotterdam_Airlines
 
                         void printPlane()
                         {
+                            if (oldSlice == CurrentSlice) { return; }
                             int i = 17;
                             foreach (string line_ in layout) {
                                 Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -1091,20 +1094,21 @@ namespace Rotterdam_Airlines
                                         }
                                     }
                                 }
-                                foreach (Seat seat in BookingSelectedSeats)
+                                foreach (string seat in BookingSelectedSeats)
                                 {
-                                    int Index = line_.Substring(CurrentSlice, 102).IndexOf(seat.Id);
+                                    int Index = line_.Substring(CurrentSlice, 102).IndexOf(seat);
                                     if (Index != -1)
                                     {
                                         Console.ForegroundColor = ConsoleColor.Blue;
                                         Console.SetCursorPosition(Index + 4, i);
-                                        Console.Write(seat.Id);
+                                        Console.Write(seat);
                                         UserInterface.SetDefaultColor();
                                     }
                                 }
                                 i += 1;
                             }
                             Console.SetCursorPosition(20, 35);
+                            oldSlice = CurrentSlice;
                         }
 
                         while (SelectingSeats)
@@ -1211,29 +1215,37 @@ namespace Rotterdam_Airlines
                                             if (editSeat != null)
                                             {
                                                 // CHECK IF SELECTED
-                                                if (BookingSelectedSeats.Contains(editSeat))
+                                                if (BookingSelectedSeats.Contains(editSeat.Id))
                                                 {
-                                                    BookingSelectedSeats.Remove(editSeat);
+                                                    BookingSelectedSeats.Remove(editSeat.Id);
                                                     EnteringId = false;
                                                     break;
                                                 }
 
                                                 // IF NOT SELECTED
+                                                string[] list = editSeat.Description.Split(".");
+
                                                 Console.WriteLine("");
-                                                Console.WriteLine($"    Geselecteerde stoel: {editSeat.Id}");
-                                                Console.WriteLine($"    {editSeat.Description}");
+                                                Console.WriteLine($"    ─────────────────────────────────────────────────|{editSeat.Id}|─────────────────────────────────────────────────");
+                                                Console.WriteLine($"    Geselecteerde stoel: {editSeat.Id} voor vlucht {BookingSelectedFlight.FlightCode} naar {BookingSelectedFlight.Destination}");
+                                                Console.WriteLine("");
+                                                Console.WriteLine($"    Stoel beschrijving:");
+                                                foreach (string str in list)
+                                                {
+                                                    Console.WriteLine("    " + str);
+                                                }
+                                                Console.WriteLine("");
                                                 if (editSeat.Special != "normal")
                                                 {
                                                     Console.WriteLine($"    Bijzonderheden: {editSeat.Special}");
                                                 }
-                                                Console.WriteLine("");
-                                                Console.WriteLine("    Press [1] or [y] to confirm, press anything else to cancel");
+                                                Console.WriteLine($"    ──────────────────────────────────|Klik op [Enter] om te bevestigen|──────────────────────────────────");
                                                 var InputConfirmId = Console.ReadKey(true);
                                                 switch (InputConfirmId.Key)
                                                 {
                                                     case ConsoleKey.D1:
                                                     case ConsoleKey.Y:
-                                                        BookingSelectedSeats.Add(editSeat);
+                                                        BookingSelectedSeats.Add(editSeat.Id);
                                                         EnteringId = false;
                                                         break;
                                                     default:

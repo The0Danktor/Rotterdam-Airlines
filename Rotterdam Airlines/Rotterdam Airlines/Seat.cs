@@ -25,16 +25,16 @@ namespace Rotterdam_Airlines
             switch (seatclass)
             {
                 case "first":
-                    this.Description = "First-class zitplekken bevinden zich aan de voorkant van het vliegtuig. De ultime luxe met de beste service en de grootste stoelen met de meeste been ruimte.";
+                    this.Description = " First class zitplekken bevinden zich aan de voorkant van het vliegtuig. De ultime luxe met de beste service en de grootste stoelen met de meeste been ruimte.";
                     break;
                 case "business":
-                    this.Description = "Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.";
+                    this.Description = " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.";
                     break;
                 case "economy":
-                    this.Description = "Economy class zitplekken zijn de standaard meest goedkope zitplekken.";
+                    this.Description = " Economy class zitplekken zijn de standaard meest goedkope zitplekken.";
                     break;
                 default:
-                    this.Description = "Unspecified, Deze klasse heeft geen beschrijving.";
+                    this.Description = " Unspecified, Deze klasse heeft geen beschrijving.";
                     break;
             }
         }
