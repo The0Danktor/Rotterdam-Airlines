@@ -8,18 +8,20 @@ namespace Rotterdam_Airlines
 {
     internal class Seat
     {
-        public int Id { set; get; }
+        public string Id { set; get; }
         public string SeatClass { set; get; }
         public string Occupant { set; get; }
         public string Description { set; get; }
         public string Special { set; get; }
+        public double Price { set; get; }
 
-        public Seat(int id, string seatclass, string special)
+        public Seat(string id, string seatclass, string special)
         {
             this.Id = id;
             this.SeatClass = seatclass;
             this.Occupant = null;
             this.Special = special;
+            this.Price = 0.0;
             switch (seatclass)
             {
                 case "first":

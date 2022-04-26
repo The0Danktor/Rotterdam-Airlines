@@ -562,6 +562,7 @@ namespace Rotterdam_Airlines
 
             // BOOKING INFO
             string[] BookingSelectedLuggage;
+            List<Seat> BookingSelectedSeats = new List<Seat>();
             List<BookingPerson> BookingPersonData = new List<BookingPerson>();
             Customer BookingCustomer = Customer;
             Flight BookingSelectedFlight = null;
@@ -992,6 +993,7 @@ namespace Rotterdam_Airlines
                                         {
                                             int index = Flight.GetFlightIndex(InputFlightCode);
                                             BookingSelectedFlight = Flight.Flights[index];
+                                            BookingSelectedSeats = new List<Seat>();
                                             FlightSelected = true;
                                             EnteringFlightCode = false;
                                             SelectingFlight = false;
@@ -1035,17 +1037,74 @@ namespace Rotterdam_Airlines
                         string[] layout = PlaneLayouts.getLayout(BookingSelectedFlight);
                         string line = layout[0];
                         int maxSliceLength = line.Length - 102;
-                        
+
+                        Dictionary<string, List<Seat>> dict = JSON.LoadSeatsJSON();
+                        List<Seat> seats = new List<Seat>();
+                        if (BookingSelectedFlight != null)
+                        {
+                            seats = dict[BookingSelectedFlight.FlightCode];
+                        }
+
                         void printPlane()
                         {
-                            int i = 20;
+                            int i = 17;
                             foreach (string line_ in layout) {
                                 Console.OutputEncoding = System.Text.Encoding.UTF8;
                                 Console.SetCursorPosition(0, i);
                                 Console.Write("    " + line_.Substring(CurrentSlice, 102));
+                                foreach (Seat seat in seats)
+                                {
+                                    int Index = line_.Substring(CurrentSlice, 102).IndexOf(seat.Id);
+                                    if (Index != -1)
+                                    {
+                                        // SEAT FOUND
+                                        if (seat.Occupant != null)
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                                            Console.SetCursorPosition(Index + 4, i);
+                                            Console.Write("~~");
+                                            UserInterface.SetDefaultColor();
+                                        }
+                                        if (seat.Special.Contains("limited") || seat.Special.Contains("missing"))
+                                        {
+                                            if (seat.Special.Contains("increased"))
+                                            {
+                                                Console.ForegroundColor = ConsoleColor.Yellow;
+                                                Console.SetCursorPosition(Index + 4, i);
+                                                Console.Write(seat.Id);
+                                                UserInterface.SetDefaultColor();
+                                            }
+                                            else
+                                            {
+                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                Console.SetCursorPosition(Index + 4, i);
+                                                Console.Write(seat.Id);
+                                                UserInterface.SetDefaultColor();
+                                            }
+                                        }
+                                        else if (seat.Special.Contains("increased"))
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Green;
+                                            Console.SetCursorPosition(Index + 4, i);
+                                            Console.Write(seat.Id);
+                                            UserInterface.SetDefaultColor();
+                                        }
+                                    }
+                                }
+                                foreach (Seat seat in BookingSelectedSeats)
+                                {
+                                    int Index = line_.Substring(CurrentSlice, 102).IndexOf(seat.Id);
+                                    if (Index != -1)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Blue;
+                                        Console.SetCursorPosition(Index + 4, i);
+                                        Console.Write(seat.Id);
+                                        UserInterface.SetDefaultColor();
+                                    }
+                                }
                                 i += 1;
                             }
-                            Console.SetCursorPosition(20, 37);
+                            Console.SetCursorPosition(20, 35);
                         }
 
                         while (SelectingSeats)
@@ -1062,10 +1121,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    [0] Hoofdmenu");
                             Console.WriteLine("    [1] Terug");
                             Console.WriteLine("");
-                            Console.WriteLine("    [2] Scrol naar links");
-                            Console.WriteLine("    [3] Scrol naar rechts");
-                            Console.WriteLine("");
-                            Console.WriteLine("    [4] Stoelcode Invoeren");
+                            Console.WriteLine("    [2] Stoel selecteren / Stoel deselecteren");
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine("");
@@ -1083,8 +1139,9 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("");
                             Console.WriteLine("");
                             Console.WriteLine("");
-                            Console.WriteLine("    ──────────────────────────────────────|Use arrow keys to scroll|──────────────────────────────────────");
-                            Console.WriteLine("    □ = Restroom     ▼ = Exit / Entrance     XX = Seat");
+                            Console.WriteLine("    ──────────────────────────────|Gebruik pijltjes toetsen om te scrollen|───────────────────────────────");
+                            Console.WriteLine("");
+                            Console.WriteLine("    □ = Toilet     ▼ = Ingang / Uitgang     ~~ = Niet Beschikbaar");
                             Console.WriteLine("");
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
@@ -1100,6 +1157,7 @@ namespace Rotterdam_Airlines
                                 var InputSelectSeat = Console.ReadKey(true);
                                 switch (InputSelectSeat.Key)
                                 {
+                                    // BACK TO MAIN
                                     case ConsoleKey.D0:
                                         SelectingFlight = BackToMainMenu();
                                         BookingFlight = SelectingFlight;
@@ -1107,25 +1165,94 @@ namespace Rotterdam_Airlines
                                         running = false;
                                         break;
 
+                                    // BACK TO PREV
                                     case ConsoleKey.D1:
                                         SelectingSeats = false;
                                         BookingSteps[4][1] = "X";
                                         Console.Clear();
                                         running = false;
                                         break;
+
+                                    //SCROLL PLANE TO LEFT
                                     case ConsoleKey.LeftArrow:
-                                    case ConsoleKey.D2:
                                         CurrentSlice -= 1;
                                         if (CurrentSlice <= 0) { CurrentSlice = 0; }
                                         printPlane();
                                         break;
+
+                                    // SCROLL PLANE TO RIGHT
                                     case ConsoleKey.RightArrow:
-                                    case ConsoleKey.D3:
                                         CurrentSlice += 1;
                                         if (CurrentSlice >= maxSliceLength) { CurrentSlice = maxSliceLength; }
                                         printPlane();
                                         break;
-                                    case ConsoleKey.D4:
+
+                                    // CHOOSE SEATS
+                                    case ConsoleKey.D2:
+                                        bool EnteringId = true;
+                                        while (EnteringId)
+                                        {
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Vul een seat id in: ");
+                                            UserInterface.SetDefaultColor();
+
+                                            string InputId = Console.ReadLine();
+                                            Seat editSeat = null;
+                                            foreach (Seat seat in seats)
+                                            {
+                                                if (seat.Id == InputId)
+                                                {
+                                                    editSeat = seat;
+                                                    break;
+                                                }
+                                            }
+                                            
+                                            if (editSeat != null)
+                                            {
+                                                // CHECK IF SELECTED
+                                                if (BookingSelectedSeats.Contains(editSeat))
+                                                {
+                                                    BookingSelectedSeats.Remove(editSeat);
+                                                    EnteringId = false;
+                                                    break;
+                                                }
+
+                                                // IF NOT SELECTED
+                                                Console.WriteLine("");
+                                                Console.WriteLine($"    Geselecteerde stoel: {editSeat.Id}");
+                                                Console.WriteLine($"    {editSeat.Description}");
+                                                if (editSeat.Special != "normal")
+                                                {
+                                                    Console.WriteLine($"    Bijzonderheden: {editSeat.Special}");
+                                                }
+                                                Console.WriteLine("");
+                                                Console.WriteLine("    Press [1] or [y] to confirm, press anything else to cancel");
+                                                var InputConfirmId = Console.ReadKey(true);
+                                                switch (InputConfirmId.Key)
+                                                {
+                                                    case ConsoleKey.D1:
+                                                    case ConsoleKey.Y:
+                                                        BookingSelectedSeats.Add(editSeat);
+                                                        EnteringId = false;
+                                                        break;
+                                                    default:
+                                                        EnteringId = false;
+                                                        break;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                UserInterface.SetErrorColor();
+                                                Console.WriteLine();
+                                                Console.WriteLine("    De ingevoerde seat id is niet gevonden! Probeer het opnieuw.");
+                                                UserInterface.SetDefaultColor();
+                                            }
+
+                                            // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
+                                        }
+
+                                        Console.Clear();
                                         running = false;
                                         break;
                                 }
