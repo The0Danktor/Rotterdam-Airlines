@@ -1074,6 +1074,8 @@ namespace Rotterdam_Airlines
                         int maxSliceLength = line.Length - 102;
                         List<string> backup = new List<string>(BookingSelectedSeats);
 
+                        DateTime cooldown = DateTime.MinValue;
+
                         List<Seat> seats = new List<Seat>();
                         if (BookingSelectedFlight != null)
                         {
@@ -1224,14 +1226,34 @@ namespace Rotterdam_Airlines
 
                                     //SCROLL PLANE TO LEFT
                                     case ConsoleKey.LeftArrow:
-                                        CurrentSlice -= 1;
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 50)
+                                        {
+                                            break;
+                                        }
+                                        int extraLeft = 0;
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 70)
+                                        {
+                                            extraLeft = 1;
+                                        }
+                                        cooldown = DateTime.Now;
+                                        CurrentSlice -= 1 + extraLeft;
                                         if (CurrentSlice <= 0) { CurrentSlice = 0; }
                                         printPlane();
                                         break;
 
                                     // SCROLL PLANE TO RIGHT
                                     case ConsoleKey.RightArrow:
-                                        CurrentSlice += 1;
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 50)
+                                        {
+                                            break;
+                                        }
+                                        int extraRight = 0;
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 70)
+                                        {
+                                            extraRight = 1;
+                                        }
+                                        cooldown = DateTime.Now;
+                                        CurrentSlice += 1 + extraRight;
                                         if (CurrentSlice >= maxSliceLength) { CurrentSlice = maxSliceLength; }
                                         printPlane();
                                         break;
