@@ -572,9 +572,20 @@ namespace Rotterdam_Airlines
                 {
 
                     Console.Clear();
-                    Console.WriteLine("[1] Inloggen");
-                    Console.WriteLine("[2] Registreren");
-                    Console.WriteLine("[3] Verder gaan als gast");
+                    UserInterface.PrintLogo();
+                    UserInterface.SetMainColor();
+                    Console.WriteLine("    Rotterdam Airlines | Vlucht Boeken");
+                    Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                    Console.WriteLine();
+                    UserInterface.SetDefaultColor();
+                    Console.WriteLine("    [1] Inloggen");
+                    Console.WriteLine("    [2] Registreren");
+                    Console.WriteLine("    [3] Verder gaan als gast");
+                    Console.WriteLine();
+                    Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                    UserInterface.SetMainColor();
+                    Console.Write("    Maak een keuze: ");
+                    UserInterface.SetDefaultColor();
                     int InputContactGegevens = 100;
                     try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
                     switch (InputContactGegevens)
@@ -1059,21 +1070,52 @@ namespace Rotterdam_Airlines
                     //PERSOONS GEGEVENS INVULLEN
                     case 2:
                         bool ChangingPersoons = true;
-                        if(BookingSelectedFlight == null) {break;}
-                        while (ChangingPersoons)
+                        if(BookingSelectedFlight == null) 
                         {
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine("    Je moet eerst een vlucht selecteren");
+                            UserInterface.SetDefaultColor();
+                            Console.ReadKey(true);
+                            break;
+                        }
+                        while (ChangingPersoons)
+                        {   
+
                             if ((int)Filters["Aantal Personen"] == 1)
                             {
                                 if(BookingPersonData.Count == 0) { BookingPersonData.Add(new BookingPerson(null, null, null, null, null, null, null));}
+                                if (BookingPersonData.Count > 1) 
+                                { 
+                                    for (int i = 1; i < BookingPersonData.Count; i++)
+                                    {
+                                        BookingPersonData.RemoveAt(i);
+                                    }
+                                }
                                 Console.Clear();
-                                Console.WriteLine($"[0]Hoofdmenu");
-                                Console.WriteLine($"[1]Terug");
-                                Console.WriteLine($"[2]Aantal Personen                {Filters["Aantal Personen"]}");
-                                Console.WriteLine($"[3]Voornaam                       {BookingPersonData[0].CustomerFirstName}");
-                                Console.WriteLine($"[4]Achternaam en Tussenvoegsel    {BookingPersonData[0].CustomerLastName}, {BookingPersonData[0].CustomerMiddleName}");
-                                Console.WriteLine($"[5]Land                          {BookingPersonData[0].CustomerCountry}");
-                                Console.WriteLine($"[6]Geslacht                      {BookingPersonData[0].CustomerGender}");
-                                Console.WriteLine($"[7]Geboortedatum                 {BookingPersonData[0].CustomerBirthDate}");
+                                UserInterface.PrintLogo();
+                                PrintBookingStatus();
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine();
+                                Console.WriteLine($"    [0] Hoofdmenu");
+                                Console.WriteLine($"    [1] Terug");
+                                Console.WriteLine();
+                                Console.WriteLine($"    [2] Aantal Personen                - {Filters["Aantal Personen"]}");
+                                Console.WriteLine();
+                                Console.WriteLine($"    [3] Voornaam                       - {BookingPersonData[0].CustomerFirstName}");
+                                if (BookingPersonData[0].CustomerMiddleName == null || BookingPersonData[0].CustomerMiddleName == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {BookingPersonData[0].CustomerLastName} {BookingPersonData[0].CustomerMiddleName}"); }
+                                else {Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {BookingPersonData[0].CustomerLastName}, {BookingPersonData[0].CustomerMiddleName}"); }
+                                Console.WriteLine($"    [5] Land                           - {BookingPersonData[0].CustomerCountry}");
+                                Console.WriteLine($"    [6] Geslacht                       - {BookingPersonData[0].CustomerGender}");
+                                Console.WriteLine($"    [7] Geboortedatum                  - {BookingPersonData[0].CustomerBirthDate}");
+                                Console.WriteLine();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.Write("    Maak een keuze: ");
+                                UserInterface.SetDefaultColor();
                                 int InputPersoonsgegevens = 100;
                                 try { InputPersoonsgegevens = int.Parse(Console.ReadLine()); } catch { }
                                 switch (InputPersoonsgegevens)
@@ -1087,22 +1129,32 @@ namespace Rotterdam_Airlines
                                         ChangingPersoons = false;
                                         break;
                                     case 2:
-                                        int InputSelectingNumberOfPassengers = 100;
-                                        try { InputSelectingNumberOfPassengers = int.Parse(Console.ReadLine()); } catch { }
-                                        switch (InputSelectingNumberOfPassengers)
+                                        bool EnteringPersons = true;
+                                        while (EnteringPersons)
                                         {
-                                            case 1:
-                                                Filters["Aantal Personen"] = 1;
-                                                break;
-                                            case 2:
-                                                Filters["Aantal Personen"] = 2;
-                                                break;
-                                            case 3:
-                                                Filters["Aantal Personen"] = 3;
-                                                break;
-                                            case 4:
-                                                Filters["Aantal Personen"] = 4;
-                                                break;
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Kies het aantal personen: ");
+                                            UserInterface.SetDefaultColor();
+                                            string InputPersons = Console.ReadLine();
+                                            try
+                                            {
+                                                if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); EnteringPersons = false; }
+                                                else
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt voor maximaal 4 personen tegelijk boeken.");
+                                                    UserInterface.SetDefaultColor();
+                                                }
+                                            }
+                                            catch
+                                            {
+                                                UserInterface.SetErrorColor();
+                                                Console.WriteLine();
+                                                Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt alleen een nummer invoeren.");
+                                                UserInterface.SetDefaultColor();
+                                            }
                                         }
                                         break;
                                     case 3:
@@ -1273,6 +1325,512 @@ namespace Rotterdam_Airlines
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                 UserInterface.SetDefaultColor();
 
+                                            }
+                                        }
+                                        break;
+                                }
+                            }
+                            else if ((int)Filters["Aantal Personen"] == 2)
+                            {
+                                if (BookingPersonData.Count < 2)
+                                {
+                                    for (int i = BookingPersonData.Count; i < 2; i++)
+                                    {
+                                        BookingPersonData.Add(new BookingPerson(null, null, null, null, null, null, null)); 
+                                    }
+                                }
+                                if (BookingPersonData.Count > 2)
+                                {
+                                    for (int i = 2; i < BookingPersonData.Count; i++)
+                                    {
+                                        BookingPersonData.RemoveAt(i);
+                                    }
+                                }
+                                Console.Clear();
+                                UserInterface.PrintLogo();
+                                PrintBookingStatus();
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine();
+                                Console.WriteLine($"    [0] Hoofdmenu");
+                                Console.WriteLine($"    [1] Terug");
+                                Console.WriteLine();
+                                Console.WriteLine($"    [2] Aantal Personen                - {Filters["Aantal Personen"]}");
+                                Console.WriteLine();
+                                Console.WriteLine($"    [3] Persoon 1");
+                                Console.WriteLine($"    [4] Persoon 2");
+                                Console.WriteLine();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.Write("    Maak een keuze: ");
+                                UserInterface.SetDefaultColor();
+                                int InputPersoonsgegevens = 100;
+                                try { InputPersoonsgegevens = int.Parse(Console.ReadLine()); } catch { }
+                                switch (InputPersoonsgegevens)
+                                {
+                                    case 0:
+                                        BookingFlight = BackToMainMenu();
+                                        ChangingPersoons = false;
+                                        Console.Clear();
+                                        break;
+                                    case 1:
+                                        ChangingPersoons = false;
+                                        break;
+                                    case 2:
+                                        bool EnteringPersons = true;
+                                        while (EnteringPersons)
+                                        {
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Kies het aantal personen: ");
+                                            UserInterface.SetDefaultColor();
+                                            string InputPersons = Console.ReadLine();
+                                            try
+                                            {
+                                                if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); EnteringPersons = false; }
+                                                else
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt voor maximaal 4 personen tegelijk boeken.");
+                                                    UserInterface.SetDefaultColor();
+                                                }
+                                            }
+                                            catch
+                                            {
+                                                UserInterface.SetErrorColor();
+                                                Console.WriteLine();
+                                                Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt alleen een nummer invoeren.");
+                                                UserInterface.SetDefaultColor();
+                                            }
+                                        }
+                                        break;
+                                    case 3:
+                                        bool ChangingPersoon1 = true;
+                                        while (ChangingPersoon1)
+                                        {
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+                                            PrintBookingStatus();
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                            UserInterface.SetDefaultColor();
+                                            Console.WriteLine();
+                                            Console.WriteLine($"    [0] Hoofdmenu");
+                                            Console.WriteLine($"    [1] Terug");
+                                            Console.WriteLine();
+                                            Console.WriteLine($"    [2] Voornaam                       - {BookingPersonData[0].CustomerFirstName}");
+                                            if (BookingPersonData[0].CustomerMiddleName == null || BookingPersonData[0].CustomerMiddleName == "") { Console.WriteLine($"    [3] Achternaam en Tussenvoegsel    - {BookingPersonData[0].CustomerLastName} {BookingPersonData[0].CustomerMiddleName}"); }
+                                            else { Console.WriteLine($"    " +$"[3] Achternaam en Tussenvoegsel    - {BookingPersonData[0].CustomerLastName}, {BookingPersonData[0].CustomerMiddleName}"); }
+                                            Console.WriteLine($"    [4] Land                           - {BookingPersonData[0].CustomerCountry}");
+                                            Console.WriteLine($"    [5] Geslacht                       - {BookingPersonData[0].CustomerGender}");
+                                            Console.WriteLine($"    [6] Geboortedatum                  - {BookingPersonData[0].CustomerBirthDate}");
+                                            Console.WriteLine();
+                                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Maak een keuze: ");
+                                            UserInterface.SetDefaultColor();
+                                            int InputPersoon1gegevens = 100;
+                                            try { InputPersoon1gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                            switch (InputPersoon1gegevens)
+                                            {
+                                                case 0:
+                                                    BookingFlight = BackToMainMenu();
+                                                    ChangingPersoons = false;
+                                                    Console.Clear();
+                                                    break;
+                                                case 1:
+                                                    ChangingPersoon1 = false;
+                                                    break;
+                                                case 2:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw naam in: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempFirstName = Console.ReadLine();
+                                                        if (TempFirstName.All(char.IsLetter))
+                                                        {
+                                                            BookingPersonData[0].CustomerFirstName = textInfo.ToTitleCase(TempFirstName.ToLower());
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    break;
+                                                case 3:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempPrefix = Console.ReadLine();
+                                                        if (!TempPrefix.All(char.IsNumber) || TempPrefix == "")
+                                                        {
+                                                            BookingPersonData[0].CustomerMiddleName = TempPrefix;
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw achternaam in: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempLastName = Console.ReadLine();
+                                                        if (TempLastName.All(char.IsLetter))
+                                                        {
+                                                            BookingPersonData[0].CustomerLastName = textInfo.ToTitleCase(TempLastName.ToLower());
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine();
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    break;
+                                                case 4:
+                                                    while (true)
+                                                    {
+                                                        UserInterface.SetMainColor();
+                                                        Console.WriteLine();
+                                                        Console.Write("    Vul uw land in: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string InputCountry = Console.ReadLine();
+                                                        InputCountry = InputCountry.ToLower();
+                                                        InputCountry = textInfo.ToTitleCase(InputCountry);
+                                                        if (InputCountry.Any(char.IsDigit))
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine();
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                        else
+                                                        {
+                                                            BookingPersonData[0].CustomerCountry = InputCountry;
+                                                            break;
+                                                        }
+                                                    }
+                                                    Console.Clear();
+                                                    break;
+                                                case 5:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    [1] Man");
+                                                        Console.WriteLine("    [2] Vrouw");
+                                                        Console.WriteLine("    [3] Overig");
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Maak een keuze: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempInput = Console.ReadLine();
+                                                        if (TempInput == "1")
+                                                        {
+                                                            BookingPersonData[0].CustomerGender = "Man";
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else if (TempInput == "2")
+                                                        {
+                                                            BookingPersonData[0].CustomerGender = "Vrouw";
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else if (TempInput == "3")
+                                                        {
+                                                            BookingPersonData[0].CustomerGender = "Overig";
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    break;
+                                                case 6:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw geboortedatum in als dd-mm-jjjj: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempBirthDate = Console.ReadLine();
+                                                        var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
+                                                        DateTime scheduleDate;
+                                                        bool validDate = DateTime.TryParseExact(
+                                                        TempBirthDate,
+                                                        dateFormats,
+                                                        DateTimeFormatInfo.InvariantInfo,
+                                                        DateTimeStyles.None,
+                                                        out scheduleDate);
+                                                        DateTime today = DateTime.Today;
+                                                        if (validDate)
+                                                        {
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            {
+                                                                BookingPersonData[0].CustomerBirthDate = TempBirthDate;
+                                                                Console.Clear();
+                                                                break;
+                                                            }
+                                                            else
+                                                            {
+                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
+                                                                UserInterface.SetDefaultColor();
+                                                                Console.ReadKey(true);
+                                                                Console.Clear();
+                                                                break;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
+                                                            UserInterface.SetDefaultColor();
+
+                                                        }
+                                                    }
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 4:
+                                        bool ChangingPersoon2 = true;
+                                        while (ChangingPersoon2)
+                                        {
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+                                            PrintBookingStatus();
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                            UserInterface.SetDefaultColor();
+                                            Console.WriteLine();
+                                            Console.WriteLine($"    [0] Hoofdmenu");
+                                            Console.WriteLine($"    [1] Terug");
+                                            Console.WriteLine();
+                                            Console.WriteLine($"    [2] Voornaam                       - {BookingPersonData[1].CustomerFirstName}");
+                                            if (BookingPersonData[1].CustomerMiddleName == null || BookingPersonData[1].CustomerMiddleName == "") { Console.WriteLine($"    [3] Achternaam en Tussenvoegsel    - {BookingPersonData[1].CustomerLastName} {BookingPersonData[1].CustomerMiddleName}"); }
+                                            else { Console.WriteLine($"    [3] Achternaam en Tussenvoegsel    - {BookingPersonData[1].CustomerLastName}, {BookingPersonData[1].CustomerMiddleName}"); }
+                                            Console.WriteLine($"    [4] Land                           - {BookingPersonData[1].CustomerCountry}");
+                                            Console.WriteLine($"    [5] Geslacht                       - {BookingPersonData[1].CustomerGender}");
+                                            Console.WriteLine($"    [6] Geboortedatum                  - {BookingPersonData[1].CustomerBirthDate}");
+                                            Console.WriteLine();
+                                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Maak een keuze: ");
+                                            UserInterface.SetDefaultColor();
+                                            int InputPersoon2gegevens = 100;
+                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                            switch (InputPersoon2gegevens)
+                                            {
+                                                case 0:
+                                                    BookingFlight = BackToMainMenu();
+                                                    ChangingPersoons = false;
+                                                    Console.Clear();
+                                                    break;
+                                                case 1:
+                                                    ChangingPersoon2 = false;
+                                                    break;
+                                                case 2:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw naam in: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempFirstName = Console.ReadLine();
+                                                        if (TempFirstName.All(char.IsLetter))
+                                                        {
+                                                            BookingPersonData[1].CustomerFirstName = textInfo.ToTitleCase(TempFirstName.ToLower());
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    break;
+                                                case 3:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw tussenvoegsel in (optioneel): ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempPrefix = Console.ReadLine();
+                                                        if (!TempPrefix.All(char.IsNumber) || TempPrefix == "")
+                                                        {
+                                                            BookingPersonData[1].CustomerMiddleName = TempPrefix;
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw achternaam in: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempLastName = Console.ReadLine();
+                                                        if (TempLastName.All(char.IsLetter))
+                                                        {
+                                                            BookingPersonData[1].CustomerLastName = textInfo.ToTitleCase(TempLastName.ToLower());
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine();
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    break;
+                                                case 4:
+                                                    while (true)
+                                                    {
+                                                        UserInterface.SetMainColor();
+                                                        Console.WriteLine();
+                                                        Console.Write("    Vul uw land in: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string InputCountry = Console.ReadLine();
+                                                        InputCountry = InputCountry.ToLower();
+                                                        InputCountry = textInfo.ToTitleCase(InputCountry);
+                                                        if (InputCountry.Any(char.IsDigit))
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine();
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                        else
+                                                        {
+                                                            BookingPersonData[1].CustomerCountry = InputCountry;
+                                                            break;
+                                                        }
+                                                    }
+                                                    Console.Clear();
+                                                    break;
+                                                case 5:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    [1] Man");
+                                                        Console.WriteLine("    [2] Vrouw");
+                                                        Console.WriteLine("    [3] Overig");
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Maak een keuze: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempInput = Console.ReadLine();
+                                                        if (TempInput == "1")
+                                                        {
+                                                            BookingPersonData[1].CustomerGender = "Man";
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else if (TempInput == "2")
+                                                        {
+                                                            BookingPersonData[1].CustomerGender = "Vrouw";
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else if (TempInput == "3")
+                                                        {
+                                                            BookingPersonData[1].CustomerGender = "Overig";
+                                                            Console.Clear();
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            UserInterface.SetDefaultColor();
+                                                        }
+                                                    }
+                                                    break;
+                                                case 6:
+                                                    while (true)
+                                                    {
+                                                        Console.WriteLine();
+                                                        UserInterface.SetMainColor();
+                                                        Console.Write("    Vul uw geboortedatum in als dd-mm-jjjj: ");
+                                                        UserInterface.SetDefaultColor();
+                                                        string TempBirthDate = Console.ReadLine();
+                                                        var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
+                                                        DateTime scheduleDate;
+                                                        bool validDate = DateTime.TryParseExact(
+                                                        TempBirthDate,
+                                                        dateFormats,
+                                                        DateTimeFormatInfo.InvariantInfo,
+                                                        DateTimeStyles.None,
+                                                        out scheduleDate);
+                                                        DateTime today = DateTime.Today;
+                                                        if (validDate)
+                                                        {
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            {
+                                                                BookingPersonData[1].CustomerBirthDate = TempBirthDate;
+                                                                Console.Clear();
+                                                                break;
+                                                            }
+                                                            else
+                                                            {
+                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
+                                                                UserInterface.SetDefaultColor();
+                                                                Console.ReadKey(true);
+                                                                Console.Clear();
+                                                                break;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
+                                                            UserInterface.SetDefaultColor();
+
+                                                        }
+                                                    }
+                                                    break;
                                             }
                                         }
                                         break;
