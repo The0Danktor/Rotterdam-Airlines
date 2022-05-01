@@ -16,8 +16,8 @@ namespace Rotterdam_Airlines
         public string CustomerBirthDate { get; set; }
         public string CustomerGender { get; set; }
         public string CustomerCountry { get; set; }
-
-        public BookingPerson(string customerFlightNumber, string customerFirstName, string customerMiddleName, string customerLastName, string customerBirthDate, string customerGender, string customerCountry)
+        public string CustomerBSN { get; set; }
+        public BookingPerson(string customerFlightNumber, string customerFirstName, string customerMiddleName, string customerLastName, string customerBirthDate, string customerGender, string customerCountry, string customerBSN = null)
         {
             CustomerFlightNumber = customerFlightNumber;
             CustomerFirstName = customerFirstName;
@@ -26,6 +26,7 @@ namespace Rotterdam_Airlines
             CustomerBirthDate = customerBirthDate;
             CustomerGender = customerGender;
             CustomerCountry = customerCountry;
+            CustomerBSN = customerBSN;
         }
     }
 }
