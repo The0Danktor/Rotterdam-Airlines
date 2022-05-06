@@ -10,8 +10,8 @@ namespace Rotterdam_Airlines
     {
         public Admin(string email, string password) : base(email, password)
         {
-            this.email = email;
-            this.password = password;
+            this.Email = email;
+            this.Password = password;
         }
 
         private static bool RemoveUser()
@@ -30,6 +30,7 @@ namespace Rotterdam_Airlines
 
             foreach (var user in user_list)
             {
+
                 if (input == user_list[user_count].email)
                 {
                     check = true;
@@ -49,7 +50,7 @@ namespace Rotterdam_Airlines
             Admin.PrintRemoveUserConfirmScreen();
             foreach (var user in user_list)
             {
-                if (input == user_list[count].email)
+                if (input == user_list[count].Email)
                 {
                     check = true;
                     int choice = count;
