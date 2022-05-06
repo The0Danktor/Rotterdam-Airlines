@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="header-wrapper">
+            <div class="header-header">
+                <ion-icon class="header-icon" name="checkmark-circle"></ion-icon>
+                <p>Boekingsnummer: #0418923</p>
+            </div>
+            <div class="header-content">
+                <p>Hallo Lucas Prins,</p>
+                <h1>Bedankt voor je boeking!</h1>
+                <p>Hier zijn je boekingsbevestiging en betaaloverzicht. Je e-ticket(s) ontvang je in een aparte e-mail binnen 24 uur na betaling.</p>
+            </div>
+        </div>
+
+        <div class="main-wrapper">
+            <div class="confirmed-notification">
+                <ion-icon class="confirmed-icon" name="checkmark-circle-outline"></ion-icon>
+                <h2>Vlucht succesvol geboekt</h2>
+            </div>
+
+            <div class="flight-details-header">
+                <h2>Rotterdam naar Barcelona</h2>
+                <p id="booking-date">26 April 2022</p>
+            </div>
+
+            <div class="flight-details">
+                <div class="airport-to-airport">
+                    <div class="airport-details">
+                        <h1>RDM</h1>
+                        <p>ROTTERDAM AIRPORT</p>
+                        <br id="brtag">
+                        <p>TERMINAL 1</p>
+                    </div>
+                    <ion-icon class="airport-to-airport-icon" name="airplane"></ion-icon>
+                    <div class="airport-details">
+                        <h1>BCN</h1>
+                        <p>BARCELONA-EL PRAT</p>
+                        <br id="brtag"><br id="brtag">
+                        <p>TERMINAL 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="departure-arrival">
+                <div class="departure">
+                    <ion-icon class="calendar-icon" name="calendar-outline"></ion-icon>
+                    <div class="departure-info">
+                        <p class="p-gray">VERTREK</p>
+                        <p style="font-weight: 500;">27 April - 20:40</p>
+                    </div> 
+                </div>
+                <div class="departure">
+                    <ion-icon class="calendar-icon" name="calendar-outline"></ion-icon>
+                    <div class="departure-info">
+                        <p class="p-gray">AANKOMST</p>
+                        <p style="font-weight: 500;">28 April - 00:15</p>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="flight-details-header">
+                <h2>Contactgegevens</h2>
+            </div>
+
+            <div class="contact-details">
+                <div class="detail-column">
+                    <p class="p-gray">NAAM</p>
+                    <p style="font-weight: 500;">Lucas Prins</p>
+                </div>
+                <div class="detail-column">
+                    <p class="p-gray">TELEFOONNUMMER</p>
+                    <p style="font-weight: 500;">06-34998880</p>
+                </div>
+                <div class="detail-column">
+                    <p class="p-gray">EMAIL</p>
+                    <p style="font-weight: 500;">lucas2002prins@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="flight-details-header">
+                <h2>Persoonsgegevens</h2>
+            </div>
+            
+            <div>
+                <div class="details-header" onClick="collapse(0)">
+                    <ion-icon class="arrow-icon" name="chevron-down-outline"></ion-icon>
+                    <h3 style="font-weight: 500;">Lucas Prins</h3>
+                </div>
+                <div class="person-details">
+                    <div class="detail-column">
+                        <p class="p-gray">NAAM</p>
+                        <p style="font-weight: 500;">Lucas Prins</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">GEBOORTEDATUM</p>
+                        <p style="font-weight: 500;">17-08-2002</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">BSN</p>
+                        <p style="font-weight: 500;">0000000</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">LAND</p>
+                        <p style="font-weight: 500;">Oezbekistan</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">GESLACHT</p>
+                        <p style="font-weight: 500;">Helikopter</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">BAGAGE</p>
+                        <p style="font-weight: 500;">Handbagage</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="details-header" onClick="collapse(1)">
+                    <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+                    <h3 style="font-weight: 500;">Lucas Prins</h3>
+                </div>
+                <div class="person-details" style="display: none;">
+                    <div class="detail-column">
+                        <p class="p-gray">NAAM</p>
+                        <p style="font-weight: 500;">Lucas Prins</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">GEBOORTEDATUM</p>
+                        <p style="font-weight: 500;">17-08-2002</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">BSN</p>
+                        <p style="font-weight: 500;">0000000</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">LAND</p>
+                        <p style="font-weight: 500;">Oezbekistan</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">GESLACHT</p>
+                        <p style="font-weight: 500;">Helikopter</p>
+                    </div>
+                    <div class="detail-column">
+                        <p class="p-gray">BAGAGE</p>
+                        <p style="font-weight: 500;">Handbagage</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-wrapper">
+
+        </div>
+    </div>
+    
+    <script src="/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
