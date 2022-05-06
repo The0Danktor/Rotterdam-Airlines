@@ -21,6 +21,7 @@ namespace Rotterdam_Airlines
             File.WriteAllText(CustomersJSON, jsonString);
         }
 
+        // ID JSON
         static string IdJSON = @"..\..\..\json\id.json";
         public static Dictionary<string, List<int>> LoadIdJSON()
         {
@@ -32,6 +33,34 @@ namespace Rotterdam_Airlines
         {
             string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(IdJSON, jsonString);
+        }
+
+        // FLIGHTSCHEME JSON
+        static string FlightschemeJSON = @"..\..\..\json\flightscheme.json";
+        public static List<Hashtable> LoadFlightschemeJSON()
+        {
+            string JsonString = File.ReadAllText(FlightschemeJSON);
+            List<Hashtable> objects = JsonConvert.DeserializeObject<List<Hashtable>>(JsonString);
+            return objects;
+        }
+        public static void SaveFlightschemeJSON(List<Hashtable> data)
+        {
+            string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(FlightschemeJSON, jsonString);
+        }
+
+        // FLIGHTS JSON
+        static string FlightsJSON = @"..\..\..\json\flights.json";
+        public static List<Flight> LoadFlightsJSON()
+        {
+            string JsonString = File.ReadAllText(FlightsJSON);
+            List<Flight> objects = JsonConvert.DeserializeObject<List<Flight>>(JsonString);
+            return objects;
+        }
+        public static void SaveFlightsJSON(List<Flight> data)
+        {
+            string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(FlightsJSON, jsonString);
         }
     }
 }
