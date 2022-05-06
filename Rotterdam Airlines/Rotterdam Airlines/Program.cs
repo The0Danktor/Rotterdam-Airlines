@@ -22,19 +22,20 @@ namespace Rotterdam_Airlines
                 Credentials = new NetworkCredential("RotterdamAirlines2022@outlook.com", "yks`PAha8\"5QyTN$"),
                 EnableSsl = true,
             };
-           
+
             // CREATE DEFAULT USERS
-            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null,null,null,new List<string>(),true);
-            Admin AdminUser = new Admin("admin", "admin");
-            
-            while (true)
+            Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null, new List<string>(), true);
+            Admin AdminUser = new Admin("a", "a");
+            //Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
+            while(true)
             {
-                if(authorized)
+                if (authorized)
                 {
                     Console.Clear();
                     Admin.PrintAdminMainScreen();
                     Console.Clear();
-                } else
+                }
+                else
                 {
                     // PRINT LOGO
                     UserInterface.PrintLogo();
@@ -94,7 +95,7 @@ namespace Rotterdam_Airlines
                         // INFORMATIE
                         case 5:
                             bool InformationActive = true;
-                            while(InformationActive)
+                            while (InformationActive)
                             {
                                 Console.Clear();
                                 UserInterface.PrintLogo();
@@ -226,9 +227,10 @@ namespace Rotterdam_Airlines
                                         break;
                                     case 3:
                                         Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Customer.ChangePassword(smtpClient);
                                         break;
                                 }
-
                             }
                             // Options for when a admin is logged in 
                             else if (authorized) { }
@@ -259,8 +261,8 @@ namespace Rotterdam_Airlines
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
                             int contact_choice = 100;
-                            try { contact_choice = int.Parse(Console.ReadLine());} catch {}
-                            
+                            try { contact_choice = int.Parse(Console.ReadLine()); } catch { }
+
 
                             switch (contact_choice)
                             {
