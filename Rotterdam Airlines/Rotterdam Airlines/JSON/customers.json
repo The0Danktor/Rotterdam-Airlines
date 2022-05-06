@@ -1,26 +1,39 @@
 [
   {
-    "UserId": "l-D5uPKU",
+    "UserId": "Y9sj3q3q",
     "first_name": "test",
-    "prefix": "test",
+    "prefix": "",
     "last_name": "test",
     "country": "test",
     "gender": "man",
-    "birth_date": "test",
-    "phone_number": "test",
-    "email": "sven.groeneveld.nl@gmail.com",
-    "password": "Letsgoooo"
+    "birth_date": "11-11-1111",
+    "phone_number": "0627162566",
+    "BookingList": [
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test"
+    ],
+    "IsGuest": false,
+    "email": "test@test.",
+    "password": "testtest"
+
   },
   {
-    "UserId": "nRRthv6u",
-    "first_name": "e",
-    "prefix": "e",
-    "last_name": "e",
-    "country": "e",
+    "UserId": "LxEk5Dbk",
+    "first_name": "Lucas",
+    "prefix": "de",
+    "last_name": "Leest",
+    "country": "dad",
     "gender": "overig",
-    "birth_date": "01-01-0001",
-    "phone_number": "0611111111",
-    "email": "e@e.e",
-    "password": "ThxPik"
+    "birth_date": "17-08-2002",
+    "phone_number": "0634998880",
+    "BookingList": [],
+    "IsGuest": false,
+    "email": "lucas2002prins@gmail.com",
+    "password": "jamiedepamie"
   }
 ]

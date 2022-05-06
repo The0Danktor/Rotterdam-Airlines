@@ -12,6 +12,8 @@ namespace Rotterdam_Airlines
         static bool authorized = false;
         static void Main(string[] args)
         {
+            // LOAD ALL FLIGHTS WHICH ARE IN THE FLIGHTS.JSON TO THE FLIGHT LIST
+            Flight.GenerateFlightWeeks();
 
             // INITIATE EMAIL CLIENT
             var smtpClient = new SmtpClient("smtp-mail.outlook.com")
@@ -20,244 +22,284 @@ namespace Rotterdam_Airlines
                 Credentials = new NetworkCredential("RotterdamAirlines2022@outlook.com", "yks`PAha8\"5QyTN$"),
                 EnableSsl = true,
             };
-           
+
             // CREATE DEFAULT USERS
-            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null,null,null);
-            Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
-            
-            while (true)
+            Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null, new List<string>(), true);
+            Admin AdminUser = new Admin("a", "a");
+            //Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
+            while(true)
             {
-                // PRINT LOGO
-                UserInterface.PrintLogo();
-
-                // PRINT WELCOME TEXT
-                UserInterface.SetMainColor();
-                Console.WriteLine("    Welkom bij het boekingsysteem van Rotterdam Airlines");
-                Console.WriteLine("    ────────────────────────────────────────────────────");
-                UserInterface.SetDefaultColor();
-                Console.WriteLine();
-
-                // PRINT MAIN MENU
-                UserInterface.PrintMainMenu(authorized);
-
-                // HANDLE USER INPUT
-                Console.WriteLine("    ────────────────────────────────────────────────────");
-                Console.WriteLine();
-                UserInterface.SetMainColor();
-                Console.Write("    Maak een keuze: ");
-                UserInterface.SetDefaultColor();
-                string MainMenuInput = Console.ReadLine();
-                int MainMenuChoice = int.Parse(MainMenuInput);
-
-                // HANDLE MENU
-                switch(MainMenuChoice)
+                if (authorized)
                 {
-                    // VLUCHT BOEKEN
-                    case 1:
-                        Console.Clear();
-                        break;
+                    Console.Clear();
+                    Admin.PrintAdminMainScreen();
+                    Console.Clear();
+                }
+                else
+                {
+                    // PRINT LOGO
+                    UserInterface.PrintLogo();
 
-                    // OVERZICHT BOEKINGEN
-                    case 2:
-                        Console.Clear();
-                        break;
+                    // PRINT WELCOME TEXT
+                    UserInterface.SetMainColor();
+                    if (!CurrentUser.IsGuest == true)
+                    {
+                        Console.WriteLine($"    Welkom {CurrentUser.first_name} bij het boekingsysteem van Rotterdam Airlines");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"    Welkom bij het boekingsysteem van Rotterdam Airlines");
+                    }
+                    Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                    UserInterface.SetDefaultColor();
+                    Console.WriteLine();
 
-                    // MEDEDELINGEN
-                    case 3:
-                        Console.Clear();
-                        break;
+                    // PRINT MAIN MENU
+                    UserInterface.PrintMainMenu(authorized);
 
-                    // AANBIEDINGEN
-                    case 4:
-                        Console.Clear();
-                        break;
+                    // HANDLE USER INPUT
+                    Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                    Console.WriteLine();
+                    UserInterface.SetMainColor();
+                    Console.Write("    Maak een keuze: ");
+                    UserInterface.SetDefaultColor();
 
-                    // INFORMATIE
-                    case 5:
-                        Console.Clear();
-                        UserInterface.PrintLogo();
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("    Vind alle Informatie over Rotterdam Airlines.");
-                        Console.WriteLine("    ─────────────────────────────────────────────");
-                        Console.WriteLine();
-                        Console.ForegroundColor = ConsoleColor.White;
+                    int Input = 100;
+                    try { Input = int.Parse(Console.ReadLine()); } catch { }
 
-                        UserInterface.PrintInfoMenu();
+                    // HANDLE MENU
+                    switch (Input)
+                    {
+                        // VLUCHT BOEKEN
+                        case 1:
+                            Console.Clear();
+                            Customer.BookFlight(CurrentUser);
+                            Console.Clear();
+                            break;
 
-                        Console.WriteLine();
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("    ───────────────────────────────────────────");
-                        Console.Write("    Maak een keuze: ");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        // OVERZICHT BOEKINGEN
+                        case 2:
+                            Console.Clear();
+                            break;
 
-                        string informatie_input = Console.ReadLine();
-                        int informatie_choice = int.Parse(informatie_input);
+                        // MEDEDELINGEN
+                        case 3:
+                            Console.Clear();
+                            break;
 
-                        switch (informatie_choice)
-                        {
-                            case 0:
-                                Console.Clear();
-                                break;
+                        // AANBIEDINGEN
+                        case 4:
+                            Console.Clear();
+                            break;
 
-                            case 1:
+                        // INFORMATIE
+                        case 5:
+                            bool InformationActive = true;
+                            while (InformationActive)
+                            {
                                 Console.Clear();
                                 UserInterface.PrintLogo();
-                                Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.WriteLine("    Vind alle Informatie over onze faciliteien.");
-                                Console.WriteLine("    ───────────────────────────────────────────");
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Rotterdam Airlines | Informatie");
+                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                                 Console.WriteLine();
-                                Console.ForegroundColor = ConsoleColor.White;
-
-                                UserInterface.PrintFaciliteitenMenu();
-
+                                UserInterface.SetDefaultColor();
+                                UserInterface.PrintInfoMenu();
                                 Console.WriteLine();
-                                Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.WriteLine("    ───────────────────────────────────────────");
+                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
                                 Console.Write("    Maak een keuze: ");
-                                Console.ForegroundColor = ConsoleColor.White;
+                                UserInterface.SetDefaultColor();
+                                int informatie_choice = 100;
+                                try { informatie_choice = int.Parse(Console.ReadLine()); } catch { }
 
-                                string faciliteiten_input = Console.ReadLine();
-                                int faciliteiten_choice = int.Parse(faciliteiten_input);
-
-                                
-                                switch (faciliteiten_choice)
+                                switch (informatie_choice)
                                 {
                                     case 0:
+                                        InformationActive = false;
                                         Console.Clear();
                                         break;
+
                                     case 1:
                                         Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        Informatie.PrintWinkelen();
-                                        Console.ReadLine();
                                         Console.Clear();
-                                        break;
+                                        UserInterface.PrintLogo();
+                                        UserInterface.SetMainColor();
+                                        Console.WriteLine("    Rotterdam Airlines | Informatie | Faciliteiten");
+                                        Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                                        Console.WriteLine();
+                                        UserInterface.SetDefaultColor();
+                                        UserInterface.PrintFaciliteitenMenu();
+                                        Console.WriteLine();
+                                        Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Maak een keuze: ");
+                                        UserInterface.SetDefaultColor();
+                                        int faciliteiten_choice = 100;
+                                        try { faciliteiten_choice = int.Parse(Console.ReadLine()); } catch { }
 
+                                        switch (faciliteiten_choice)
+                                        {
+                                            case 0:
+                                                Console.Clear();
+                                                break;
+                                            case 1:
+                                                Console.Clear();
+                                                UserInterface.PrintLogo();
+                                                Informatie.PrintWinkelen();
+                                                Console.ReadLine();
+                                                Console.Clear();
+                                                break;
+                                            case 2:
+                                                Console.Clear();
+                                                UserInterface.PrintLogo();
+                                                Informatie.PrintEetgelegenheden();
+                                                Console.ReadLine();
+                                                Console.Clear();
+                                                break;
+                                            case 3:
+                                                Console.Clear();
+                                                UserInterface.PrintLogo();
+                                                Informatie.PrintRecreatie();
+                                                Console.ReadLine();
+                                                Console.Clear();
+                                                break;
+                                        }
+                                        break;
                                     case 2:
                                         Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        Informatie.PrintEetgelegenheden();
-                                        Console.ReadLine();
-                                        Console.Clear();
                                         break;
-
                                     case 3:
                                         Console.Clear();
                                         UserInterface.PrintLogo();
-                                        Informatie.PrintRecreatie();
+                                        Informatie.PrintOnzeVliegtuigen();
                                         Console.ReadLine();
                                         Console.Clear();
                                         break;
-
+                                    case 4:
+                                        Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Informatie.PrintFAQ();
+                                        Console.ReadLine();
+                                        Console.Clear();
+                                        break;
                                 }
+                            }
+                            Console.Clear();
+                            break;
 
-                                break;
-
-                            case 2:
-                                Console.Clear();
-                                break;
-
-                            case 3:
-                                Console.Clear();
-                                UserInterface.PrintLogo();
-                                Informatie.PrintOnzeVliegtuigen();
-                                Console.ReadLine();
-                                Console.Clear();
-                                break;
-
-                            case 4:
-                                Console.Clear();
-                                UserInterface.PrintLogo();
-                                Informatie.PrintFAQ();
-                                Console.ReadLine();
-                                Console.Clear();
-                                break;
-
-                        }
-                        break;
-
-                    // ACCOUNT
-                    case 6:
-                        Console.Clear();
-                        UserInterface.PrintAccountMenu(authorized);
-                        Console.WriteLine("    ────────────────────────────────────────────────────");
-                        Console.WriteLine();
-                        UserInterface.SetMainColor();
-                        Console.Write("    Maak een keuze: ");
-                        UserInterface.SetDefaultColor();
-                        string account_input = Console.ReadLine();
-                        int account_choice = int.Parse(account_input);
-
-                        switch(account_choice)
-                        {
-                            case 0:
-                                Console.WriteLine("1");
-                                break;
-                            case 1:
-                                Type check = typeof(Customer);
-                                object LoginInformation = Customer.Login(AdminUser);
-                                if(LoginInformation.GetType().Equals(check))
+                        // ACCOUNT
+                        case 6:
+                            Console.Clear();
+                            UserInterface.PrintAccountMenu(authorized, CurrentUser);
+                            Console.WriteLine("    ────────────────────────────────────────────────────");
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.Write("    Maak een keuze: ");
+                            UserInterface.SetDefaultColor();
+                            int account_choice = 100;
+                            try { account_choice = int.Parse(Console.ReadLine()); } catch { }
+                            // Options for when no one is logged in
+                            if (CurrentUser.IsGuest)
+                            {
+                                switch (account_choice)
                                 {
-                                    CurrentUser = (Customer)LoginInformation; 
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        Console.Clear();
+                                        Type check = typeof(Customer);
+                                        object LoginInformation = Customer.Login(AdminUser, CurrentUser);
+                                        if (LoginInformation.GetType().Equals(check))
+                                        {
+                                            CurrentUser = (Customer)LoginInformation;
+                                        }
+                                        else
+                                        {
+                                            authorized = true;
+                                        }
+                                        break;
+                                    case 2:
+                                        Console.Clear();
+                                        Customer.RegisterCustomer(CurrentUser);
+                                        break;
+                                    case 3:
+                                        Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Customer.ChangePassword(smtpClient);
+                                        break;
                                 }
-                                else
+                            }
+                            // Options for when a admin is logged in 
+                            else if (authorized) { }
+                            // Options for when a user is logged in 
+                            else
+                            {
+                                switch (account_choice)
                                 {
-                                    authorized = true;
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        CurrentUser.SetToDefault();
+                                        break;
                                 }
-                                break;
-                            case 2:
-                                Console.Clear();
-                                Customer.RegisterCustomer(CurrentUser);
-                                break;
-                            case 3:
-                                Console.Clear();
-                                UserInterface.PrintLogo();
-                                Customer.ChangePassword(smtpClient);
-                                break;
-                        }
+                            }
+                            Console.Clear();
+                            break;
 
-                        Console.Clear();
-                        break;
+                        // CONTACT
+                        case 7:
+                            Console.Clear();
+                            Contact.PrintContactInfo();
+                            UserInterface.SetMainColor();
+                            Console.Write("    Maak een keuze: ");
+                            UserInterface.SetDefaultColor();
+                            int contact_choice = 100;
+                            try { contact_choice = int.Parse(Console.ReadLine()); } catch { }
 
-                    // CONTACT
-                    case 7:
-                        Console.Clear();
-                        Contact.PrintContactInfo();
-                        UserInterface.SetMainColor();
-                        Console.Write("    Maak een keuze: ");
-                        UserInterface.SetDefaultColor();
-                        string contact_input = Console.ReadLine();
-                        int contact_choice = int.Parse(contact_input);
 
-                        switch (contact_choice)
-                        {
-                            case 0:
-                                Console.Clear();
-                                break;
-                            case 1:
-                                Console.Clear();
-                                List<string> ContactInfo = Contact.GetContactInfo();
-                                if(ContactInfo.Count == 5) 
-                                {
-                                    Contact.SendEmail(ContactInfo, smtpClient);
-                                }
-                                break;
-                            default:
-                                break;
-                        }
+                            switch (contact_choice)
+                            {
+                                case 0:
+                                    Console.Clear();
+                                    break;
+                                case 1:
+                                    Console.Clear();
+                                    List<string> ContactInfo = Contact.GetContactInfo();
+                                    if (ContactInfo.Count == 5)
+                                    {
+                                        Contact.SendEmail(ContactInfo, smtpClient);
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
 
-                        Console.Clear();
-                        break;
+                            Console.Clear();
+                            break;
 
-                    // EXIT
-                    case 8:
-                        Environment.Exit(0);
-                        break;
+                        // EXIT
+                        case 8:
+                            Environment.Exit(0);
+                            break;
 
-                    // DEFAULT
-                    default:
-                        Console.Clear();
-                        break;
+                        // Admin Test
+                        case 9:
+                            Console.Clear();
+                            Console.Clear();
+                            break;
+
+                        // DEFAULT
+                        default:
+                            Console.Clear();
+                            break;
+                    }
                 }
             }
         }
