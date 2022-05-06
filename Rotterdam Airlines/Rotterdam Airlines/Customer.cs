@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Text.RegularExpressions;
+
 
 namespace Rotterdam_Airlines
 {
@@ -1025,5 +1028,90 @@ namespace Rotterdam_Airlines
                 }
             }
         }
+
+
+        public static void ChangePassword(SmtpClient smtpClient)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
+            Console.WriteLine("    ──────────────────────────────────────────────────");
+            Console.WriteLine();
+            Console.Write("    Vul uw email in: ");
+            Console.ForegroundColor = ConsoleColor.White;
+            List<Customer> customers = JSON.LoadCustomersJSON();
+            string inputemail = Console.ReadLine();
+            string currentemail;
+            foreach (Customer customer in customers)
+            {
+                if (customer.email == inputemail)
+                {
+                    currentemail = customer.email;
+                    Random rd = new Random();
+                    int RandCode = rd.Next(100000, 999999);
+                    Customer.SendCodeMail(currentemail, smtpClient, RandCode);
+                    Customer.CheckChangeCode(RandCode, currentemail);
+
+                }
+                else
+                {
+                    Console.WriteLine("    niet bestande email ingevoerd");
+                }
+            }
+        }
+
+
+        public static void SendCodeMail(string currentEmail, SmtpClient smtpClient, int RandCode)
+        {
+
+            var currentemail = new MailMessage
+
+            {
+
+                From = new MailAddress("RotterdamAirlines2022@outlook.com"),
+                Subject = "Code",
+                Body = String.Format("<h4><b>code:</b> {0} {1}</h4>Email:<h4>", RandCode, currentEmail),
+                IsBodyHtml = true,
+            };
+            currentemail.To.Add("RotterdamAirlines2022@outlook.com");
+            currentemail.To.Add(currentEmail);
+            smtpClient.Send(currentemail);
+
+        }
+
+
+        public static void CheckChangeCode(int Truecode, string EmailChangable)
+        {
+            Console.Write("    Vul de code in: ");
+            List<Customer> customers = JSON.LoadCustomersJSON();
+            string inputcode = Console.ReadLine();
+            int InputCode = int.Parse(inputcode);
+            int y = 0;
+
+            if (Truecode == InputCode)
+            {
+                Console.WriteLine("    Kies een wachtwoord: ");
+                string InputFirstPassword = Console.ReadLine();
+                Console.WriteLine("    Vul het wachtwoord nog een keer in : ");
+                string InputSecondPassword = Console.ReadLine();
+                foreach (Customer customer in customers) 
+                {
+                    if (customer.email == EmailChangable)
+                    {
+                        customers[y].password = InputSecondPassword;
+                        Console.WriteLine("    Wachtwoord succesvol aangepast!");
+                    }
+                    y++;
+
+                }
+                JSON.SaveCustomersJSON(customers);
+            }
+            else
+            {
+                Console.WriteLine("    Code is onjuist, probeer opniew");
+            }
+
+        }
+
     }
+
 }

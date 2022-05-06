@@ -227,6 +227,8 @@ namespace Rotterdam_Airlines
                                         break;
                                     case 3:
                                         Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Customer.ChangePassword(smtpClient);
                                         break;
                                 }
                             }
