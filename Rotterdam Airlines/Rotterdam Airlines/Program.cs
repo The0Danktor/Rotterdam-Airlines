@@ -27,6 +27,7 @@ namespace Rotterdam_Airlines
             Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null, new List<string>(), true);
             Admin AdminUser = new Admin("a", "a");
             //Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
+            while(true)
             {
                 if (authorized)
                 {
