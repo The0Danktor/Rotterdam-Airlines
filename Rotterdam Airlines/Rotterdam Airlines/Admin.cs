@@ -53,7 +53,9 @@ namespace Rotterdam_Airlines
                 {
                     check = true;
                     int choice = count;
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    Console.WriteLine("    ─────────────────────────────────────────────────────────");
+                    Console.WriteLine();
                     Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                     Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
                     Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
@@ -720,7 +722,7 @@ namespace Rotterdam_Airlines
             UserInterface.PrintLogo();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    Rotterdam Airlines | Admin");
-            Console.WriteLine("    ──────────────────────────");
+            Console.WriteLine("    ─────────────────────────────────────────────────────────");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("    [1] Gebruiker Opzoeken");
@@ -732,7 +734,7 @@ namespace Rotterdam_Airlines
             Console.WriteLine("    [5] Boekingen Opzoeken");
             Console.WriteLine("    [6] Boekingen Wijzigen");
             Console.WriteLine();
-            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+            Console.WriteLine("    ─────────────────────────────────────────────────────────");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("    Maak een keuze: ");
@@ -864,7 +866,7 @@ namespace Rotterdam_Airlines
             UserInterface.PrintLogo();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    Rotterdam Airlines | Admin | " + screen);
-            Console.WriteLine("    ──────────────────────────────────────────────────");
+            Console.WriteLine("    ─────────────────────────────────────────────────────────");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("    [0] Hoofdmenu");

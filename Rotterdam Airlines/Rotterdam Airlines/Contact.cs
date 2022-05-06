@@ -76,8 +76,8 @@ namespace Rotterdam_Airlines
                 UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
-                string Input = Console.ReadLine();
-                int Choice = int.Parse(Input);
+                int Choice = 100;
+                try {Choice = int.Parse(Console.ReadLine());} catch {}
 
                 switch (Choice)
                 {
