@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
-using System.Collections;
-using System.Text.RegularExpressions;
 
 namespace Rotterdam_Airlines
 {
@@ -78,14 +76,13 @@ namespace Rotterdam_Airlines
         static public object Login(Admin AdminUser , Customer CurrentUser)
         {
             
-            string Email = "" ;
-            string Password = "" ;
+                string Email = "" ;
+                string Password = "" ;
             while (true) 
             {
-                Console.Clear();
                 UserInterface.PrintInlogMenu(Email,Password);
-                int InlogChoice = 100;
-                try { InlogChoice = int.Parse(Console.ReadLine()); } catch { }
+                string InlogInput = Console.ReadLine();
+                int InlogChoice = int.Parse(InlogInput);
                 bool UserFound = false;
                 switch (InlogChoice)
                 {
@@ -236,10 +233,11 @@ namespace Rotterdam_Airlines
             bool creating = true;
             while (creating)
             {
-                Console.Clear();
+
                 UserInterface.PrintRegisterMenu(CurrentUser);
-                int register_choice = 100;
-                try { register_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                string register_input = Console.ReadLine();
+                int register_choice = int.Parse(register_input);
                 switch (register_choice)
                 {
                     case 0:
@@ -306,9 +304,9 @@ namespace Rotterdam_Airlines
                             {
                                 UserInterface.PrintRegisterMenu(CurrentUser);
                                 Console.WriteLine();
-                                Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
+                                Console.WriteLine();
                                 UserInterface.SetDefaultColor();
                             }
                         }
@@ -333,11 +331,8 @@ namespace Rotterdam_Airlines
                                 UserInterface.PrintRegisterMenu(CurrentUser);
                                 Console.WriteLine();
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine();
-                                Console.WriteLine("    Onjuiste invoer. De ingevoerde wachtwoorden waren niet hetzelfde.\n    Klik op ENTER om het opnieuw te proberen.");
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Het ingevoerde Wachtwoorden waren niet het zelfde)");
                                 UserInterface.SetDefaultColor();
-                                Console.ReadKey();
-                                Console.Clear();
                             }
                         }
                         break;
@@ -432,7 +427,6 @@ namespace Rotterdam_Airlines
                     case 6:
                         while(true)
                         {
-                            Console.WriteLine();
                             Console.WriteLine("    [1] Man");
                             Console.WriteLine("    [2] Vrouw");
                             Console.WriteLine("    [3] Overig");
@@ -443,19 +437,19 @@ namespace Rotterdam_Airlines
                             string TempInput = Console.ReadLine();
                             if (TempInput == "1")
                             {
-                                CurrentUser.gender = "Man";
+                                CurrentUser.gender = "man";
                                 Console.Clear();
                                 break;
                             }
                             else if(TempInput == "2")
                             {
-                                CurrentUser.gender = "Vrouw";
+                                CurrentUser.gender = "vrouw";
                                 Console.Clear();
                                 break;
                             }
                             else if(TempInput == "3")
                             {
-                                CurrentUser.gender = "Overig";
+                                CurrentUser.gender = "overig";
                                 Console.Clear();
                                 break;
                             }
@@ -553,477 +547,7 @@ namespace Rotterdam_Airlines
                         break;
                 }
             }
-        }
 
-        public static void BookFlight(Customer Customer)
-        {
-            bool BookingFlight = true;
-            string[][] BookingSteps = GenerateBookingSteps();
-
-            // BOOKING INFO
-            string[] BookingSelectedLuggage;
-            List<BookingPerson> BookingPersonData = new List<BookingPerson>();
-            Customer BookingCustomer = Customer;
-            Flight BookingSelectedFlight = null;
-            bool FlightSelected = false;
-
-            List<Flight> AllFlights = Flight.GetFlights();
-            List<Flight> FilteredFlights = Flight.GetFlights();
-            List<string> FlightDestinations = Flight.GetFlightDestinations();
-
-            // FILTERS
-            Hashtable Filters = new Hashtable()
-            {
-                {"Bestemming", ""},
-                {"Datum", "" },
-                {"Aantal Personen", 1},
-                {"Maximum Prijs", 1000}
-            };
-
-            // LOCAL FUNCTIONS
-            string[][] GenerateBookingSteps()
-            {
-                string[][] GenerateBookingSteps =
-                {
-                new string[] { "Vlucht Selecteren", "X" },
-                new string[] { "Persoonsgegevens", "X" },
-                new string[] { "Contactgegevens", "X" },
-                new string[] { "Bagage", "X" },
-                new string[] { "Stoelen", "X" },
-                new string[] { "Bevestigen", "X" }
-                };
-
-                return GenerateBookingSteps;
-            }
-
-            void PrintBookingStatus()
-            {
-                UserInterface.SetMainColor();
-                Console.Write("    Vlucht Boeken | ");
-                for(int i = 0; i < BookingSteps.Length; i++)
-                {
-                    if(BookingSteps[i][1] == "Y")
-                    {
-                        UserInterface.SetMainColor();
-                        Console.Write(BookingSteps[i][0]);
-                        UserInterface.SetDefaultColor();
-                        if(i != BookingSteps.Length - 1) { Console.Write(" - "); }
-                    } else
-                    {
-                        UserInterface.SetDefaultColor();
-                        Console.Write(BookingSteps[i][0]);
-                        if (i != BookingSteps.Length - 1) { Console.Write(" - "); }
-                    }
-                }
-            }
-
-            bool BackToMainMenu()
-            {
-                Console.WriteLine();
-                UserInterface.SetErrorColor();
-                Console.WriteLine("    Weet je zeker dat je terug naar het hoofdmenu wilt gaan?\n    Je boeking wordt niet opgeslagen!");
-                UserInterface.SetDefaultColor();
-                Console.WriteLine();
-                Console.WriteLine("    [0] Nee");
-                Console.WriteLine("    [1] Ja");
-                Console.WriteLine();
-                UserInterface.SetMainColor();
-                Console.Write("    Maak een keuze: ");
-                UserInterface.SetDefaultColor();
-                int InputConfirm = 100;
-                try { InputConfirm = int.Parse(Console.ReadLine()); } catch { }
-                if (InputConfirm == 1)
-                {
-                    return false;
-                } else
-                {
-                    return true;
-                }
-            }
-
-            void PrintFlightOverview()
-            {
-                if(FlightSelected == true)
-                {
-                    CultureInfo Dutch = new CultureInfo("nl-NL", false);
-                    TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
-                    DateTime DepartureInfo = BookingSelectedFlight.Departure;
-                    string Departure = DepartureInfo.ToString("MMMM", Dutch);
-                    Departure = textInfo.ToTitleCase(Departure);
-                    UserInterface.SetMainColor();
-                    Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
-                    UserInterface.SetDefaultColor();
-                    Console.WriteLine();
-                    Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
-                    Console.WriteLine();
-                    Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                    Console.WriteLine();
-                }
-            }
-
-            // BOOK FLIGHT MENU
-            while (BookingFlight)
-            {
-
-                Console.Clear();
-                UserInterface.SetDefaultColor();
-                UserInterface.PrintLogo();
-                PrintBookingStatus();
-                Console.WriteLine();
-                UserInterface.SetMainColor();
-                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                UserInterface.SetDefaultColor();
-                Console.WriteLine();
-                Console.WriteLine("    [0] Hoofdmenu");
-                Console.WriteLine();
-                Console.WriteLine("    [1] Vlucht Selecteren");
-                Console.WriteLine("    [2] Persoonsgegevens");
-                Console.WriteLine("    [3] Contactgegevens");
-                Console.WriteLine("    [4] Bagage Toevoegen");
-                Console.WriteLine("    [5] Stoelen Kiezen");
-                Console.WriteLine();
-                Console.WriteLine("    [6] Boeking Overzicht");
-                Console.WriteLine("    [7] Boeking Bevestigen");
-                Console.WriteLine();
-                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                Console.WriteLine();
-                PrintFlightOverview();
-                UserInterface.SetMainColor();
-                Console.Write("    Maak een keuze: ");
-                UserInterface.SetDefaultColor();
-
-                int Input = 100;
-
-                try { Input = int.Parse(Console.ReadLine()); } catch { }
-
-                switch (Input)
-                {
-                    // HOOFDMENU
-                    case 0:
-                        BookingFlight = BackToMainMenu();
-                        Console.Clear();
-                        break;
-
-                    // VLUCHT SELECTEREN
-                    case 1:
-                        BookingSteps[0][1] = "Y";
-                        bool SelectingFlight = true;
-                        int CurrentPage = 0;
-                        double MaxPagesDec = FilteredFlights.Count / 10;
-                        int MaxPages = (int)Math.Ceiling(MaxPagesDec);
-                        void PrintFlightsOverview()
-                        {
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek                              Pagina " + (CurrentPage + 1) + "/" + (MaxPages + 1));
-                            Console.WriteLine();
-                            UserInterface.SetDefaultColor();
-
-                            for (int i = 0; i < 10; i++)
-                            {
-                                int index = i + (CurrentPage * 10);
-                                try
-                                {
-                                    CultureInfo Dutch = new CultureInfo("nl-NL", false);
-                                    TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
-                                    DateTime DepartureInfo = FilteredFlights[index].Departure;
-                                    string Departure = DepartureInfo.ToString("MMMM", Dutch);
-                                    Departure = textInfo.ToTitleCase(Departure);
-                                    Console.WriteLine("    " + FilteredFlights[index].FlightCode + "\t  " + FilteredFlights[index].FlightNumber + "\t   " + FilteredFlights[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
-                                }
-                                catch (System.ArgumentOutOfRangeException)
-                                {
-                                    Console.Write("");
-                                }
-                            }
-                        }
-
-                        while (SelectingFlight)
-                        {
-                            FilteredFlights = FilterHandler.filterList(AllFlights, Filters, "");
-                            MaxPagesDec = FilteredFlights.Count / 10;
-                            MaxPages = (int)Math.Ceiling(MaxPagesDec);
-                            Console.Clear();
-                            UserInterface.SetDefaultColor();
-                            UserInterface.PrintLogo();
-                            PrintBookingStatus();
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            UserInterface.SetDefaultColor();
-                            Console.WriteLine();
-                            Console.WriteLine("    [0] Hoofdmenu");
-                            Console.WriteLine("    [1] Terug");
-                            Console.WriteLine();
-                            Console.WriteLine("    [2] Filters Aanpassen");
-                            Console.WriteLine("    [3] Sorteren");
-                            Console.WriteLine("    [4] Vorige Pagina");
-                            Console.WriteLine("    [5] Volgende Pagina");
-                            Console.WriteLine();
-                            Console.WriteLine("    [6] Vluchtcode Invoeren");
-                            Console.WriteLine();
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            Console.WriteLine();
-                            PrintFlightsOverview();
-                            Console.WriteLine("");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            Console.WriteLine("");
-                            UserInterface.SetMainColor();
-                            Console.Write("    Maak een keuze: ");
-                            UserInterface.SetDefaultColor();
-
-                            int InputSelectFlight = 100;
-                            try { InputSelectFlight = int.Parse(Console.ReadLine()); } catch { }
-
-                            switch (InputSelectFlight)
-                            {
-                                case 0:
-                                    SelectingFlight = BackToMainMenu();
-                                    BookingFlight = SelectingFlight;
-                                    Console.Clear();
-                                    break;
-
-                                case 1:
-                                    SelectingFlight = false;
-                                    BookingSteps[0][1] = "X";
-                                    Console.Clear();
-                                    break;
-
-                                case 2:
-                                    bool ChangingFilters = true;
-                                    while (ChangingFilters)
-                                    {
-                                        Console.Clear();
-                                        UserInterface.SetDefaultColor();
-                                        UserInterface.PrintLogo();
-                                        PrintBookingStatus();
-                                        Console.WriteLine();
-                                        UserInterface.SetMainColor();
-                                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                                        UserInterface.SetDefaultColor();
-                                        Console.WriteLine();
-                                        Console.WriteLine("    [0] Hoofdmenu");
-                                        Console.WriteLine("    [1] Terug");
-                                        Console.WriteLine();
-                                        Console.WriteLine("    [2] Bestemming           " + Filters["Bestemming"]);
-                                        Console.WriteLine("    [3] Datum                " + Filters["Datum"]);
-                                        Console.WriteLine("    [4] Aantal Personen      " + Filters["Aantal Personen"]);
-                                        Console.WriteLine("    [5] Maximum Prijs        " + Filters["Maximum Prijs"]);
-                                        Console.WriteLine();
-                                        Console.WriteLine("    [6] Filters Resetten");
-                                        Console.WriteLine("    [7] Filters Bevestigen");
-                                        Console.WriteLine();
-                                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                                        Console.WriteLine();
-                                        UserInterface.SetMainColor();
-                                        Console.Write("    Maak een keuze: ");
-                                        UserInterface.SetDefaultColor();
-
-                                        int InputSelectFlightFilter = 100;
-                                        try { InputSelectFlightFilter = int.Parse(Console.ReadLine()); } catch { }
-
-                                        switch (InputSelectFlightFilter)
-                                        {
-                                            case 0:
-                                                ChangingFilters = BackToMainMenu();
-                                                SelectingFlight = ChangingFilters;
-                                                BookingFlight = ChangingFilters;
-                                                Console.Clear();
-                                                break;
-                                            case 1:
-                                                ChangingFilters = false;
-                                                Console.Clear();
-                                                break;
-                                            case 2:
-                                                bool EnteringDestination = true;
-                                                Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.WriteLine("    Bestemmingen:");
-                                                UserInterface.SetDefaultColor();
-                                                Console.Write("    ");
-                                                for (int i = 0; i < FlightDestinations.Count; i++)
-                                                {
-                                                    Console.Write(FlightDestinations[i]);
-                                                    if (i != FlightDestinations.Count - 1) { Console.Write(", "); } else { Console.Write("."); }
-                                                    if (i == 10 || i == 20 || i == 30) { Console.WriteLine(); Console.Write("    "); }
-                                                }
-                                                Console.WriteLine();
-                                                while (EnteringDestination)
-                                                {
-                                                    UserInterface.SetMainColor();
-                                                    Console.WriteLine();
-                                                    Console.Write("    Kies een bestemming: ");
-                                                    UserInterface.SetDefaultColor();
-                                                    string InputDestination = Console.ReadLine();
-                                                    InputDestination = InputDestination.ToLower();
-                                                    TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
-                                                    InputDestination = textInfo.ToTitleCase(InputDestination);
-                                                    if (FlightDestinations.Contains(InputDestination)) { Filters["Bestemming"] = InputDestination; EnteringDestination = false; }
-                                                    else
-                                                    {
-                                                        UserInterface.SetErrorColor();
-                                                        Console.WriteLine();
-                                                        Console.WriteLine("    De ingevoerde bestemming is niet gevonden!");
-                                                        UserInterface.SetDefaultColor();
-                                                    }
-                                                }
-
-                                                Console.Clear();
-                                                break;
-
-                                            case 3:
-                                                bool EnteringDate = true;
-                                                while(EnteringDate)
-                                                {
-                                                    Console.WriteLine();
-                                                    UserInterface.SetMainColor();
-                                                    Console.Write("    Kies een datum (DD-MM-JJJJ): ");
-                                                    UserInterface.SetDefaultColor();
-                                                    string InputDate = Console.ReadLine();
-                                                    DateTime dDate;
-                                                    if (DateTime.TryParse(InputDate, out dDate)) { Filters["Datum"] = InputDate; EnteringDate = false; }
-                                                    else
-                                                    {
-                                                        UserInterface.SetErrorColor();
-                                                        Console.WriteLine();
-                                                        Console.WriteLine("    De ingevoerde datum is niet correct. Heeft u het correcte format gebruikt? (DD-MM-JJJJ)");
-                                                        UserInterface.SetDefaultColor();
-                                                    }
-                                                }
-
-
-                                                Console.Clear();
-                                                break;
-                                            case 4:
-                                                bool EnteringPersons = true;
-                                                while(EnteringPersons)
-                                                {
-                                                    Console.WriteLine();
-                                                    UserInterface.SetMainColor();
-                                                    Console.Write("    Kies het aantal personen: ");
-                                                    UserInterface.SetDefaultColor();
-                                                    string InputPersons = Console.ReadLine();
-                                                    try
-                                                    {
-                                                        if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); EnteringPersons = false; }
-                                                        else
-                                                        {
-                                                            UserInterface.SetErrorColor();
-                                                            Console.WriteLine();
-                                                            Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt voor maximaal 4 personen tegelijk boeken.");
-                                                            UserInterface.SetDefaultColor();
-                                                        }
-                                                    }
-                                                    catch
-                                                    {
-                                                        UserInterface.SetErrorColor();
-                                                        Console.WriteLine();
-                                                        Console.WriteLine("    Het ingevoerde aantal personen is niet correct. U kunt alleen een nummer invoeren.");
-                                                        UserInterface.SetDefaultColor();
-                                                    }
-                                                }
-
-                                                Console.Clear();
-                                                break;
-                                            case 5:
-                                                bool EnteringPrice = true;
-                                                while (EnteringPrice)
-                                                {
-                                                Console.WriteLine();
-                                                UserInterface.SetMainColor();
-                                                Console.Write("    Kies een maximumprijs: ");
-                                                UserInterface.SetDefaultColor();
-                                                string InputPrice = Console.ReadLine();
-
-                                                    try { Filters["Maximum Prijs"] = Int32.Parse(InputPrice); EnteringPrice = false; }
-                                                    catch
-                                                    {
-                                                        UserInterface.SetErrorColor();
-                                                        Console.WriteLine();
-                                                        Console.WriteLine("    De ingevoerde prijs is niet correct. U kunt alleen een nummer invoeren.");
-                                                        UserInterface.SetDefaultColor();
-                                                    }
-                                                }
-                                                Console.Clear();
-                                                break;
-                                            case 6:
-                                                Filters["Bestemming"] = "";
-                                                Filters["Datum"] = "";
-                                                Filters["Aantal Personen"] = 1;
-                                                Filters["Maximum Prijs"] = 1000;
-                                                Console.Clear();
-                                                break;
-                                            case 7:
-                                                ChangingFilters = false;
-                                                Console.Clear();
-                                                break;
-                                            default:
-                                                Console.Clear();
-                                                break;
-                                        }
-                                    }
-                                    CurrentPage = 0;
-                                    Console.Clear();
-                                    break;
-
-                                // SORTEREN
-                                case 3:
-                                    break;
-                                
-                                // VORIGE PAGINA
-                                case 4:
-                                    if (CurrentPage != 0) {CurrentPage--;} else {CurrentPage = MaxPages;} Console.Clear();
-                                    break;
-                                
-                                // VOLGENDE PAGINA
-                                case 5:
-                                    if (CurrentPage + 1 > MaxPages) {CurrentPage = 0;} else {CurrentPage++;} Console.Clear();
-                                    break;
-
-                                case 6:
-                                    bool EnteringFlightCode = true;
-                                    while(EnteringFlightCode)
-                                    {
-                                        Console.WriteLine();
-                                        UserInterface.SetMainColor();
-                                        Console.Write("    Vul een vluchtcode in: ");
-                                        UserInterface.SetDefaultColor();
-                                        string InputFlightCode = Console.ReadLine();
-                                        if(Flight.FlightExists(InputFlightCode))
-                                        {
-                                            int index = Flight.GetFlightIndex(InputFlightCode);
-                                            BookingSelectedFlight = Flight.Flights[index];
-                                            FlightSelected = true;
-                                            EnteringFlightCode = false;
-                                            SelectingFlight = false;
-                                        } else
-                                        {
-                                            UserInterface.SetErrorColor();
-                                            Console.WriteLine();
-                                            Console.WriteLine("    De ingevoerde vluchtcode is niet gevonden! Probeer het opnieuw.");
-                                            UserInterface.SetDefaultColor();
-                                        }
-
-                                        // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
-                                    }
-
-                                    Console.Clear();
-                                    break;
-
-                                default:
-                                    Console.Clear();
-                                    break;
-                            }
-                        }
-                        BookingSteps[0][1] = "X";
-                        Console.Clear();
-                        break;
-
-                    // DEFAULT
-                    default:
-                        Console.Clear();
-                        break;
-                }
-            }
         }
     }
 }

@@ -11,8 +11,6 @@ namespace Rotterdam_Airlines
 
         public static ConsoleColor MainColor = ConsoleColor.Blue;
         public static ConsoleColor DefaultColor = ConsoleColor.White;
-        public static ConsoleColor ErrorColor = ConsoleColor.Red;
-        public static ConsoleColor ConfirmColor = ConsoleColor.Green;
 
         public UserInterface()
         { }
@@ -173,6 +171,7 @@ namespace Rotterdam_Airlines
 
         }
 
+
         public static void SetMainColor()
         {
             Console.ForegroundColor = MainColor;
@@ -181,16 +180,6 @@ namespace Rotterdam_Airlines
         public static void SetDefaultColor()
         {
             Console.ForegroundColor = DefaultColor;
-        }
-
-        public static void SetErrorColor()
-        {
-            Console.ForegroundColor = ErrorColor;
-        }
-
-        public static void SetConfirmColor()
-        {
-            Console.ForegroundColor = ConfirmColor;
         }
     }
 }
