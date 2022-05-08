@@ -37,6 +37,32 @@ namespace Rotterdam_Airlines
                     this.Description = " Unspecified, Deze klasse heeft geen beschrijving.";
                     break;
             }
+
+            //PRICE ESTIMATION
+            double extra = 0;
+            switch (seatclass)
+            {
+                case "first":
+                    extra += 0;
+                    break;
+                case "business":
+                    extra += 0;
+                    break;
+                case "economy":
+                    extra += 0;
+                    break;
+                default:
+                    extra += 0;
+                    break;
+            }
+            if (this.Special.Contains("limited") || this.Special.Contains("missing"))
+            {
+                extra += 0;
+            }
+            else if (this.Special.Contains("increased"))
+            {
+                extra += 0;
+            }
         }
     }
 }
