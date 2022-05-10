@@ -3769,9 +3769,9 @@ namespace Rotterdam_Airlines
             string currentemail;
             foreach (Customer customer in customers)
             {
-                if (customer.email == inputemail)
+                if (customer.Email == inputemail)
                 {
-                    currentemail = customer.email;
+                    currentemail = customer.Email;
                     Random rd = new Random();
                     int RandCode = rd.Next(100000, 999999);
                     Customer.SendCodeMail(currentemail, smtpClient, RandCode);
@@ -3821,9 +3821,9 @@ namespace Rotterdam_Airlines
                 string InputSecondPassword = Console.ReadLine();
                 foreach (Customer customer in customers) 
                 {
-                    if (customer.email == EmailChangable)
+                    if (customer.Email == EmailChangable)
                     {
-                        customers[y].password = InputSecondPassword;
+                        customers[y].Password = InputSecondPassword;
                         Console.WriteLine("    Wachtwoord succesvol aangepast!");
                     }
                     y++;

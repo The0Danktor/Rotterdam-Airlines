@@ -31,7 +31,7 @@ namespace Rotterdam_Airlines
             foreach (var user in user_list)
             {
 
-                if (input == user_list[user_count].email)
+                if (input == user_list[user_count].Email)
                 {
                     check = true;
                     break;
@@ -58,14 +58,14 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    ─────────────────────────────────────────────────────────");
                     Console.WriteLine();
                     Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                    Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                    Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                    Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                    Console.WriteLine("    Land:                 " + user_list[choice].country);
-                    Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                    Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                    Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                    Console.WriteLine("    Email:                " + user_list[choice].email);
+                    Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                    Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                    Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                    Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                    Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                    Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                    Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                    Console.WriteLine("    Email:                " + user_list[choice].Email);
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -94,7 +94,7 @@ namespace Rotterdam_Airlines
 
                 foreach (var user in user_list)
                 {
-                    if (input == user_list[count].email && confirm == 2)
+                    if (input == user_list[count].Email && confirm == 2)
                     {
                         email_check = true;
                         int choice = count;
@@ -173,7 +173,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].email || user_input == user_list[number].first_name || user_input == user_list[number].prefix || user_input == user_list[number].last_name || user_input == user_list[number].country || user_input == user_list[number].gender || user_input == user_list[number].birth_date || user_input == user_list[number].phone_number || user_input == user_list[number].UserId)
+                        if (user_input == user_list[number].Email || user_input == user_list[number].First_name || user_input == user_list[number].Prefix || user_input == user_list[number].Last_name || user_input == user_list[number].Country || user_input == user_list[number].Gender || user_input == user_list[number].Birth_date || user_input == user_list[number].Phone_number || user_input == user_list[number].UserId)
                         {
                             user_count += 1;
                         }
@@ -183,21 +183,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].email || user_input == user_list[count].first_name || user_input == user_list[count].prefix || user_input == user_list[count].last_name || user_input == user_list[count].country || user_input == user_list[count].gender || user_input == user_list[count].birth_date || user_input == user_list[count].phone_number || user_input == user_list[count].UserId)
+                        if (user_input == user_list[count].Email || user_input == user_list[count].First_name || user_input == user_list[count].Prefix || user_input == user_list[count].Last_name || user_input == user_list[count].Country || user_input == user_list[count].Gender || user_input == user_list[count].Birth_date || user_input == user_list[count].Phone_number || user_input == user_list[count].UserId)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -245,14 +245,14 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -283,7 +283,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].first_name)
+                        if (user_input == user_list[number].First_name)
                         {
                             user_count += 1;
                         }
@@ -293,21 +293,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].first_name)
+                        if (user_input == user_list[count].First_name)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -338,7 +338,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].prefix)
+                        if (user_input == user_list[number].Prefix)
                         {
                             user_count += 1;
                         }
@@ -348,21 +348,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].prefix)
+                        if (user_input == user_list[count].Prefix)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -393,7 +393,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].last_name)
+                        if (user_input == user_list[number].Last_name)
                         {
                             user_count += 1;
                         }
@@ -403,21 +403,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].last_name)
+                        if (user_input == user_list[count].Last_name)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -448,7 +448,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].country)
+                        if (user_input == user_list[number].Country)
                         {
                             user_count += 1;
                         }
@@ -458,21 +458,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].country)
+                        if (user_input == user_list[count].Country)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -503,7 +503,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].gender)
+                        if (user_input == user_list[number].Gender)
                         {
                             user_count += 1;
                         }
@@ -513,21 +513,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].gender)
+                        if (user_input == user_list[count].Gender)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -558,7 +558,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].birth_date)
+                        if (user_input == user_list[number].Birth_date)
                         {
                             user_count += 1;
                         }
@@ -568,21 +568,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].birth_date)
+                        if (user_input == user_list[count].Birth_date)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -613,7 +613,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].phone_number)
+                        if (user_input == user_list[number].Phone_number)
                         {
                             user_count += 1;
                         }
@@ -623,21 +623,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (input == user_list[count].phone_number)
+                        if (input == user_list[count].Phone_number)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -668,7 +668,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].email)
+                        if (user_input == user_list[number].Email)
                         {
                             user_count += 1;
                         }
@@ -678,21 +678,21 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].email)
+                        if (user_input == user_list[count].Email)
                         {
                             check = true;
                             int choice = count;
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                            Console.WriteLine("    Voornaam:             " + user_list[choice].first_name);
-                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].prefix);
-                            Console.WriteLine("    Achternaam:           " + user_list[choice].last_name);
-                            Console.WriteLine("    Land:                 " + user_list[choice].country);
-                            Console.WriteLine("    Geslacht:             " + user_list[choice].gender);
-                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].birth_date);
-                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].phone_number);
-                            Console.WriteLine("    Email:                " + user_list[choice].email);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
