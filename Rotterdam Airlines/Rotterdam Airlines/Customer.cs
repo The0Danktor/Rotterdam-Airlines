@@ -574,7 +574,7 @@ namespace Rotterdam_Airlines
 
             // IMPORT SEAT JSON AT START FOR CONVENIENCE
             Dictionary<string, List<Seat>> seatJson = JSON.LoadSeatsJSON();
-            // JSON.SaveSeatsJSON(dict);
+            JSON.SaveSeatsJSON(seatJson);
 
             // FILTERS
             Hashtable Filters = new Hashtable()
@@ -1226,7 +1226,7 @@ namespace Rotterdam_Airlines
 
                                     //SCROLL PLANE TO LEFT
                                     case ConsoleKey.LeftArrow:
-                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 50)
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 40)
                                         {
                                             break;
                                         }
@@ -1303,6 +1303,8 @@ namespace Rotterdam_Airlines
                                                 Console.WriteLine("");
                                                 Console.WriteLine($"    ─────────────────────────────────────────────────|{editSeat.Id}|─────────────────────────────────────────────────");
                                                 Console.WriteLine($"    Geselecteerde stoel: {editSeat.Id} voor vlucht {BookingSelectedFlight.FlightNumber} naar {BookingSelectedFlight.Destination}");
+                                                Console.WriteLine("");
+                                                Console.WriteLine($"    Prijs van de geselecteerde stoel: {editSeat.Price} euro");
                                                 Console.WriteLine("");
                                                 Console.WriteLine($"    Stoel beschrijving:");
                                                 foreach (string str in list)

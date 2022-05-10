@@ -77,7 +77,7 @@ namespace Rotterdam_Airlines
             {
                 if (!keys.Contains(flight.FlightCode))
                 {
-                    objects.Add(flight.FlightCode, PlaneLayouts.CreateSeatList(flight.PlaneType));
+                    objects.Add(flight.FlightCode, PlaneLayouts.CreateSeatList(flight));
                 }
             }
             // REMOVING LOST FLIGHTS
