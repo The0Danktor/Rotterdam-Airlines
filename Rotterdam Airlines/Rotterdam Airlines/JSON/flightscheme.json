@@ -4,6 +4,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Porto",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sá Carneiro",
+    "Arrival": 1.35 ,
     "Departure": 0,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737PO"
@@ -13,6 +16,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Valencia",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Arrival": 2.25,
     "Departure": 0,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS3030VA"
@@ -22,6 +28,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Sevilla",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Arrival": 2.55,
     "Departure": 0,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787SE"
@@ -31,6 +40,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Barcelona",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Arrival": 2.15,
     "Departure": 4,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737BA"
@@ -40,6 +52,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Dusseldorf",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Düsseldorf International Airport",
+    "Arrival": 0.50,
     "Departure": 4,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330DU"
@@ -49,6 +64,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Oslo",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Arrival": 1.45,
     "Departure": 4,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787OS"
@@ -58,6 +76,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Malaga",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Málaga-Costa del Sol Airport",
+    "Arrival": 3,
     "Departure": 8,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737MA"
@@ -67,6 +88,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Brussel",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Arrival": 0.45,
     "Departure": 8,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330BU"
@@ -76,6 +100,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Zurich",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Arrival": 1.30,
     "Departure": 8,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787ZU"
@@ -85,6 +112,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Rome",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Arrival": 2.15,
     "Departure": 12,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737RO"
@@ -94,6 +124,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Wenen",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Arrival": 1.45,
     "Departure": 12,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330WE"
@@ -103,6 +136,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Madrid",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid–Barajas Airport",
+    "Arrival": 2.35,
     "Departure": 12,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787MA"
@@ -112,6 +148,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Praag",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Václav Havel Airport",
+    "Arrival": 1.30,
     "Departure": 16,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737PR"
@@ -121,6 +160,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Dublin",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Arrival": 1.45,
     "Departure": 16,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330DU"
@@ -130,6 +172,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Lyon",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon–Saint-Exupéry Airport",
+    "Arrival": 1.35,
     "Departure": 16,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787LY"
@@ -139,6 +184,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Munchen",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Arrival": 1.25,
     "Departure": 20,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737MU"
@@ -148,6 +196,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Kopenhagen",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Arrival": 1.20,
     "Departure": 20,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330KO"
@@ -157,6 +208,9 @@
     "Airline": "Rotterdam Airlines",
     "Cancelled": false,
     "Destination": "Londen",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Arrival": 1.15,
     "Departure": 20,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787LO"
