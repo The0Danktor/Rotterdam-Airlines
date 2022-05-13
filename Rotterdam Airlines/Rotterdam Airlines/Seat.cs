@@ -38,19 +38,16 @@ namespace Rotterdam_Airlines
             { "Londen", new Dictionary<int, double>(){ { 1, 80.0 }, { 2, 85.0 }, { 3, 53.0 }, { 4, 108.0 }, { 5, 35.0 }, { 6, 31.0 }, { 7, 42.0 }, { 8, 29.0 }, { 9, 51.0 }, { 10, 34.0 }, { 11, 63.0 }, { 12, 41.0 } } }
         };
 
-        public Seat(string id, string seatclass, string special, string flightc, double price = 0.0)
+        public Seat(string id, string seatclass, string special, Flight flight, double price = 0.0)
         {
             this.Id = id;
             this.SeatClass = seatclass;
             this.Occupant = null;
             this.Special = special;
-            this.FlightCode = flightc;
             this.Price = price;
 
             if (price == 0.0)
             {
-                Flight flight = Flight.getFlight(this.FlightCode);
-                Console.WriteLine(this.FlightCode);
                 this.Price = priceList[flight.Destination][flight.Departure.Month] / 2;
                 switch (seatclass)
                 {
