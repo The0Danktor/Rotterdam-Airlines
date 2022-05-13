@@ -121,7 +121,7 @@ namespace Rotterdam_Airlines
                 }
 
                 double extraHour = (double)Convert.ToInt32(jsonScheme[i]["Departure"]);
-                double extraArrival = (double)Convert.ToInt32((int)jsonScheme[i]["Departure"] + (int)jsonScheme[i]["Arrival"]);
+                double extraArrival = 1.50; //(float)jsonScheme[i]["Arrival"]; 
                 DateTime newDeparture = date.AddHours(extraHour);
                 DateTime newArrival = date.AddHours(extraArrival);
                 Flight flight = new Flight(flightCodeString, (string)jsonScheme[i]["FlightNumber"], (string)jsonScheme[i]["PlaneType"], (string)jsonScheme[i]["Airline"], (string)jsonScheme[i]["Destination"], newDeparture, (string)jsonScheme[i]["Gate"], false, (string)jsonScheme[i]["DestinationAbbreviation"], (string)jsonScheme[i]["DestinationAirport"], newArrival);

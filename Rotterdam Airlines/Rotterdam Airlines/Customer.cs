@@ -736,8 +736,7 @@ namespace Rotterdam_Airlines
                 Console.WriteLine("    [4] Bagage Toevoegen");
                 Console.WriteLine("    [5] Stoelen Kiezen");
                 Console.WriteLine();
-                Console.WriteLine("    [6] Boeking Overzicht");
-                Console.WriteLine("    [7] Boeking Bevestigen");
+                Console.WriteLine("    [6] Boeking Bevestigen");
                 Console.WriteLine();
                 Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                 Console.WriteLine();
@@ -3746,6 +3745,22 @@ namespace Rotterdam_Airlines
 
                         }
                         BookingSteps[2][1] = "X";
+                        break;
+                    // BOOKING BEVESTIGEN
+                    case 6:
+                        CultureInfo Dutch = new CultureInfo("nl-NL", false);
+                        DateTime DepartureInfo = BookingSelectedFlight.Departure;
+                        string Departure = DepartureInfo.ToString("MMMM", Dutch);
+                        Departure = textInfo.ToTitleCase(Departure);
+                        UserInterface.SetMainColor();
+                        Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
+                        UserInterface.SetDefaultColor();
+                        Console.WriteLine();
+                        Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
+                        Console.WriteLine();
+                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                        Console.WriteLine();
+                        Console.Read();
                         break;
                     // DEFAULT
                     default:

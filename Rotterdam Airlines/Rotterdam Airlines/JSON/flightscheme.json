@@ -6,7 +6,7 @@
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
     "DestinationAirport": "Aeroporto Francisco Sá Carneiro",
-    "Arrival": 1.35 ,
+    "Arrival": 1.58,
     "Departure": 0,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737PO"
@@ -18,7 +18,7 @@
     "Destination": "Valencia",
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
-    "Arrival": 2.25,
+    "Arrival": 2.42,
     "Departure": 0,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS3030VA"
@@ -30,7 +30,7 @@
     "Destination": "Sevilla",
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
-    "Arrival": 2.55,
+    "Arrival": 2.92,
     "Departure": 0,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787SE"
@@ -42,7 +42,7 @@
     "Destination": "Barcelona",
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
-    "Arrival": 2.15,
+    "Arrival": 2.25,
     "Departure": 4,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737BA"
@@ -54,7 +54,7 @@
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
     "DestinationAirport": "Düsseldorf International Airport",
-    "Arrival": 0.50,
+    "Arrival": 0.83,
     "Departure": 4,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330DU"
@@ -66,7 +66,7 @@
     "Destination": "Oslo",
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
-    "Arrival": 1.45,
+    "Arrival": 1.75,
     "Departure": 4,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787OS"
@@ -90,7 +90,7 @@
     "Destination": "Brussel",
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
-    "Arrival": 0.45,
+    "Arrival": 0.75,
     "Departure": 8,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330BU"
@@ -102,7 +102,7 @@
     "Destination": "Zurich",
     "DestinationAbbreviation": "ZRH",
     "DestinationAirport": "Zurich Airport",
-    "Arrival": 1.30,
+    "Arrival": 1.50,
     "Departure": 8,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787ZU"
@@ -114,7 +114,7 @@
     "Destination": "Rome",
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
-    "Arrival": 2.15,
+    "Arrival": 2.25,
     "Departure": 12,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737RO"
@@ -126,7 +126,7 @@
     "Destination": "Wenen",
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
-    "Arrival": 1.45,
+    "Arrival": 1.75,
     "Departure": 12,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330WE"
@@ -138,7 +138,7 @@
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
     "DestinationAirport": "Madrid–Barajas Airport",
-    "Arrival": 2.35,
+    "Arrival": 2.58,
     "Departure": 12,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787MA"
@@ -150,7 +150,7 @@
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
     "DestinationAirport": "Václav Havel Airport",
-    "Arrival": 1.30,
+    "Arrival": 1.50,
     "Departure": 16,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737PR"
@@ -162,7 +162,7 @@
     "Destination": "Dublin",
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
-    "Arrival": 1.45,
+    "Arrival": 1.75,
     "Departure": 16,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330DU"
@@ -174,7 +174,7 @@
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
     "DestinationAirport": "Lyon–Saint-Exupéry Airport",
-    "Arrival": 1.35,
+    "Arrival": 1.58,
     "Departure": 16,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787LY"
@@ -186,7 +186,7 @@
     "Destination": "Munchen",
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
-    "Arrival": 1.25,
+    "Arrival": 1.42,
     "Departure": 20,
     "PlaneType": "Boeing 737",
     "FlightNumber": "RAS737MU"
@@ -198,7 +198,7 @@
     "Destination": "Kopenhagen",
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
-    "Arrival": 1.20,
+    "Arrival": 1.33,
     "Departure": 20,
     "PlaneType": "Airbus 330",
     "FlightNumber": "RAS330KO"
@@ -210,7 +210,7 @@
     "Destination": "Londen",
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
-    "Arrival": 1.15,
+    "Arrival": 1.25,
     "Departure": 20,
     "PlaneType": "Boeing 787",
     "FlightNumber": "RAS787LO"
