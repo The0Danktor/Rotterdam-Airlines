@@ -46,6 +46,12 @@ namespace Rotterdam_Airlines
             this.Special = special;
             this.Price = price;
 
+            //LOADING SCREEN
+            int s = DateTime.Now.Second;
+            int amount = s % 4;
+            Console.WriteLine("\n    Loading" + new String('.', amount) + "   ");
+            Console.SetCursorPosition(0, 0);
+            
             if (price == 0.0)
             {
                 this.Price = priceList[flight.Destination][flight.Departure.Month] / 2;

@@ -573,8 +573,10 @@ namespace Rotterdam_Airlines
             List<string> FlightDestinations = Flight.GetFlightDestinations();
 
             // IMPORT SEAT JSON AT START FOR CONVENIENCE
+            Console.CursorVisible = false;
             Dictionary<string, List<Seat>> seatJson = JSON.LoadSeatsJSON();
             JSON.SaveSeatsJSON(seatJson);
+            Console.CursorVisible = true;
 
             // FILTERS
             Hashtable Filters = new Hashtable()
