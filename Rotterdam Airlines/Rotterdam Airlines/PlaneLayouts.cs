@@ -86,10 +86,11 @@ namespace Rotterdam_Airlines
             return list;
         }
 
-        public static List<Seat> CreateSeatList(Flight flight)
+        public static List<Seat> CreateSeatList(Flight flightObj)
         {
+            string flight = flightObj.FlightCode;
             List<Seat> seats = new List<Seat>();
-            string planeType = flight.PlaneType;
+            string planeType = flightObj.PlaneType;
             switch (planeType)
             {
                 case "Boeing 737": // ------------------------------------------------------- Boeing 737

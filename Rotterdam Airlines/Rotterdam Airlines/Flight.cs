@@ -57,6 +57,19 @@ namespace Rotterdam_Airlines
             return found;
         }
 
+        // GETS FLIGHT FROM FLIGHT CODE
+        public static Flight getFlight(string flightCode)
+        {
+            foreach (Flight flight in Flights)
+            {
+                if (flight.FlightCode == flightCode)
+                {
+                    return flight;
+                }
+            }
+            return null;
+        }
+
         // GETS FLIGHT INDEX FOR A SPECFIC FLIGHTCODE
         public static int GetFlightIndex(string flightCode)
         {
