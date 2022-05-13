@@ -3748,10 +3748,12 @@ namespace Rotterdam_Airlines
                         break;
                     // BOOKING BEVESTIGEN
                     case 6:
+                        Console.Clear();
                         CultureInfo Dutch = new CultureInfo("nl-NL", false);
                         DateTime DepartureInfo = BookingSelectedFlight.Departure;
                         string Departure = DepartureInfo.ToString("MMMM", Dutch);
                         Departure = textInfo.ToTitleCase(Departure);
+                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                         UserInterface.SetMainColor();
                         Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
                         UserInterface.SetDefaultColor();

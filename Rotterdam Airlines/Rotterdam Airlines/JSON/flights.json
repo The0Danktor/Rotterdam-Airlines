@@ -7,9 +7,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-14T00:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -22,7 +22,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-14T00:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -35,7 +35,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-14T00:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -48,7 +48,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-14T04:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -59,9 +59,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-14T04:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -74,7 +74,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-14T04:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -85,9 +85,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-14T08:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -100,7 +100,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-14T08:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -126,7 +126,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-14T12:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -139,7 +139,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-14T12:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -150,9 +150,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-14T12:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -163,7 +163,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-14T16:00:00+02:00",
     "Arrival": "2022-05-14T01:30:00+02:00",
     "Gate": "1"
@@ -178,7 +178,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-14T16:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -189,9 +189,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-14T16:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -204,7 +204,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-14T20:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -217,7 +217,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-14T20:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -230,7 +230,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-14T20:00:00+02:00",
-    "Arrival": "2022-05-14T01:30:00+02:00",
+    "Arrival": "2022-05-14T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -241,9 +241,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-15T00:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -256,7 +256,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-15T00:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -269,7 +269,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-15T00:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -282,7 +282,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-15T04:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -293,9 +293,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-15T04:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -308,7 +308,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-15T04:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -319,9 +319,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-15T08:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -334,7 +334,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-15T08:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -360,7 +360,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-15T12:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -373,7 +373,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-15T12:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -384,9 +384,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-15T12:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -397,7 +397,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-15T16:00:00+02:00",
     "Arrival": "2022-05-15T01:30:00+02:00",
     "Gate": "1"
@@ -412,7 +412,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-15T16:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -423,9 +423,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-15T16:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -438,7 +438,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-15T20:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -451,7 +451,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-15T20:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -464,7 +464,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-15T20:00:00+02:00",
-    "Arrival": "2022-05-15T01:30:00+02:00",
+    "Arrival": "2022-05-15T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -475,9 +475,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-16T00:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -490,7 +490,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-16T00:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -503,7 +503,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-16T00:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -516,7 +516,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-16T04:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -527,9 +527,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-16T04:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -542,7 +542,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-16T04:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -553,9 +553,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-16T08:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -568,7 +568,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-16T08:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -594,7 +594,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-16T12:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -607,7 +607,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-16T12:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -618,9 +618,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-16T12:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -631,7 +631,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-16T16:00:00+02:00",
     "Arrival": "2022-05-16T01:30:00+02:00",
     "Gate": "1"
@@ -646,7 +646,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-16T16:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -657,9 +657,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-16T16:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -672,7 +672,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-16T20:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -685,7 +685,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-16T20:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -698,7 +698,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-16T20:00:00+02:00",
-    "Arrival": "2022-05-16T01:30:00+02:00",
+    "Arrival": "2022-05-16T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -709,9 +709,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-17T00:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -724,7 +724,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-17T00:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -737,7 +737,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-17T00:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -750,7 +750,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-17T04:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -761,9 +761,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-17T04:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -776,7 +776,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-17T04:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -787,9 +787,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-17T08:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -802,7 +802,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-17T08:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -828,7 +828,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-17T12:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -841,7 +841,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-17T12:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -852,9 +852,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-17T12:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -865,7 +865,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-17T16:00:00+02:00",
     "Arrival": "2022-05-17T01:30:00+02:00",
     "Gate": "1"
@@ -880,7 +880,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-17T16:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -891,9 +891,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-17T16:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -906,7 +906,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-17T20:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -919,7 +919,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-17T20:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -932,7 +932,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-17T20:00:00+02:00",
-    "Arrival": "2022-05-17T01:30:00+02:00",
+    "Arrival": "2022-05-17T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -943,9 +943,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-18T00:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -958,7 +958,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-18T00:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -971,7 +971,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-18T00:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -984,7 +984,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-18T04:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -995,9 +995,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-18T04:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1010,7 +1010,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-18T04:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1021,9 +1021,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-18T08:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1036,7 +1036,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-18T08:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1062,7 +1062,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-18T12:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1075,7 +1075,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-18T12:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1086,9 +1086,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-18T12:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1099,7 +1099,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-18T16:00:00+02:00",
     "Arrival": "2022-05-18T01:30:00+02:00",
     "Gate": "1"
@@ -1114,7 +1114,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-18T16:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1125,9 +1125,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-18T16:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1140,7 +1140,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-18T20:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1153,7 +1153,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-18T20:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1166,7 +1166,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-18T20:00:00+02:00",
-    "Arrival": "2022-05-18T01:30:00+02:00",
+    "Arrival": "2022-05-18T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1177,9 +1177,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-19T00:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1192,7 +1192,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-19T00:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1205,7 +1205,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-19T00:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1218,7 +1218,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-19T04:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1229,9 +1229,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-19T04:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1244,7 +1244,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-19T04:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1255,9 +1255,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-19T08:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1270,7 +1270,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-19T08:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1296,7 +1296,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-19T12:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1309,7 +1309,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-19T12:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1320,9 +1320,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-19T12:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1333,7 +1333,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-19T16:00:00+02:00",
     "Arrival": "2022-05-19T01:30:00+02:00",
     "Gate": "1"
@@ -1348,7 +1348,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-19T16:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1359,9 +1359,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-19T16:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1374,7 +1374,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-19T20:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1387,7 +1387,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-19T20:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1400,7 +1400,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-19T20:00:00+02:00",
-    "Arrival": "2022-05-19T01:30:00+02:00",
+    "Arrival": "2022-05-19T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1411,9 +1411,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-20T00:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1426,7 +1426,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-20T00:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1439,7 +1439,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-20T00:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1452,7 +1452,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-20T04:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1463,9 +1463,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-20T04:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1478,7 +1478,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-20T04:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1489,9 +1489,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-20T08:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1504,7 +1504,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-20T08:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1530,7 +1530,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-20T12:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1543,7 +1543,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-20T12:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1554,9 +1554,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-20T12:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1567,7 +1567,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-20T16:00:00+02:00",
     "Arrival": "2022-05-20T01:30:00+02:00",
     "Gate": "1"
@@ -1582,7 +1582,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-20T16:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1593,9 +1593,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-20T16:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1608,7 +1608,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-20T20:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1621,7 +1621,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-20T20:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1634,7 +1634,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-20T20:00:00+02:00",
-    "Arrival": "2022-05-20T01:30:00+02:00",
+    "Arrival": "2022-05-20T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1645,9 +1645,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-21T00:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1660,7 +1660,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-21T00:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1673,7 +1673,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-21T00:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1686,7 +1686,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-21T04:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1697,9 +1697,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-21T04:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1712,7 +1712,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-21T04:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1723,9 +1723,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-21T08:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1738,7 +1738,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-21T08:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1764,7 +1764,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-21T12:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1777,7 +1777,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-21T12:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1788,9 +1788,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-21T12:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1801,7 +1801,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-21T16:00:00+02:00",
     "Arrival": "2022-05-21T01:30:00+02:00",
     "Gate": "1"
@@ -1816,7 +1816,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-21T16:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1827,9 +1827,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-21T16:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1842,7 +1842,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-21T20:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1855,7 +1855,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-21T20:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1868,7 +1868,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-21T20:00:00+02:00",
-    "Arrival": "2022-05-21T01:30:00+02:00",
+    "Arrival": "2022-05-21T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1879,9 +1879,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-22T00:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1894,7 +1894,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-22T00:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1907,7 +1907,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-22T00:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1920,7 +1920,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-22T04:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1931,9 +1931,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-22T04:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1946,7 +1946,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-22T04:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1957,9 +1957,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-22T08:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1972,7 +1972,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-22T08:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1998,7 +1998,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-22T12:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2011,7 +2011,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-22T12:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2022,9 +2022,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-22T12:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2035,7 +2035,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-22T16:00:00+02:00",
     "Arrival": "2022-05-22T01:30:00+02:00",
     "Gate": "1"
@@ -2050,7 +2050,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-22T16:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2061,9 +2061,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-22T16:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2076,7 +2076,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-22T20:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2089,7 +2089,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-22T20:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2102,7 +2102,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-22T20:00:00+02:00",
-    "Arrival": "2022-05-22T01:30:00+02:00",
+    "Arrival": "2022-05-22T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -2113,9 +2113,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-23T00:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -2128,7 +2128,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-23T00:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2141,7 +2141,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-23T00:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2154,7 +2154,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-23T04:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2165,9 +2165,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-23T04:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2180,7 +2180,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-23T04:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2191,9 +2191,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-23T08:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2206,7 +2206,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-23T08:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2232,7 +2232,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-23T12:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2245,7 +2245,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-23T12:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2256,9 +2256,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-23T12:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2269,7 +2269,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-23T16:00:00+02:00",
     "Arrival": "2022-05-23T01:30:00+02:00",
     "Gate": "1"
@@ -2284,7 +2284,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-23T16:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2295,9 +2295,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-23T16:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2310,7 +2310,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-23T20:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2323,7 +2323,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-23T20:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2336,7 +2336,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-23T20:00:00+02:00",
-    "Arrival": "2022-05-23T01:30:00+02:00",
+    "Arrival": "2022-05-23T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -2347,9 +2347,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-24T00:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -2362,7 +2362,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-24T00:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2375,7 +2375,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-24T00:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2388,7 +2388,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-24T04:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2399,9 +2399,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-24T04:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2414,7 +2414,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-24T04:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2425,9 +2425,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-24T08:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2440,7 +2440,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-24T08:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2466,7 +2466,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-24T12:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2479,7 +2479,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-24T12:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2490,9 +2490,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-24T12:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2503,7 +2503,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-24T16:00:00+02:00",
     "Arrival": "2022-05-24T01:30:00+02:00",
     "Gate": "1"
@@ -2518,7 +2518,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-24T16:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2529,9 +2529,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-24T16:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2544,7 +2544,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-24T20:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2557,7 +2557,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-24T20:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2570,7 +2570,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-24T20:00:00+02:00",
-    "Arrival": "2022-05-24T01:30:00+02:00",
+    "Arrival": "2022-05-24T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -2581,9 +2581,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-25T00:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -2596,7 +2596,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-25T00:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2609,7 +2609,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-25T00:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2622,7 +2622,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-25T04:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2633,9 +2633,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-25T04:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2648,7 +2648,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-25T04:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2659,9 +2659,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-25T08:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2674,7 +2674,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-25T08:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2700,7 +2700,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-25T12:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2713,7 +2713,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-25T12:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2724,9 +2724,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-25T12:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2737,7 +2737,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-25T16:00:00+02:00",
     "Arrival": "2022-05-25T01:30:00+02:00",
     "Gate": "1"
@@ -2752,7 +2752,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-25T16:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2763,9 +2763,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-25T16:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2778,7 +2778,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-25T20:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2791,7 +2791,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-25T20:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2804,7 +2804,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-25T20:00:00+02:00",
-    "Arrival": "2022-05-25T01:30:00+02:00",
+    "Arrival": "2022-05-25T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -2815,9 +2815,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-26T00:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -2830,7 +2830,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-26T00:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2843,7 +2843,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-26T00:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2856,7 +2856,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-26T04:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2867,9 +2867,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-26T04:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2882,7 +2882,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-26T04:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2893,9 +2893,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-26T08:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2908,7 +2908,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-26T08:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2934,7 +2934,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-26T12:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2947,7 +2947,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-26T12:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2958,9 +2958,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-26T12:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2971,7 +2971,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-26T16:00:00+02:00",
     "Arrival": "2022-05-26T01:30:00+02:00",
     "Gate": "1"
@@ -2986,7 +2986,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-26T16:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2997,9 +2997,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-26T16:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -3012,7 +3012,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-26T20:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -3025,7 +3025,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-26T20:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -3038,7 +3038,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-26T20:00:00+02:00",
-    "Arrival": "2022-05-26T01:30:00+02:00",
+    "Arrival": "2022-05-26T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -3049,9 +3049,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
     "DestinationAbbreviation": "OPO",
-    "DestinationAirport": "Aeroporto Francisco S� Carneiro",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
     "Departure": "2022-05-27T00:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -3064,7 +3064,7 @@
     "DestinationAbbreviation": "VLC",
     "DestinationAirport": "Valencia Airport",
     "Departure": "2022-05-27T00:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -3077,7 +3077,7 @@
     "DestinationAbbreviation": "SVQ",
     "DestinationAirport": "Sevilla-San Pablo Airport",
     "Departure": "2022-05-27T00:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -3090,7 +3090,7 @@
     "DestinationAbbreviation": "BCN",
     "DestinationAirport": "Barcelona-El Prat Airport",
     "Departure": "2022-05-27T04:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -3101,9 +3101,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
     "DestinationAbbreviation": "DUS",
-    "DestinationAirport": "D�sseldorf International Airport",
+    "DestinationAirport": "Dusseldorf International Airport",
     "Departure": "2022-05-27T04:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -3116,7 +3116,7 @@
     "DestinationAbbreviation": "OSL",
     "DestinationAirport": "Oslo Gardermoen Airport",
     "Departure": "2022-05-27T04:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -3127,9 +3127,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
     "DestinationAbbreviation": "AGP",
-    "DestinationAirport": "M�laga-Costa del Sol Airport",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
     "Departure": "2022-05-27T08:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -3142,7 +3142,7 @@
     "DestinationAbbreviation": "BRU",
     "DestinationAirport": "Brussels Airport",
     "Departure": "2022-05-27T08:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -3168,7 +3168,7 @@
     "DestinationAbbreviation": "FCO",
     "DestinationAirport": "Roma-Fiumicino Airport",
     "Departure": "2022-05-27T12:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -3181,7 +3181,7 @@
     "DestinationAbbreviation": "VIE",
     "DestinationAirport": "Vienna International Airport",
     "Departure": "2022-05-27T12:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -3192,9 +3192,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
     "DestinationAbbreviation": "MAD",
-    "DestinationAirport": "Madrid�Barajas Airport",
+    "DestinationAirport": "Madrid-Barajas Airport",
     "Departure": "2022-05-27T12:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -3205,7 +3205,7 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
     "DestinationAbbreviation": "PRG",
-    "DestinationAirport": "V�clav Havel Airport",
+    "DestinationAirport": "Vaclav Havel Airport",
     "Departure": "2022-05-27T16:00:00+02:00",
     "Arrival": "2022-05-27T01:30:00+02:00",
     "Gate": "1"
@@ -3220,7 +3220,7 @@
     "DestinationAbbreviation": "DUB",
     "DestinationAirport": "Dublin Airport",
     "Departure": "2022-05-27T16:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -3231,9 +3231,9 @@
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
     "DestinationAbbreviation": "LYS",
-    "DestinationAirport": "Lyon�Saint-Exup�ry Airport",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
     "Departure": "2022-05-27T16:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -3246,7 +3246,7 @@
     "DestinationAbbreviation": "MUC",
     "DestinationAirport": "Munich Airport",
     "Departure": "2022-05-27T20:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -3259,7 +3259,7 @@
     "DestinationAbbreviation": "CPH",
     "DestinationAirport": "Copenhagen Airport",
     "Departure": "2022-05-27T20:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -3272,7 +3272,7 @@
     "DestinationAbbreviation": "LHR",
     "DestinationAirport": "London Heathrow Airport",
     "Departure": "2022-05-27T20:00:00+02:00",
-    "Arrival": "2022-05-27T01:30:00+02:00",
+    "Arrival": "2022-05-27T01:15:00+02:00",
     "Gate": "3"
   }
 ]
