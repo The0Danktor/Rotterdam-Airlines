@@ -38,46 +38,50 @@ namespace Rotterdam_Airlines
             { "Londen", new Dictionary<int, double>(){ { 1, 80.0 }, { 2, 85.0 }, { 3, 53.0 }, { 4, 108.0 }, { 5, 35.0 }, { 6, 31.0 }, { 7, 42.0 }, { 8, 29.0 }, { 9, 51.0 }, { 10, 34.0 }, { 11, 63.0 }, { 12, 41.0 } } }
         };
 
-        public Seat(string id, string seatclass, string special, string flightc)
+        public Seat(string id, string seatclass, string special, string flightc, double price = 0.0)
         {
             this.Id = id;
             this.SeatClass = seatclass;
             this.Occupant = null;
             this.Special = special;
             this.FlightCode = flightc;
+            this.Price = price;
 
-            Flight flight = Flight.getFlight(this.FlightCode);
-            Console.WriteLine(this.FlightCode);
-            this.Price = priceList[flight.Destination][flight.Departure.Month]/2;
-            switch (seatclass)
+            if (price == 0.0)
             {
-                case "first":
-                    this.Description = " First class zitplekken bevinden zich aan de voorkant van het vliegtuig. De ultime luxe met de beste service en de grootste stoelen met de meeste been ruimte.";
-                    this.Price *= 5;
-                    break;
-                case "business":
-                    this.Description = " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.";
-                    this.Price *= 2.5;
-                    break;
-                case "economy":
-                    this.Description = " Economy class zitplekken zijn de standaard meest goedkope zitplekken.";
-                    this.Price *= 1;
-                    break;
-                default:
-                    this.Description = " Unspecified, Deze klasse heeft geen beschrijving.";
-                    break;
-            }
+                Flight flight = Flight.getFlight(this.FlightCode);
+                Console.WriteLine(this.FlightCode);
+                this.Price = priceList[flight.Destination][flight.Departure.Month] / 2;
+                switch (seatclass)
+                {
+                    case "first":
+                        this.Description = " First class zitplekken bevinden zich aan de voorkant van het vliegtuig. De ultime luxe met de beste service en de grootste stoelen met de meeste been ruimte.";
+                        this.Price *= 5;
+                        break;
+                    case "business":
+                        this.Description = " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.";
+                        this.Price *= 2.5;
+                        break;
+                    case "economy":
+                        this.Description = " Economy class zitplekken zijn de standaard meest goedkope zitplekken.";
+                        this.Price *= 1;
+                        break;
+                    default:
+                        this.Description = " Unspecified, Deze klasse heeft geen beschrijving.";
+                        break;
+                }
 
-            if (this.Special.Contains("limited") || this.Special.Contains("missing"))
-            {
-                this.Price *= 0.9;
-            }
-            else if (this.Special.Contains("increased"))
-            {
-                this.Price *= 1.1;
-            }
+                if (this.Special.Contains("limited") || this.Special.Contains("missing"))
+                {
+                    this.Price *= 0.9;
+                }
+                else if (this.Special.Contains("increased"))
+                {
+                    this.Price *= 1.1;
+                }
 
-            this.Price = Math.Round(this.Price, 2);
+                this.Price = Math.Round(this.Price, 2);
+            }
         }
     }
 }
