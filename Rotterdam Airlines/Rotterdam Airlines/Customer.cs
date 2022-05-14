@@ -118,6 +118,7 @@ namespace Rotterdam_Airlines
                             UserFound = true;
                             if (AdminUser.Password == Password)
                             {
+                                Console.Clear();
                                 return AdminUser;
                             }
                             else
@@ -140,6 +141,7 @@ namespace Rotterdam_Airlines
                                     UserFound = true;
                                     if (TempUser.Password == Password)
                                     {
+                                        Console.Clear();
                                         return TempUser;
                                     }
                                     else
@@ -4086,10 +4088,28 @@ namespace Rotterdam_Airlines
                             break;
                         }
                         BookingSteps[5][1] = "Y";
+                        List<Seat> BookingSeats = new List<Seat>();
+                        foreach (string seatStr in BookingSelectedSeats)
+                        {
+                            Seat getSeat = null;
+                            foreach (Seat seat in seatJson[BookingSelectedFlight.FlightCode])
+                            {
+                                if (seat.Id == seatStr)
+                                {
+                                    getSeat = seat;
+                                    break;
+                                }
+                            }
+                            BookingSeats.Add(getSeat);
+                        }
                         bool Confirming = true;
                         double Price = 0.00;
+                        foreach (Seat seat in BookingSeats)
+                        {
+                            Price = Price + seat.Price;
+                        }
                         double PriceDiscount = 0.00;
-                        Booking booking = new Booking(CurrentUser.UserId, CurrentUser.Phone_number, CurrentUser.Email, BookingSelectedFlight.FlightCode, Booking.GenerateBookingID(), Price, PriceDiscount, BookingPersonData);
+                        Booking booking = new Booking(CurrentUser.UserId, CurrentUser.Phone_number, CurrentUser.Email, BookingSelectedFlight.FlightCode, Booking.GenerateBookingID(), Price, PriceDiscount, BookingPersonData,BookingSeats);
                         while (Confirming)
                         {
 
@@ -4123,7 +4143,7 @@ namespace Rotterdam_Airlines
                             UserInterface.SetMainColor();
                             Console.WriteLine("    Persoonsgegevens");
                             UserInterface.SetDefaultColor();
-                            foreach (BookingPerson person in BookingPersonData)
+                            foreach (BookingPerson person in booking.BookingPersons)
                             {
                                 Console.WriteLine();
                                 Console.WriteLine($"    {person.GetFullname()}");
@@ -4145,6 +4165,33 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    Stoelen");
+                            UserInterface.SetDefaultColor();
+                            foreach (Seat seat in booking.SeatList)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine($"    Stoel {seat.Id}");
+                                Console.WriteLine();
+                                Console.WriteLine($"        klasse                         - { seat.SeatClass}");
+                                Console.WriteLine($"        Bijzonderheden                 - {seat.Special}");
+                                Console.WriteLine($"        Prijs                          - {seat.Price}");
+                                Console.WriteLine();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            }
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    Prijs");
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine();
+                            foreach (Seat seat in booking.SeatList)
+                            {
+                                Console.WriteLine($"    Stoel {seat.Id}                            - €{seat.Price}");
+                            }
+                            Console.WriteLine($"                                        ─────────── +");
+                            Console.WriteLine($"    Totaal                              - €{booking.BookingPrice}");
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine()
                             UserInterface.SetMainColor();
                             Console.Write("    Maak uw keuze: ");
                             UserInterface.SetDefaultColor();
