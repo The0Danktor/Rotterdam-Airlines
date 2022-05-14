@@ -14,7 +14,6 @@ namespace Rotterdam_Airlines
         {
             // LOAD ALL FLIGHTS WHICH ARE IN THE FLIGHTS.JSON TO THE FLIGHT LIST
             Flight.GenerateFlightWeeks();
-
             // INITIATE EMAIL CLIENT
             var smtpClient = new SmtpClient("smtp-mail.outlook.com")
             {
@@ -22,19 +21,20 @@ namespace Rotterdam_Airlines
                 Credentials = new NetworkCredential("RotterdamAirlines2022@outlook.com", "yks`PAha8\"5QyTN$"),
                 EnableSsl = true,
             };
-           
+
             // CREATE DEFAULT USERS
-            Customer CurrentUser = new Customer(null,null,null,null,null,null,null,null,null,null,new List<string>(),true);
-            Admin AdminUser = new Admin("admin", "admin");
-            
-            while (true)
+            Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null, new List<string>(), true);
+            Admin AdminUser = new Admin("a", "a");
+            //Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
+            while(true)
             {
-                if(authorized)
+                if (authorized)
                 {
                     Console.Clear();
                     Admin.PrintAdminMainScreen();
                     Console.Clear();
-                } else
+                }
+                else
                 {
                     // PRINT LOGO
                     UserInterface.PrintLogo();
@@ -43,7 +43,7 @@ namespace Rotterdam_Airlines
                     UserInterface.SetMainColor();
                     if (!CurrentUser.IsGuest == true)
                     {
-                        Console.WriteLine($"    Welkom {CurrentUser.first_name} bij het boekingsysteem van Rotterdam Airlines");
+                        Console.WriteLine($"    Welkom {CurrentUser.First_name} bij het boekingsysteem van Rotterdam Airlines");
                     }
                     else
                     {
@@ -72,7 +72,7 @@ namespace Rotterdam_Airlines
                         // VLUCHT BOEKEN
                         case 1:
                             Console.Clear();
-                            Customer.BookFlight(CurrentUser);
+                            Customer.BookFlight(AdminUser, CurrentUser);
                             Console.Clear();
                             break;
 
@@ -94,7 +94,7 @@ namespace Rotterdam_Airlines
                         // INFORMATIE
                         case 5:
                             bool InformationActive = true;
-                            while(InformationActive)
+                            while (InformationActive)
                             {
                                 Console.Clear();
                                 UserInterface.PrintLogo();
@@ -226,9 +226,10 @@ namespace Rotterdam_Airlines
                                         break;
                                     case 3:
                                         Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Customer.ChangePassword(smtpClient);
                                         break;
                                 }
-
                             }
                             // Options for when a admin is logged in 
                             else if (authorized) { }
@@ -259,8 +260,8 @@ namespace Rotterdam_Airlines
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
                             int contact_choice = 100;
-                            try { contact_choice = int.Parse(Console.ReadLine());} catch {}
-                            
+                            try { contact_choice = int.Parse(Console.ReadLine()); } catch { }
+
 
                             switch (contact_choice)
                             {
@@ -291,6 +292,10 @@ namespace Rotterdam_Airlines
                         case 9:
                             Console.Clear();
                             Console.Clear();
+                            break;
+
+                        case 420:
+                            EmailHandler.SendBookingConfirmation(smtpClient);
                             break;
 
                         // DEFAULT

@@ -6,7 +6,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-25T00:00:00+01:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-15T00:00:00+02:00",
+    "Arrival": "2022-05-15T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -16,7 +19,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-25T00:00:00+01:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-15T00:00:00+02:00",
+    "Arrival": "2022-05-15T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -26,7 +32,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-25T00:00:00+01:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-15T00:00:00+02:00",
+    "Arrival": "2022-05-15T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -36,7 +45,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-25T04:00:00+01:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-15T04:00:00+02:00",
+    "Arrival": "2022-05-15T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -46,7 +58,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-25T04:00:00+01:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-15T04:00:00+02:00",
+    "Arrival": "2022-05-15T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -56,7 +71,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-25T04:00:00+01:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-15T04:00:00+02:00",
+    "Arrival": "2022-05-15T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -66,7 +84,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-25T08:00:00+01:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-15T08:00:00+02:00",
+    "Arrival": "2022-05-15T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -76,7 +97,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-25T08:00:00+01:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-15T08:00:00+02:00",
+    "Arrival": "2022-05-15T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -86,7 +110,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-25T08:00:00+01:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-15T08:00:00+02:00",
+    "Arrival": "2022-05-15T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -96,7 +123,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-25T12:00:00+01:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-15T12:00:00+02:00",
+    "Arrival": "2022-05-15T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -106,7 +136,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-25T12:00:00+01:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-15T12:00:00+02:00",
+    "Arrival": "2022-05-15T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -116,7 +149,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-25T12:00:00+01:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-15T12:00:00+02:00",
+    "Arrival": "2022-05-15T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -126,7 +162,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-25T16:00:00+01:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-15T16:00:00+02:00",
+    "Arrival": "2022-05-15T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -136,7 +175,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-25T16:00:00+01:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-15T16:00:00+02:00",
+    "Arrival": "2022-05-15T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -146,7 +188,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-25T16:00:00+01:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-15T16:00:00+02:00",
+    "Arrival": "2022-05-15T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -156,7 +201,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-25T20:00:00+01:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-15T20:00:00+02:00",
+    "Arrival": "2022-05-15T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -166,7 +214,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-25T20:00:00+01:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-15T20:00:00+02:00",
+    "Arrival": "2022-05-15T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -176,7 +227,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-25T20:00:00+01:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-15T20:00:00+02:00",
+    "Arrival": "2022-05-15T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -186,7 +240,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-26T00:00:00+01:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-16T00:00:00+02:00",
+    "Arrival": "2022-05-16T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -196,7 +253,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-26T00:00:00+01:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-16T00:00:00+02:00",
+    "Arrival": "2022-05-16T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -206,7 +266,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-26T00:00:00+01:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-16T00:00:00+02:00",
+    "Arrival": "2022-05-16T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -216,7 +279,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-26T04:00:00+01:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-16T04:00:00+02:00",
+    "Arrival": "2022-05-16T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -226,7 +292,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-26T04:00:00+01:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-16T04:00:00+02:00",
+    "Arrival": "2022-05-16T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -236,7 +305,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-26T04:00:00+01:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-16T04:00:00+02:00",
+    "Arrival": "2022-05-16T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -246,7 +318,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-26T08:00:00+01:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-16T08:00:00+02:00",
+    "Arrival": "2022-05-16T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -256,7 +331,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-26T08:00:00+01:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-16T08:00:00+02:00",
+    "Arrival": "2022-05-16T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -266,7 +344,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-26T08:00:00+01:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-16T08:00:00+02:00",
+    "Arrival": "2022-05-16T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -276,7 +357,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-26T12:00:00+01:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-16T12:00:00+02:00",
+    "Arrival": "2022-05-16T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -286,7 +370,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-26T12:00:00+01:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-16T12:00:00+02:00",
+    "Arrival": "2022-05-16T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -296,7 +383,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-26T12:00:00+01:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-16T12:00:00+02:00",
+    "Arrival": "2022-05-16T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -306,7 +396,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-26T16:00:00+01:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-16T16:00:00+02:00",
+    "Arrival": "2022-05-16T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -316,7 +409,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-26T16:00:00+01:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-16T16:00:00+02:00",
+    "Arrival": "2022-05-16T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -326,7 +422,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-26T16:00:00+01:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-16T16:00:00+02:00",
+    "Arrival": "2022-05-16T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -336,7 +435,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-26T20:00:00+01:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-16T20:00:00+02:00",
+    "Arrival": "2022-05-16T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -346,7 +448,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-26T20:00:00+01:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-16T20:00:00+02:00",
+    "Arrival": "2022-05-16T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -356,7 +461,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-26T20:00:00+01:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-16T20:00:00+02:00",
+    "Arrival": "2022-05-16T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -366,7 +474,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-27T00:00:00+01:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-17T00:00:00+02:00",
+    "Arrival": "2022-05-17T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -376,7 +487,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-27T00:00:00+01:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-17T00:00:00+02:00",
+    "Arrival": "2022-05-17T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -386,7 +500,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-27T00:00:00+01:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-17T00:00:00+02:00",
+    "Arrival": "2022-05-17T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -396,7 +513,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-27T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-17T04:00:00+02:00",
+    "Arrival": "2022-05-17T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -406,7 +526,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-27T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-17T04:00:00+02:00",
+    "Arrival": "2022-05-17T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -416,7 +539,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-27T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-17T04:00:00+02:00",
+    "Arrival": "2022-05-17T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -426,7 +552,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-27T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-17T08:00:00+02:00",
+    "Arrival": "2022-05-17T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -436,7 +565,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-27T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-17T08:00:00+02:00",
+    "Arrival": "2022-05-17T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -446,7 +578,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-27T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-17T08:00:00+02:00",
+    "Arrival": "2022-05-17T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -456,7 +591,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-27T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-17T12:00:00+02:00",
+    "Arrival": "2022-05-17T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -466,7 +604,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-27T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-17T12:00:00+02:00",
+    "Arrival": "2022-05-17T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -476,7 +617,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-27T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-17T12:00:00+02:00",
+    "Arrival": "2022-05-17T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -486,7 +630,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-27T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-17T16:00:00+02:00",
+    "Arrival": "2022-05-17T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -496,7 +643,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-27T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-17T16:00:00+02:00",
+    "Arrival": "2022-05-17T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -506,7 +656,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-27T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-17T16:00:00+02:00",
+    "Arrival": "2022-05-17T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -516,7 +669,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-27T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-17T20:00:00+02:00",
+    "Arrival": "2022-05-17T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -526,7 +682,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-27T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-17T20:00:00+02:00",
+    "Arrival": "2022-05-17T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -536,7 +695,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-27T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-17T20:00:00+02:00",
+    "Arrival": "2022-05-17T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -546,7 +708,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-28T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-18T00:00:00+02:00",
+    "Arrival": "2022-05-18T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -556,7 +721,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-28T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-18T00:00:00+02:00",
+    "Arrival": "2022-05-18T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -566,7 +734,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-28T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-18T00:00:00+02:00",
+    "Arrival": "2022-05-18T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -576,7 +747,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-28T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-18T04:00:00+02:00",
+    "Arrival": "2022-05-18T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -586,7 +760,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-28T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-18T04:00:00+02:00",
+    "Arrival": "2022-05-18T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -596,7 +773,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-28T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-18T04:00:00+02:00",
+    "Arrival": "2022-05-18T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -606,7 +786,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-28T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-18T08:00:00+02:00",
+    "Arrival": "2022-05-18T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -616,7 +799,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-28T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-18T08:00:00+02:00",
+    "Arrival": "2022-05-18T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -626,7 +812,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-28T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-18T08:00:00+02:00",
+    "Arrival": "2022-05-18T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -636,7 +825,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-28T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-18T12:00:00+02:00",
+    "Arrival": "2022-05-18T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -646,7 +838,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-28T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-18T12:00:00+02:00",
+    "Arrival": "2022-05-18T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -656,7 +851,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-28T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-18T12:00:00+02:00",
+    "Arrival": "2022-05-18T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -666,7 +864,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-28T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-18T16:00:00+02:00",
+    "Arrival": "2022-05-18T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -676,7 +877,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-28T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-18T16:00:00+02:00",
+    "Arrival": "2022-05-18T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -686,7 +890,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-28T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-18T16:00:00+02:00",
+    "Arrival": "2022-05-18T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -696,7 +903,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-28T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-18T20:00:00+02:00",
+    "Arrival": "2022-05-18T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -706,7 +916,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-28T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-18T20:00:00+02:00",
+    "Arrival": "2022-05-18T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -716,7 +929,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-28T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-18T20:00:00+02:00",
+    "Arrival": "2022-05-18T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -726,7 +942,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-29T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-19T00:00:00+02:00",
+    "Arrival": "2022-05-19T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -736,7 +955,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-29T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-19T00:00:00+02:00",
+    "Arrival": "2022-05-19T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -746,7 +968,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-29T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-19T00:00:00+02:00",
+    "Arrival": "2022-05-19T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -756,7 +981,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-29T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-19T04:00:00+02:00",
+    "Arrival": "2022-05-19T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -766,7 +994,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-29T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-19T04:00:00+02:00",
+    "Arrival": "2022-05-19T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -776,7 +1007,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-29T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-19T04:00:00+02:00",
+    "Arrival": "2022-05-19T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -786,7 +1020,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-29T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-19T08:00:00+02:00",
+    "Arrival": "2022-05-19T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -796,7 +1033,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-29T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-19T08:00:00+02:00",
+    "Arrival": "2022-05-19T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -806,7 +1046,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-29T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-19T08:00:00+02:00",
+    "Arrival": "2022-05-19T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -816,7 +1059,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-29T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-19T12:00:00+02:00",
+    "Arrival": "2022-05-19T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -826,7 +1072,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-29T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-19T12:00:00+02:00",
+    "Arrival": "2022-05-19T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -836,7 +1085,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-29T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-19T12:00:00+02:00",
+    "Arrival": "2022-05-19T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -846,7 +1098,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-29T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-19T16:00:00+02:00",
+    "Arrival": "2022-05-19T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -856,7 +1111,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-29T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-19T16:00:00+02:00",
+    "Arrival": "2022-05-19T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -866,7 +1124,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-29T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-19T16:00:00+02:00",
+    "Arrival": "2022-05-19T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -876,7 +1137,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-29T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-19T20:00:00+02:00",
+    "Arrival": "2022-05-19T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -886,7 +1150,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-29T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-19T20:00:00+02:00",
+    "Arrival": "2022-05-19T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -896,7 +1163,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-29T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-19T20:00:00+02:00",
+    "Arrival": "2022-05-19T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -906,7 +1176,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-30T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-20T00:00:00+02:00",
+    "Arrival": "2022-05-20T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -916,7 +1189,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-30T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-20T00:00:00+02:00",
+    "Arrival": "2022-05-20T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -926,7 +1202,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-30T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-20T00:00:00+02:00",
+    "Arrival": "2022-05-20T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -936,7 +1215,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-30T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-20T04:00:00+02:00",
+    "Arrival": "2022-05-20T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -946,7 +1228,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-30T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-20T04:00:00+02:00",
+    "Arrival": "2022-05-20T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -956,7 +1241,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-30T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-20T04:00:00+02:00",
+    "Arrival": "2022-05-20T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -966,7 +1254,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-30T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-20T08:00:00+02:00",
+    "Arrival": "2022-05-20T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -976,7 +1267,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-30T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-20T08:00:00+02:00",
+    "Arrival": "2022-05-20T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -986,7 +1280,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-30T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-20T08:00:00+02:00",
+    "Arrival": "2022-05-20T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -996,7 +1293,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-30T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-20T12:00:00+02:00",
+    "Arrival": "2022-05-20T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1006,7 +1306,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-30T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-20T12:00:00+02:00",
+    "Arrival": "2022-05-20T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1016,7 +1319,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-30T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-20T12:00:00+02:00",
+    "Arrival": "2022-05-20T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1026,7 +1332,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-30T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-20T16:00:00+02:00",
+    "Arrival": "2022-05-20T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -1036,7 +1345,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-30T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-20T16:00:00+02:00",
+    "Arrival": "2022-05-20T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1046,7 +1358,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-30T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-20T16:00:00+02:00",
+    "Arrival": "2022-05-20T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1056,7 +1371,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-30T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-20T20:00:00+02:00",
+    "Arrival": "2022-05-20T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1066,7 +1384,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-30T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-20T20:00:00+02:00",
+    "Arrival": "2022-05-20T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1076,7 +1397,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-30T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-20T20:00:00+02:00",
+    "Arrival": "2022-05-20T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1086,7 +1410,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-03-31T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-21T00:00:00+02:00",
+    "Arrival": "2022-05-21T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1096,7 +1423,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-03-31T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-21T00:00:00+02:00",
+    "Arrival": "2022-05-21T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1106,7 +1436,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-03-31T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-21T00:00:00+02:00",
+    "Arrival": "2022-05-21T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1116,7 +1449,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-03-31T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-21T04:00:00+02:00",
+    "Arrival": "2022-05-21T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1126,7 +1462,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-03-31T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-21T04:00:00+02:00",
+    "Arrival": "2022-05-21T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1136,7 +1475,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-03-31T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-21T04:00:00+02:00",
+    "Arrival": "2022-05-21T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1146,7 +1488,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-03-31T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-21T08:00:00+02:00",
+    "Arrival": "2022-05-21T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1156,7 +1501,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-03-31T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-21T08:00:00+02:00",
+    "Arrival": "2022-05-21T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1166,7 +1514,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-03-31T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-21T08:00:00+02:00",
+    "Arrival": "2022-05-21T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -1176,7 +1527,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-03-31T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-21T12:00:00+02:00",
+    "Arrival": "2022-05-21T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1186,7 +1540,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-03-31T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-21T12:00:00+02:00",
+    "Arrival": "2022-05-21T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1196,7 +1553,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-03-31T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-21T12:00:00+02:00",
+    "Arrival": "2022-05-21T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1206,7 +1566,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-03-31T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-21T16:00:00+02:00",
+    "Arrival": "2022-05-21T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -1216,7 +1579,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-03-31T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-21T16:00:00+02:00",
+    "Arrival": "2022-05-21T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1226,7 +1592,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-03-31T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-21T16:00:00+02:00",
+    "Arrival": "2022-05-21T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1236,7 +1605,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-03-31T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-21T20:00:00+02:00",
+    "Arrival": "2022-05-21T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1246,7 +1618,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-03-31T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-21T20:00:00+02:00",
+    "Arrival": "2022-05-21T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1256,7 +1631,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-03-31T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-21T20:00:00+02:00",
+    "Arrival": "2022-05-21T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1266,7 +1644,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-01T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-22T00:00:00+02:00",
+    "Arrival": "2022-05-22T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1276,7 +1657,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-01T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-22T00:00:00+02:00",
+    "Arrival": "2022-05-22T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1286,7 +1670,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-01T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-22T00:00:00+02:00",
+    "Arrival": "2022-05-22T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1296,7 +1683,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-01T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-22T04:00:00+02:00",
+    "Arrival": "2022-05-22T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1306,7 +1696,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-01T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-22T04:00:00+02:00",
+    "Arrival": "2022-05-22T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1316,7 +1709,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-01T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-22T04:00:00+02:00",
+    "Arrival": "2022-05-22T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1326,7 +1722,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-01T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-22T08:00:00+02:00",
+    "Arrival": "2022-05-22T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1336,7 +1735,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-01T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-22T08:00:00+02:00",
+    "Arrival": "2022-05-22T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1346,7 +1748,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-01T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-22T08:00:00+02:00",
+    "Arrival": "2022-05-22T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -1356,7 +1761,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-01T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-22T12:00:00+02:00",
+    "Arrival": "2022-05-22T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1366,7 +1774,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-01T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-22T12:00:00+02:00",
+    "Arrival": "2022-05-22T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1376,7 +1787,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-01T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-22T12:00:00+02:00",
+    "Arrival": "2022-05-22T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1386,7 +1800,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-01T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-22T16:00:00+02:00",
+    "Arrival": "2022-05-22T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -1396,7 +1813,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-01T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-22T16:00:00+02:00",
+    "Arrival": "2022-05-22T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1406,7 +1826,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-01T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-22T16:00:00+02:00",
+    "Arrival": "2022-05-22T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1416,7 +1839,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-01T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-22T20:00:00+02:00",
+    "Arrival": "2022-05-22T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1426,7 +1852,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-01T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-22T20:00:00+02:00",
+    "Arrival": "2022-05-22T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1436,7 +1865,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-01T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-22T20:00:00+02:00",
+    "Arrival": "2022-05-22T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1446,7 +1878,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-02T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-23T00:00:00+02:00",
+    "Arrival": "2022-05-23T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1456,7 +1891,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-02T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-23T00:00:00+02:00",
+    "Arrival": "2022-05-23T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1466,7 +1904,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-02T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-23T00:00:00+02:00",
+    "Arrival": "2022-05-23T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1476,7 +1917,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-02T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-23T04:00:00+02:00",
+    "Arrival": "2022-05-23T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1486,7 +1930,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-02T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-23T04:00:00+02:00",
+    "Arrival": "2022-05-23T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1496,7 +1943,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-02T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-23T04:00:00+02:00",
+    "Arrival": "2022-05-23T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1506,7 +1956,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-02T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-23T08:00:00+02:00",
+    "Arrival": "2022-05-23T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1516,7 +1969,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-02T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-23T08:00:00+02:00",
+    "Arrival": "2022-05-23T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1526,7 +1982,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-02T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-23T08:00:00+02:00",
+    "Arrival": "2022-05-23T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -1536,7 +1995,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-02T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-23T12:00:00+02:00",
+    "Arrival": "2022-05-23T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1546,7 +2008,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-02T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-23T12:00:00+02:00",
+    "Arrival": "2022-05-23T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1556,7 +2021,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-02T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-23T12:00:00+02:00",
+    "Arrival": "2022-05-23T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1566,7 +2034,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-02T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-23T16:00:00+02:00",
+    "Arrival": "2022-05-23T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -1576,7 +2047,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-02T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-23T16:00:00+02:00",
+    "Arrival": "2022-05-23T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1586,7 +2060,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-02T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-23T16:00:00+02:00",
+    "Arrival": "2022-05-23T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1596,7 +2073,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-02T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-23T20:00:00+02:00",
+    "Arrival": "2022-05-23T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1606,7 +2086,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-02T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-23T20:00:00+02:00",
+    "Arrival": "2022-05-23T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1616,7 +2099,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-02T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-23T20:00:00+02:00",
+    "Arrival": "2022-05-23T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1626,7 +2112,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-03T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-24T00:00:00+02:00",
+    "Arrival": "2022-05-24T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1636,7 +2125,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-03T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-24T00:00:00+02:00",
+    "Arrival": "2022-05-24T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1646,7 +2138,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-03T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-24T00:00:00+02:00",
+    "Arrival": "2022-05-24T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1656,7 +2151,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-03T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-24T04:00:00+02:00",
+    "Arrival": "2022-05-24T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1666,7 +2164,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-03T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-24T04:00:00+02:00",
+    "Arrival": "2022-05-24T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1676,7 +2177,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-03T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-24T04:00:00+02:00",
+    "Arrival": "2022-05-24T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1686,7 +2190,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-03T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-24T08:00:00+02:00",
+    "Arrival": "2022-05-24T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1696,7 +2203,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-03T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-24T08:00:00+02:00",
+    "Arrival": "2022-05-24T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1706,7 +2216,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-03T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-24T08:00:00+02:00",
+    "Arrival": "2022-05-24T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -1716,7 +2229,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-03T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-24T12:00:00+02:00",
+    "Arrival": "2022-05-24T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1726,7 +2242,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-03T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-24T12:00:00+02:00",
+    "Arrival": "2022-05-24T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1736,7 +2255,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-03T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-24T12:00:00+02:00",
+    "Arrival": "2022-05-24T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1746,7 +2268,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-03T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-24T16:00:00+02:00",
+    "Arrival": "2022-05-24T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -1756,7 +2281,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-03T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-24T16:00:00+02:00",
+    "Arrival": "2022-05-24T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1766,7 +2294,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-03T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-24T16:00:00+02:00",
+    "Arrival": "2022-05-24T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1776,7 +2307,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-03T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-24T20:00:00+02:00",
+    "Arrival": "2022-05-24T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1786,7 +2320,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-03T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-24T20:00:00+02:00",
+    "Arrival": "2022-05-24T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1796,7 +2333,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-03T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-24T20:00:00+02:00",
+    "Arrival": "2022-05-24T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1806,7 +2346,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-04T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-25T00:00:00+02:00",
+    "Arrival": "2022-05-25T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1816,7 +2359,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-04T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-25T00:00:00+02:00",
+    "Arrival": "2022-05-25T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -1826,7 +2372,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-04T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-25T00:00:00+02:00",
+    "Arrival": "2022-05-25T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -1836,7 +2385,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-04T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-25T04:00:00+02:00",
+    "Arrival": "2022-05-25T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1846,7 +2398,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-04T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-25T04:00:00+02:00",
+    "Arrival": "2022-05-25T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -1856,7 +2411,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-04T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-25T04:00:00+02:00",
+    "Arrival": "2022-05-25T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -1866,7 +2424,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-04T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-25T08:00:00+02:00",
+    "Arrival": "2022-05-25T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -1876,7 +2437,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-04T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-25T08:00:00+02:00",
+    "Arrival": "2022-05-25T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1886,7 +2450,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-04T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-25T08:00:00+02:00",
+    "Arrival": "2022-05-25T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -1896,7 +2463,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-04T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-25T12:00:00+02:00",
+    "Arrival": "2022-05-25T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -1906,7 +2476,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-04T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-25T12:00:00+02:00",
+    "Arrival": "2022-05-25T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1916,7 +2489,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-04T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-25T12:00:00+02:00",
+    "Arrival": "2022-05-25T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1926,7 +2502,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-04T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-25T16:00:00+02:00",
+    "Arrival": "2022-05-25T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -1936,7 +2515,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-04T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-25T16:00:00+02:00",
+    "Arrival": "2022-05-25T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -1946,7 +2528,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-04T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-25T16:00:00+02:00",
+    "Arrival": "2022-05-25T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -1956,7 +2541,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-04T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-25T20:00:00+02:00",
+    "Arrival": "2022-05-25T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -1966,7 +2554,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-04T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-25T20:00:00+02:00",
+    "Arrival": "2022-05-25T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -1976,7 +2567,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-04T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-25T20:00:00+02:00",
+    "Arrival": "2022-05-25T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -1986,7 +2580,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-05T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-26T00:00:00+02:00",
+    "Arrival": "2022-05-26T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -1996,7 +2593,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-05T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-26T00:00:00+02:00",
+    "Arrival": "2022-05-26T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2006,7 +2606,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-05T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-26T00:00:00+02:00",
+    "Arrival": "2022-05-26T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2016,7 +2619,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-05T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-26T04:00:00+02:00",
+    "Arrival": "2022-05-26T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2026,7 +2632,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-05T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-26T04:00:00+02:00",
+    "Arrival": "2022-05-26T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2036,7 +2645,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-05T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-26T04:00:00+02:00",
+    "Arrival": "2022-05-26T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2046,7 +2658,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-05T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-26T08:00:00+02:00",
+    "Arrival": "2022-05-26T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2056,7 +2671,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-05T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-26T08:00:00+02:00",
+    "Arrival": "2022-05-26T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2066,7 +2684,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-05T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-26T08:00:00+02:00",
+    "Arrival": "2022-05-26T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -2076,7 +2697,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-05T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-26T12:00:00+02:00",
+    "Arrival": "2022-05-26T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2086,7 +2710,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-05T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-26T12:00:00+02:00",
+    "Arrival": "2022-05-26T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2096,7 +2723,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-05T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-26T12:00:00+02:00",
+    "Arrival": "2022-05-26T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2106,7 +2736,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-05T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-26T16:00:00+02:00",
+    "Arrival": "2022-05-26T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -2116,7 +2749,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-05T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-26T16:00:00+02:00",
+    "Arrival": "2022-05-26T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2126,7 +2762,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-05T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-26T16:00:00+02:00",
+    "Arrival": "2022-05-26T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2136,7 +2775,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-05T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-26T20:00:00+02:00",
+    "Arrival": "2022-05-26T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2146,7 +2788,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-05T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-26T20:00:00+02:00",
+    "Arrival": "2022-05-26T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2156,7 +2801,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-05T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-26T20:00:00+02:00",
+    "Arrival": "2022-05-26T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -2166,7 +2814,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-06T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-27T00:00:00+02:00",
+    "Arrival": "2022-05-27T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -2176,7 +2827,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-06T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-27T00:00:00+02:00",
+    "Arrival": "2022-05-27T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2186,7 +2840,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-06T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-27T00:00:00+02:00",
+    "Arrival": "2022-05-27T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2196,7 +2853,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-06T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-27T04:00:00+02:00",
+    "Arrival": "2022-05-27T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2206,7 +2866,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-06T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-27T04:00:00+02:00",
+    "Arrival": "2022-05-27T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2216,7 +2879,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-06T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-27T04:00:00+02:00",
+    "Arrival": "2022-05-27T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2226,7 +2892,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-06T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-27T08:00:00+02:00",
+    "Arrival": "2022-05-27T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2236,7 +2905,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-06T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-27T08:00:00+02:00",
+    "Arrival": "2022-05-27T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2246,7 +2918,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-06T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-27T08:00:00+02:00",
+    "Arrival": "2022-05-27T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -2256,7 +2931,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-06T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-27T12:00:00+02:00",
+    "Arrival": "2022-05-27T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2266,7 +2944,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-06T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-27T12:00:00+02:00",
+    "Arrival": "2022-05-27T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2276,7 +2957,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-06T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-27T12:00:00+02:00",
+    "Arrival": "2022-05-27T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2286,7 +2970,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-06T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-27T16:00:00+02:00",
+    "Arrival": "2022-05-27T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -2296,7 +2983,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-06T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-27T16:00:00+02:00",
+    "Arrival": "2022-05-27T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2306,7 +2996,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-06T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-27T16:00:00+02:00",
+    "Arrival": "2022-05-27T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2316,7 +3009,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-06T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-27T20:00:00+02:00",
+    "Arrival": "2022-05-27T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2326,7 +3022,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-06T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-27T20:00:00+02:00",
+    "Arrival": "2022-05-27T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2336,7 +3035,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-06T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-27T20:00:00+02:00",
+    "Arrival": "2022-05-27T01:15:00+02:00",
     "Gate": "3"
   },
   {
@@ -2346,7 +3048,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Porto",
-    "Departure": "2022-04-07T00:00:00+02:00",
+    "DestinationAbbreviation": "OPO",
+    "DestinationAirport": "Aeroporto Francisco Sa Carneiro",
+    "Departure": "2022-05-28T00:00:00+02:00",
+    "Arrival": "2022-05-28T01:34:48+02:00",
     "Gate": "1"
   },
   {
@@ -2356,7 +3061,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Valencia",
-    "Departure": "2022-04-07T00:00:00+02:00",
+    "DestinationAbbreviation": "VLC",
+    "DestinationAirport": "Valencia Airport",
+    "Departure": "2022-05-28T00:00:00+02:00",
+    "Arrival": "2022-05-28T02:25:12+02:00",
     "Gate": "2"
   },
   {
@@ -2366,7 +3074,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Sevilla",
-    "Departure": "2022-04-07T00:00:00+02:00",
+    "DestinationAbbreviation": "SVQ",
+    "DestinationAirport": "Sevilla-San Pablo Airport",
+    "Departure": "2022-05-28T00:00:00+02:00",
+    "Arrival": "2022-05-28T02:55:12+02:00",
     "Gate": "3"
   },
   {
@@ -2376,7 +3087,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Barcelona",
-    "Departure": "2022-04-07T04:00:00+02:00",
+    "DestinationAbbreviation": "BCN",
+    "DestinationAirport": "Barcelona-El Prat Airport",
+    "Departure": "2022-05-28T04:00:00+02:00",
+    "Arrival": "2022-05-28T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2386,7 +3100,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dusseldorf",
-    "Departure": "2022-04-07T04:00:00+02:00",
+    "DestinationAbbreviation": "DUS",
+    "DestinationAirport": "Dusseldorf International Airport",
+    "Departure": "2022-05-28T04:00:00+02:00",
+    "Arrival": "2022-05-28T00:49:48+02:00",
     "Gate": "2"
   },
   {
@@ -2396,7 +3113,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Oslo",
-    "Departure": "2022-04-07T04:00:00+02:00",
+    "DestinationAbbreviation": "OSL",
+    "DestinationAirport": "Oslo Gardermoen Airport",
+    "Departure": "2022-05-28T04:00:00+02:00",
+    "Arrival": "2022-05-28T01:45:00+02:00",
     "Gate": "3"
   },
   {
@@ -2406,7 +3126,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Malaga",
-    "Departure": "2022-04-07T08:00:00+02:00",
+    "DestinationAbbreviation": "AGP",
+    "DestinationAirport": "Malaga-Costa del Sol Airport",
+    "Departure": "2022-05-28T08:00:00+02:00",
+    "Arrival": "2022-05-28T03:00:00+02:00",
     "Gate": "1"
   },
   {
@@ -2416,7 +3139,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Brussel",
-    "Departure": "2022-04-07T08:00:00+02:00",
+    "DestinationAbbreviation": "BRU",
+    "DestinationAirport": "Brussels Airport",
+    "Departure": "2022-05-28T08:00:00+02:00",
+    "Arrival": "2022-05-28T00:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2426,7 +3152,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Zurich",
-    "Departure": "2022-04-07T08:00:00+02:00",
+    "DestinationAbbreviation": "ZRH",
+    "DestinationAirport": "Zurich Airport",
+    "Departure": "2022-05-28T08:00:00+02:00",
+    "Arrival": "2022-05-28T01:30:00+02:00",
     "Gate": "3"
   },
   {
@@ -2436,7 +3165,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Rome",
-    "Departure": "2022-04-07T12:00:00+02:00",
+    "DestinationAbbreviation": "FCO",
+    "DestinationAirport": "Roma-Fiumicino Airport",
+    "Departure": "2022-05-28T12:00:00+02:00",
+    "Arrival": "2022-05-28T02:15:00+02:00",
     "Gate": "1"
   },
   {
@@ -2446,7 +3178,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Wenen",
-    "Departure": "2022-04-07T12:00:00+02:00",
+    "DestinationAbbreviation": "VIE",
+    "DestinationAirport": "Vienna International Airport",
+    "Departure": "2022-05-28T12:00:00+02:00",
+    "Arrival": "2022-05-28T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2456,7 +3191,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Madrid",
-    "Departure": "2022-04-07T12:00:00+02:00",
+    "DestinationAbbreviation": "MAD",
+    "DestinationAirport": "Madrid-Barajas Airport",
+    "Departure": "2022-05-28T12:00:00+02:00",
+    "Arrival": "2022-05-28T02:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2466,7 +3204,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Praag",
-    "Departure": "2022-04-07T16:00:00+02:00",
+    "DestinationAbbreviation": "PRG",
+    "DestinationAirport": "Vaclav Havel Airport",
+    "Departure": "2022-05-28T16:00:00+02:00",
+    "Arrival": "2022-05-28T01:30:00+02:00",
     "Gate": "1"
   },
   {
@@ -2476,7 +3217,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Dublin",
-    "Departure": "2022-04-07T16:00:00+02:00",
+    "DestinationAbbreviation": "DUB",
+    "DestinationAirport": "Dublin Airport",
+    "Departure": "2022-05-28T16:00:00+02:00",
+    "Arrival": "2022-05-28T01:45:00+02:00",
     "Gate": "2"
   },
   {
@@ -2486,7 +3230,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Lyon",
-    "Departure": "2022-04-07T16:00:00+02:00",
+    "DestinationAbbreviation": "LYS",
+    "DestinationAirport": "Lyon-Saint-Exupery Airport",
+    "Departure": "2022-05-28T16:00:00+02:00",
+    "Arrival": "2022-05-28T01:34:48+02:00",
     "Gate": "3"
   },
   {
@@ -2496,7 +3243,10 @@
     "PlaneType": "Boeing 737",
     "Airline": "Rotterdam Airlines",
     "Destination": "Munchen",
-    "Departure": "2022-04-07T20:00:00+02:00",
+    "DestinationAbbreviation": "MUC",
+    "DestinationAirport": "Munich Airport",
+    "Departure": "2022-05-28T20:00:00+02:00",
+    "Arrival": "2022-05-28T01:25:12+02:00",
     "Gate": "1"
   },
   {
@@ -2506,7 +3256,10 @@
     "PlaneType": "Airbus 330",
     "Airline": "Rotterdam Airlines",
     "Destination": "Kopenhagen",
-    "Departure": "2022-04-07T20:00:00+02:00",
+    "DestinationAbbreviation": "CPH",
+    "DestinationAirport": "Copenhagen Airport",
+    "Departure": "2022-05-28T20:00:00+02:00",
+    "Arrival": "2022-05-28T01:19:48+02:00",
     "Gate": "2"
   },
   {
@@ -2516,907 +3269,10 @@
     "PlaneType": "Boeing 787",
     "Airline": "Rotterdam Airlines",
     "Destination": "Londen",
-    "Departure": "2022-04-07T20:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000253",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-04-08T00:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000254",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-04-08T00:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000255",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-04-08T00:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000256",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-04-08T04:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000257",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-04-08T04:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000258",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-04-08T04:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000259",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-04-08T08:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000260",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-04-08T08:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000261",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-04-08T08:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000262",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-04-08T12:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000263",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-04-08T12:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000264",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-04-08T12:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000265",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-04-08T16:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000266",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-04-08T16:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000267",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-04-08T16:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000268",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-04-08T20:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000269",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-04-08T20:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000270",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-04-08T20:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000271",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-04-09T00:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000272",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-04-09T00:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000273",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-04-09T00:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000274",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-04-09T04:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000275",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-04-09T04:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000276",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-04-09T04:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000277",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-04-09T08:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000278",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-04-09T08:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000279",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-04-09T08:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000280",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-04-09T12:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000281",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-04-09T12:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000282",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-04-09T12:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000283",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-04-09T16:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000284",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-04-09T16:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000285",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-04-09T16:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000286",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-04-09T20:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000287",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-04-09T20:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000288",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-04-09T20:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000289",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-04-10T00:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000290",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-04-10T00:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000291",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-04-10T00:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000292",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-04-10T04:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000293",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-04-10T04:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000294",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-04-10T04:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000295",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-04-10T08:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000296",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-04-10T08:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000297",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-04-10T08:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000298",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-04-10T12:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000299",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-04-10T12:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000300",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-04-10T12:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000301",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-04-10T16:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000302",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-04-10T16:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000303",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-04-10T16:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000304",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-04-10T20:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000305",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-04-10T20:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000306",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-04-10T20:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000307",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-04-11T00:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000308",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-04-11T00:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000309",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-04-11T00:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000310",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-04-11T04:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000311",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-04-11T04:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000312",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-04-11T04:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000313",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-04-11T08:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000314",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-04-11T08:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000315",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-04-11T08:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000316",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-04-11T12:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000317",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-04-11T12:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000318",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-04-11T12:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000319",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-04-11T16:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000320",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-04-11T16:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000321",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-04-11T16:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000322",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-04-11T20:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000323",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-04-11T20:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000324",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-04-11T20:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000325",
-    "FlightNumber": "RAS737PO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Porto",
-    "Departure": "2022-04-12T00:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000326",
-    "FlightNumber": "RAS3030VA",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Valencia",
-    "Departure": "2022-04-12T00:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000327",
-    "FlightNumber": "RAS787SE",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Sevilla",
-    "Departure": "2022-04-12T00:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000328",
-    "FlightNumber": "RAS737BA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Barcelona",
-    "Departure": "2022-04-12T04:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000329",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dusseldorf",
-    "Departure": "2022-04-12T04:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000330",
-    "FlightNumber": "RAS787OS",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Oslo",
-    "Departure": "2022-04-12T04:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000331",
-    "FlightNumber": "RAS737MA",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Malaga",
-    "Departure": "2022-04-12T08:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000332",
-    "FlightNumber": "RAS330BU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Brussel",
-    "Departure": "2022-04-12T08:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000333",
-    "FlightNumber": "RAS787ZU",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Zurich",
-    "Departure": "2022-04-12T08:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000334",
-    "FlightNumber": "RAS737RO",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Rome",
-    "Departure": "2022-04-12T12:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000335",
-    "FlightNumber": "RAS330WE",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Wenen",
-    "Departure": "2022-04-12T12:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000336",
-    "FlightNumber": "RAS787MA",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Madrid",
-    "Departure": "2022-04-12T12:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000337",
-    "FlightNumber": "RAS737PR",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Praag",
-    "Departure": "2022-04-12T16:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000338",
-    "FlightNumber": "RAS330DU",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Dublin",
-    "Departure": "2022-04-12T16:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000339",
-    "FlightNumber": "RAS787LY",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Lyon",
-    "Departure": "2022-04-12T16:00:00+02:00",
-    "Gate": "3"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000340",
-    "FlightNumber": "RAS737MU",
-    "PlaneType": "Boeing 737",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Munchen",
-    "Departure": "2022-04-12T20:00:00+02:00",
-    "Gate": "1"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000341",
-    "FlightNumber": "RAS330KO",
-    "PlaneType": "Airbus 330",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Kopenhagen",
-    "Departure": "2022-04-12T20:00:00+02:00",
-    "Gate": "2"
-  },
-  {
-    "Cancelled": false,
-    "FlightCode": "000342",
-    "FlightNumber": "RAS787LO",
-    "PlaneType": "Boeing 787",
-    "Airline": "Rotterdam Airlines",
-    "Destination": "Londen",
-    "Departure": "2022-04-12T20:00:00+02:00",
+    "DestinationAbbreviation": "LHR",
+    "DestinationAirport": "London Heathrow Airport",
+    "Departure": "2022-05-28T20:00:00+02:00",
+    "Arrival": "2022-05-28T01:15:00+02:00",
     "Gate": "3"
   },
   {

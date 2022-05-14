@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrapper {
+    font-family: 'Poppins', sans-serif;
+    margin: 4rem 0;
+    background: #fff;
+    border-radius: 1rem;
+    width: 700px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.header-content p {
+    line-height: 1.5rem;
+}
+
+.header-wrapper {
+    border-radius: 1rem 1rem 0 0;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    row-gap: 4rem;
+    background-color: #506CF6;
+}
+
+.header-header {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.header-wrapper h1 {
+    font-size: 1.625rem;
+    font-weight: 500;
+}
+
+.header-wrapper p {
+    font-size: 1rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 1rem;
+}
+
+.header-icon {
+    font-size: 2rem;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.confirmed-notification {
+    color: #506CF6;
+    background-color: rgba(80, 108, 246, 0.15);
+    padding: 1rem 2rem;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+    font-weight: 400;
+}
+
+.confirmed-icon, .arrow-icon {
+    font-size: 1.5rem;
+}
+
+.flight-details-header {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+}
+
+.flight-details-header p {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.flight-details-header h2 {
+    font-weight: 500;
+}
+
+.airport-to-airport {
+    display: grid;
+    grid-template: 1fr / 2fr 1fr 2fr;
+    align-items: flex-start;
+    column-gap: 2rem;
+    margin: 0 2rem;
+    padding: 2rem;
+    border: 2px dashed #e5e5e5;
+    border-radius: 1rem;
+}
+
+.airport-to-airport h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.airport-to-airport-icon {
+    color: rgb(224, 224, 224);
+    font-size: 2rem;
+}
+
+.airport-details p {
+    color: rgb(180, 180, 180);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 0.825rem;
+}
+
+.departure-arrival {
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+    margin: 0 2rem;
+    padding: 2rem;
+    border: 2px dashed #e5e5e5;
+    border-radius: 1rem;
+}
+
+.departure {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.calendar-icon {
+    color:#506CF6;
+    background-color: rgba(80, 108, 246, 0.15);
+    font-size: 1.625rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.p-gray {
+    color: rgb(180, 180, 180);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 0.825rem;
+}
+
+.departure-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.375rem;
+    justify-content: center;
+}
+
+.contact-details, .person-details {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 4rem;
+    margin: 0 2rem;
+    padding: 2rem;
+    border: 2px dashed #e5e5e5;
+    border-radius: 1rem;
+    row-gap: 2rem;
+}
+
+.detail-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.375rem;
+    justify-content: center
+}
+
+.person-details-wrapper {
+    margin-bottom: 2rem;
+}
+
+.person-details {
+    border-radius: 0rem 0rem 1rem 1rem;
+    border-top: 0;
+}
+
+.details-header {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    margin: 0rem 2rem;
+    padding: 1rem 2rem;
+    color: #506CF6;
+    background-color: rgba(80, 108, 246, 0.15);
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+#brtag {
+    display: none;
+}
+
+.footer-wrapper {
+    color: white;
+    background-color: #506CF6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.seats-details {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 4rem;
+    margin: 0 2rem;
+    padding: 2rem;
+    border: 2px dashed #e5e5e5;
+    border-radius: 1rem;
+    row-gap: 2rem;
+}
+
+.order-summary-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border: 2px solid #f1f1f1;
+    border-radius: 1rem;
+    font-weight: 500;
+    margin: 2rem;
+}
+
+.order-summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divider {
+    height: 2px;
+    background-color: #f1f1f1;
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .content-wrapper {
+        margin: 2rem 0;
+        width: 70%
+    }
+
+    .contact-details {
+        grid-template: 1fr / 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .content-wrapper {
+        margin: 2rem 0;
+        width: 80%
+    }
+
+
+    .person-details {
+        grid-template: 1fr / 1fr 1fr;
+    }
+
+    .departure-arrival {
+        display: grid;
+        grid-template: 1fr / 1fr;
+        row-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .person-details {
+        grid-template: 1fr / 1fr;
+    }
+
+    .contact-details {
+        grid-template: 1fr / 1fr;
+    }
+
+    .content-wrapper {
+        margin: 2rem 0;
+        width: 90%
+    }
+}
