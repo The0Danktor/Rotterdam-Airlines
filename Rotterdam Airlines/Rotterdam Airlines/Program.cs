@@ -294,6 +294,10 @@ namespace Rotterdam_Airlines
                             Console.Clear();
                             break;
 
+                        case 420:
+                            EmailHandler.SendBookingConfirmation(smtpClient);
+                            break;
+
                         // DEFAULT
                         default:
                             Console.Clear();

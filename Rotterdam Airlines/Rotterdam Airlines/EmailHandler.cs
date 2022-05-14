@@ -9,8 +9,6 @@ namespace Rotterdam_Airlines
 {
     class EmailHandler
     {
-        private string 
-
 
         public EmailHandler()
         {
@@ -18,20 +16,22 @@ namespace Rotterdam_Airlines
         }
 
 
-        public static bool SendBookingConfirmation(Booking BookingData, SmtpClient EmailClient)
+        //public static bool SendBookingConfirmation(Booking BookingData, SmtpClient EmailClient)
+        public static bool SendBookingConfirmation(SmtpClient EmailClient)
         {
             var mailMessage = new MailMessage
             {
                 From = new MailAddress("RotterdamAirlines2022@outlook.com"),
-                Subject = "subject",
-                Body = String.Format("<h4><b>Naam:</b> {0} {1}</h4>\n<h4><b>Email:</b> {2}</h4>\n<h4><b>Subject:</b> {3}</h4>\n<h4> <b>Message:</b> </h4>\n<p>{4}</p>"),
+                Subject = "test",
+                Body = "TEst",
                 IsBodyHtml = true,
             };
 
 
             // Add RotterdamAirlines and customer to recipients
             mailMessage.To.Add("RotterdamAirlines2022@outlook.com");
-            mailMessage.To.Add(BookingData.CustomerEmail);
+            mailMessage.To.Add("lucas2002prins@gmail.com");
+            // mailMessage.To.Add(BookingData.CustomerEmail);
             // Send email to RotterdamAirlines and Customer
             EmailClient.Send(mailMessage);
 
