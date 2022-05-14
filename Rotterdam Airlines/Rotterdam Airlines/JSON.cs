@@ -7,7 +7,7 @@ namespace Rotterdam_Airlines
 {
     class JSON
     {
-        // DEFINE JSON PATHS
+        // CUSTOMER JSON
         static string CustomersJSON = @"..\..\..\json\customers.json";
         public static List<Customer> LoadCustomersJSON()
         {
@@ -62,6 +62,43 @@ namespace Rotterdam_Airlines
             string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(FlightsJSON, jsonString);
         }
+        // SEATS JSON
+        static string SeatsJSON = @"..\..\..\json\seats.json";
+        public static Dictionary<string, List<Seat>> LoadSeatsJSON()
+        {
+            string JsonString = File.ReadAllText(SeatsJSON);
+            Dictionary<string, List<Seat>> objects = JsonConvert.DeserializeObject<Dictionary<string, List<Seat>>>(JsonString);
+
+            List<Flight> flights = LoadFlightsJSON();
+            List<string> keys = new List<string>(objects.Keys);
+            // ADD MISSING FLIGHTS
+            foreach (Flight flight in flights)
+            {
+                if (!keys.Contains(flight.FlightCode))
+                {
+                    objects.Add(flight.FlightCode, PlaneLayouts.CreateSeatList(flight));
+                }
+            }
+            // REMOVING LOST FLIGHTS
+            foreach (string key in keys)
+            {
+                bool remove = true;
+                foreach (Flight flight in flights)
+                {
+                    if (key == flight.FlightCode) { remove = false; }
+                }
+                if (remove)
+                {
+                    objects.Remove(key);
+                }
+            }
+            return objects;
+        }
+        public static void SaveSeatsJSON(Dictionary<string, List<Seat>> data)
+        {
+            string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(SeatsJSON, jsonString);
+
         // BOOKINGS JSON
         static string BookingsJSON = @"..\..\..\json\bookings.json";
         public static List<Booking> LoadBookingsJSON()
