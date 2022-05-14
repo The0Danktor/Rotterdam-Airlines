@@ -106,7 +106,7 @@ namespace Rotterdam_Airlines
                             JSON.SaveCustomersJSON(user_list);
 
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            UserInterface.SetConfirmColor();
                             Console.WriteLine("    Gebruiker Verwijderd");
                             remove_confirm_bool = false;
                             break;
