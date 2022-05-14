@@ -98,7 +98,7 @@ namespace Rotterdam_Airlines
         {
             string jsonString = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(SeatsJSON, jsonString);
-
+        }
         // BOOKINGS JSON
         static string BookingsJSON = @"..\..\..\json\bookings.json";
         public static List<Booking> LoadBookingsJSON()
