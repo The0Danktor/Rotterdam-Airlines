@@ -215,6 +215,8 @@ body {
     justify-content: space-between;
     padding: 3rem 2rem;
     border-radius: 0 0 1rem 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .seats-details {
@@ -268,8 +270,11 @@ body {
         width: 80%
     }
 
-
     .person-details {
+        grid-template: 1fr / 1fr 1fr;
+    }
+
+    .seats-details {
         grid-template: 1fr / 1fr 1fr;
     }
 
@@ -287,6 +292,10 @@ body {
 
     .contact-details {
         grid-template: 1fr / 1fr;
+    }
+
+    .seats-details {
+        grid-template: 1fr / 1fr
     }
 
     .content-wrapper {
