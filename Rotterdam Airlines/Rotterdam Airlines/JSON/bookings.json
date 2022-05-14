@@ -1,0 +1,23 @@
+[
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": "000234",
+        "CustomerFirstName": "Jamie",
+        "CustomerMiddleName": "de",
+        "CustomerLastName": "Leest",
+        "CustomerBirthDate": "31-03-2004",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "234523465"
+      }
+    ],
+    "CustomerID": "7CRGl9TF",
+    "CustomerPhoneNumber": "0627162566",
+    "CustomerEmail": "jdeleest@live.nl",
+    "FlightCode": "000234",
+    "BookingID": "000001",
+    "BookingPrice": 0.0,
+    "BookingDiscount": 0.0
+  }
+]

@@ -18,9 +18,8 @@
       "test"
     ],
     "IsGuest": false,
-    "email": "test@test.",
-    "password": "testtest"
-
+    "Email": "test@test.",
+    "Password": "testtest"
   },
   {
     "UserId": "LxEk5Dbk",
@@ -33,8 +32,8 @@
     "Phone_number": "0634998880",
     "BookingList": [],
     "IsGuest": false,
-    "email": "lucas2002prins@gmail.com",
-    "password": "jamiedepamie"
+    "Email": "lucas2002prins@gmail.com",
+    "Password": "jamiedepamie"
   },
   {
     "UserId": "BUCKCUHc",
@@ -47,7 +46,21 @@
     "Phone_number": "0627132467",
     "BookingList": [],
     "IsGuest": false,
-    "email": "@.",
-    "password": "testtest"
+    "Email": "@.",
+    "Password": "testtest"
+  },
+  {
+    "UserId": "7CRGl9TF",
+    "First_name": "Jamie",
+    "Prefix": "de",
+    "Last_name": "Leest",
+    "Country": "Nederland",
+    "Gender": "Man",
+    "Birth_date": "31-03-2004",
+    "Phone_number": "0627162566",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "jdeleest@live.nl",
+    "Password": "testtest"
   }
 ]

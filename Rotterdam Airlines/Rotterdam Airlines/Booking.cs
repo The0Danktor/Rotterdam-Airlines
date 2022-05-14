@@ -37,5 +37,55 @@ namespace Rotterdam_Airlines
             BookingPersons = bookingPersons;
             Bookings.Add(this);
         }
+
+        public static string GenerateBookingID()
+        {
+            Bookings = JSON.LoadBookingsJSON();
+            int BookingID;
+            try
+            {
+                BookingID = Int32.Parse(Bookings[^1].BookingID);
+            }
+            catch (System.ArgumentOutOfRangeException)
+            {
+                BookingID = 0;
+            }
+            BookingID++;
+            string BookingIDString = BookingID.ToString();
+
+            while (BookingIDString.Length < 6)
+            {
+                BookingIDString = "0" + BookingIDString;
+            }
+            return BookingIDString;
+        }
+        public static void SaveBooking(Booking booking)
+        {
+            Bookings = JSON.LoadBookingsJSON();
+            Bookings.Add(booking);
+            JSON.SaveBookingsJSON(Bookings);
+        }
+        public bool BookingComplete()
+        {
+            bool done;
+            bool personDone = true;
+            foreach (BookingPerson person in BookingPersons)
+            {
+                if (!person.PersonComplete())
+                {
+                    personDone = false;
+                }
+            }
+            if(CustomerPhoneNumber == null || CustomerEmail == null || !personDone) 
+            {
+                done = false;
+            }
+            else
+            {
+                done = true;
+            }
+            return done;
+        }
+
     }
 }

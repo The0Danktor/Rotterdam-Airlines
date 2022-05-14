@@ -157,7 +157,7 @@ namespace Rotterdam_Airlines
                         if (!UserFound)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
+                            Console.WriteLine("    Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);
                             Console.Clear();
@@ -176,9 +176,12 @@ namespace Rotterdam_Airlines
                 var temp = Console.ReadKey(true);
                 if (temp.Key != ConsoleKey.Enter && temp.Key != ConsoleKey.Backspace && temp.Key != ConsoleKey.Escape)
                 {
+                    if(char.IsLetter(temp.KeyChar) || char.IsSymbol(temp.KeyChar) || char.IsNumber(temp.KeyChar))
+                    {
                     HiddenPassword += temp.KeyChar;
                     hidden += "*";
                     Console.Write("*");
+                    }
                 }
                 else if (temp.Key == ConsoleKey.Escape)
                 {
@@ -1113,8 +1116,10 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine($"    [5] Land                           - {BookingPersonData[0].CustomerCountry}");
                                 Console.WriteLine($"    [6] Geslacht                       - {BookingPersonData[0].CustomerGender}");
                                 Console.WriteLine($"    [7] Geboortedatum                  - {BookingPersonData[0].CustomerBirthDate}");
+                                Console.WriteLine($"    [8] BSN                            - {BookingPersonData[0].CustomerBSN}");
                                 Console.WriteLine();
-                                Console.WriteLine($"    [8] Bevestigen");
+                                Console.WriteLine($"    [9] Bevestigen");
+                                Console.WriteLine();
                                 Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                 Console.WriteLine();
                                 UserInterface.SetMainColor();
@@ -1333,6 +1338,17 @@ namespace Rotterdam_Airlines
                                         }
                                         break;
                                     case 8:
+                                        while (true)
+                                        {
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Vull uw BSN in: ");
+                                            UserInterface.SetDefaultColor();
+                                            BookingPersonData[0].CustomerBSN = Console.ReadLine();
+                                            break;
+                                        }
+                                        break;
+                                    case 9:
                                         ChangingPersoons = false;
                                         break;
                                 }
@@ -1370,6 +1386,7 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine($"    [4] Persoon 2");
                                 Console.WriteLine();
                                 Console.WriteLine($"    [5] Bevestigen");
+                                Console.WriteLine();
                                 Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                 Console.WriteLine();
                                 UserInterface.SetMainColor();
@@ -1905,6 +1922,7 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine($"    [5] Persoon 3");
                                 Console.WriteLine();
                                 Console.WriteLine($"    [6] Bevestigen");
+                                Console.WriteLine();
                                 Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                 Console.WriteLine();
                                 UserInterface.SetMainColor();
@@ -2666,6 +2684,7 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine($"    [6] Persoon 4");
                                 Console.WriteLine();
                                 Console.WriteLine($"    [7] Bevestigen");
+                                Console.WriteLine();
                                 Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                 Console.WriteLine();
                                 UserInterface.SetMainColor();
@@ -3623,20 +3642,13 @@ namespace Rotterdam_Airlines
                     // CONTACT GEGEVENS INVULLEN
                     case 3:
                         BookingSteps[2][1] = "Y";
-                        if (BookingSelectedFlight == null) {break;}
-                        bool EmailExists(string email)
+                        if (BookingSelectedFlight == null)
                         {
-                            bool EmailExists = false;
-                            List<Customer> customers = JSON.LoadCustomersJSON();
-                            for (int i = 0; i < customers.Count; i++)
-                            {
-                                if (customers[i].Email == email)
-                                {
-                                    EmailExists = true;
-                                    break;
-                                }
-                            }
-                            return EmailExists;
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine("    Je moet eerst een vlucht selecteren");
+                            UserInterface.SetDefaultColor();
+                            Console.ReadKey(true);
+                            break;
                         }
                         bool ChangingContactGegevens = true;
                         while (ChangingContactGegevens)
@@ -3652,14 +3664,16 @@ namespace Rotterdam_Airlines
                             Console.WriteLine($"    [0] Hoofdmenu");
                             Console.WriteLine($"    [1] Terug");
                             Console.WriteLine();
-                            Console.WriteLine($"    [2] Email       {CurrentUser.Email}");
-                            Console.WriteLine($"    [3] Telefoon Nummer     {CurrentUser.Phone_number}");
+                            Console.WriteLine($"    [2] Email               {CurrentUser.Email}");
+                            Console.WriteLine($"    [3] Telefoonnummer      {CurrentUser.Phone_number}");
                             Console.WriteLine();
                             Console.WriteLine($"    [4] Bevestigen");
+                            Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine();
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
+                            UserInterface.SetDefaultColor();
                             int InputContactGegevens = 100;
                             try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
                             switch (InputContactGegevens)
@@ -3683,28 +3697,20 @@ namespace Rotterdam_Airlines
 
                                         try
                                         {
-                                            if (EmailExists(TempEmail))
+
+                                            if (TempEmail.Contains("@") && TempEmail.Contains("."))
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
-                                                Console.WriteLine();
-                                                Console.WriteLine("    Er bestaat al een account met deze email. Vul een andere email in.");
-                                                UserInterface.SetDefaultColor();
+                                                CurrentUser.Email = TempEmail;
+                                                Console.Clear();
+                                                break;
                                             }
                                             else
                                             {
-                                                if (TempEmail.Contains("@") && TempEmail.Contains("."))
-                                                {
-                                                    CurrentUser.Email = TempEmail;
-                                                    Console.Clear();
-                                                    break;
-                                                }
-                                                else
-                                                {
-                                                    Console.ForegroundColor = ConsoleColor.Red;
-                                                    Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
-                                                    UserInterface.SetDefaultColor();
-                                                }
+                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
+                                                UserInterface.SetDefaultColor();
                                             }
+
                                         }
                                         catch
                                         {
@@ -3746,23 +3752,117 @@ namespace Rotterdam_Airlines
                         }
                         BookingSteps[2][1] = "X";
                         break;
-                    // BOOKING BEVESTIGEN
+                    // BOOKING CONFORMATIONS
                     case 6:
-                        Console.Clear();
-                        CultureInfo Dutch = new CultureInfo("nl-NL", false);
-                        DateTime DepartureInfo = BookingSelectedFlight.Departure;
-                        string Departure = DepartureInfo.ToString("MMMM", Dutch);
-                        Departure = textInfo.ToTitleCase(Departure);
-                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                        UserInterface.SetMainColor();
-                        Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
-                        UserInterface.SetDefaultColor();
-                        Console.WriteLine();
-                        Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
-                        Console.WriteLine();
-                        Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                        Console.WriteLine();
-                        Console.Read();
+                        if (BookingSelectedFlight == null)
+                        {
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine("    Je moet eerst een vlucht selecteren");
+                            UserInterface.SetDefaultColor();
+                            Console.ReadKey(true);
+                            break;
+                        }
+                        BookingSteps[5][1] = "Y";
+                        bool Confirming = true;
+                        double Price = 0.00;
+                        double PriceDiscount = 0.00;
+                        Booking booking = new Booking(CurrentUser.UserId, CurrentUser.Phone_number, CurrentUser.Email, BookingSelectedFlight.FlightCode, Booking.GenerateBookingID(), Price, PriceDiscount, BookingPersonData);
+                        while (Confirming)
+                        {
+
+                            Console.Clear();
+                            CultureInfo Dutch = new CultureInfo("nl-NL", false);
+                            DateTime DepartureInfo = BookingSelectedFlight.Departure;
+                            string Departure = DepartureInfo.ToString("MMMM", Dutch);
+                            Departure = textInfo.ToTitleCase(Departure);
+                            UserInterface.SetDefaultColor();
+                            UserInterface.PrintLogo();
+                            PrintBookingStatus();
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    [0] Hoofdmenu");
+                            Console.WriteLine("    [1] Terug");
+                            Console.WriteLine("    [2] Boeking bevestigen");
+                            Console.WriteLine();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            UserInterface.SetMainColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
+                            Console.WriteLine();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    Persoonsgegevens");
+                            UserInterface.SetDefaultColor();
+                            foreach (BookingPerson person in BookingPersonData)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine($"    {person.GetFullname()}");
+                                Console.WriteLine();
+                                Console.WriteLine($"        Land                           - {person.CustomerCountry}");
+                                Console.WriteLine($"        Geslacht                       - {person.CustomerGender}");
+                                Console.WriteLine($"        Geboortedatum                  - {person.CustomerBirthDate}");
+                                Console.WriteLine($"        BSN                            - {person.CustomerBSN}");
+                                Console.WriteLine();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            }
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    Contactgegevens");
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine();
+                            Console.WriteLine($"        Email                          - {booking.CustomerEmail}");
+                            Console.WriteLine($"        Telefoonnummer                 - {booking.CustomerPhoneNumber}");
+                            Console.WriteLine();
+                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.Write("    Maak uw keuze: ");
+                            UserInterface.SetDefaultColor();
+                            int InputConformation = 100;
+                            try { InputConformation = int.Parse(Console.ReadLine()); } catch { }
+                            switch (InputConformation)
+                            {
+                                case 0:
+                                    BookingFlight = BackToMainMenu();
+                                    Confirming = false;
+                                    Console.Clear();
+                                    break;
+                                case 1:
+                                    Confirming = false;
+                                    Console.Clear();
+                                    break;
+                                case 2:
+                                    if (booking.BookingComplete())
+                                    {
+                                        Booking.SaveBooking(booking);
+                                        BookingFlight = false;
+                                        Confirming = false;
+                                        UserInterface.SetConfirmColor();
+                                        Console.WriteLine("    Boeking is Bevestiged en er is een email met informatie naar uw gestuurd.");
+                                        UserInterface.SetDefaultColor();
+                                        Console.ReadKey();
+                                        Console.Clear();
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        UserInterface.SetErrorColor();
+                                        Console.WriteLine("    Niet alle Gegevens zijn ingevoerd.");
+                                        UserInterface.SetDefaultColor();
+                                        Console.ReadKey();
+                                        break;
+                                    }
+
+                            }
+                        }
+                        BookingSteps[5][1] = "X";
                         break;
                     // DEFAULT
                     default:
