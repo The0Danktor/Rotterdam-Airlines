@@ -3758,31 +3758,45 @@ namespace Rotterdam_Airlines
 
         public static void ChangePassword(SmtpClient smtpClient)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
-            Console.WriteLine("    ──────────────────────────────────────────────────");
-            Console.WriteLine();
-            Console.Write("    Vul uw email in: ");
-            Console.ForegroundColor = ConsoleColor.White;
-            List<Customer> customers = JSON.LoadCustomersJSON();
-            string inputemail = Console.ReadLine();
-            string currentemail;
-            foreach (Customer customer in customers)
+            bool Email = true;
+            while (Email)
             {
-                if (customer.Email == inputemail)
+
+                
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("    Vul uw email in: ");
+                UserInterface.SetDefaultColor();
+                List<Customer> customers = JSON.LoadCustomersJSON();
+                string inputemail = Console.ReadLine();
+                string currentemail;
+                bool EmailExists = false;
+                
+                foreach (Customer customer in customers)
                 {
-                    currentemail = customer.Email;
+                    if (customer.Email == inputemail)
+                    {
+                        EmailExists = true;
+                    }
+                }
+                if (!EmailExists) 
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("    niet bestande email ingevoerd");
+                    UserInterface.SetDefaultColor();
+                }
+                else
+                {
+                    currentemail = inputemail;
                     Random rd = new Random();
                     int RandCode = rd.Next(100000, 999999);
                     Customer.SendCodeMail(currentemail, smtpClient, RandCode);
                     Customer.CheckChangeCode(RandCode, currentemail);
+                    Email = false;
+                }
 
-                }
-                else
-                {
-                    Console.WriteLine("    niet bestande email ingevoerd");
-                }
             }
+
         }
 
 
@@ -3795,7 +3809,7 @@ namespace Rotterdam_Airlines
 
                 From = new MailAddress("RotterdamAirlines2022@outlook.com"),
                 Subject = "Code",
-                Body = String.Format("<h4><b>code:</b> {0} {1}</h4>Email:<h4>", RandCode, currentEmail),
+                Body = String.Format("<h4><b>code:</b> {0} </h4>Email:<h4> {1}", RandCode, currentEmail),
                 IsBodyHtml = true,
             };
             currentemail.To.Add("RotterdamAirlines2022@outlook.com");
@@ -3807,33 +3821,69 @@ namespace Rotterdam_Airlines
 
         public static void CheckChangeCode(int Truecode, string EmailChangable)
         {
-            Console.Write("    Vul de code in: ");
-            List<Customer> customers = JSON.LoadCustomersJSON();
-            string inputcode = Console.ReadLine();
-            int InputCode = int.Parse(inputcode);
-            int y = 0;
-
-            if (Truecode == InputCode)
+            bool code = true;
+            int InputTries = 3;
+            while (code)
             {
-                Console.WriteLine("    Kies een wachtwoord: ");
-                string InputFirstPassword = Console.ReadLine();
-                Console.WriteLine("    Vul het wachtwoord nog een keer in : ");
-                string InputSecondPassword = Console.ReadLine();
-                foreach (Customer customer in customers) 
+
+                Console.WriteLine("    ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("    Vul de code in: ");
+                UserInterface.SetDefaultColor();
+                List<Customer> customers = JSON.LoadCustomersJSON();
+                string inputcode = Console.ReadLine();
+                int InputCode = int.Parse(inputcode);
+                int y = 0;
+                
+
+                if (Truecode == InputCode)
                 {
-                    if (customer.Email == EmailChangable)
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("    Kies een wachtwoord: ");
+                    UserInterface.SetDefaultColor();
+                    string InputFirstPassword = Console.ReadLine();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("    Vul het wachtwoord opnieuw : ");
+                    UserInterface.SetDefaultColor();
+                    string InputSecondPassword = Console.ReadLine();
+                    foreach (Customer customer in customers)
                     {
-                        customers[y].Password = InputSecondPassword;
-                        Console.WriteLine("    Wachtwoord succesvol aangepast!");
-                    }
-                    y++;
+                        if (customer.Email == EmailChangable)
+                        {
+                            customers[y].Password = InputSecondPassword;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("    Wachtwoord succesvol aangepast!");
+                            UserInterface.SetDefaultColor();
+                            code = false;
+                        }
+                        y++;
 
+                    }
+                    JSON.SaveCustomersJSON(customers);
+                    
                 }
-                JSON.SaveCustomersJSON(customers);
-            }
-            else
-            {
-                Console.WriteLine("    Code is onjuist, probeer opniew");
+                else
+                {
+                    
+                    if (InputTries > 0)
+                    { 
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("    Code is onjuist, probeer opniew");
+                        Console.WriteLine("    u hebt nog " + InputTries.ToString() + " kansen om het juiste wachtwoord in te vullen");
+                        UserInterface.SetDefaultColor();
+                        InputTries--;
+                        
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("    uw kansen zijn op, klik op [enter] om naar het hoofdmenu te gaan");
+                        UserInterface.SetDefaultColor();
+                        Console.ReadLine();
+                        code = false;
+                    }
+                }
+
             }
 
         }

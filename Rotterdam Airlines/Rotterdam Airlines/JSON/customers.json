@@ -18,9 +18,8 @@
       "test"
     ],
     "IsGuest": false,
-    "email": "test@test.",
-    "password": "testtest"
-
+    "Email": "test@test.",
+    "Password": "testtest"
   },
   {
     "UserId": "LxEk5Dbk",
@@ -33,8 +32,8 @@
     "Phone_number": "0634998880",
     "BookingList": [],
     "IsGuest": false,
-    "email": "lucas2002prins@gmail.com",
-    "password": "jamiedepamie"
+    "Email": "sven.groeneveld.nl@gmail.com",
+    "Password": "1231"
   },
   {
     "UserId": "BUCKCUHc",
@@ -47,7 +46,7 @@
     "Phone_number": "0627132467",
     "BookingList": [],
     "IsGuest": false,
-    "email": "@.",
-    "password": "testtest"
+    "Email": "@.",
+    "Password": "testtest"
   }
 ]
