@@ -617,6 +617,7 @@ namespace Rotterdam_Airlines
                             }
                             break;
                         case 3:
+                            Console.Clear();
                             chaning_account = false;
                             break;
                     }
@@ -4191,7 +4192,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine($"                                        ─────────── +");
                             Console.WriteLine($"    Totaal                              - €{booking.BookingPrice}");
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            Console.WriteLine()
+                            Console.WriteLine();
                             UserInterface.SetMainColor();
                             Console.Write("    Maak uw keuze: ");
                             UserInterface.SetDefaultColor();
