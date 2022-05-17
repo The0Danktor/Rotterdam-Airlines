@@ -41,7 +41,7 @@ namespace Rotterdam_Airlines
             if (check == false)
             {
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
+                UserInterface.SetErrorColor();
                 Console.WriteLine("    Er bestaat geen gebruiker met deze email");
                 return false;
             }
@@ -67,7 +67,7 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                     Console.WriteLine("    Email:                " + user_list[choice].Email);
                     Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    UserInterface.SetMainColor();
                     Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                     Console.WriteLine();
                     break;
@@ -76,7 +76,7 @@ namespace Rotterdam_Airlines
             }
             Console.WriteLine("    Weet u zeker dat u deze gebruiker wilt verwijderen?");
             Console.Write("    ");
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             string confirm_input = Console.ReadLine();
 
             if (confirm_input == "0" || confirm_input == "1" || confirm_input == "2")
@@ -114,7 +114,7 @@ namespace Rotterdam_Airlines
                 if (email_check == false && confirm == 2)
                 {
                     Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    UserInterface.SetErrorColor();
                     Console.WriteLine("Er bestaat geen gebruiker met deze email");
                     return false;
                 }
@@ -122,7 +122,7 @@ namespace Rotterdam_Airlines
             else
             {
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
+                UserInterface.SetErrorColor();
                 Console.WriteLine("    Verkeerde input");
                 return false;
             }
@@ -188,7 +188,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -199,7 +199,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -243,7 +243,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -254,7 +254,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -298,7 +298,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -309,7 +309,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -353,7 +353,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -364,7 +364,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -408,7 +408,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -419,7 +419,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -463,7 +463,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -474,7 +474,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -518,7 +518,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -529,7 +529,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -573,7 +573,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -584,7 +584,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -628,7 +628,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -639,7 +639,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -683,7 +683,7 @@ namespace Rotterdam_Airlines
                             check = true;
                             int choice = count;
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                             Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
                             Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
@@ -694,7 +694,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
                             Console.WriteLine("    Email:                " + user_list[choice].Email);
                             Console.WriteLine();
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
                         count += 1;
@@ -703,7 +703,7 @@ namespace Rotterdam_Airlines
                 if (check == false)
                 {
                     Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    UserInterface.SetErrorColor();
                     Console.WriteLine("    Er bestaan geen gebruikers met deze gegevens");
                     return false;
                 }
@@ -711,7 +711,7 @@ namespace Rotterdam_Airlines
             else
             {
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
+                UserInterface.SetErrorColor();
                 Console.WriteLine("    Verkeerde input");
                 Console.ReadLine();
             }
@@ -721,11 +721,11 @@ namespace Rotterdam_Airlines
         public static void PrintAdminMainScreen()
         {
             UserInterface.PrintLogo();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Admin");
             Console.WriteLine("    ─────────────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.WriteLine("    [1] Gebruiker Opzoeken");
             Console.WriteLine("    [2] Gebruiker Verwijderen");
             Console.WriteLine();
@@ -737,9 +737,9 @@ namespace Rotterdam_Airlines
             Console.WriteLine();
             Console.WriteLine("    ─────────────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.Write("    Maak een keuze: ");
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
 
             bool admin_bool = true;
             string input = Console.ReadLine();
@@ -856,7 +856,7 @@ namespace Rotterdam_Airlines
             else
             {
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
+                UserInterface.SetErrorColor();
                 Console.WriteLine("    Verkeerde input");
                 Console.ReadLine();
             }
@@ -865,65 +865,65 @@ namespace Rotterdam_Airlines
         private static void PrintAdminSubScreen(string screen, string question)
         {
             UserInterface.PrintLogo();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Admin | " + screen);
             Console.WriteLine("    ─────────────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.WriteLine("    [0] Hoofdmenu");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             Console.WriteLine("    " + question);
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.Write("    ");
         }
 
         private static void PrintSearchUserInfoSubScreen(string screen, string question)
         {
             UserInterface.PrintLogo();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Admin | " + screen);
             Console.WriteLine("    ──────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.WriteLine("    [0] Hoofdmenu");
             Console.WriteLine("    [1] Terug");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             Console.WriteLine("    " + question);
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.Write("    ");
         }
         private static void PrintRemoveUserConfirmScreen()
         {
             UserInterface.PrintLogo();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Admin | Gebruiker Verwijderen");
             Console.WriteLine("    ──────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.WriteLine("    [0] Hoofdmenu");
             Console.WriteLine("    [1] Terug");
             Console.WriteLine("    [2] Gebruiker Verwijderen");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
         }
 
         private static void PrintUserInfoSubScreen()
         {
             UserInterface.PrintLogo();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    Rotterdam Airlines | Admin | Gebruiker Opzoeken");
             Console.WriteLine("    ──────────────────────────────────────────────────");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
             Console.WriteLine("    [0] Hoofdmenu");
             Console.WriteLine();
             Console.WriteLine("    [1] Algemeen");
@@ -937,11 +937,11 @@ namespace Rotterdam_Airlines
             Console.WriteLine("    [9] Telefoonnummer");
             Console.WriteLine("    [10] Email");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            UserInterface.SetMainColor();
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             Console.Write("    Maak een keuze: ");
-            Console.ForegroundColor = ConsoleColor.White;
+            UserInterface.SetDefaultColor();
         }
 
         private static void PrintNumberOfResults(int user_count)
@@ -950,7 +950,9 @@ namespace Rotterdam_Airlines
             {
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Blue;
+                
+
+
                 Console.WriteLine("    " + user_count + " Resultaten");
                 Console.WriteLine();
                 Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
@@ -959,7 +961,7 @@ namespace Rotterdam_Airlines
             {
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Blue;
+                UserInterface.SetMainColor();
                 Console.WriteLine("    " + user_count + " Resultaat");
                 Console.WriteLine();
                 Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");

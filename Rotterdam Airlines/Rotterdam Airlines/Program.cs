@@ -239,7 +239,8 @@ namespace Rotterdam_Airlines
                                     case 3:
                                         Console.Clear();
                                         UserInterface.PrintLogo();
-                                        Console.ForegroundColor = ConsoleColor.Blue;
+                                        
+
                                         Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
                                         Console.WriteLine("    ──────────────────────────────────────────────────");
                                         UserInterface.SetDefaultColor();
