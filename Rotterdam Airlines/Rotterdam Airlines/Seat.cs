@@ -14,7 +14,6 @@ namespace Rotterdam_Airlines
         public string Description { set; get; }
         public string Special { set; get; }
         public double Price { set; get; }
-        public string FlightCode { get; set; }
 
         Dictionary<string, Dictionary<int, double>> priceList = new Dictionary<string, Dictionary<int, double>>()
         {
