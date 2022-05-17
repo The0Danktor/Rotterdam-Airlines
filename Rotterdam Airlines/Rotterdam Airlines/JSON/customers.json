@@ -1,66 +1,16 @@
 [
   {
-    "UserId": "Y9sj3q3q",
-    "First_name": "test",
-    "Prefix": "",
-    "Last_name": "test",
-    "Country": "test",
-    "Gender": "man",
-    "Birth_date": "11-11-1111",
-    "Phone_number": "0627162566",
-    "BookingList": [
-      "test",
-      "test",
-      "test",
-      "test",
-      "test",
-      "test",
-      "test"
-    ],
-    "IsGuest": false,
-    "Email": "test@test.",
-    "Password": "testtest"
-  },
-  {
-    "UserId": "LxEk5Dbk",
-    "First_name": "Lucas",
-    "Prefix": "de",
-    "Last_name": "Leest",
-    "Country": "dad",
-    "Gender": "overig",
-    "Birth_date": "17-08-2002",
-    "Phone_number": "0634998880",
-    "BookingList": [],
-    "IsGuest": false,
-    "Email": "lucas2002prins@gmail.com",
-    "Password": "jamiedepamie"
-  },
-  {
-    "UserId": "BUCKCUHc",
-    "First_name": "Pip",
-    "Prefix": "",
-    "Last_name": "test",
-    "Country": "Nederland",
-    "Gender": "Man",
-    "Birth_date": "12-02-1980",
-    "Phone_number": "0627132467",
-    "BookingList": [],
-    "IsGuest": false,
-    "Email": "@.",
-    "Password": "testtest"
-  },
-  {
-    "UserId": "7CRGl9TF",
+    "UserId": "_uwcZG_P",
     "First_name": "Jamie",
     "Prefix": "de",
     "Last_name": "Leest",
     "Country": "Nederland",
     "Gender": "Man",
-    "Birth_date": "31-03-2004",
-    "Phone_number": "0627162566",
+    "Birth_date": "31-01-2004",
+    "Phone_number": "1234567890",
     "BookingList": [],
     "IsGuest": false,
-    "Email": "jdeleest@live.nl",
+    "Email": "j@.",
     "Password": "testtest"
   }
 ]

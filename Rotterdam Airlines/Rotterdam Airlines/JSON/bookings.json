@@ -19,8 +19,7 @@
         "Occupant": null,
         "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
         "Special": "increased legroom",
-        "Price": 64.35,
-        "FlightCode": null
+        "Price": 64.35
       },
       {
         "Id": "H1",
@@ -28,8 +27,7 @@
         "Occupant": null,
         "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
         "Special": "increased legroom",
-        "Price": 64.35,
-        "FlightCode": null
+        "Price": 64.35
       },
       {
         "Id": "I1",
@@ -37,8 +35,7 @@
         "Occupant": null,
         "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
         "Special": "increased legroom",
-        "Price": 64.35,
-        "FlightCode": null
+        "Price": 64.35
       },
       {
         "Id": "J1",
@@ -46,8 +43,7 @@
         "Occupant": null,
         "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
         "Special": "increased legroom",
-        "Price": 64.35,
-        "FlightCode": null
+        "Price": 64.35
       }
     ],
     "CustomerID": "7CRGl9TF",
@@ -56,6 +52,61 @@
     "FlightCode": "000034",
     "BookingID": "000001",
     "BookingPrice": 257.4,
+    "BookingDiscount": 0.0
+  },
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": "000040",
+        "CustomerFirstName": "Jamie",
+        "CustomerMiddleName": "de",
+        "CustomerLastName": "Leest",
+        "CustomerBirthDate": "31-01-2004",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "df"
+      }
+    ],
+    "SeatList": [
+      {
+        "Id": "A1",
+        "SeatClass": "business",
+        "Occupant": null,
+        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
+        "Special": "normal",
+        "Price": 72.5
+      },
+      {
+        "Id": "A2",
+        "SeatClass": "business",
+        "Occupant": null,
+        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
+        "Special": "normal",
+        "Price": 72.5
+      },
+      {
+        "Id": "C1",
+        "SeatClass": "business",
+        "Occupant": null,
+        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
+        "Special": "normal",
+        "Price": 72.5
+      },
+      {
+        "Id": "B2",
+        "SeatClass": "business",
+        "Occupant": null,
+        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
+        "Special": "normal",
+        "Price": 72.5
+      }
+    ],
+    "CustomerID": "_uwcZG_P",
+    "CustomerPhoneNumber": "1234567890",
+    "CustomerEmail": "j@.",
+    "FlightCode": "000040",
+    "BookingID": "000002",
+    "BookingPrice": 290.0,
     "BookingDiscount": 0.0
   }
 ]
