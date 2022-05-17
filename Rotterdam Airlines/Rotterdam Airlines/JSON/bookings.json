@@ -1,0 +1,61 @@
+[
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": "000034",
+        "CustomerFirstName": "Jamie",
+        "CustomerMiddleName": "de",
+        "CustomerLastName": "Leest",
+        "CustomerBirthDate": "31-03-2004",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "12351523"
+      }
+    ],
+    "SeatList": [
+      {
+        "Id": "G1",
+        "SeatClass": "economy",
+        "Occupant": null,
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 64.35,
+        "FlightCode": null
+      },
+      {
+        "Id": "H1",
+        "SeatClass": "economy",
+        "Occupant": null,
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 64.35,
+        "FlightCode": null
+      },
+      {
+        "Id": "I1",
+        "SeatClass": "economy",
+        "Occupant": null,
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 64.35,
+        "FlightCode": null
+      },
+      {
+        "Id": "J1",
+        "SeatClass": "economy",
+        "Occupant": null,
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 64.35,
+        "FlightCode": null
+      }
+    ],
+    "CustomerID": "7CRGl9TF",
+    "CustomerPhoneNumber": "0627162566",
+    "CustomerEmail": "jdeleest@live.nl",
+    "FlightCode": "000034",
+    "BookingID": "000001",
+    "BookingPrice": 257.4,
+    "BookingDiscount": 0.0
+  }
+]

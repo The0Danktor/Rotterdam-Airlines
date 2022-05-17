@@ -15,15 +15,19 @@ namespace Rotterdam_Airlines
         public string PlaneType { set; get; }
         public string Airline { set; get; }
         public string Destination { set; get; }
+        public string DestinationAbbreviation { set; get; }
+        public string DestinationAirport { set; get; }
         public DateTime Departure { set; get; }
+        public DateTime Arrival { set; get; }
         public string Gate { set; get; }
+
         public bool Cancelled = false;
 
         // LIST OF FLIGHTS
         public static List<Flight> Flights = new List<Flight>();
 
         // CONSTRUCTOR
-        public Flight(string flightCode, string flightNumber, string planeType, string airline, string destination, DateTime departure, string gate, bool cancelled)
+        public Flight(string flightCode, string flightNumber, string planeType, string airline, string destination, DateTime departure, string gate, bool cancelled , string destinationAbbreviation, string destinationAirport,DateTime arrival)
         {
             this.FlightCode = flightCode;
             this.FlightNumber = flightNumber;
@@ -33,6 +37,9 @@ namespace Rotterdam_Airlines
             this.Departure = departure;
             this.Gate = gate;
             this.Cancelled = cancelled;
+            this.DestinationAbbreviation = destinationAbbreviation;
+            this.DestinationAirport = destinationAirport;
+            this.Arrival = arrival;
             Flights.Add(this);
         }
 
@@ -55,6 +62,19 @@ namespace Rotterdam_Airlines
                 }
             }
             return found;
+        }
+
+        // GETS FLIGHT FROM FLIGHT CODE
+        public static Flight getFlight(string flightCode)
+        {
+            foreach (Flight flight in Flights)
+            {
+                if (flight.FlightCode == flightCode)
+                {
+                    return flight;
+                }
+            }
+            return null;
         }
 
         // GETS FLIGHT INDEX FOR A SPECFIC FLIGHTCODE
@@ -114,8 +134,10 @@ namespace Rotterdam_Airlines
                 }
 
                 double extraHour = (double)Convert.ToInt32(jsonScheme[i]["Departure"]);
+                double extraArrival = (double)Convert.ToDouble(jsonScheme[i]["Arrival"]); 
                 DateTime newDeparture = date.AddHours(extraHour);
-                Flight flight = new Flight(flightCodeString, (string)jsonScheme[i]["FlightNumber"], (string)jsonScheme[i]["PlaneType"], (string)jsonScheme[i]["Airline"], (string)jsonScheme[i]["Destination"], newDeparture, (string)jsonScheme[i]["Gate"], false);
+                DateTime newArrival = date.AddHours(extraArrival);
+                Flight flight = new Flight(flightCodeString, (string)jsonScheme[i]["FlightNumber"], (string)jsonScheme[i]["PlaneType"], (string)jsonScheme[i]["Airline"], (string)jsonScheme[i]["Destination"], newDeparture, (string)jsonScheme[i]["Gate"], false, (string)jsonScheme[i]["DestinationAbbreviation"], (string)jsonScheme[i]["DestinationAirport"], newArrival);
             }
 
             JSON.SaveFlightsJSON(Flights);

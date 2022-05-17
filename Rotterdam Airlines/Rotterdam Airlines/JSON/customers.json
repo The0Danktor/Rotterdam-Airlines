@@ -50,17 +50,17 @@
     "Password": "testtest"
   },
   {
-    "UserId": "VdrquGwL",
-    "First_name": "Josh",
-    "Prefix": "hoi",
-    "Last_name": "",
+    "UserId": "7CRGl9TF",
+    "First_name": "Jamie",
+    "Prefix": "de",
+    "Last_name": "Leest",
     "Country": "Nederland",
-    "Gender": "Overig",
-    "Birth_date": "05-06-2002",
-    "Phone_number": "0712345678",
+    "Gender": "Man",
+    "Birth_date": "31-03-2004",
+    "Phone_number": "0627162566",
     "BookingList": [],
     "IsGuest": false,
-    "Email": "joshua@cammeraat.it",
-    "Password": "feyenoord"
+    "Email": "jdeleest@live.nl",
+    "Password": "testtest"
   }
 ]

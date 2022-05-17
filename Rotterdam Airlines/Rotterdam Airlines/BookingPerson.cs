@@ -28,5 +28,38 @@ namespace Rotterdam_Airlines
             CustomerCountry = customerCountry;
             CustomerBSN = customerBSN;
         }
+        public string GetFullname()
+        {
+            string fullname;
+            if (CustomerMiddleName == "")
+            {
+                fullname = $"{this.CustomerFirstName} {this.CustomerLastName}";
+            }
+            else
+            {
+                fullname = $"{this.CustomerFirstName} {this.CustomerMiddleName} {this.CustomerLastName}";
+            }
+            return fullname;
+        }
+        public bool PersonComplete()
+        {
+            bool done;
+            if (
+                CustomerFirstName == null ||
+                CustomerLastName == null ||
+                CustomerBirthDate == null ||
+                CustomerGender == null ||
+                CustomerCountry == null ||
+                CustomerBSN == null
+                )
+            {
+                done = false;
+            }
+            else
+            {
+                done=true;
+            }
+            return done;
+        }
     }
 }

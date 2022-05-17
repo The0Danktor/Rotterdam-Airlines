@@ -14,7 +14,6 @@ namespace Rotterdam_Airlines
         {
             // LOAD ALL FLIGHTS WHICH ARE IN THE FLIGHTS.JSON TO THE FLIGHT LIST
             Flight.GenerateFlightWeeks();
-
             // INITIATE EMAIL CLIENT
             var smtpClient = new SmtpClient("smtp-mail.outlook.com")
             {
@@ -293,6 +292,10 @@ namespace Rotterdam_Airlines
                         case 9:
                             Console.Clear();
                             Console.Clear();
+                            break;
+
+                        case 420:
+                            EmailHandler.SendBookingConfirmation(smtpClient);
                             break;
 
                         // DEFAULT
