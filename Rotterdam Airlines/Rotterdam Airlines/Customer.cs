@@ -78,6 +78,11 @@ namespace Rotterdam_Airlines
             this.UserId = IdHandler.getID();
         }
 
+        public void ViewBookings()
+        {
+
+        }
+
         static public object Login(Admin AdminUser , Customer CurrentUser)
         {
             
@@ -4113,7 +4118,6 @@ namespace Rotterdam_Airlines
                         Booking booking = new Booking(CurrentUser.UserId, CurrentUser.Phone_number, CurrentUser.Email, BookingSelectedFlight.FlightCode, Booking.GenerateBookingID(), Price, PriceDiscount, BookingPersonData,BookingSeats);
                         while (Confirming)
                         {
-
                             Console.Clear();
                             CultureInfo Dutch = new CultureInfo("nl-NL", false);
                             DateTime DepartureInfo = BookingSelectedFlight.Departure;
