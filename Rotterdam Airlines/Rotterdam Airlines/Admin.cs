@@ -724,147 +724,82 @@ namespace Rotterdam_Airlines
 
         public static void PrintAdminMainScreen()
         {
-            UserInterface.PrintLogo();
-            UserInterface.SetMainColor();
-            Console.WriteLine("    Rotterdam Airlines | Admin");
-            Console.WriteLine("    ─────────────────────────────────────────────────────────");
-            Console.WriteLine();
-            UserInterface.SetDefaultColor();
-            Console.WriteLine("    [1] Gebruiker Opzoeken");
-            Console.WriteLine("    [2] Gebruiker Verwijderen");
-            Console.WriteLine();
-            Console.WriteLine("    [3] Vluchten Opzoeken");
-            Console.WriteLine("    [4] Vluchten Wijzigen");
-            Console.WriteLine();
-            Console.WriteLine("    [5] Boekingen Opzoeken");
-            Console.WriteLine("    [6] Boekingen Wijzigen");
-            Console.WriteLine();
-            Console.WriteLine("    ─────────────────────────────────────────────────────────");
-            Console.WriteLine();
-            UserInterface.SetMainColor();
-            Console.Write("    Maak een keuze: ");
-            UserInterface.SetDefaultColor();
-
             bool admin_bool = true;
-            string input = Console.ReadLine();
-            if (input == "1" || input == "2" || input == "3" || input == "4" || input == "5" || input == "6")
+            while (admin_bool)
             {
-                int choice = int.Parse(input);
-
-                while (admin_bool)
-                {
-                    switch (choice)
-                    {
-                        case 0:
-                            admin_bool = false;
-                            Console.Clear();
-                            break;
-                        case 1:
-                            while (admin_bool)
-                            {
-                                Console.Clear();
-                                if (Admin.PrintUserInfoScreen())
-                                {
-                                    admin_bool = false;
-                                }
-                                else
-                                {
-                                    admin_bool = true;
-                                }
-                                Console.ReadLine();
-                                Console.Clear();
-                                break;
-                            }
-                            Console.Clear();
-                            break;
-                        case 2:
-                            while (admin_bool)
-                            {
-                                Console.Clear();
-                                string screen = "Gebruiker Verwijderen";
-                                string question = "Wat is de email van de gebruiker die u wilt verwijderen?";
-                                PrintAdminSubScreen(screen, question);
-                                if (Admin.RemoveUser())
-                                {
-                                    admin_bool = false;
-                                }
-                                else
-                                {
-                                    admin_bool = true;
-                                }
-                                Console.ReadLine();
-                                Console.Clear();
-                                break;
-                            }
-                            Console.Clear();
-                            break;
-                        case 3:
-                            while (admin_bool)
-                            {
-                                Console.Clear();
-                                string screen = "Vluchten Opzoeken";
-                                string question = "Wat is de vluchtcode van de vlucht die u wilt Opzoeken?";
-                                PrintAdminSubScreen(screen, question);
-                                Console.ReadLine();
-                                admin_bool = false;
-                                Console.Clear();
-                                break;
-                            }
-                            Console.Clear();
-                            break;
-                        case 4:
-                            while (admin_bool)
-                            {
-                                Console.Clear();
-                                string screen = "Vluchten Wijzigen";
-                                string question = "Wat is de vluchtcode van de vlucht die u wilt wijzigen?";
-                                PrintAdminSubScreen(screen, question);
-                                Console.ReadLine();
-                                admin_bool = false;
-                                Console.Clear();
-                                break;
-                            }
-                            Console.Clear();
-                            break;
-                        case 5:
-                            while (admin_bool)
-                            {
-                                Console.Clear();
-                                string screen = "Boekingen Opzoeken";
-                                string question = "Wat is de email van de gebruiker waarvan u de boeking wilt opzoeken?";
-                                PrintAdminSubScreen(screen, question);
-                                Console.ReadLine();
-                                admin_bool = false;
-                                Console.Clear();
-                                break;
-                            }
-                            Console.Clear();
-                            break;
-                        case 6:
-                            while (admin_bool)
-                            {
-                                Console.Clear();
-                                string screen = "Boekingen Wijzigen";
-                                string question = "Wat is de email van de gebruiker waarvan u de boeking wilt wijzigen?";
-                                PrintAdminSubScreen(screen, question);
-                                Console.ReadLine();
-                                admin_bool = false;
-                                Console.Clear();
-                                break;
-                            }
-                            Console.Clear();
-                            break;
-                    }
-                }
-            }
-            else
-            {
+                Console.Clear();
+                UserInterface.PrintLogo();
+                UserInterface.SetMainColor();
+                Console.WriteLine("    Rotterdam Airlines | Admin");
+                Console.WriteLine("    ─────────────────────────────────────────────────────────");
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("    Verkeerde input");
-                Console.ReadLine();
-            }
+                UserInterface.SetDefaultColor();
+                Console.WriteLine("    [1] Gebruiker Opzoeken");
+                Console.WriteLine("    [2] Gebruiker Verwijderen");
+                Console.WriteLine();
+                Console.WriteLine("    [3] Vluchten");
+                Console.WriteLine("    [4] Boekingen");
+                Console.WriteLine();
+                Console.WriteLine("    ─────────────────────────────────────────────────────────");
+                Console.WriteLine();
+                UserInterface.SetMainColor();
+                Console.Write("    Maak een keuze: ");
+                UserInterface.SetDefaultColor();
+                var AdminInput = Console.ReadKey(true);
+                switch (AdminInput.Key)
+                {
+                    case ConsoleKey.D0:
+                        admin_bool = false;
+                        Console.Clear();
+                        break;
+                    case ConsoleKey.D1:
+                        while (admin_bool)
+                        {
+                            Console.Clear();
+                            if (Admin.PrintUserInfoScreen())
+                            {
+                                admin_bool = false;
+                            }
+                            else
+                            {
+                                admin_bool = true;
+                            }
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
+                        Console.Clear();
+                        break;
+                    case ConsoleKey.D2:
+                        while (admin_bool)
+                        {
+                            Console.Clear();
+                            string screen = "Gebruiker Verwijderen";
+                            string question = "Wat is de email van de gebruiker die u wilt verwijderen?";
+                            PrintAdminSubScreen(screen, question);
+                            if (Admin.RemoveUser())
+                            {
+                                admin_bool = false;
+                            }
+                            else
+                            {
+                                admin_bool = true;
+                            }
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
+                        Console.Clear();
+                        break;
+                    case ConsoleKey.D3:
+
+                        break;
+
+                    default:
+                        break;
+                }
         }
+    }
 
         private static void PrintAdminSubScreen(string screen, string question)
         {
