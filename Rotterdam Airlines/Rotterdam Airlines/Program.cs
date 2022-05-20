@@ -82,6 +82,9 @@ namespace Rotterdam_Airlines
                         // OVERZICHT BOEKINGEN
                         case ConsoleKey.D2:
                             // IF USER IS NOT LOGGED IN
+                            List<Flight> Flights = JSON.LoadFlightsJSON();
+                            Flight FlightTarget = null;
+                            List<Booking> Bookings = JSON.LoadBookingsJSON();
                             if (CurrentUser.UserId == null)
                             {
                                 bool SearchingBookings = true;  
@@ -111,7 +114,7 @@ namespace Rotterdam_Airlines
                                             SearchingBookings = false;
                                             break;
                                         case ConsoleKey.D1:
-                                            List<Booking> Bookings = JSON.LoadBookingsJSON();
+                                            Console.Clear();
                                             UserInterface.PrintLogo();
                                             UserInterface.SetMainColor();
                                             Console.WriteLine("    Rotterdam Airlines | Boekingcode Invoeren");
@@ -144,8 +147,6 @@ namespace Rotterdam_Airlines
                                                     Console.ReadKey(true);
                                                 } else
                                                 {
-                                                    List<Flight> Flights = JSON.LoadFlightsJSON();
-                                                    Flight FlightTarget = null;
                                                     for(int i = 0; i < Flights.Count; i++)
                                                     {
                                                         if(BookingTarget.FlightCode == Flights[i].FlightCode) { FlightTarget = Flights[i]; }
@@ -221,9 +222,9 @@ namespace Rotterdam_Airlines
                                                     Console.WriteLine($"                                        ─────────── +");
                                                     Console.WriteLine($"    Totaal                              - €{BookingTarget.BookingPrice}");
                                                     Console.WriteLine();
+                                                    UserInterface.SetMainColor();
                                                     Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                                     Console.WriteLine();
-                                                    UserInterface.SetMainColor();
                                                     Console.WriteLine("    Klik op een willekeurige toets om terug naar het hoofdmenu te gaan");
                                                     Console.ReadKey();
                                                     SearchingBookings = false;
@@ -453,6 +454,11 @@ namespace Rotterdam_Airlines
                         // EXIT
                         case ConsoleKey.D8:
                             Environment.Exit(0);
+                            break;
+
+                        case ConsoleKey.D9:
+                            Booking booking = new Booking("abc", "abc", "lucas2002prins@gmail.com", "000001", "000005", 250.5, 25, new List<BookingPerson>(), new List<Seat>(), true);
+                            EmailHandler.SendBookingConfirmation(booking);
                             break;
 
                         // DEFAULT

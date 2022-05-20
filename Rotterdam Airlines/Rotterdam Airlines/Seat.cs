@@ -84,7 +84,6 @@ namespace Rotterdam_Airlines
 
                 this.Price = Math.Round(this.Price, 2);
             }
-            Console.Clear();
         }
     }
 }
