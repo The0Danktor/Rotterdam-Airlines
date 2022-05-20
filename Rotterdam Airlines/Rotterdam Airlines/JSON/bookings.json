@@ -2,114 +2,76 @@
   {
     "BookingPersons": [
       {
-        "CustomerFlightNumber": "000034",
-        "CustomerFirstName": "Jamie",
-        "CustomerMiddleName": "de",
-        "CustomerLastName": "Leest",
-        "CustomerBirthDate": "31-03-2004",
+        "CustomerFlightNumber": null,
+        "CustomerFirstName": "Lucas",
+        "CustomerMiddleName": "",
+        "CustomerLastName": "Prins",
+        "CustomerBirthDate": "19-02-2002",
         "CustomerGender": "Man",
         "CustomerCountry": "Nederland",
-        "CustomerBSN": "12351523"
-      }
-    ],
-    "SeatList": [
-      {
-        "Id": "G1",
-        "SeatClass": "economy",
-        "Occupant": null,
-        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
-        "Special": "increased legroom",
-        "Price": 64.35
-      },
-      {
-        "Id": "H1",
-        "SeatClass": "economy",
-        "Occupant": null,
-        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
-        "Special": "increased legroom",
-        "Price": 64.35
-      },
-      {
-        "Id": "I1",
-        "SeatClass": "economy",
-        "Occupant": null,
-        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
-        "Special": "increased legroom",
-        "Price": 64.35
-      },
-      {
-        "Id": "J1",
-        "SeatClass": "economy",
-        "Occupant": null,
-        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
-        "Special": "increased legroom",
-        "Price": 64.35
-      }
-    ],
-    "CustomerID": "7CRGl9TF",
-    "CustomerPhoneNumber": "0627162566",
-    "CustomerEmail": "jdeleest@live.nl",
-    "FlightCode": "000034",
-    "BookingID": "000001",
-    "BookingPrice": 257.4,
-    "BookingDiscount": 0.0,
-    "CheckedLuggage": false
-  },
-  {
-    "BookingPersons": [
-      {
-        "CustomerFlightNumber": "000040",
-        "CustomerFirstName": "Jamie",
-        "CustomerMiddleName": "de",
-        "CustomerLastName": "Leest",
-        "CustomerBirthDate": "31-01-2004",
-        "CustomerGender": "Man",
-        "CustomerCountry": "Nederland",
-        "CustomerBSN": "df"
+        "CustomerBSN": "545515"
       }
     ],
     "SeatList": [
       {
         "Id": "A1",
         "SeatClass": "business",
-        "Occupant": null,
+        "Occupant": "Yes",
         "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
         "Special": "normal",
         "Price": 72.5
       },
       {
-        "Id": "A2",
+        "Id": "B1",
         "SeatClass": "business",
-        "Occupant": null,
-        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
-        "Special": "normal",
-        "Price": 72.5
-      },
-      {
-        "Id": "C1",
-        "SeatClass": "business",
-        "Occupant": null,
-        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
-        "Special": "normal",
-        "Price": 72.5
-      },
-      {
-        "Id": "B2",
-        "SeatClass": "business",
-        "Occupant": null,
+        "Occupant": "Yes",
         "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
         "Special": "normal",
         "Price": 72.5
       }
     ],
-    "CustomerID": "_uwcZG_P",
-    "CustomerPhoneNumber": "1234567890",
-    "CustomerEmail": "j@.",
-    "FlightCode": "000040",
-    "BookingID": "000002",
-    "BookingPrice": 290.0,
+    "CustomerID": null,
+    "CustomerPhoneNumber": "0634998880",
+    "CustomerEmail": "lucas2002prins@gmail.com",
+    "FlightCode": "000001",
+    "BookingID": "000001",
+    "BookingPrice": 170.0,
     "BookingDiscount": 0.0,
-    "CheckedLuggage": false
+    "CheckedLuggage": true,
+    "Cancelled": true
+  },
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": null,
+        "CustomerFirstName": "Lucas",
+        "CustomerMiddleName": "",
+        "CustomerLastName": "Prins",
+        "CustomerBirthDate": "17-08-2002",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "652626"
+      }
+    ],
+    "SeatList": [
+      {
+        "Id": "C1",
+        "SeatClass": "business",
+        "Occupant": "Yes",
+        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
+        "Special": "normal",
+        "Price": 72.5
+      }
+    ],
+    "CustomerID": null,
+    "CustomerPhoneNumber": "0634998880",
+    "CustomerEmail": "lucas2002prins@gmail.com",
+    "FlightCode": "000001",
+    "BookingID": "000002",
+    "BookingPrice": 72.5,
+    "BookingDiscount": 0.0,
+    "CheckedLuggage": false,
+    "Cancelled": true
   },
   {
     "BookingPersons": [
@@ -121,14 +83,14 @@
         "CustomerBirthDate": "19-08-2002",
         "CustomerGender": "Man",
         "CustomerCountry": "Nederland",
-        "CustomerBSN": "1313213"
+        "CustomerBSN": "62626"
       }
     ],
     "SeatList": [
       {
-        "Id": "A1",
+        "Id": "C1",
         "SeatClass": "business",
-        "Occupant": null,
+        "Occupant": "Yes",
         "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
         "Special": "normal",
         "Price": 72.5
@@ -141,134 +103,7 @@
     "BookingID": "000003",
     "BookingPrice": 97.5,
     "BookingDiscount": 0.0,
-    "CheckedLuggage": true
-  },
-  {
-    "BookingPersons": [
-      {
-        "CustomerFlightNumber": null,
-        "CustomerFirstName": "Lucas",
-        "CustomerMiddleName": "",
-        "CustomerLastName": "Prins",
-        "CustomerBirthDate": "19-08-2002",
-        "CustomerGender": "Man",
-        "CustomerCountry": "Nederland",
-        "CustomerBSN": "4141"
-      }
-    ],
-    "SeatList": [
-      {
-        "Id": "A1",
-        "SeatClass": "business",
-        "Occupant": null,
-        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
-        "Special": "normal",
-        "Price": 72.5
-      }
-    ],
-    "CustomerID": null,
-    "CustomerPhoneNumber": "0634998880",
-    "CustomerEmail": "lucas2002prins@gmail.com",
-    "FlightCode": "000001",
-    "BookingID": "000004",
-    "BookingPrice": 97.5,
-    "BookingDiscount": 0.0,
-    "CheckedLuggage": true
-  },
-  {
-    "BookingPersons": [
-      {
-        "CustomerFlightNumber": null,
-        "CustomerFirstName": "Lucas",
-        "CustomerMiddleName": "",
-        "CustomerLastName": "Prins",
-        "CustomerBirthDate": "17-08-2002",
-        "CustomerGender": "Man",
-        "CustomerCountry": "Nederland",
-        "CustomerBSN": "13123123"
-      }
-    ],
-    "SeatList": [
-      {
-        "Id": "A1",
-        "SeatClass": "business",
-        "Occupant": null,
-        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
-        "Special": "normal",
-        "Price": 72.5
-      }
-    ],
-    "CustomerID": null,
-    "CustomerPhoneNumber": "0634998880",
-    "CustomerEmail": "lucas2002prins@gmail.com",
-    "FlightCode": "000001",
-    "BookingID": "000005",
-    "BookingPrice": 97.5,
-    "BookingDiscount": 0.0,
-    "CheckedLuggage": true
-  },
-  {
-    "BookingPersons": [
-      {
-        "CustomerFlightNumber": null,
-        "CustomerFirstName": "Lucas",
-        "CustomerMiddleName": "",
-        "CustomerLastName": "Prins",
-        "CustomerBirthDate": "19-08-2002",
-        "CustomerGender": "Man",
-        "CustomerCountry": "Nederland",
-        "CustomerBSN": "312132"
-      }
-    ],
-    "SeatList": [
-      {
-        "Id": "A1",
-        "SeatClass": "business",
-        "Occupant": null,
-        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
-        "Special": "normal",
-        "Price": 72.5
-      }
-    ],
-    "CustomerID": null,
-    "CustomerPhoneNumber": "0634998880",
-    "CustomerEmail": "lucas2002prins@gmail.com",
-    "FlightCode": "000001",
-    "BookingID": "000006",
-    "BookingPrice": 97.5,
-    "BookingDiscount": 0.0,
-    "CheckedLuggage": true
-  },
-  {
-    "BookingPersons": [
-      {
-        "CustomerFlightNumber": null,
-        "CustomerFirstName": "Lucas",
-        "CustomerMiddleName": "",
-        "CustomerLastName": "Prins",
-        "CustomerBirthDate": "18-12-2002",
-        "CustomerGender": "Man",
-        "CustomerCountry": "Nederland",
-        "CustomerBSN": "1313123"
-      }
-    ],
-    "SeatList": [
-      {
-        "Id": "A1",
-        "SeatClass": "business",
-        "Occupant": null,
-        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
-        "Special": "normal",
-        "Price": 72.5
-      }
-    ],
-    "CustomerID": null,
-    "CustomerPhoneNumber": "0634998880",
-    "CustomerEmail": "lucas2002prins@gmail.com",
-    "FlightCode": "000001",
-    "BookingID": "000007",
-    "BookingPrice": 72.5,
-    "BookingDiscount": 0.0,
-    "CheckedLuggage": false
+    "CheckedLuggage": true,
+    "Cancelled": true
   }
 ]

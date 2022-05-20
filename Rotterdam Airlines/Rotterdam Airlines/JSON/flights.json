@@ -1,6 +1,6 @@
 [
   {
-    "Cancelled": false,
+    "Cancelled": true,
     "FlightCode": "000001",
     "FlightNumber": "RAS737PO",
     "PlaneType": "Boeing 737",

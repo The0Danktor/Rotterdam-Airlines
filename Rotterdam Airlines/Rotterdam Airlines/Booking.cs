@@ -19,6 +19,7 @@ namespace Rotterdam_Airlines
         public double BookingPrice { get; set; }
         public double BookingDiscount { get; set; }
         public bool CheckedLuggage { get; set; }
+        public bool Cancelled { get; set; }
 
         // BOOKING PERSONS
         public List<BookingPerson> BookingPersons = new List<BookingPerson>();
@@ -27,7 +28,7 @@ namespace Rotterdam_Airlines
         // ALL BOOKINGS
         public static List<Booking> Bookings = new List<Booking>();
 
-        public Booking(string customerID, string customerPhoneNumber, string customerEmail, string flightCode, string bookingID, double bookingPrice, double bookingDiscount, List<BookingPerson> bookingPersons,List<Seat>seatlist, bool checkedLuggage)
+        public Booking(string customerID, string customerPhoneNumber, string customerEmail, string flightCode, string bookingID, double bookingPrice, double bookingDiscount, List<BookingPerson> bookingPersons,List<Seat> seatlist, bool checkedLuggage, bool cancelled)
         {
             CustomerID = customerID;
             CustomerPhoneNumber = customerPhoneNumber;
@@ -40,6 +41,7 @@ namespace Rotterdam_Airlines
             BookingPersons = bookingPersons;
             SeatList = seatlist;
             Bookings.Add(this);
+            Cancelled = cancelled;  
         }
 
         public static string GenerateBookingID()

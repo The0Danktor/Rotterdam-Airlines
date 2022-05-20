@@ -161,7 +161,14 @@ namespace Rotterdam_Airlines
                                                     UserInterface.PrintLogo();
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
-                                                    Console.WriteLine("    Rotterdam Airlines | Boeking (" + BookingTarget.BookingID + ")");
+                                                    if (BookingTarget.Cancelled == true)
+                                                    {
+                                                        Console.WriteLine("    Rotterdam Airlines | Boeking (" + BookingTarget.BookingID + ") - GEANNULEERD");
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.WriteLine("    Rotterdam Airlines | Boeking (" + BookingTarget.BookingID + ")");
+                                                    }
                                                     Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                                     Console.WriteLine();
                                                     Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
@@ -457,8 +464,10 @@ namespace Rotterdam_Airlines
                             break;
 
                         case ConsoleKey.D9:
-                            Booking booking = new Booking("abc", "abc", "lucas2002prins@gmail.com", "000001", "000005", 250.5, 25, new List<BookingPerson>(), new List<Seat>(), true);
+                            Console.Clear();
+                            Booking booking = new Booking("abc", "abc", "lucas2002prins@gmail.com", "000001", "000005", 250.5, 25, new List<BookingPerson>(), new List<Seat>(), true, false);
                             EmailHandler.SendBookingConfirmation(booking);
+                            Console.Clear();
                             break;
 
                         // DEFAULT

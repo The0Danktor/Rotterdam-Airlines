@@ -4035,6 +4035,14 @@ namespace Rotterdam_Airlines
 
                     // STOELEN KIEZEN
                     case 5:
+                        if (BookingPersonData.Count < 1)
+                        {
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine("    U moet eerst uw persoonsgegevens invullen. Klik op een willekeurige toets om terug te gaan.");
+                            UserInterface.SetDefaultColor();
+                            Console.ReadKey(true);
+                            break;
+                        }
                         BookingSteps[4][1] = "Y";
                         bool SelectingSeats = true;
                         int CurrentSlice = 0;
@@ -4259,11 +4267,18 @@ namespace Rotterdam_Airlines
                                                 }
 
                                                 // IF CAN'T GET ANY MORE
-                                                if (BookingSelectedSeats.Count >= 4)
+                                                if (BookingSelectedSeats.Count >= BookingPersonData.Count * 2)
                                                 {
                                                     UserInterface.SetErrorColor();
-                                                    Console.WriteLine("    U kunt maximaal maar 4 stoelen tegelijk reserveren");
+                                                    Console.WriteLine("    U kunt maximaal maar " + BookingPersonData.Count * 2 + " stoelen tegelijk reserveren");
                                                     var _ = Console.ReadKey(true);
+                                                    break;
+                                                }
+                                                if (editSeat.Occupant != null)
+                                                {
+                                                    UserInterface.SetErrorColor();
+                                                    Console.WriteLine("    Deze stoel is niet beschikbaar...");
+                                                    Console.ReadKey(true);
                                                     break;
                                                 }
 
@@ -4323,7 +4338,7 @@ namespace Rotterdam_Airlines
                         if (BookingSelectedFlight == null)
                         {
                             UserInterface.SetErrorColor();
-                            Console.WriteLine("    U moet eerst een vlucht selecteren");
+                            Console.WriteLine("    U moet eerst een vlucht selecteren. Klik op een willekeurige toets om terug te gaan.");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);
                             break;
@@ -4354,7 +4369,7 @@ namespace Rotterdam_Airlines
                             Price += 25 * BookingPersonData.Count;
                         }
                         double PriceDiscount = 0.00;
-                        Booking booking = new Booking(CurrentUser.UserId, CurrentUser.Phone_number, CurrentUser.Email, BookingSelectedFlight.FlightCode, Booking.GenerateBookingID(), Price, PriceDiscount, BookingPersonData,BookingSeats, BookingSelectedLuggage);
+                        Booking booking = new Booking(CurrentUser.UserId, CurrentUser.Phone_number, CurrentUser.Email, BookingSelectedFlight.FlightCode, Booking.GenerateBookingID(), Price, PriceDiscount, BookingPersonData,BookingSeats, BookingSelectedLuggage, false);
                         while (Confirming)
                         {
                             Console.Clear();
@@ -4404,8 +4419,8 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             UserInterface.SetDefaultColor();
                             Console.WriteLine();
-                            Console.WriteLine($"        Email                          - {booking.CustomerEmail}");
-                            Console.WriteLine($"        Telefoonnummer                 - {booking.CustomerPhoneNumber}");
+                            Console.WriteLine($"    Email                              - {booking.CustomerEmail}");
+                            Console.WriteLine($"    Telefoonnummer                     - {booking.CustomerPhoneNumber}");
                             Console.WriteLine();
                             Console.WriteLine();
                             UserInterface.SetMainColor();
@@ -4458,8 +4473,29 @@ namespace Rotterdam_Airlines
                                     Console.Clear();
                                     break;
                                 case 2:
-                                    if (booking.BookingComplete())
+                                    Tuple<bool, string> BookingCompleted()
                                     {
+                                        if(booking.SeatList.Count < 1) { return new Tuple<bool, string>(false, "    U heeft geen stoelen geselecteerd."); }
+                                        if(booking.FlightCode == null) { return new Tuple<bool, string>(false, "    U heeft geen vlucht geselecteerd"); }
+                                        if (booking.BookingPersons.Count < 1) { return new Tuple<bool, string>(false, "    U heeft geen persoonsgegevens ingevuld"); }
+                                        if (booking.CustomerEmail == null || booking.CustomerEmail == "") { return new Tuple<bool, string>(false, "    U heeft uw email niet ingevuld"); }
+                                        if (booking.CustomerPhoneNumber == null || booking.CustomerPhoneNumber == "") { return new Tuple<bool, string>(false, "    U heeft uw telefoonnummer niet ingevuld");}
+                                        if (booking.SeatList.Count < booking.BookingPersons.Count) { return new Tuple<bool, string>(false, "    U heeft niet genoeg stoelen geselecteerd"); }
+                                        return new Tuple<bool, string>(true, "");
+                                    }
+                                    if (BookingCompleted().Item1)
+                                    {
+                                        foreach (Seat seat in seatJson[BookingSelectedFlight.FlightCode])
+                                        {
+                                            foreach(Seat bookedSeat in BookingSeats)
+                                            {
+                                                if(seat == bookedSeat)
+                                                {
+                                                    seat.Occupant = "Yes";
+                                                }
+                                            }
+                                        }
+                                        JSON.SaveSeatsJSON(seatJson);
                                         Booking.SaveBooking(booking);
                                         BookingFlight = false;
                                         Confirming = false;
@@ -4474,7 +4510,8 @@ namespace Rotterdam_Airlines
                                     else
                                     {
                                         UserInterface.SetErrorColor();
-                                        Console.WriteLine("    Niet alle Gegevens zijn ingevoerd.");
+                                        Console.WriteLine();
+                                        Console.WriteLine(BookingCompleted().Item2);
                                         UserInterface.SetDefaultColor();
                                         Console.ReadKey();
                                         break;
