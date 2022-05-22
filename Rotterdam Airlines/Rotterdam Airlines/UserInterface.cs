@@ -170,7 +170,8 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    [1] Winkelen");
             Console.WriteLine($"    [2] Eetgelegenheden");
             Console.WriteLine($"    [3] Recreatie");
-
+            Console.WriteLine();
+            Console.WriteLine($"    [4] Terug");
         }
 
         public static void SetMainColor()

@@ -296,50 +296,59 @@ namespace Rotterdam_Airlines
                                         break;
 
                                     case 1:
-                                        Console.Clear();
-                                        Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        UserInterface.SetMainColor();
-                                        Console.WriteLine("    Rotterdam Airlines | Informatie | Faciliteiten");
-                                        Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
-                                        Console.WriteLine();
-                                        UserInterface.SetDefaultColor();
-                                        UserInterface.PrintFaciliteitenMenu();
-                                        Console.WriteLine();
-                                        Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
-                                        Console.WriteLine();
-                                        UserInterface.SetMainColor();
-                                        Console.Write("    Maak een keuze: ");
-                                        UserInterface.SetDefaultColor();
-                                        int faciliteiten_choice = 100;
-                                        try { faciliteiten_choice = int.Parse(Console.ReadLine()); } catch { }
-
-                                        switch (faciliteiten_choice)
+                                        bool FaciliteitenActive = true;
+                                        while (FaciliteitenActive)
                                         {
-                                            case 0:
-                                                Console.Clear();
-                                                break;
-                                            case 1:
-                                                Console.Clear();
-                                                UserInterface.PrintLogo();
-                                                Informatie.PrintWinkelen();
-                                                Console.ReadLine();
-                                                Console.Clear();
-                                                break;
-                                            case 2:
-                                                Console.Clear();
-                                                UserInterface.PrintLogo();
-                                                Informatie.PrintEetgelegenheden();
-                                                Console.ReadLine();
-                                                Console.Clear();
-                                                break;
-                                            case 3:
-                                                Console.Clear();
-                                                UserInterface.PrintLogo();
-                                                Informatie.PrintRecreatie();
-                                                Console.ReadLine();
-                                                Console.Clear();
-                                                break;
+                                            Console.Clear();
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+                                            UserInterface.SetMainColor();
+                                            Console.WriteLine("    Rotterdam Airlines | Informatie | Faciliteiten");
+                                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                                            Console.WriteLine();
+                                            UserInterface.SetDefaultColor();
+                                            UserInterface.PrintFaciliteitenMenu();
+                                            Console.WriteLine();
+                                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+                                            Console.WriteLine();
+                                            UserInterface.SetMainColor();
+                                            Console.Write("    Maak een keuze: ");
+                                            UserInterface.SetDefaultColor();
+                                            int faciliteiten_choice = 100;
+                                            try { faciliteiten_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                                            switch (faciliteiten_choice)
+                                            {
+                                                case 0:
+                                                    Console.Clear();
+                                                    FaciliteitenActive = false;
+                                                    InformationActive = false;
+                                                    break;
+                                                case 1:
+                                                    Console.Clear();
+                                                    UserInterface.PrintLogo();
+                                                    Informatie.PrintWinkelen();
+                                                    Console.ReadLine();
+                                                    Console.Clear();
+                                                    break;
+                                                case 2:
+                                                    Console.Clear();
+                                                    UserInterface.PrintLogo();
+                                                    Informatie.PrintEetgelegenheden();
+                                                    Console.ReadLine();
+                                                    Console.Clear();
+                                                    break;
+                                                case 3:
+                                                    Console.Clear();
+                                                    UserInterface.PrintLogo();
+                                                    Informatie.PrintRecreatie();
+                                                    Console.ReadLine();
+                                                    Console.Clear();
+                                                    break;
+                                                case 4:
+                                                    FaciliteitenActive = false;
+                                                    break;
+                                            }
                                         }
                                         break;
                                     case 2:
@@ -357,8 +366,10 @@ namespace Rotterdam_Airlines
                                         UserInterface.PrintLogo();
                                         Informatie.PrintFAQ();
                                         Console.ReadLine();
+
                                         Console.Clear();
                                         break;
+                                    
                                 }
                             }
                             Console.Clear();
@@ -402,6 +413,11 @@ namespace Rotterdam_Airlines
                                     case 3:
                                         Console.Clear();
                                         UserInterface.PrintLogo();
+                                        
+
+                                        Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
+                                        Console.WriteLine("    ──────────────────────────────────────────────────");
+                                        UserInterface.SetDefaultColor();
                                         Customer.ChangePassword(smtpClient);
                                         break;
                                 }

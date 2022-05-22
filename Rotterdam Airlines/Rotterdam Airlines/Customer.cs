@@ -294,7 +294,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine();
                                 Console.WriteLine("    Verkeerd wachtwoord ingevuld Druk op een willekeurige toets om door te gaan ");
                                 UserInterface.SetDefaultColor();
@@ -317,7 +317,7 @@ namespace Rotterdam_Airlines
                                     }
                                     else
                                     {
-                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        UserInterface.SetErrorColor();
                                         Console.WriteLine();
                                         Console.WriteLine("    Verkeerd wachtwoord ingevuld Druk op een willekeurige toets om door te gaan ");
                                         UserInterface.SetDefaultColor();
@@ -329,7 +329,7 @@ namespace Rotterdam_Airlines
                         }
                         if (!UserFound)
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
+                            UserInterface.SetErrorColor();
                             Console.WriteLine("    Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);
@@ -438,7 +438,7 @@ namespace Rotterdam_Airlines
                             {
                                 if (EmailExists(TempEmail))
                                 {
-                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    UserInterface.SetErrorColor();
                                     Console.WriteLine();
                                     Console.WriteLine("    Er bestaat al een account met deze email. Vul een andere email in.");
                                     UserInterface.SetDefaultColor();
@@ -452,14 +452,14 @@ namespace Rotterdam_Airlines
                                     }
                                     else
                                     {
-                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        UserInterface.SetErrorColor();
                                         Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
                                         UserInterface.SetDefaultColor();
                                     }
                                 }
                             } catch 
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
                                 UserInterface.SetDefaultColor();
                             }
@@ -486,7 +486,7 @@ namespace Rotterdam_Airlines
                                 UserInterface.PrintRegisterMenu(CurrentUser);
                                 Console.WriteLine();
                                 Console.WriteLine();
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw wachtwoord moet langer zijn dat 8 characters)");
                                 UserInterface.SetDefaultColor();
                             }
@@ -511,7 +511,7 @@ namespace Rotterdam_Airlines
                             {
                                 UserInterface.PrintRegisterMenu(CurrentUser);
                                 Console.WriteLine();
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine();
                                 Console.WriteLine("    Onjuiste invoer. De ingevoerde wachtwoorden waren niet hetzelfde.\n    Klik op ENTER om het opnieuw te proberen.");
                                 UserInterface.SetDefaultColor();
@@ -536,7 +536,7 @@ namespace Rotterdam_Airlines
                             }
                             else 
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                 UserInterface.SetDefaultColor();
                             }
@@ -557,7 +557,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                 UserInterface.SetDefaultColor();
                             }
@@ -577,7 +577,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                 UserInterface.SetDefaultColor();
@@ -596,7 +596,7 @@ namespace Rotterdam_Airlines
                             InputCountry = textInfo.ToTitleCase(InputCountry);
                             if(InputCountry.Any(char.IsDigit))
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                 UserInterface.SetDefaultColor();
@@ -673,7 +673,7 @@ namespace Rotterdam_Airlines
                                 }
                                 else
                                 { 
-                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    UserInterface.SetErrorColor();
                                     Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                     UserInterface.SetDefaultColor();
                                     Console.ReadKey(true);
@@ -683,7 +683,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                 UserInterface.SetDefaultColor();
                                 
@@ -706,7 +706,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
                                 UserInterface.SetDefaultColor();
                             }
@@ -726,7 +726,7 @@ namespace Rotterdam_Airlines
                         else
                         {
                             Console.Clear();
-                            Console.ForegroundColor = ConsoleColor.Red;
+                            UserInterface.SetErrorColor();
                             Console.WriteLine("    Niet alle velden zijn ingevuld.");
                         }
                         break;
@@ -1444,7 +1444,7 @@ namespace Rotterdam_Airlines
                                             }
                                             else
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                UserInterface.SetErrorColor();
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                 UserInterface.SetDefaultColor();
                                             }
@@ -1465,7 +1465,7 @@ namespace Rotterdam_Airlines
                                             }
                                             else
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                UserInterface.SetErrorColor();
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                 UserInterface.SetDefaultColor();
                                             }
@@ -1485,7 +1485,7 @@ namespace Rotterdam_Airlines
                                             }
                                             else
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                UserInterface.SetErrorColor();
                                                 Console.WriteLine();
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                 UserInterface.SetDefaultColor();
@@ -1504,7 +1504,7 @@ namespace Rotterdam_Airlines
                                             InputCountry = textInfo.ToTitleCase(InputCountry);
                                             if (InputCountry.Any(char.IsDigit))
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                UserInterface.SetErrorColor();
                                                 Console.WriteLine();
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                 UserInterface.SetDefaultColor();
@@ -1549,7 +1549,7 @@ namespace Rotterdam_Airlines
                                             }
                                             else
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                UserInterface.SetErrorColor();
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                 UserInterface.SetDefaultColor();
                                             }
@@ -1582,7 +1582,7 @@ namespace Rotterdam_Airlines
                                                 }
                                                 else
                                                 {
-                                                    Console.ForegroundColor = ConsoleColor.Red;
+                                                    UserInterface.SetErrorColor();
                                                     Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                     UserInterface.SetDefaultColor();
                                                     Console.ReadKey(true);
@@ -1592,7 +1592,7 @@ namespace Rotterdam_Airlines
                                             }
                                             else
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                UserInterface.SetErrorColor();
                                                 Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                 UserInterface.SetDefaultColor();
 
@@ -1751,7 +1751,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -1772,7 +1772,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -1792,7 +1792,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -1811,7 +1811,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -1856,7 +1856,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -1889,7 +1889,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -1899,7 +1899,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -1976,7 +1976,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -1997,7 +1997,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2017,7 +2017,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2036,7 +2036,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2081,7 +2081,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2114,7 +2114,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -2124,7 +2124,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -2287,7 +2287,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2308,7 +2308,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2328,7 +2328,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2347,7 +2347,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2392,7 +2392,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2425,7 +2425,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -2435,7 +2435,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -2512,7 +2512,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2533,7 +2533,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2553,7 +2553,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2572,7 +2572,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2617,7 +2617,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2650,7 +2650,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -2660,7 +2660,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -2737,7 +2737,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2758,7 +2758,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2778,7 +2778,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2797,7 +2797,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -2842,7 +2842,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -2875,7 +2875,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -2885,7 +2885,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -3049,7 +3049,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3070,7 +3070,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3090,7 +3090,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3109,7 +3109,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3154,7 +3154,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3187,7 +3187,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -3197,7 +3197,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -3274,7 +3274,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3295,7 +3295,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3315,7 +3315,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3334,7 +3334,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3379,7 +3379,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3412,7 +3412,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -3422,7 +3422,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -3499,7 +3499,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3520,7 +3520,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3540,7 +3540,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3559,7 +3559,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3604,7 +3604,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3637,7 +3637,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -3647,7 +3647,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -3724,7 +3724,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3745,7 +3745,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3765,7 +3765,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3784,7 +3784,7 @@ namespace Rotterdam_Airlines
                                                         InputCountry = textInfo.ToTitleCase(InputCountry);
                                                         if (InputCountry.Any(char.IsDigit))
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen letters gebruiken)");
                                                             UserInterface.SetDefaultColor();
@@ -3829,7 +3829,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
@@ -3862,7 +3862,7 @@ namespace Rotterdam_Airlines
                                                             }
                                                             else
                                                             {
-                                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                                UserInterface.SetErrorColor();
                                                                 Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
                                                                 UserInterface.SetDefaultColor();
                                                                 Console.ReadKey(true);
@@ -3872,7 +3872,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                         else
                                                         {
-                                                            Console.ForegroundColor = ConsoleColor.Red;
+                                                            UserInterface.SetErrorColor();
                                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Invoer moet geschreven zijn in dd-mm-jjjj)");
                                                             UserInterface.SetDefaultColor();
 
@@ -3976,7 +3976,7 @@ namespace Rotterdam_Airlines
                                         }
                                         catch
                                         {
-                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            UserInterface.SetErrorColor();
                                             Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
                                             UserInterface.SetDefaultColor();
                                         }
@@ -3999,7 +3999,7 @@ namespace Rotterdam_Airlines
                                         }
                                         else
                                         {
-                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            UserInterface.SetErrorColor();
                                             Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
                                             UserInterface.SetDefaultColor();
                                         }
@@ -4580,31 +4580,45 @@ namespace Rotterdam_Airlines
 
         public static void ChangePassword(SmtpClient smtpClient)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
-            Console.WriteLine("    ──────────────────────────────────────────────────");
-            Console.WriteLine();
-            Console.Write("    Vul uw email in: ");
-            Console.ForegroundColor = ConsoleColor.White;
-            List<Customer> customers = JSON.LoadCustomersJSON();
-            string inputemail = Console.ReadLine();
-            string currentemail;
-            foreach (Customer customer in customers)
+            bool Email = true;
+            while (Email)
             {
-                if (customer.Email == inputemail)
+
+                
+                Console.WriteLine();
+                UserInterface.SetMainColor();
+                Console.Write("    Vul uw email in: ");
+                UserInterface.SetDefaultColor();
+                List<Customer> customers = JSON.LoadCustomersJSON();
+                string inputemail = Console.ReadLine();
+                string currentemail;
+                bool EmailExists = false;
+                
+                foreach (Customer customer in customers)
                 {
-                    currentemail = customer.Email;
+                    if (customer.Email == inputemail)
+                    {
+                        EmailExists = true;
+                    }
+                }
+                if (!EmailExists) 
+                {
+                    UserInterface.SetErrorColor();
+                    Console.WriteLine("    niet bestande email ingevoerd");
+                    UserInterface.SetDefaultColor();
+                }
+                else
+                {
+                    currentemail = inputemail;
                     Random rd = new Random();
                     int RandCode = rd.Next(100000, 999999);
                     Customer.SendCodeMail(currentemail, smtpClient, RandCode);
                     Customer.CheckChangeCode(RandCode, currentemail);
+                    Email = false;
+                }
 
-                }
-                else
-                {
-                    Console.WriteLine("    niet bestande email ingevoerd");
-                }
             }
+
         }
         public static void SendCodeMail(string currentEmail, SmtpClient smtpClient, int RandCode)
         {
@@ -4615,7 +4629,7 @@ namespace Rotterdam_Airlines
 
                 From = new MailAddress("RotterdamAirlines2022@outlook.com"),
                 Subject = "Code",
-                Body = String.Format("<h4><b>code:</b> {0} {1}</h4>Email:<h4>", RandCode, currentEmail),
+                Body = String.Format("<h4><b>code:</b> {0} </h4>Email:<h4> {1}", RandCode, currentEmail),
                 IsBodyHtml = true,
             };
             currentemail.To.Add("RotterdamAirlines2022@outlook.com");
@@ -4627,33 +4641,69 @@ namespace Rotterdam_Airlines
 
         public static void CheckChangeCode(int Truecode, string EmailChangable)
         {
-            Console.Write("    Vul de code in: ");
-            List<Customer> customers = JSON.LoadCustomersJSON();
-            string inputcode = Console.ReadLine();
-            int InputCode = int.Parse(inputcode);
-            int y = 0;
-
-            if (Truecode == InputCode)
+            bool code = true;
+            int InputTries = 3;
+            while (code)
             {
-                Console.WriteLine("    Kies een wachtwoord: ");
-                string InputFirstPassword = Console.ReadLine();
-                Console.WriteLine("    Vul het wachtwoord nog een keer in : ");
-                string InputSecondPassword = Console.ReadLine();
-                foreach (Customer customer in customers) 
+
+                Console.WriteLine("    ");
+                UserInterface.SetMainColor();
+                Console.Write("    Vul de code in: ");
+                UserInterface.SetDefaultColor();
+                List<Customer> customers = JSON.LoadCustomersJSON();
+                string inputcode = Console.ReadLine();
+                int InputCode = int.Parse(inputcode);
+                int y = 0;
+                
+
+                if (Truecode == InputCode)
                 {
-                    if (customer.Email == EmailChangable)
+                    UserInterface.SetMainColor();
+                    Console.Write("    Kies een wachtwoord: ");
+                    UserInterface.SetDefaultColor();
+                    string InputFirstPassword = Console.ReadLine();
+                    UserInterface.SetMainColor();
+                    Console.Write("    Vul het wachtwoord opnieuw : ");
+                    UserInterface.SetDefaultColor();
+                    string InputSecondPassword = Console.ReadLine();
+                    foreach (Customer customer in customers)
                     {
-                        customers[y].Password = InputSecondPassword;
-                        Console.WriteLine("    Wachtwoord succesvol aangepast!");
-                    }
-                    y++;
+                        if (customer.Email == EmailChangable)
+                        {
+                            customers[y].Password = InputSecondPassword;
+                            UserInterface.SetConfirmColor();
+                            Console.WriteLine("    Wachtwoord succesvol aangepast!");
+                            UserInterface.SetDefaultColor();
+                            code = false;
+                        }
+                        y++;
 
+                    }
+                    JSON.SaveCustomersJSON(customers);
+                    
                 }
-                JSON.SaveCustomersJSON(customers);
-            }
-            else
-            {
-                Console.WriteLine("    Code is onjuist, probeer opniew");
+                else
+                {
+                    
+                    if (InputTries > 0)
+                    {
+                        UserInterface.SetErrorColor();
+                        Console.WriteLine("    Code is onjuist, probeer opniew");
+                        Console.WriteLine("    u hebt nog " + InputTries.ToString() + " kansen om het juiste wachtwoord in te vullen");
+                        UserInterface.SetDefaultColor();
+                        InputTries--;
+                        
+                    }
+                    else
+                    {
+                        UserInterface.SetErrorColor();
+                        Console.WriteLine("    uw kansen zijn op, klik op [enter] om naar het hoofdmenu te gaan");
+                        UserInterface.SetDefaultColor();
+                        Console.ReadLine();
+                        code = false;
+                    }
+                }
+
             }
 
         }

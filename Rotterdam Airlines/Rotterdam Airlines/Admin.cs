@@ -708,7 +708,7 @@ namespace Rotterdam_Airlines
                 if (check == false)
                 {
                     Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    UserInterface.SetErrorColor();
                     Console.WriteLine("    Er bestaan geen gebruikers met deze gegevens");
                     return false;
                 }
@@ -716,7 +716,7 @@ namespace Rotterdam_Airlines
             else
             {
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
+                UserInterface.SetErrorColor();
                 Console.WriteLine("    Verkeerde input");
                 Console.ReadLine();
             }
@@ -1194,6 +1194,7 @@ namespace Rotterdam_Airlines
             Console.WriteLine("    [0] Hoofdmenu");
             Console.WriteLine("    [1] Terug");
             Console.WriteLine();
+            UserInterface.SetMainColor();
             UserInterface.SetDefaultColor();
             Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine();
