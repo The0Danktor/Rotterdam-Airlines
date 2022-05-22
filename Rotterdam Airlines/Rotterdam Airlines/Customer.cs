@@ -806,7 +806,7 @@ namespace Rotterdam_Airlines
             // IMPORT SEAT JSON AT START FOR CONVENIENCE
             Console.CursorVisible = false;
             Dictionary<string, List<Seat>> seatJson = JSON.LoadSeatsJSON();
-            JSON.SaveSeatsJSON(seatJson);
+            //JSON.SaveSeatsJSON(seatJson);
             Console.CursorVisible = true;
 
             // FILTERS
@@ -817,6 +817,12 @@ namespace Rotterdam_Airlines
                 {"Aantal Personen", 1},
                 {"Maximum Prijs", 1000}
             };
+            // SORTING
+            // oldest date:   date-
+            // newest date:   date+
+            // lowest price:  price-
+            // highest price: price+
+            string SortType = "date+";
 
             // LOCAL FUNCTIONS
             string[][] GenerateBookingSteps()
@@ -1008,7 +1014,7 @@ namespace Rotterdam_Airlines
 
                         while (SelectingFlight)
                         {
-                            FilteredFlights = FilterHandler.filterList(AllFlights, Filters, "");
+                            FilteredFlights = FilterHandler.filterList(AllFlights, Filters, SortType, seatJson);
                             MaxPagesDec = FilteredFlights.Count / 10;
                             MaxPages = (int)Math.Ceiling(MaxPagesDec);
                             Console.Clear();
@@ -1235,6 +1241,48 @@ namespace Rotterdam_Airlines
 
                                 // SORTEREN
                                 case 3:
+                                    UserInterface.SetMainColor();
+                                    Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                    UserInterface.SetDefaultColor();
+                                    Console.WriteLine();
+                                    Console.WriteLine("    [1] Terug");
+                                    Console.WriteLine();
+                                    Console.WriteLine("    [2] Vroegste datum eerst");
+                                    Console.WriteLine("    [3] Laatste datum eerst");
+                                    Console.WriteLine("    [4] Goedkoopste stoelen eerst");
+                                    Console.WriteLine("    [5] Duurste stoelen eerst");
+                                    Console.WriteLine();
+                                    Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                    Console.WriteLine();
+                                    UserInterface.SetMainColor();
+                                    Console.Write("    Maak een keuze: ");
+                                    UserInterface.SetDefaultColor();
+
+                                    int InputSelectSort = 100;
+                                    try { InputSelectSort = int.Parse(Console.ReadLine()); } catch { }
+
+                                    switch (InputSelectSort)
+                                    {
+                                        case 1:
+                                            Console.Clear();
+                                            break;
+                                        case 2:
+                                            SortType = "date+";
+                                            Console.Clear();
+                                            break;
+                                        case 3:
+                                            SortType = "date-";
+                                            Console.Clear();
+                                            break;
+                                        case 4:
+                                            SortType = "price-";
+                                            Console.Clear();
+                                            break;
+                                        case 5:
+                                            SortType = "price+";
+                                            Console.Clear();
+                                            break;
+                                    }
                                     break;
                                 
                                 // VORIGE PAGINA
