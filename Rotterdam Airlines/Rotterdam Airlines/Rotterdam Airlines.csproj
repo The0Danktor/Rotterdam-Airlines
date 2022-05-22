@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="JSON\" />
     <Folder Include="img\" />
   </ItemGroup>
 

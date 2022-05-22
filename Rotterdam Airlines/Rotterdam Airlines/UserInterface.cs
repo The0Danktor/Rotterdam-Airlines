@@ -9,7 +9,7 @@ namespace Rotterdam_Airlines
     class UserInterface
     {
 
-        public static ConsoleColor MainColor = ConsoleColor.Blue;
+        public static ConsoleColor MainColor = ConsoleColor.Yellow;
         public static ConsoleColor DefaultColor = ConsoleColor.White;
         public static ConsoleColor ErrorColor = ConsoleColor.Red;
         public static ConsoleColor ConfirmColor = ConsoleColor.Green;
