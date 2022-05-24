@@ -4150,30 +4150,51 @@ namespace Rotterdam_Airlines
                                             Console.Write("~~");
                                             UserInterface.SetDefaultColor();
                                         }
-                                        if (seat.Special.Contains("limited") || seat.Special.Contains("missing"))
+                                        else if (seat.SeatClass == "first")
                                         {
-                                            if (seat.Special.Contains("increased"))
-                                            {
-                                                Console.ForegroundColor = ConsoleColor.Yellow;
-                                                Console.SetCursorPosition(Index + 4, i);
-                                                Console.Write(seat.Id);
-                                                UserInterface.SetDefaultColor();
-                                            }
-                                            else
-                                            {
-                                                Console.ForegroundColor = ConsoleColor.Red;
-                                                Console.SetCursorPosition(Index + 4, i);
-                                                Console.Write(seat.Id);
-                                                UserInterface.SetDefaultColor();
-                                            }
+                                            Console.ForegroundColor = ConsoleColor.Blue;
+                                            Console.SetCursorPosition(Index + 4, i);
+                                            Console.Write(seat.Id);
+                                            UserInterface.SetDefaultColor();
                                         }
-                                        else if (seat.Special.Contains("increased"))
+                                        else if (seat.SeatClass == "business")
                                         {
                                             Console.ForegroundColor = ConsoleColor.Green;
                                             Console.SetCursorPosition(Index + 4, i);
                                             Console.Write(seat.Id);
                                             UserInterface.SetDefaultColor();
                                         }
+                                        else if (seat.SeatClass == "economy")
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Yellow;
+                                            Console.SetCursorPosition(Index + 4, i);
+                                            Console.Write(seat.Id);
+                                            UserInterface.SetDefaultColor();
+                                        }
+                                        //if (seat.Special.Contains("limited") || seat.Special.Contains("missing"))
+                                        //{
+                                        //    if (seat.Special.Contains("increased"))
+                                        //    {
+                                        //        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        //        Console.SetCursorPosition(Index + 4, i);
+                                        //        Console.Write(seat.Id);
+                                        //        UserInterface.SetDefaultColor();
+                                        //    }
+                                        //    else
+                                        //    {
+                                        //        Console.ForegroundColor = ConsoleColor.Red;
+                                        //        Console.SetCursorPosition(Index + 4, i);
+                                        //        Console.Write(seat.Id);
+                                        //        UserInterface.SetDefaultColor();
+                                        //    }
+                                        //}
+                                        //else if (seat.Special.Contains("increased"))
+                                        //{
+                                        //    Console.ForegroundColor = ConsoleColor.Green;
+                                        //    Console.SetCursorPosition(Index + 4, i);
+                                        //    Console.Write(seat.Id);
+                                        //    UserInterface.SetDefaultColor();
+                                        //}
                                     }
                                 }
                                 foreach (string seat in BookingSelectedSeats)
@@ -4237,6 +4258,24 @@ namespace Rotterdam_Airlines
                             UserInterface.SetDefaultColor();
                             printPlane();
 
+                            Console.SetCursorPosition(75, 12);
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write("XX ");
+                            UserInterface.SetDefaultColor();
+                            Console.Write("= First class");
+
+                            Console.SetCursorPosition(75, 13);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write("XX ");
+                            UserInterface.SetDefaultColor();
+                            Console.Write("= Business class");
+
+                            Console.SetCursorPosition(75, 14);
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write("XX ");
+                            UserInterface.SetDefaultColor();
+                            Console.Write("= Economy class");
+
                             //int InputSelectSeat = 100;
                             //try { InputSelectSeat = int.Parse(Console.ReadLine()); } catch { }
 
@@ -4273,7 +4312,7 @@ namespace Rotterdam_Airlines
 
                                     //SCROLL PLANE TO LEFT
                                     case ConsoleKey.LeftArrow:
-                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 40)
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 80)
                                         {
                                             break;
                                         }
