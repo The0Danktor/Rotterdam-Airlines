@@ -180,13 +180,33 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 6:
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine();
-                        Console.WriteLine("    Bedankt voor uw bericht! We doen ons best om u binnen 24 uur een antwoord te sturen.");
-                        Console.WriteLine("    Klik op 'ENTER' om het bericht te versturen en terug te gaan naar het hoofdmenu.");
-                        Console.ReadLine();
-                        Creating = false;
-                        Console.Clear();
+                        bool InputIsNull = false;
+                        foreach(var x in ContactInfo)
+                        {
+                            if(x == null)
+                            {
+                                InputIsNull = true;
+                                break;
+                            }
+                        }
+                        if(InputIsNull || ContactInfo.Count == 0)
+                        {
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    U heeft niet alle velden ingevuld.");
+                            Console.WriteLine("    Klik op een willekeurige toets om verder te gaan.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        } else
+                        {
+                            UserInterface.SetConfirmColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    Bedankt voor uw bericht! We doen ons best om u binnen 24 uur een antwoord te sturen.");
+                            Console.WriteLine("    Klik op 'ENTER' om het bericht te versturen en terug te gaan naar het hoofdmenu.");
+                            Console.ReadLine();
+                            Creating = false;
+                            Console.Clear();
+                        }
                         break;
                     default:
                         Console.Clear();
