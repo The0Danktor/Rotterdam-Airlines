@@ -39,19 +39,11 @@ namespace Rotterdam_Airlines
             Console.WriteLine("    [1] Vlucht boeken");
             Console.WriteLine("    [2] Overzicht boekingen");
             Console.WriteLine("    [3] Mededelingen");
-            Console.WriteLine("    [4] Aanbiedingen");
-            Console.WriteLine("    [5] Informatie");
+            Console.WriteLine("    [4] Informatie");
             Console.WriteLine();
-            if (authorized) 
-            {
-                Console.WriteLine("    [6] Admin Menu");
-            }
-            else 
-            { 
-                Console.WriteLine("    [6] Account");
-            }
-            Console.WriteLine("    [7] Contact");
-            Console.WriteLine("    [8] Afsluiten");
+            Console.WriteLine("    [5] Account");
+            Console.WriteLine("    [6] Contact");
+            Console.WriteLine("    [7] Afsluiten");
             Console.WriteLine();
         }
 

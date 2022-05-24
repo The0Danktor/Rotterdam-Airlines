@@ -261,13 +261,8 @@ namespace Rotterdam_Airlines
                             Console.Clear();
                             break;
 
-                        // AANBIEDINGEN
-                        case ConsoleKey.D4:
-                            Console.Clear();
-                            break;
-
                         // INFORMATIE
-                        case ConsoleKey.D5:
+                        case ConsoleKey.D4:
                             bool InformationActive = true;
                             while (InformationActive)
                             {
@@ -376,7 +371,7 @@ namespace Rotterdam_Airlines
                             break;
 
                         // ACCOUNT
-                        case ConsoleKey.D6:
+                        case ConsoleKey.D5:
                             Console.Clear();
                             UserInterface.PrintAccountMenu(authorized, CurrentUser);
                             Console.WriteLine("    ────────────────────────────────────────────────────");
@@ -444,7 +439,7 @@ namespace Rotterdam_Airlines
                             break;
 
                         // CONTACT
-                        case ConsoleKey.D7:
+                        case ConsoleKey.D6:
                             Console.Clear();
                             Contact.PrintContactInfo();
                             UserInterface.SetMainColor();
@@ -475,7 +470,7 @@ namespace Rotterdam_Airlines
                             break;
 
                         // EXIT
-                        case ConsoleKey.D8:
+                        case ConsoleKey.D7:
                             Environment.Exit(0);
                             break;
 
