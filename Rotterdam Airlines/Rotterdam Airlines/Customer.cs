@@ -4564,16 +4564,16 @@ namespace Rotterdam_Airlines
                                                 }
                                             }
                                         }
+                                        UserInterface.SetConfirmColor();
                                         Console.WriteLine("    Boeking is Bevestiged en er is een email met informatie naar uw gestuurd.");
+                                        UserInterface.SetDefaultColor();
                                         Console.ReadKey();
                                         Console.Clear();
                                         JSON.SaveSeatsJSON(seatJson);
                                         Booking.SaveBooking(booking);
                                         BookingFlight = false;
                                         Confirming = false;
-                                        UserInterface.SetConfirmColor();
                                         EmailHandler.SendBookingConfirmation(booking);
-                                        UserInterface.SetDefaultColor();
                                         Console.Clear();
                                         break;
                                     }
