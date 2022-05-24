@@ -21,12 +21,13 @@ namespace Rotterdam_Airlines
         public static void PrintLogo()
         {
             SetDefaultColor();
-            Console.WriteLine(@"     _____       _   _               _                          _      _ _                 ");
-            Console.WriteLine(@"    |  __ \     | | | |             | |                   /\   (_)    | (_)                ");
-            Console.WriteLine(@"    | |__) |___ | |_| |_ ___ _ __ __| | __ _ _ __ ___    /  \   _ _ __| |_ _ __   ___  ___ ");
-            Console.WriteLine(@"    |  _  // _ \| __| __/ _ \ '__/ _` |/ _` | '_ ` _ \  / /\ \ | | '__| | | '_ \ / _ \/ __|");
-            Console.WriteLine(@"    | | \ \ (_) | |_| ||  __/ | | (_| | (_| | | | | | |/ ____ \| | |  | | | | | |  __/\__ \");
-            Console.WriteLine(@"    |_|  \_\___/ \__|\__\___|_|  \__,_|\__,_|_| |_| |_/_/    \_\_|_|  |_|_|_| |_|\___||___/");
+            Console.WriteLine();
+            Console.WriteLine(@"    ██████╗  ██████╗ ████████╗████████╗███████╗██████╗ ██████╗  █████╗ ███╗   ███╗     █████╗ ██╗██████╗ ██╗     ██╗███╗   ██╗███████╗███████╗");
+            Console.WriteLine(@"    ██╔══██╗██╔═══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔══██╗████╗ ████║    ██╔══██╗██║██╔══██╗██║     ██║████╗  ██║██╔════╝██╔════╝");
+            Console.WriteLine(@"    ██████╔╝██║   ██║   ██║      ██║   █████╗  ██████╔╝██║  ██║███████║██╔████╔██║    ███████║██║██████╔╝██║     ██║██╔██╗ ██║█████╗  ███████╗");
+            Console.WriteLine(@"    ██╔══██╗██║   ██║   ██║      ██║   ██╔══╝  ██╔══██╗██║  ██║██╔══██║██║╚██╔╝██║    ██╔══██║██║██╔══██╗██║     ██║██║╚██╗██║██╔══╝  ╚════██║");
+            Console.WriteLine(@"    ██║  ██║╚██████╔╝   ██║      ██║   ███████╗██║  ██║██████╔╝██║  ██║██║ ╚═╝ ██║    ██║  ██║██║██║  ██║███████╗██║██║ ╚████║███████╗███████║");
+            Console.WriteLine(@"    ╚═╝  ╚═╝ ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝");
             Console.WriteLine();
             SetDefaultColor();
         }
@@ -39,19 +40,11 @@ namespace Rotterdam_Airlines
             Console.WriteLine("    [1] Vlucht boeken");
             Console.WriteLine("    [2] Overzicht boekingen");
             Console.WriteLine("    [3] Mededelingen");
-            Console.WriteLine("    [4] Aanbiedingen");
-            Console.WriteLine("    [5] Informatie");
+            Console.WriteLine("    [4] Informatie");
             Console.WriteLine();
-            if (authorized) 
-            {
-                Console.WriteLine("    [6] Admin Menu");
-            }
-            else 
-            { 
-                Console.WriteLine("    [6] Account");
-            }
-            Console.WriteLine("    [7] Contact");
-            Console.WriteLine("    [8] Afsluiten");
+            Console.WriteLine("    [5] Account");
+            Console.WriteLine("    [6] Contact");
+            Console.WriteLine("    [7] Afsluiten");
             Console.WriteLine();
         }
 
