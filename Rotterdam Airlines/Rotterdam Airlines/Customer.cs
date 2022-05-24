@@ -1644,8 +1644,10 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine();
                                 Console.WriteLine($"    [2] Aantal Personen                - {Filters["Aantal Personen"]}");
                                 Console.WriteLine();
-                                Console.WriteLine($"    [3] Persoon 1");
-                                Console.WriteLine($"    [4] Persoon 2");
+                                if (BookingPersonData[0].CustomerFirstName == null) {Console.WriteLine($"    [3] Persoon 1");}
+                                else { Console.WriteLine($"    [3] {BookingPersonData[0].GetFullname()}"); }
+                                if (BookingPersonData[1].CustomerFirstName == null) { Console.WriteLine($"    [4] Persoon 2"); }
+                                else { Console.WriteLine($"    [4] {BookingPersonData[1].GetFullname()}"); }
                                 Console.WriteLine();
                                 Console.WriteLine($"    [5] Bevestigen");
                                 Console.WriteLine();
@@ -1677,7 +1679,19 @@ namespace Rotterdam_Airlines
                                             string InputPersons = Console.ReadLine();
                                             try
                                             {
-                                                if (Int32.Parse(InputPersons) < 5) { Filters["Aantal Personen"] = Int32.Parse(InputPersons); EnteringPersons = false; }
+                                                List<Seat>seatsforflight = seatJson[BookingSelectedFlight.FlightCode];
+                                                int available = 0;
+                                                foreach (Seat seat in seatsforflight)
+                                                {
+                                                    if (seat.Occupant == null)
+                                                    {
+                                                        available += 1;
+                                                    }
+                                                }
+                                                if (Int32.Parse(InputPersons) < 5 && Int32.Parse(InputPersons) <= available ) 
+                                                { 
+                                                    Filters["Aantal Personen"] = Int32.Parse(InputPersons); EnteringPersons = false;
+                                                }
                                                 else
                                                 {
                                                     UserInterface.SetErrorColor();
@@ -2179,9 +2193,12 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine();
                                 Console.WriteLine($"    [2] Aantal Personen                - {Filters["Aantal Personen"]}");
                                 Console.WriteLine();
-                                Console.WriteLine($"    [3] Persoon 1");
-                                Console.WriteLine($"    [4] Persoon 2");
-                                Console.WriteLine($"    [5] Persoon 3");
+                                if (BookingPersonData[0].CustomerFirstName == null) { Console.WriteLine($"    [3] Persoon 1"); }
+                                else { Console.WriteLine($"    [3] {BookingPersonData[0].GetFullname()}"); }
+                                if (BookingPersonData[1].CustomerFirstName == null) { Console.WriteLine($"    [4] Persoon 2"); }
+                                else { Console.WriteLine($"    [4] {BookingPersonData[0].GetFullname()}"); }
+                                if (BookingPersonData[2].CustomerFirstName == null) { Console.WriteLine($"    [5] Persoon 3"); }
+                                else { Console.WriteLine($"    [5] {BookingPersonData[0].GetFullname()}"); }
                                 Console.WriteLine();
                                 Console.WriteLine($"    [6] Bevestigen");
                                 Console.WriteLine();
@@ -2940,10 +2957,14 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine();
                                 Console.WriteLine($"    [2] Aantal Personen                - {Filters["Aantal Personen"]}");
                                 Console.WriteLine();
-                                Console.WriteLine($"    [3] Persoon 1");
-                                Console.WriteLine($"    [4] Persoon 2");
-                                Console.WriteLine($"    [5] Persoon 3");
-                                Console.WriteLine($"    [6] Persoon 4");
+                                if (BookingPersonData[0].CustomerFirstName == null) { Console.WriteLine($"    [3] Persoon 1"); }
+                                else { Console.WriteLine($"    [3] {BookingPersonData[0].GetFullname()}"); }
+                                if (BookingPersonData[0].CustomerFirstName == null) { Console.WriteLine($"    [4] Persoon 2"); }
+                                else { Console.WriteLine($"    [4] {BookingPersonData[0].GetFullname()}"); }
+                                if (BookingPersonData[0].CustomerFirstName == null) { Console.WriteLine($"    [5] Persoon 3"); }
+                                else { Console.WriteLine($"    [5] {BookingPersonData[0].GetFullname()}"); }
+                                if (BookingPersonData[0].CustomerFirstName == null) { Console.WriteLine($"    [6] Persoon 4"); }
+                                else { Console.WriteLine($"    [6] {BookingPersonData[0].GetFullname()}"); }
                                 Console.WriteLine();
                                 Console.WriteLine($"    [7] Bevestigen");
                                 Console.WriteLine();
