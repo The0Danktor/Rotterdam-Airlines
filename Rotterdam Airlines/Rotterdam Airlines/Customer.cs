@@ -799,7 +799,7 @@ namespace Rotterdam_Airlines
             bool FlightSelected = false;
             TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
 
-            List<Flight> AllFlights = Flight.GetFlights();
+            List<Flight> AllFlights = JSON.LoadFlightsJSON();
             List<Flight> FilteredFlights = Flight.GetFlights();
             List<string> FlightDestinations = Flight.GetFlightDestinations();
 
