@@ -32,7 +32,7 @@ namespace Rotterdam_Airlines
             foreach (var user in user_list)
             {
 
-                if (input == user_list[user_count].Email)
+                if (input.ToLower() == user_list[user_count].Email.ToLower())
                 {
                     check = true;
                     break;
@@ -54,7 +54,7 @@ namespace Rotterdam_Airlines
                 Admin.PrintRemoveUserConfirmScreen();
                 foreach (var user in user_list)
                 {
-                    if (input == user_list[count].Email)
+                    if (input.ToLower() == user_list[count].Email.ToLower())
                     {
                         check = true;
                         int choice = count;
@@ -97,7 +97,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (input == user_list[count].Email && confirm == 2)
+                        if (input.ToLower() == user_list[count].Email.ToLower() && confirm == 2)
                         {
                             email_check = true;
                             int choice = count;
@@ -178,7 +178,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Email || user_input == user_list[number].First_name || user_input == user_list[number].Prefix || user_input == user_list[number].Last_name || user_input == user_list[number].Country || user_input == user_list[number].Gender || user_input == user_list[number].Birth_date || user_input == user_list[number].Phone_number || user_input == user_list[number].UserId)
+                        if (user_input.ToLower() == user_list[number].Email.ToLower() || user_input.ToLower() == user_list[number].First_name.ToLower() || user_input.ToLower() == user_list[number].Prefix.ToLower() || user_input.ToLower() == user_list[number].Last_name.ToLower() || user_input.ToLower() == user_list[number].Country.ToLower() || user_input.ToLower() == user_list[number].Gender.ToLower() || user_input.ToLower() == user_list[number].Birth_date.ToLower() || user_input.ToLower() == user_list[number].Phone_number.ToLower() || user_input.ToLower() == user_list[number].UserId.ToLower())
                         {
                             user_count += 1;
                         }
@@ -188,7 +188,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Email || user_input == user_list[count].First_name || user_input == user_list[count].Prefix || user_input == user_list[count].Last_name || user_input == user_list[count].Country || user_input == user_list[count].Gender || user_input == user_list[count].Birth_date || user_input == user_list[count].Phone_number || user_input == user_list[count].UserId)
+                        if (user_input.ToLower() == user_list[count].Email.ToLower() || user_input.ToLower() == user_list[count].First_name.ToLower() || user_input.ToLower() == user_list[count].Prefix.ToLower() || user_input.ToLower() == user_list[count].Last_name.ToLower() || user_input.ToLower() == user_list[count].Country.ToLower() || user_input.ToLower() == user_list[count].Gender.ToLower() || user_input.ToLower() == user_list[count].Birth_date.ToLower() || user_input.ToLower() == user_list[count].Phone_number.ToLower() || user_input.ToLower() == user_list[count].UserId.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -233,7 +233,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].UserId)
+                        if (user_input.ToLower() == user_list[number].UserId.ToLower())
                         {
                             user_count += 1;
                         }
@@ -243,7 +243,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].UserId)
+                        if (user_input.ToLower() == user_list[count].UserId.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -288,7 +288,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].First_name)
+                        if (user_input.ToLower() == user_list[number].First_name.ToLower())
                         {
                             user_count += 1;
                         }
@@ -298,7 +298,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].First_name)
+                        if (user_input.ToLower() == user_list[count].First_name.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -343,7 +343,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Prefix)
+                        if (user_input.ToLower() == user_list[number].Prefix.ToLower())
                         {
                             user_count += 1;
                         }
@@ -353,7 +353,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Prefix)
+                        if (user_input.ToLower() == user_list[count].Prefix.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -398,7 +398,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Last_name)
+                        if (user_input.ToLower() == user_list[number].Last_name.ToLower())
                         {
                             user_count += 1;
                         }
@@ -408,7 +408,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Last_name)
+                        if (user_input.ToLower() == user_list[count].Last_name.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -453,7 +453,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Country)
+                        if (user_input.ToLower() == user_list[number].Country.ToLower())
                         {
                             user_count += 1;
                         }
@@ -463,7 +463,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Country)
+                        if (user_input.ToLower() == user_list[count].Country.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -508,7 +508,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Gender)
+                        if (user_input.ToLower() == user_list[number].Gender.ToLower())
                         {
                             user_count += 1;
                         }
@@ -518,7 +518,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Gender)
+                        if (user_input.ToLower() == user_list[count].Gender.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -563,7 +563,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Birth_date)
+                        if (user_input.ToLower() == user_list[number].Birth_date.ToLower())
                         {
                             user_count += 1;
                         }
@@ -573,7 +573,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Birth_date)
+                        if (user_input.ToLower() == user_list[count].Birth_date.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -618,7 +618,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Phone_number)
+                        if (user_input.ToLower() == user_list[number].Phone_number.ToLower())
                         {
                             user_count += 1;
                         }
@@ -628,7 +628,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (input == user_list[count].Phone_number)
+                        if (input.ToLower() == user_list[count].Phone_number.ToLower())
                         {
                             check = true;
                             int choice = count;
@@ -673,7 +673,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var people in user_list)
                     {
-                        if (user_input == user_list[number].Email)
+                        if (user_input.ToLower() == user_list[number].Email.ToLower())
                         {
                             user_count += 1;
                         }
@@ -683,7 +683,7 @@ namespace Rotterdam_Airlines
 
                     foreach (var user in user_list)
                     {
-                        if (user_input == user_list[count].Email)
+                        if (user_input.ToLower() == user_list[count].Email.ToLower())
                         {
                             check = true;
                             int choice = count;
