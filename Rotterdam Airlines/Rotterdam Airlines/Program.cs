@@ -273,6 +273,7 @@ namespace Rotterdam_Airlines
                             bool ViewingFlightScheme = true;
                             while(ViewingFlightScheme)
                             {
+                                Console.Clear();
                                 UserInterface.PrintLogo();
                                 UserInterface.SetMainColor();
                                 Console.WriteLine("    Rotterdam Airlines | Vluchtschema (Alle vluchten van vandaag)");
@@ -306,6 +307,7 @@ namespace Rotterdam_Airlines
                                 Console.WriteLine();
                                 UserInterface.SetMainColor();
                                 Console.WriteLine("    ────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
                                 Console.Write("    Maak een keuze: ");
                                 UserInterface.SetDefaultColor();
 
