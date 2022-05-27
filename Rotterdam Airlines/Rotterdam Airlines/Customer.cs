@@ -1021,7 +1021,7 @@ namespace Rotterdam_Airlines
                             {
                                 DateTime DepartureInfo = flight.Departure;
                                 string Departure = DepartureInfo.ToString("MMMM", Dutch);
-                                if (DateTime.Compare(DateTime.Now, DepartureInfo) > 0)
+                                if (DateTime.Compare(DateTime.Now, DepartureInfo) > 0 || flight.Cancelled == true)
                                 {
                                     FilteredFlights.Remove(flight);
                                 }
@@ -1328,6 +1328,15 @@ namespace Rotterdam_Airlines
                                                 Console.ReadKey();
                                                 BookingSelectedFlight = null;
                                                 break;
+                                            } else if(BookingSelectedFlight.Cancelled == true)
+                                            {
+                                                UserInterface.SetErrorColor();
+                                                Console.WriteLine();
+                                                Console.WriteLine("    Deze vlucht is geannuleerd! Klik op een willekeurige toets om verder te gaan.");
+                                                UserInterface.SetDefaultColor();
+                                                Console.ReadKey();
+                                                BookingSelectedFlight = null;
+                                                break;
                                             }
                                             BookingSelectedSeats = new List<string>();
                                             FlightSelected = true;
@@ -1359,7 +1368,6 @@ namespace Rotterdam_Airlines
                         break;
                     //PERSOONS GEGEVENS INVULLEN
                     case 2:
-                        BookingSteps[1][1] = "Y";
                         bool ChangingPersoons = true;
                         if(BookingSelectedFlight == null) 
                         {
@@ -1369,6 +1377,7 @@ namespace Rotterdam_Airlines
                             Console.ReadKey(true);
                             break;
                         }
+                        BookingSteps[1][1] = "Y";
                         while (ChangingPersoons)
                         {   
 
@@ -3947,7 +3956,6 @@ namespace Rotterdam_Airlines
                         break;
                     // CONTACT GEGEVENS INVULLEN
                     case 3:
-                        BookingSteps[2][1] = "Y";
                         if (BookingSelectedFlight == null)
                         {
                             UserInterface.SetErrorColor();
@@ -3956,6 +3964,7 @@ namespace Rotterdam_Airlines
                             Console.ReadKey(true);
                             break;
                         }
+                        BookingSteps[2][1] = "Y";
                         bool ChangingContactGegevens = true;
                         while (ChangingContactGegevens)
                         {
@@ -4064,6 +4073,7 @@ namespace Rotterdam_Airlines
                         bool AddingLuggage = true;
                         while (AddingLuggage)
                         {
+                            BookingSteps[3][1] = "Y";
                             Console.Clear();
                             UserInterface.PrintLogo();
                             PrintBookingStatus();
@@ -4088,6 +4098,7 @@ namespace Rotterdam_Airlines
                             switch(InputSelectingLuggage.Key)
                             {
                                 case ConsoleKey.D0:
+                                    BookingSteps[3][1] = "X";
                                     break;
                                 case ConsoleKey.D1:
                                     AddingLuggage = false;
@@ -4115,14 +4126,17 @@ namespace Rotterdam_Airlines
                                     break;
                                 case ConsoleKey.D3:
                                     AddingLuggage = false;
+                                    BookingSteps[3][1] = "X";
                                     break;
                                 default:
                                     Console.WriteLine();
                                     Console.WriteLine("    Verkeerde menu input. Klik een willekeurige toets om het opnieuw te proberen...");
                                     Console.ReadKey(true);
+                                    BookingSteps[3][1] = "X";
                                     break;
                             }
                         }
+                        BookingSteps[3][1] = "X";
                         break;
 
                     // STOELEN KIEZEN
