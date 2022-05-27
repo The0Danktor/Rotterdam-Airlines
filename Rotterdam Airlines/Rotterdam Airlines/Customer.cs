@@ -986,8 +986,12 @@ namespace Rotterdam_Airlines
                         int CurrentPage = 0;
                         double MaxPagesDec = FilteredFlights.Count / 10;
                         int MaxPages = (int)Math.Ceiling(MaxPagesDec);
-                        void PrintFlightsOverview()
+
+                        void PrintFlightsOverview(List<Flight> flightList)
                         {
+                            CultureInfo Dutch = new CultureInfo("nl-NL", false);
+                            MaxPagesDec = flightList.Count / 10;
+                            MaxPages = (int)Math.Ceiling(MaxPagesDec);
                             UserInterface.SetMainColor();
                             Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek                              Pagina " + (CurrentPage + 1) + "/" + (MaxPages + 1));
                             Console.WriteLine();
@@ -998,23 +1002,30 @@ namespace Rotterdam_Airlines
                                 int index = i + (CurrentPage * 10);
                                 try
                                 {
-                                    CultureInfo Dutch = new CultureInfo("nl-NL", false);
-                                    TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
-                                    DateTime DepartureInfo = FilteredFlights[index].Departure;
+                                    DateTime DepartureInfo = flightList[index].Departure;
                                     string Departure = DepartureInfo.ToString("MMMM", Dutch);
                                     Departure = textInfo.ToTitleCase(Departure);
-                                    Console.WriteLine("    " + FilteredFlights[index].FlightCode + "\t  " + FilteredFlights[index].FlightNumber + "\t   " + FilteredFlights[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
+                                    Console.WriteLine("    " + flightList[index].FlightCode + "\t  " + flightList[index].FlightNumber + "\t   " + flightList[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
                                 }
                                 catch (System.ArgumentOutOfRangeException)
                                 {
-                                    Console.Write("");
                                 }
                             }
                         }
 
                         while (SelectingFlight)
                         {
+                            CultureInfo Dutch = new CultureInfo("nl-NL", false);
                             FilteredFlights = FilterHandler.filterList(AllFlights, Filters, SortType, seatJson);
+                            foreach (Flight flight in FilteredFlights.ToList())
+                            {
+                                DateTime DepartureInfo = flight.Departure;
+                                string Departure = DepartureInfo.ToString("MMMM", Dutch);
+                                if (DateTime.Compare(DateTime.Now, DepartureInfo) > 0)
+                                {
+                                    FilteredFlights.Remove(flight);
+                                }
+                            }
                             MaxPagesDec = FilteredFlights.Count / 10;
                             MaxPages = (int)Math.Ceiling(MaxPagesDec);
                             Console.Clear();
@@ -1038,7 +1049,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine();
-                            PrintFlightsOverview();
+                            PrintFlightsOverview(FilteredFlights);
                             Console.WriteLine("");
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine("");
@@ -1308,6 +1319,16 @@ namespace Rotterdam_Airlines
                                         {
                                             int index = Flight.GetFlightIndex(InputFlightCode);
                                             BookingSelectedFlight = Flight.Flights[index];
+                                            if(DateTime.Compare(DateTime.Now, BookingSelectedFlight.Departure) > 0)
+                                            {
+                                                UserInterface.SetErrorColor();
+                                                Console.WriteLine();
+                                                Console.WriteLine("    Deze vlucht is niet meer beschikbaar! Klik op een willekeurige toets om verder te gaan.");
+                                                UserInterface.SetDefaultColor();
+                                                Console.ReadKey();
+                                                BookingSelectedFlight = null;
+                                                break;
+                                            }
                                             BookingSelectedSeats = new List<string>();
                                             FlightSelected = true;
                                             EnteringFlightCode = false;
@@ -1318,6 +1339,8 @@ namespace Rotterdam_Airlines
                                             Console.WriteLine();
                                             Console.WriteLine("    De ingevoerde vluchtcode is niet gevonden! Probeer het opnieuw.");
                                             UserInterface.SetDefaultColor();
+                                            Console.ReadKey();
+                                            break;
                                         }
 
                                         // CHECK IF INPUT IS CORRECT AND ASSIGN FLIGHT TO BOOKINGSELECTEDFLIGHT
