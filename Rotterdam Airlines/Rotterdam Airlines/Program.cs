@@ -256,8 +256,69 @@ namespace Rotterdam_Airlines
                             Console.Clear();
                             break;
 
-                        // MEDEDELINGEN
+                        // VLUCHTSCHEMA
                         case ConsoleKey.D3:
+                            Console.Clear();
+                            List<Flight> AllFlights = JSON.LoadFlightsJSON();
+                            List<Flight> TodayFlights = new List<Flight>();
+
+                            foreach (Flight flight in AllFlights)
+                            {
+                                if(flight.Departure.Date == DateTime.Now.Date)
+                                {
+                                    TodayFlights.Add(flight);
+                                }
+                            }
+
+                            bool ViewingFlightScheme = true;
+                            while(ViewingFlightScheme)
+                            {
+                                UserInterface.PrintLogo();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Rotterdam Airlines | Vluchtschema (Alle vluchten van vandaag)");
+                                Console.WriteLine("    ────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine("    [0] Hoofdmenu");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    ────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                if (TodayFlights.Count > 0)
+                                {
+                                    Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek                 Status");
+                                    Console.WriteLine();
+                                    UserInterface.SetDefaultColor();
+                                    foreach (Flight flight in TodayFlights)
+                                    {
+                                        string FlightStatus = "";
+                                        if(flight.Cancelled == true) { FlightStatus = "Geannuleerd"; }
+                                        else if(DateTime.Compare(DateTime.Now, flight.Departure) > 0) { FlightStatus = "Vertrokken"; }
+                                        Console.WriteLine("    " + flight.FlightCode + "\t  " + flight.FlightNumber + "\t   " + flight.Destination + " \t\t" + flight.Departure + "\t" + FlightStatus);
+                                    }
+                                } else
+                                {
+                                    UserInterface.SetErrorColor();
+                                    Console.WriteLine("    Geen vluchten gevonden...");
+                                    UserInterface.SetDefaultColor();
+                                }
+
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    ────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.Write("    Maak een keuze: ");
+                                UserInterface.SetDefaultColor();
+
+                                var InputSearchBookings = Console.ReadKey(true);
+                                switch (InputSearchBookings.Key) {
+                                    case ConsoleKey.D0:
+                                        ViewingFlightScheme = false;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+
                             Console.Clear();
                             break;
 
