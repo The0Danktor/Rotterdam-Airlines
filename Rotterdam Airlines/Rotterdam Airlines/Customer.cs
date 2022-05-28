@@ -4491,6 +4491,8 @@ namespace Rotterdam_Airlines
                             UserInterface.SetDefaultColor();
                             Console.Write("= Economy class");
 
+                            Console.SetCursorPosition(20, 37);
+
                             //int InputSelectSeat = 100;
                             //try { InputSelectSeat = int.Parse(Console.ReadLine()); } catch { }
 
@@ -4506,6 +4508,7 @@ namespace Rotterdam_Airlines
                                         BookingFlight = SelectingFlight;
                                         Console.Clear();
                                         running = false;
+                                        oldSlice = -1;
                                         break;
 
                                     // BACK TO PREV
