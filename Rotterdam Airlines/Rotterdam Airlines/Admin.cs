@@ -147,569 +147,580 @@ namespace Rotterdam_Airlines
             string question = "";
             string screen = "Gebruiker Opzoeken";
 
-            bool ViewingUserInfoScreen = true;
-            while(ViewingUserInfoScreen)
+            if (input == "0" || input == "1" || input == "2" || input == "3" || input == "4" || input == "5" || input == "6" || input == "7" || input == "8" || input == "9" || input == "10")
             {
-                if (input == "0" || input == "1" || input == "2" || input == "3" || input == "4" || input == "5" || input == "6" || input == "7" || input == "8" || input == "9" || input == "10")
+                int input_int = int.Parse(input);
+
+                if (input_int == 0)
                 {
-                    int input_int = int.Parse(input);
+                    return true;
+                }
+                else if (input_int == 1)
+                {
+                    Console.Clear();
+                    question = "Wat is het woord waar u naar wilt zoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
 
-                    if (input_int == 0)
+                    if (user_input == "0" || user_input == "1")
                     {
-                        ViewingUserInfoScreen = false;
-                        break;
-                    }
-                    else if (input_int == 1)
-                    {
-                        Console.Clear();
-                        question = "Wat is het woord waar u naar wilt zoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
+                        int user_input_int = int.Parse(user_input);
 
-                        if (user_input == "0" || user_input == "1")
+                        if (user_input_int == 0)
                         {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
+                            return true;
                         }
-
-                        foreach (var people in user_list)
+                        else if (user_input_int == 1)
                         {
-                            if (user_input.ToLower() == user_list[number].Email.ToLower() || user_input.ToLower() == user_list[number].First_name.ToLower() || user_input.ToLower() == user_list[number].Prefix.ToLower() || user_input.ToLower() == user_list[number].Last_name.ToLower() || user_input.ToLower() == user_list[number].Country.ToLower() || user_input.ToLower() == user_list[number].Gender.ToLower() || user_input.ToLower() == user_list[number].Birth_date.ToLower() || user_input.ToLower() == user_list[number].Phone_number.ToLower() || user_input.ToLower() == user_list[number].UserId.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Email.ToLower() || user_input.ToLower() == user_list[count].First_name.ToLower() || user_input.ToLower() == user_list[count].Prefix.ToLower() || user_input.ToLower() == user_list[count].Last_name.ToLower() || user_input.ToLower() == user_list[count].Country.ToLower() || user_input.ToLower() == user_list[count].Gender.ToLower() || user_input.ToLower() == user_list[count].Birth_date.ToLower() || user_input.ToLower() == user_list[count].Phone_number.ToLower() || user_input.ToLower() == user_list[count].UserId.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
+                            return false;
                         }
                     }
-                    else if (input_int == 2)
+
+                    foreach (var people in user_list)
                     {
-                        Console.Clear();
-                        question = "Wat is de gebruikersID van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
+                        if (user_input.ToLower() == user_list[number].Email.ToLower() || user_input.ToLower() == user_list[number].First_name.ToLower() || user_input.ToLower() == user_list[number].Prefix.ToLower() || user_input.ToLower() == user_list[number].Last_name.ToLower() || user_input.ToLower() == user_list[number].Country.ToLower() || user_input.ToLower() == user_list[number].Gender.ToLower() || user_input.ToLower() == user_list[number].Birth_date.ToLower() || user_input.ToLower() == user_list[number].Phone_number.ToLower() || user_input.ToLower() == user_list[number].UserId.ToLower())
                         {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
+                            user_count += 1;
                         }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].UserId.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].UserId.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
+                        number += 1;
                     }
-                    else if (input_int == 3)
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
                     {
-                        Console.Clear();
-                        question = "Wat is de voornaam van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
+                        if (user_input.ToLower() == user_list[count].Email.ToLower() || user_input.ToLower() == user_list[count].First_name.ToLower() || user_input.ToLower() == user_list[count].Prefix.ToLower() || user_input.ToLower() == user_list[count].Last_name.ToLower() || user_input.ToLower() == user_list[count].Country.ToLower() || user_input.ToLower() == user_list[count].Gender.ToLower() || user_input.ToLower() == user_list[count].Birth_date.ToLower() || user_input.ToLower() == user_list[count].Phone_number.ToLower() || user_input.ToLower() == user_list[count].UserId.ToLower())
                         {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
                         }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].First_name.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].First_name.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 4)
-                    {
-                        Console.Clear();
-                        question = "Wat is het tussenvoegsel van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Prefix.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Prefix.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 5)
-                    {
-                        Console.Clear();
-                        question = "Wat is de achternaam van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Last_name.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Last_name.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 6)
-                    {
-                        Console.Clear();
-                        question = "Wat is het land van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Country.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Country.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 7)
-                    {
-                        Console.Clear();
-                        question = "Wat is het geslacht van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Gender.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Gender.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 8)
-                    {
-                        Console.Clear();
-                        question = "Wat is de geboortedatum van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Birth_date.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Birth_date.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 9)
-                    {
-                        Console.Clear();
-                        question = "Wat is het telefoonnummer van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Phone_number.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (input.ToLower() == user_list[count].Phone_number.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    else if (input_int == 10)
-                    {
-                        Console.Clear();
-                        question = "Wat is de email van de gebruiker die u wilt opzoeken?";
-                        Admin.PrintSearchUserInfoSubScreen(screen, question);
-                        string user_input = Console.ReadLine();
-
-                        if (user_input == "0" || user_input == "1")
-                        {
-                            int user_input_int = int.Parse(user_input);
-
-                            if (user_input_int == 0)
-                            {
-                            }
-                            else if (user_input_int == 1)
-                            {
-                            }
-                        }
-
-                        foreach (var people in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[number].Email.ToLower())
-                            {
-                                user_count += 1;
-                            }
-                            number += 1;
-                        }
-                        Admin.PrintNumberOfResults(user_count);
-
-                        foreach (var user in user_list)
-                        {
-                            if (user_input.ToLower() == user_list[count].Email.ToLower())
-                            {
-                                check = true;
-                                int choice = count;
-                                Console.WriteLine();
-                                UserInterface.SetDefaultColor();
-                                Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
-                                Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
-                                Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
-                                Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
-                                Console.WriteLine("    Land:                 " + user_list[choice].Country);
-                                Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
-                                Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
-                                Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
-                                Console.WriteLine("    Email:                " + user_list[choice].Email);
-                                Console.WriteLine();
-                                UserInterface.SetMainColor();
-                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
-                            }
-                            count += 1;
-                        }
-                    }
-                    if (check == false)
-                    {
-                        Console.WriteLine();
-                        UserInterface.SetErrorColor();
-                        Console.WriteLine("    Er bestaan geen gebruikers met deze gegevens");
-                        return false;
+                        count += 1;
                     }
                 }
-                else
+                else if (input_int == 2)
+                {
+                    Console.Clear();
+                    question = "Wat is de gebruikersID van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].UserId.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].UserId.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 3)
+                {
+                    Console.Clear();
+                    question = "Wat is de voornaam van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].First_name.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].First_name.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 4)
+                {
+                    Console.Clear();
+                    question = "Wat is het tussenvoegsel van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Prefix.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].Prefix.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 5)
+                {
+                    Console.Clear();
+                    question = "Wat is de achternaam van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Last_name.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].Last_name.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 6)
+                {
+                    Console.Clear();
+                    question = "Wat is het land van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Country.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].Country.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 7)
+                {
+                    Console.Clear();
+                    question = "Wat is het geslacht van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Gender.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].Gender.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 8)
+                {
+                    Console.Clear();
+                    question = "Wat is de geboortedatum van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Birth_date.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].Birth_date.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 9)
+                {
+                    Console.Clear();
+                    question = "Wat is het telefoonnummer van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Phone_number.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (input.ToLower() == user_list[count].Phone_number.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                else if (input_int == 10)
+                {
+                    Console.Clear();
+                    question = "Wat is de email van de gebruiker die u wilt opzoeken?";
+                    Admin.PrintSearchUserInfoSubScreen(screen, question);
+                    string user_input = Console.ReadLine();
+
+                    if (user_input == "0" || user_input == "1")
+                    {
+                        int user_input_int = int.Parse(user_input);
+
+                        if (user_input_int == 0)
+                        {
+                            return true;
+                        }
+                        else if (user_input_int == 1)
+                        {
+                            return false;
+                        }
+                    }
+
+                    foreach (var people in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[number].Email.ToLower())
+                        {
+                            user_count += 1;
+                        }
+                        number += 1;
+                    }
+                    Admin.PrintNumberOfResults(user_count);
+
+                    foreach (var user in user_list)
+                    {
+                        if (user_input.ToLower() == user_list[count].Email.ToLower())
+                        {
+                            check = true;
+                            int choice = count;
+                            Console.WriteLine();
+                            UserInterface.SetDefaultColor();
+                            Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
+                            Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);
+                            Console.WriteLine("    Tussenvoegsel:        " + user_list[choice].Prefix);
+                            Console.WriteLine("    Achternaam:           " + user_list[choice].Last_name);
+                            Console.WriteLine("    Land:                 " + user_list[choice].Country);
+                            Console.WriteLine("    Geslacht:             " + user_list[choice].Gender);
+                            Console.WriteLine("    Geboortedatum:        " + user_list[choice].Birth_date);
+                            Console.WriteLine("    Telefoonnummer:       " + user_list[choice].Phone_number);
+                            Console.WriteLine("    Email:                " + user_list[choice].Email);
+                            Console.WriteLine();
+                            UserInterface.SetMainColor();
+                            Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                        }
+                        count += 1;
+                    }
+                }
+                if (check == false)
                 {
                     Console.WriteLine();
                     UserInterface.SetErrorColor();
-                    Console.WriteLine("    Verkeerde input");
-                    Console.ReadLine();
+                    Console.WriteLine("    Er bestaan geen gebruikers met deze gegevens");
+                    return false;
                 }
             }
-
-            
-            return false;
+            else
+            {
+                Console.WriteLine();
+                UserInterface.SetErrorColor();
+                Console.WriteLine("    Verkeerde input");
+                Console.ReadLine();
+            }
+            return true;
         }
 
         public static void PrintAdminMainScreen()
