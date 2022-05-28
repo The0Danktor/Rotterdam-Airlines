@@ -128,7 +128,7 @@ namespace Rotterdam_Airlines
                 }
             }
             Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
-            Console.WriteLine($"    [3] Naam                           - {CurrentUser.First_name}");
+            Console.WriteLine($"    [3] Voornaam                       - {CurrentUser.First_name}");
             if(CurrentUser.Prefix == null || CurrentUser.Prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name} {CurrentUser.Prefix}"); } 
             else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name}, {CurrentUser.Prefix}"); }
             Console.WriteLine($"    [5] Land                           - {CurrentUser.Country}");

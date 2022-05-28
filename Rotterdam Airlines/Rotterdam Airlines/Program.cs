@@ -295,7 +295,18 @@ namespace Rotterdam_Airlines
                                         string FlightStatus = "";
                                         if(flight.Cancelled == true) { FlightStatus = "Geannuleerd"; }
                                         else if(DateTime.Compare(DateTime.Now, flight.Departure) > 0) { FlightStatus = "Vertrokken"; }
-                                        Console.WriteLine("    " + flight.FlightCode + "\t  " + flight.FlightNumber + "\t   " + flight.Destination + " \t\t" + flight.Departure + "\t" + FlightStatus);
+                                        Console.Write("    " + flight.FlightCode + "\t  " + flight.FlightNumber + "\t   " + flight.Destination + " \t\t" + flight.Departure + "\t");
+                                        if(FlightStatus == "Geannuleerd")
+                                        {
+                                            UserInterface.SetErrorColor();
+                                            Console.WriteLine(FlightStatus);
+                                            UserInterface.SetDefaultColor();
+                                        } else
+                                        {
+                                            UserInterface.SetConfirmColor();
+                                            Console.WriteLine(FlightStatus);
+                                            UserInterface.SetDefaultColor();
+                                        }
                                     }
                                 } else
                                 {

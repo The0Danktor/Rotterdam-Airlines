@@ -195,6 +195,8 @@ namespace Rotterdam_Airlines
                                 check = true;
                                 int choice = count;
                                 Console.WriteLine();
+                                Console.WriteLine("    ───────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
                                 UserInterface.SetDefaultColor();
                                 Console.WriteLine("    GebruikersID:         " + user_list[choice].UserId);
                                 Console.WriteLine("    Voornaam:             " + user_list[choice].First_name);

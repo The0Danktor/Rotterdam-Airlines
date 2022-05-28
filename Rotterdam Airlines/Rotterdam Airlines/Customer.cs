@@ -8,7 +8,7 @@ using System.Globalization;
 using Newtonsoft.Json;
 using System.Collections;
 using System.Text.RegularExpressions;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace Rotterdam_Airlines
 {
@@ -183,7 +183,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
                             UserInterface.SetDefaultColor();
                             Console.WriteLine();
-                            Console.WriteLine("    " + FlightTarget.FlightCode + "\t  " + FlightTarget.FlightNumber + "\t   " + FlightTarget.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
+                            Console.WriteLine("    " + FlightTarget.FlightCode + "\t  " + FlightTarget.FlightNumber + "\t   " + FlightTarget.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t");
                             Console.WriteLine();
                             Console.WriteLine();
                             UserInterface.SetMainColor();
@@ -330,7 +330,7 @@ namespace Rotterdam_Airlines
                         if (!UserFound)
                         {
                             UserInterface.SetErrorColor();
-                            Console.WriteLine("    Geen gebruiker gevonden met dit emailadress Druk op een willekeurige toets om door te gaan ");
+                            Console.WriteLine("    Geen gebruiker gevonden met dit emailadres. Druk op een willekeurige toets om door te gaan ");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);
                             Console.Clear();
@@ -422,8 +422,24 @@ namespace Rotterdam_Airlines
                 switch (register_choice)
                 {
                     case 0:
-                        CurrentUser.SetToDefault();
-                        creating = false;
+                        Console.WriteLine();
+                        Console.WriteLine("    Weet u zeker dat u wilt annuleren? Uw gegevens worden niet opgeslagen.");
+                        Console.WriteLine();
+                        Console.WriteLine("    [1] Ja");
+                        Console.WriteLine("    [2] Nee");
+                        Console.WriteLine();
+                        UserInterface.SetMainColor();
+                        Console.Write("    Maak een keuze: ");
+                        var ConfirmInput = Console.ReadKey(true);
+                        switch(ConfirmInput.Key)
+                        {
+                            case ConsoleKey.D1:
+                                CurrentUser.SetToDefault();
+                                creating = false;
+                                break;
+                            default:
+                                break;
+                        }
                         break;
                     case 1:
                         while (true)
@@ -444,7 +460,7 @@ namespace Rotterdam_Airlines
                                     UserInterface.SetDefaultColor();
                                 } else
                                 {
-                                    if (TempEmail.Contains("@") && TempEmail.Contains("."))
+                                    if (new EmailAddressAttribute().IsValid(TempEmail))
                                     {
                                         CurrentUser.Email = TempEmail;
                                         Console.Clear();
@@ -525,7 +541,7 @@ namespace Rotterdam_Airlines
                         {
                             Console.WriteLine();
                             UserInterface.SetMainColor();
-                            Console.Write("    Vul uw naam in: ");
+                            Console.Write("    Vul uw voornaam in: ");
                             UserInterface.SetDefaultColor();
                             string TempFirstName = Console.ReadLine();
                             if (TempFirstName.All(char.IsLetter))
@@ -589,7 +605,7 @@ namespace Rotterdam_Airlines
                         {
                             UserInterface.SetMainColor();
                             Console.WriteLine();
-                            Console.Write("    Vul uw land in: ");
+                            Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                             UserInterface.SetDefaultColor();
                             string InputCountry = Console.ReadLine();
                             InputCountry = InputCountry.ToLower();
@@ -641,7 +657,7 @@ namespace Rotterdam_Airlines
                             else
                             {
                                 Console.ForegroundColor= ConsoleColor.Red;
-                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                 UserInterface.SetDefaultColor();
                             }
                         }
@@ -665,7 +681,7 @@ namespace Rotterdam_Airlines
                             DateTime today = DateTime.Today;
                             if (validDate) 
                             {
-                                if ((today.Subtract(scheduleDate).Days/365.242199) >= 18)
+                                if ((today.Subtract(scheduleDate).Days/365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                 {
                                     CurrentUser.Birth_date = TempBirthDate;
                                     Console.Clear();
@@ -673,11 +689,24 @@ namespace Rotterdam_Airlines
                                 }
                                 else
                                 { 
-                                    UserInterface.SetErrorColor();
-                                    Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken Druk op een willekeurige toets om door te gaan.");
-                                    UserInterface.SetDefaultColor();
-                                    Console.ReadKey(true);
-                                    Console.Clear();
+                                    if((today.Subtract(scheduleDate).Days / 365.242199) >= 125 || (today.Subtract(scheduleDate).Days / 365.242199) <= 0)
+                                    {
+                                        UserInterface.SetErrorColor();
+                                        Console.WriteLine();
+                                        Console.WriteLine("    Dit is geen realistische leeftijd. Druk op een willekeurige toets om door te gaan.");
+                                        UserInterface.SetDefaultColor();
+                                        Console.ReadKey(true);
+                                        Console.Clear();
+                                    } else
+                                    {
+                                        UserInterface.SetErrorColor();
+                                        Console.WriteLine();
+                                        Console.WriteLine("    Je moet achtien jaar en ouder zijn om een account aan te maken. Druk op een willekeurige toets om door te gaan.");
+                                        UserInterface.SetDefaultColor();
+                                        Console.ReadKey(true);
+                                        Console.Clear();
+                                    }
+
                                     break;
                                 }
                             }
@@ -691,25 +720,23 @@ namespace Rotterdam_Airlines
                         }
                         break;
                     case 8:
-                        while (true) 
+                        Console.WriteLine();
+                        UserInterface.SetMainColor();
+                        Console.Write("    Vul uw telefoonnummer in (Alleen nummers): ");
+                        UserInterface.SetDefaultColor();
+                        string TempPhoneNumber = Console.ReadLine();
+                        if (Regex.IsMatch(TempPhoneNumber, @"^[0-9]{8,15}$"))
                         {
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.Write("    Vul uw telefoonnummer in: ");
+                            CurrentUser.Phone_number = TempPhoneNumber;
+                            Console.Clear();
+                            break;
+                        }
+                        else
+                        {
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine("    Onjuiste invoer. Klik op een willekeurige toets om het opnieuw te proberen\n    (Uw invoer moet maximaal 15 characters lang zijn en uw mag alleen cijfers gebruiken)");
                             UserInterface.SetDefaultColor();
-                            string TempPhoneNumber = Console.ReadLine();
-                            if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
-                            {
-                                CurrentUser.Phone_number = TempPhoneNumber;
-                                Console.Clear();
-                                break;
-                            }
-                            else
-                            {
-                                UserInterface.SetErrorColor();
-                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
-                                UserInterface.SetDefaultColor();
-                            }
+                            Console.ReadKey();
                         }
                         break;
                     case 9:
@@ -725,9 +752,11 @@ namespace Rotterdam_Airlines
                         }
                         else
                         {
-                            Console.Clear();
+                            Console.WriteLine();
                             UserInterface.SetErrorColor();
-                            Console.WriteLine("    Niet alle velden zijn ingevuld.");
+                            Console.WriteLine("    Niet alle velden zijn ingevuld. Klik op een willekeurige toets om het opnieuw te proberen.");
+                            Console.ReadKey();
+                            UserInterface.SetDefaultColor();
                         }
                         break;
                 }
@@ -898,7 +927,7 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
                     UserInterface.SetDefaultColor();
                     Console.WriteLine();
-                    Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
+                    Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
                     Console.WriteLine();
                     Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
 
@@ -1049,7 +1078,13 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine();
-                            PrintFlightsOverview(FilteredFlights);
+                            if(FilteredFlights.Count > 0) { PrintFlightsOverview(FilteredFlights); }
+                            else {
+                                UserInterface.SetErrorColor();
+                                Console.WriteLine("    Geen vluchten gevonden...");
+                                UserInterface.SetDefaultColor();
+                            }
+                            
                             Console.WriteLine("");
                             Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                             Console.WriteLine("");
@@ -1529,7 +1564,7 @@ namespace Rotterdam_Airlines
                                         {
                                             UserInterface.SetMainColor();
                                             Console.WriteLine();
-                                            Console.Write("    Vul uw land in: ");
+                                            Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                             UserInterface.SetDefaultColor();
                                             string InputCountry = Console.ReadLine();
                                             InputCountry = InputCountry.ToLower();
@@ -1582,7 +1617,7 @@ namespace Rotterdam_Airlines
                                             else
                                             {
                                                 UserInterface.SetErrorColor();
-                                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                 UserInterface.SetDefaultColor();
                                             }
                                         }
@@ -1606,7 +1641,7 @@ namespace Rotterdam_Airlines
                                             DateTime today = DateTime.Today;
                                             if (validDate)
                                             {
-                                                if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                 {
                                                     BookingPersonData[0].CustomerBirthDate = TempBirthDate;
                                                     Console.Clear();
@@ -1632,14 +1667,26 @@ namespace Rotterdam_Airlines
                                         }
                                         break;
                                     case 8:
-                                        while (true)
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Vul uw BSN in: ");
+                                        UserInterface.SetDefaultColor();
+                                        string BSNInput = Console.ReadLine();
+                                        if(Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                         {
+                                            UserInterface.SetErrorColor();
                                             Console.WriteLine();
-                                            UserInterface.SetMainColor();
-                                            Console.Write("    Vull uw BSN in: ");
-                                            UserInterface.SetDefaultColor();
-                                            BookingPersonData[0].CustomerBSN = Console.ReadLine();
-                                            break;
+                                            Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                            Console.ReadKey();
+                                        } else if(BSNInput.Length > 9)
+                                        {
+                                            UserInterface.SetErrorColor();
+                                            Console.WriteLine();
+                                            Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                            Console.ReadKey();
+                                        } else
+                                        {
+                                            BookingPersonData[0].CustomerBSN = BSNInput;
                                         }
                                         break;
                                     case 9:
@@ -1850,7 +1897,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -1903,7 +1950,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -1927,7 +1974,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[0].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -1953,14 +2000,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[0].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[0].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -2011,7 +2072,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         Console.WriteLine();
                                                         UserInterface.SetMainColor();
-                                                        Console.Write("    Vul uw naam in: ");
+                                                        Console.Write("    Vul uw voornaam in: ");
                                                         UserInterface.SetDefaultColor();
                                                         string TempFirstName = Console.ReadLine();
                                                         if (TempFirstName.All(char.IsLetter))
@@ -2075,7 +2136,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -2128,7 +2189,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -2152,7 +2213,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[1].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -2178,14 +2239,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[1].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[1].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -2389,7 +2464,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -2442,7 +2517,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -2466,7 +2541,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[0].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -2492,14 +2567,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[0].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[0].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -2614,7 +2703,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -2667,7 +2756,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -2691,7 +2780,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[1].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -2717,14 +2806,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[1].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[1].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -2839,7 +2942,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -2892,7 +2995,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -2916,7 +3019,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[2].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -2942,14 +3045,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[2].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[2].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -3155,7 +3272,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -3208,7 +3325,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -3232,7 +3349,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[0].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -3258,14 +3375,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[0].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[0].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -3380,7 +3511,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -3433,7 +3564,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -3457,7 +3588,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[1].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -3483,14 +3614,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[1].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[1].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -3605,7 +3750,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -3658,7 +3803,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -3682,7 +3827,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[2].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -3708,14 +3853,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[2].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[2].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -3830,7 +3989,7 @@ namespace Rotterdam_Airlines
                                                     {
                                                         UserInterface.SetMainColor();
                                                         Console.WriteLine();
-                                                        Console.Write("    Vul uw land in: ");
+                                                        Console.Write("    Vul uw land in (Bijvoorbeeld: Nederland): ");
                                                         UserInterface.SetDefaultColor();
                                                         string InputCountry = Console.ReadLine();
                                                         InputCountry = InputCountry.ToLower();
@@ -3883,7 +4042,7 @@ namespace Rotterdam_Airlines
                                                         else
                                                         {
                                                             UserInterface.SetErrorColor();
-                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1 of 2 invoeren)");
+                                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (U mag alleen 1, 2 of 3 invoeren)");
                                                             UserInterface.SetDefaultColor();
                                                         }
                                                     }
@@ -3907,7 +4066,7 @@ namespace Rotterdam_Airlines
                                                         DateTime today = DateTime.Today;
                                                         if (validDate)
                                                         {
-                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18)
+                                                            if ((today.Subtract(scheduleDate).Days / 365.242199) >= 18 && (today.Subtract(scheduleDate).Days / 365.242199) <= 135)
                                                             {
                                                                 BookingPersonData[3].CustomerBirthDate = TempBirthDate;
                                                                 Console.Clear();
@@ -3933,14 +4092,28 @@ namespace Rotterdam_Airlines
                                                     }
                                                     break;
                                                 case 7:
-                                                    while (true)
+                                                    Console.WriteLine();
+                                                    UserInterface.SetMainColor();
+                                                    Console.Write("    Vul uw BSN in: ");
+                                                    UserInterface.SetDefaultColor();
+                                                    string BSNInput = Console.ReadLine();
+                                                    if (Regex.IsMatch(BSNInput, @"^[a-zA-Z]+$"))
                                                     {
+                                                        UserInterface.SetErrorColor();
                                                         Console.WriteLine();
-                                                        UserInterface.SetMainColor();
-                                                        Console.Write("    Vull uw BSN in: ");
-                                                        UserInterface.SetDefaultColor();
-                                                        BookingPersonData[3].CustomerBSN = Console.ReadLine();
-                                                        break;
+                                                        Console.WriteLine("    Uw BSN mag alleen nummers bevatten. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else if (BSNInput.Length > 9)
+                                                    {
+                                                        UserInterface.SetErrorColor();
+                                                        Console.WriteLine();
+                                                        Console.WriteLine("    Uw BSN kan niet langer zijn dan 9 cijfers. Klik op een willekeurige toets om het opnieuw te proberen.");
+                                                        Console.ReadKey();
+                                                    }
+                                                    else
+                                                    {
+                                                        BookingPersonData[3].CustomerBSN = BSNInput;
                                                     }
                                                     break;
                                             }
@@ -4013,7 +4186,7 @@ namespace Rotterdam_Airlines
                                         try
                                         {
 
-                                            if (TempEmail.Contains("@") && TempEmail.Contains("."))
+                                            if (new EmailAddressAttribute().IsValid(TempEmail))
                                             {
                                                 CurrentUser.Email = TempEmail;
                                                 Console.Clear();
@@ -4037,25 +4210,22 @@ namespace Rotterdam_Airlines
                                     break;
 
                                 case 3:
-                                    while (true)
+                                    Console.WriteLine();
+                                    UserInterface.SetMainColor();
+                                    Console.Write("    Vul uw telefoonnummer in (Alleen nummers): ");
+                                    UserInterface.SetDefaultColor();
+                                    string TempPhoneNumber = Console.ReadLine();
+                                    if (Regex.IsMatch(TempPhoneNumber, @"^[0-9]{8,15}$"))
                                     {
-                                        Console.WriteLine();
-                                        UserInterface.SetMainColor();
-                                        Console.Write("    Vul uw telefoonnummer in: ");
+                                        CurrentUser.Phone_number = TempPhoneNumber;
+                                        Console.Clear();
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        UserInterface.SetErrorColor();
+                                        Console.WriteLine("    Onjuiste invoer. Klik op een willekeurige toets om het opnieuw te proberen\n    (Uw invoer moet maximaal 15 characters lang zijn en uw mag alleen cijfers gebruiken)");
                                         UserInterface.SetDefaultColor();
-                                        string TempPhoneNumber = Console.ReadLine();
-                                        if (TempPhoneNumber.All(char.IsNumber) && TempPhoneNumber.Length == 10)
-                                        {
-                                            CurrentUser.Phone_number = TempPhoneNumber;
-                                            Console.Clear();
-                                            break;
-                                        }
-                                        else
-                                        {
-                                            UserInterface.SetErrorColor();
-                                            Console.WriteLine("    Onjuiste invoer. Probeer opnieuw. (Uw invoer moet 10 characters lang zijn en uw mag alleen cijfers gebruiken)");
-                                            UserInterface.SetDefaultColor();
-                                        }
                                     }
                                     break;
                                 case 4:
@@ -4540,7 +4710,7 @@ namespace Rotterdam_Airlines
                             Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
                             UserInterface.SetDefaultColor();
                             Console.WriteLine();
-                            Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t< Gekozen Vlucht");
+                            Console.WriteLine("    " + BookingSelectedFlight.FlightCode + "\t  " + BookingSelectedFlight.FlightNumber + "\t   " + BookingSelectedFlight.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t");
                             Console.WriteLine();
                             Console.WriteLine();
                             UserInterface.SetMainColor();
