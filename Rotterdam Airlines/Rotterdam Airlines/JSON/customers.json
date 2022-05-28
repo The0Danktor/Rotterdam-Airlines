@@ -12,5 +12,19 @@
     "IsGuest": false,
     "Email": "j@.",
     "Password": "testtest"
+  },
+  {
+    "UserId": "wwrXheur",
+    "First_name": "Lucas",
+    "Prefix": "de",
+    "Last_name": "",
+    "Country": "Nederland",
+    "Gender": "Man",
+    "Birth_date": "17-08-2002",
+    "Phone_number": "0634998880",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "lucas2002prins@gmail.com",
+    "Password": "lucasprins"
   }
 ]
