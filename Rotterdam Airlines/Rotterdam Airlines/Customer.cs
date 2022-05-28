@@ -588,7 +588,15 @@ namespace Rotterdam_Airlines
                             if (TempLastName.All(char.IsLetter)) 
                             { 
                                 CurrentUser.Last_name = textInfo.ToTitleCase(TempLastName.ToLower());
-                                Console.Clear();
+                                if (TempLastName == "" || TempLastName == " " || TempLastName == null)
+                                {
+                                    CurrentUser.Last_name = null;
+                                    CurrentUser.Prefix = null;
+                                    Console.WriteLine();
+                                    UserInterface.SetErrorColor();
+                                    Console.WriteLine("    U kunt niet alleen een tussenvoegsel invoeren. Klik op een willekeurige toets om verder te gaan");
+                                    Console.ReadKey();
+                                }
                                 break;
                             }
                             else
