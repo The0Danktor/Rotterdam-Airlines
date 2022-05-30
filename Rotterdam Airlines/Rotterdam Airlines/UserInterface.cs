@@ -144,6 +144,44 @@ namespace Rotterdam_Airlines
             Console.Write("    Maak een keuze: ");
             UserInterface.SetDefaultColor();
         }
+
+        public static void PrintAccountChangingMenu(Customer CurrentUser)
+        {
+            UserInterface.PrintLogo();
+            UserInterface.SetMainColor();
+            Console.WriteLine("    Rotterdam Airlines | Account | Gegevens aanpassen");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetDefaultColor();
+            Console.WriteLine($"    [0] Annuleren         ");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Email                          - {CurrentUser.Email}");
+            string HiddenPassword = "";
+            if (CurrentUser.Password != null)
+            {
+                for (int i = 0; CurrentUser.Password.Length > i; i++)
+                {
+                    HiddenPassword += "*";
+                }
+            }
+            Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
+            Console.WriteLine($"    [3] Voornaam                       - {CurrentUser.First_name}");
+            if (CurrentUser.Prefix == null || CurrentUser.Prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name} {CurrentUser.Prefix}"); }
+            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name}, {CurrentUser.Prefix}"); }
+            Console.WriteLine($"    [5] Land                           - {CurrentUser.Country}");
+            Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.Gender}");
+            Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.Birth_date}");
+            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrentUser.Phone_number}");
+            Console.WriteLine();
+            Console.WriteLine($"    [9] Gegeven opslaan       ");
+            Console.WriteLine();
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetMainColor();
+            Console.Write("    Maak een keuze: ");
+            UserInterface.SetDefaultColor();
+        }
+
         public static void PrintInfoMenu()
         {
             Console.WriteLine($"    [0] Hoofdmenu");

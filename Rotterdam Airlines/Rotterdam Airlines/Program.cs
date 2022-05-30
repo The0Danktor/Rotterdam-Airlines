@@ -446,67 +446,76 @@ namespace Rotterdam_Airlines
 
                         // ACCOUNT
                         case ConsoleKey.D5:
-                            Console.Clear();
-                            UserInterface.PrintAccountMenu(authorized, CurrentUser);
-                            Console.WriteLine("    ────────────────────────────────────────────────────");
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.Write("    Maak een keuze: ");
-                            UserInterface.SetDefaultColor();
-                            int account_choice = 100;
-                            try { account_choice = int.Parse(Console.ReadLine()); } catch { }
-                            // Options for when no one is logged in
-                            if (CurrentUser.IsGuest)
+                            bool AccountMenu = true;
+                            while (AccountMenu)
                             {
-                                switch (account_choice)
-                                {
-                                    case 0:
-                                        break;
-                                    case 1:
-                                        Console.Clear();
-                                        Type check = typeof(Customer);
-                                        object LoginInformation = Customer.Login(AdminUser, CurrentUser);
-                                        if (LoginInformation.GetType().Equals(check))
-                                        {
-                                            CurrentUser = (Customer)LoginInformation;
-                                        }
-                                        else
-                                        {
-                                            authorized = true;
-                                        }
-                                        break;
-                                    case 2:
-                                        Console.Clear();
-                                        Customer.RegisterCustomer(CurrentUser);
-                                        break;
-                                    case 3:
-                                        Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        
 
-                                        Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
-                                        Console.WriteLine("    ──────────────────────────────────────────────────");
-                                        UserInterface.SetDefaultColor();
-                                        Customer.ChangePassword(smtpClient);
-                                        break;
-                                }
-                            }
-                            // Options for when a admin is logged in 
-                            else if (authorized) { }
-                            // Options for when a user is logged in 
-                            else
-                            {
-                                switch (account_choice)
+                                Console.Clear();
+                                UserInterface.PrintAccountMenu(authorized, CurrentUser);
+                                Console.WriteLine("    ────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.Write("    Maak een keuze: ");
+                                UserInterface.SetDefaultColor();
+                                ConsoleKey account_choice = Console.ReadKey(true).Key;
+                                // Options for when no one is logged in
+                                if (CurrentUser.IsGuest)
                                 {
-                                    case 0:
-                                        break;
-                                    case 1:
-                                        break;
-                                    case 2:
-                                        break;
-                                    case 3:
-                                        CurrentUser.SetToDefault();
-                                        break;
+                                    switch (account_choice)
+                                    {
+                                        case ConsoleKey.D0:
+                                            AccountMenu = false;
+                                            break;
+                                        case ConsoleKey.D1:
+                                            Console.Clear();
+                                            Type check = typeof(Customer);
+                                            object LoginInformation = Customer.Login(AdminUser, CurrentUser);
+                                            if (LoginInformation.GetType().Equals(check))
+                                            {
+                                                CurrentUser = (Customer)LoginInformation;
+                                            }
+                                            else
+                                            {
+                                                authorized = true;
+                                            }
+                                            break;
+                                        case ConsoleKey.D2:
+                                            Console.Clear();
+                                            Customer.RegisterCustomer(CurrentUser);
+                                            break;
+                                        case ConsoleKey.D3:
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+
+
+                                            Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
+                                            Console.WriteLine("    ──────────────────────────────────────────────────");
+                                            UserInterface.SetDefaultColor();
+                                            Customer.ChangePassword(smtpClient);
+                                            break;
+                                    }
+                                }
+                                // Options for when a admin is logged in 
+                                else if (authorized) { }
+                                // Options for when a user is logged in 
+                                else
+                                {
+
+                                    switch (account_choice)
+                                    {
+                                        case ConsoleKey.D0:
+                                            AccountMenu = false;
+                                            break;
+                                        case ConsoleKey.D1:
+                                            CurrentUser.ChangeAccount(CurrentUser);
+                                            break;
+                                        case ConsoleKey.D2:
+                                            CurrentUser.ViewBookings();
+                                            break;
+                                        case ConsoleKey.D3:
+                                            CurrentUser.SetToDefault();
+                                            break;
+                                    }
                                 }
                             }
                             Console.Clear();
