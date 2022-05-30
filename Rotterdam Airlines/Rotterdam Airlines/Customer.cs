@@ -4499,6 +4499,8 @@ namespace Rotterdam_Airlines
                             bool running = true;
                             while (running)
                             {
+                                while (Console.KeyAvailable)
+                                    Console.ReadKey(false);
                                 var InputSelectSeat = Console.ReadKey(true);
                                 switch (InputSelectSeat.Key)
                                 {
@@ -4530,12 +4532,8 @@ namespace Rotterdam_Airlines
 
                                     //SCROLL PLANE TO LEFT
                                     case ConsoleKey.LeftArrow:
-                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 80)
-                                        {
-                                            break;
-                                        }
                                         int extraLeft = 0;
-                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 70)
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 200)
                                         {
                                             extraLeft = 1;
                                         }
@@ -4547,12 +4545,8 @@ namespace Rotterdam_Airlines
 
                                     // SCROLL PLANE TO RIGHT
                                     case ConsoleKey.RightArrow:
-                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 50)
-                                        {
-                                            break;
-                                        }
                                         int extraRight = 0;
-                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 70)
+                                        if ((DateTime.Now - cooldown).TotalMilliseconds < 200)
                                         {
                                             extraRight = 1;
                                         }
