@@ -26,5 +26,19 @@
     "IsGuest": false,
     "Email": "lucas2002prins@gmail.com",
     "Password": "lucasprins"
+  },
+  {
+    "UserId": "5BezDBpv",
+    "First_name": "Fabio",
+    "Prefix": "van 't",
+    "Last_name": "Hoff",
+    "Country": "Nederland",
+    "Gender": "Man",
+    "Birth_date": "26-01-2003",
+    "Phone_number": "0611111111",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "f@gmail.com",
+    "Password": "testtest"
   }
 ]
