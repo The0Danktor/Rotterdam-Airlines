@@ -31,5 +31,38 @@
     "BookingDiscount": 0.0,
     "CheckedLuggage": true,
     "Cancelled": false
+  },
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": "000056",
+        "CustomerFirstName": "Jamie",
+        "CustomerMiddleName": "de",
+        "CustomerLastName": "Leest",
+        "CustomerBirthDate": "31-01-2004",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "123456789"
+      }
+    ],
+    "SeatList": [
+      {
+        "Id": "S0",
+        "SeatClass": "economy",
+        "Occupant": "Yes",
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 42.9
+      }
+    ],
+    "CustomerID": "_uwcZG_P",
+    "CustomerPhoneNumber": "1234567890",
+    "CustomerEmail": "jamie@gmail.com",
+    "FlightCode": "000056",
+    "BookingID": "000002",
+    "BookingPrice": 67.9,
+    "BookingDiscount": 0.0,
+    "CheckedLuggage": true,
+    "Cancelled": false
   }
 ]
