@@ -88,10 +88,10 @@ namespace Rotterdam_Airlines
                     case 1:
                         while (true)
                         {
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine();
                             Console.WriteLine("    Wat is uw voornaam?");
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.Write("    ");
                             contact_first_name = Console.ReadLine();
                             Console.WriteLine();
@@ -102,7 +102,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opniew. (U mag alleen letters gebruiken)");
                                 Console.WriteLine();
                             }
@@ -112,10 +112,10 @@ namespace Rotterdam_Airlines
                     case 2:
                         while (true)
                         {
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine();
                             Console.WriteLine("    Wat is uw achternaam? (+ tussenvoegsel!)");
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.Write("    ");
                             contact_last_name = Console.ReadLine();
                             Console.WriteLine();
@@ -126,7 +126,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opniew. (U mag alleen letters gebruiken)");
                                 Console.WriteLine();
                             }
@@ -136,10 +136,10 @@ namespace Rotterdam_Airlines
                     case 3:
                         while (true)
                         {
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            UserInterface.SetMainColor();
                             Console.WriteLine();
                             Console.WriteLine("    Wat is uw emailadres?");
-                            Console.ForegroundColor = ConsoleColor.White;
+                            UserInterface.SetDefaultColor();
                             Console.Write("    ");
                             contact_email = Console.ReadLine();
                             Console.WriteLine();
@@ -150,7 +150,7 @@ namespace Rotterdam_Airlines
                             }
                             else
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                UserInterface.SetErrorColor();
                                 Console.WriteLine("    Onjuiste invoer. Probeer opniew. (Uw email moet een '@' en een punt bevatten)");
                                 Console.WriteLine();
                             }
@@ -158,10 +158,10 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 4:
-                        Console.ForegroundColor = ConsoleColor.Blue;
+                        UserInterface.SetMainColor();
                         Console.WriteLine();
                         Console.WriteLine("    Wat is het onderwerp van uw bericht?");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        UserInterface.SetDefaultColor();
                         Console.Write("    ");
                         contact_subject = Console.ReadLine();
                         Console.WriteLine();
@@ -169,10 +169,10 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 5:
-                        Console.ForegroundColor = ConsoleColor.Blue;
+                        UserInterface.SetMainColor();
                         Console.WriteLine();
                         Console.WriteLine("    Wat is uw vraag/opmerking?");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        UserInterface.SetDefaultColor();
                         Console.Write("    ");
                         contact_message = Console.ReadLine();
                         Console.WriteLine();
@@ -180,13 +180,33 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case 6:
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine();
-                        Console.WriteLine("    Bedankt voor uw bericht! We doen ons best om u binnen 24 uur een antwoord te sturen.");
-                        Console.WriteLine("    Klik op 'ENTER' om het bericht te versturen en terug te gaan naar het hoofdmenu.");
-                        Console.ReadLine();
-                        Creating = false;
-                        Console.Clear();
+                        bool InputIsNull = false;
+                        foreach(var x in ContactInfo)
+                        {
+                            if(x == null)
+                            {
+                                InputIsNull = true;
+                                break;
+                            }
+                        }
+                        if(InputIsNull || ContactInfo.Count == 0)
+                        {
+                            UserInterface.SetErrorColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    U heeft niet alle velden ingevuld.");
+                            Console.WriteLine("    Klik op een willekeurige toets om verder te gaan.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        } else
+                        {
+                            UserInterface.SetConfirmColor();
+                            Console.WriteLine();
+                            Console.WriteLine("    Bedankt voor uw bericht! We doen ons best om u binnen 24 uur een antwoord te sturen.");
+                            Console.WriteLine("    Klik op 'ENTER' om het bericht te versturen en terug te gaan naar het hoofdmenu.");
+                            Console.ReadLine();
+                            Creating = false;
+                            Console.Clear();
+                        }
                         break;
                     default:
                         Console.Clear();

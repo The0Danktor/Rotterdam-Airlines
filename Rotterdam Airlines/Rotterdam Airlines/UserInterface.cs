@@ -9,7 +9,7 @@ namespace Rotterdam_Airlines
     class UserInterface
     {
 
-        public static ConsoleColor MainColor = ConsoleColor.Blue;
+        public static ConsoleColor MainColor = ConsoleColor.Yellow;
         public static ConsoleColor DefaultColor = ConsoleColor.White;
         public static ConsoleColor ErrorColor = ConsoleColor.Red;
         public static ConsoleColor ConfirmColor = ConsoleColor.Green;
@@ -38,20 +38,12 @@ namespace Rotterdam_Airlines
             
             Console.WriteLine("    [1] Vlucht boeken");
             Console.WriteLine("    [2] Overzicht boekingen");
-            Console.WriteLine("    [3] Mededelingen");
-            Console.WriteLine("    [4] Aanbiedingen");
-            Console.WriteLine("    [5] Informatie");
+            Console.WriteLine("    [3] Vluchtschema");
+            Console.WriteLine("    [4] Informatie");
             Console.WriteLine();
-            if (authorized) 
-            {
-                Console.WriteLine("    [6] Admin Menu");
-            }
-            else 
-            { 
-                Console.WriteLine("    [6] Account");
-            }
-            Console.WriteLine("    [7] Contact");
-            Console.WriteLine("    [8] Afsluiten");
+            Console.WriteLine("    [5] Account");
+            Console.WriteLine("    [6] Contact");
+            Console.WriteLine("    [7] Afsluiten");
             Console.WriteLine();
         }
 
@@ -62,7 +54,7 @@ namespace Rotterdam_Airlines
             {
                 PrintLogo();
                 SetMainColor();
-                Console.WriteLine($"    Rotterdam Airlines | Account ({CurrentUser.first_name})");
+                Console.WriteLine($"    Rotterdam Airlines | Account ({CurrentUser.First_name})");
                 Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                 SetDefaultColor();
                 Console.WriteLine();
@@ -126,23 +118,23 @@ namespace Rotterdam_Airlines
             UserInterface.SetDefaultColor();
             Console.WriteLine($"    [0] Annuleren         ");
             Console.WriteLine();
-            Console.WriteLine($"    [1] Email                          - {CurrentUser.email}");
+            Console.WriteLine($"    [1] Email                          - {CurrentUser.Email}");
             string HiddenPassword = "";
-            if(CurrentUser.password != null)
+            if(CurrentUser.Password != null)
             {
-                for (int i = 0; CurrentUser.password.Length > i; i++)
+                for (int i = 0; CurrentUser.Password.Length > i; i++)
                 {
                      HiddenPassword += "*";
                 }
             }
             Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
-            Console.WriteLine($"    [3] Naam                           - {CurrentUser.first_name}");
-            if(CurrentUser.prefix == null || CurrentUser.prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name} {CurrentUser.prefix}"); } 
-            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.last_name}, {CurrentUser.prefix}"); }
-            Console.WriteLine($"    [5] Land                           - {CurrentUser.country}");
-            Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.gender}");
-            Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.birth_date}");
-            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrentUser.phone_number}");
+            Console.WriteLine($"    [3] Voornaam                       - {CurrentUser.First_name}");
+            if(CurrentUser.Prefix == null || CurrentUser.Prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name} {CurrentUser.Prefix}"); } 
+            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name}, {CurrentUser.Prefix}"); }
+            Console.WriteLine($"    [5] Land                           - {CurrentUser.Country}");
+            Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.Gender}");
+            Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.Birth_date}");
+            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrentUser.Phone_number}");
             Console.WriteLine();
             Console.WriteLine($"    [9] Account Creëren       ");
             Console.WriteLine();
@@ -152,6 +144,44 @@ namespace Rotterdam_Airlines
             Console.Write("    Maak een keuze: ");
             UserInterface.SetDefaultColor();
         }
+
+        public static void PrintAccountChangingMenu(Customer CurrentUser)
+        {
+            UserInterface.PrintLogo();
+            UserInterface.SetMainColor();
+            Console.WriteLine("    Rotterdam Airlines | Account | Gegevens aanpassen");
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetDefaultColor();
+            Console.WriteLine($"    [0] Annuleren         ");
+            Console.WriteLine();
+            Console.WriteLine($"    [1] Email                          - {CurrentUser.Email}");
+            string HiddenPassword = "";
+            if (CurrentUser.Password != null)
+            {
+                for (int i = 0; CurrentUser.Password.Length > i; i++)
+                {
+                    HiddenPassword += "*";
+                }
+            }
+            Console.WriteLine($"    [2] Wachtwoord                     - {HiddenPassword}");
+            Console.WriteLine($"    [3] Voornaam                       - {CurrentUser.First_name}");
+            if (CurrentUser.Prefix == null || CurrentUser.Prefix == "") { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name} {CurrentUser.Prefix}"); }
+            else { Console.WriteLine($"    [4] Achternaam en Tussenvoegsel    - {CurrentUser.Last_name}, {CurrentUser.Prefix}"); }
+            Console.WriteLine($"    [5] Land                           - {CurrentUser.Country}");
+            Console.WriteLine($"    [6] Geslacht                       - {CurrentUser.Gender}");
+            Console.WriteLine($"    [7] Geboortedatum                  - {CurrentUser.Birth_date}");
+            Console.WriteLine($"    [8] Telefoonnummer                 - {CurrentUser.Phone_number}");
+            Console.WriteLine();
+            Console.WriteLine($"    [9] Gegeven opslaan       ");
+            Console.WriteLine();
+            Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetMainColor();
+            Console.Write("    Maak een keuze: ");
+            UserInterface.SetDefaultColor();
+        }
+
         public static void PrintInfoMenu()
         {
             Console.WriteLine($"    [0] Hoofdmenu");
@@ -170,7 +200,8 @@ namespace Rotterdam_Airlines
             Console.WriteLine($"    [1] Winkelen");
             Console.WriteLine($"    [2] Eetgelegenheden");
             Console.WriteLine($"    [3] Recreatie");
-
+            Console.WriteLine();
+            Console.WriteLine($"    [4] Terug");
         }
 
         public static void SetMainColor()
