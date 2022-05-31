@@ -741,6 +741,8 @@ namespace Rotterdam_Airlines
                 Console.WriteLine("    [3] Vluchten");
                 Console.WriteLine("    [4] Boekingen");
                 Console.WriteLine();
+                Console.WriteLine("    [5] Uitloggen");
+                Console.WriteLine();
                 Console.WriteLine("    ─────────────────────────────────────────────────────────");
                 Console.WriteLine();
                 UserInterface.SetMainColor();
@@ -790,6 +792,9 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
 
+                    case ConsoleKey.D5:
+                        admin_bool = false;
+                        break;
                     default:
                         Console.WriteLine();
                         Console.WriteLine("    Verkeerde menu input. Klik een willekeurige toets om het opnieuw te proberen...");

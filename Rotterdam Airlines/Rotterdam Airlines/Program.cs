@@ -36,6 +36,7 @@ namespace Rotterdam_Airlines
                 {
                     Console.Clear();
                     Admin.PrintAdminMainScreen();
+                    authorized = false;
                     Console.Clear();
                 }
                 else
@@ -478,6 +479,7 @@ namespace Rotterdam_Airlines
                                             {
                                                 authorized = true;
                                             }
+                                            AccountMenu = false;
                                             break;
                                         case ConsoleKey.D2:
                                             Console.Clear();
