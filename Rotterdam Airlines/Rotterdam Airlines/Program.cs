@@ -491,6 +491,10 @@ namespace Rotterdam_Airlines
                                             Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
                                             Console.WriteLine("    ──────────────────────────────────────────────────");
                                             UserInterface.SetDefaultColor();
+                                            Console.WriteLine();
+                                            Console.WriteLine("    [0] Terug");
+                                            Console.WriteLine("    ");
+                                            Console.WriteLine("    ──────────────────────────────────────────────────");
                                             Customer.ChangePassword(smtpClient);
                                             break;
                                     }

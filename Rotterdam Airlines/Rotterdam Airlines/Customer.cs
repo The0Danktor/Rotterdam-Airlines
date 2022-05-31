@@ -5241,10 +5241,7 @@ namespace Rotterdam_Airlines
             {
 
                 
-                Console.WriteLine();
-                Console.WriteLine("    [0] Terug");
-                Console.WriteLine("    ");
-                Console.WriteLine("    ──────────────────────────────────────────────────");
+                
                 Console.WriteLine("    ");
                 UserInterface.SetMainColor();
                 Console.Write("    Vul uw email in: ");
