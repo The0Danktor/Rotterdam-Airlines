@@ -1010,7 +1010,7 @@ namespace Rotterdam_Airlines
                 List<Flight> Flights = JSON.LoadFlightsJSON();
                 List<Booking> Bookings = JSON.LoadBookingsJSON();
                 Flight FlightTarget = null;
-                Booking BookingTarget = null;
+                Booking BookingTarget = null;w
                 Console.Clear();
                 UserInterface.PrintLogo();
                 UserInterface.SetMainColor();
