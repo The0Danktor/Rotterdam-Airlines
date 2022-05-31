@@ -557,13 +557,6 @@ namespace Rotterdam_Airlines
                             Environment.Exit(0);
                             break;
 
-                        case ConsoleKey.D9:
-                            Console.Clear();
-                            Booking booking = new Booking("abc", "abc", "lucas2002prins@gmail.com", "000001", "000005", 250.5, 25, new List<BookingPerson>(), new List<Seat>(), true, false);
-                            EmailHandler.SendBookingConfirmation(booking);
-                            Console.Clear();
-                            break;
-
                         // DEFAULT
                         default:
                             Console.Clear();
