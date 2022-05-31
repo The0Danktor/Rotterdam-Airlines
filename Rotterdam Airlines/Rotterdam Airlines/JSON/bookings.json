@@ -64,5 +64,72 @@
     "BookingDiscount": 0.0,
     "CheckedLuggage": true,
     "Cancelled": false
+  },
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": "000275",
+        "CustomerFirstName": "Jamie",
+        "CustomerMiddleName": "de",
+        "CustomerLastName": "Leest",
+        "CustomerBirthDate": "31-01-2004",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "123456789"
+      },
+      {
+        "CustomerFlightNumber": null,
+        "CustomerFirstName": "Lucas",
+        "CustomerMiddleName": "",
+        "CustomerLastName": "Prins",
+        "CustomerBirthDate": "12-02-2003",
+        "CustomerGender": "Man",
+        "CustomerCountry": "Nederland",
+        "CustomerBSN": "123456789"
+      }
+    ],
+    "SeatList": [
+      {
+        "Id": "Q0",
+        "SeatClass": "economy",
+        "Occupant": "Yes",
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 57.2
+      },
+      {
+        "Id": "R0",
+        "SeatClass": "economy",
+        "Occupant": "Yes",
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 57.2
+      },
+      {
+        "Id": "S0",
+        "SeatClass": "economy",
+        "Occupant": "Yes",
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 57.2
+      },
+      {
+        "Id": "P0",
+        "SeatClass": "economy",
+        "Occupant": "Yes",
+        "Description": " Economy class zitplekken zijn de standaard meest goedkope zitplekken.",
+        "Special": "increased legroom",
+        "Price": 57.2
+      }
+    ],
+    "CustomerID": "_uwcZG_P",
+    "CustomerPhoneNumber": "0627435921",
+    "CustomerEmail": "jdeleest@live.nl",
+    "FlightCode": "000275",
+    "BookingID": "000003",
+    "BookingPrice": 278.8,
+    "BookingDiscount": 0.0,
+    "CheckedLuggage": true,
+    "Cancelled": false
   }
 ]

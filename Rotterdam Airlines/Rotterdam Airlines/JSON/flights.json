@@ -923,7 +923,7 @@
     "Gate": "2"
   },
   {
-    "Cancelled": false,
+    "Cancelled": true,
     "FlightCode": "000072",
     "FlightNumber": "RAS787LO",
     "PlaneType": "Boeing 787",
