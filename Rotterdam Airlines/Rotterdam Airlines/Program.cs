@@ -487,7 +487,7 @@ namespace Rotterdam_Airlines
                                             Console.Clear();
                                             UserInterface.PrintLogo();
 
-
+                                            UserInterface.SetMainColor();
                                             Console.WriteLine("    Rotterdam Airlines | Account | Wachtwoord vergeten");
                                             Console.WriteLine("    ──────────────────────────────────────────────────");
                                             UserInterface.SetDefaultColor();

@@ -5242,6 +5242,10 @@ namespace Rotterdam_Airlines
 
                 
                 Console.WriteLine();
+                Console.WriteLine("    [0] Terug");
+                Console.WriteLine("    ");
+                Console.WriteLine("    ──────────────────────────────────────────────────");
+                Console.WriteLine("    ");
                 UserInterface.SetMainColor();
                 Console.Write("    Vul uw email in: ");
                 UserInterface.SetDefaultColor();
@@ -5257,7 +5261,15 @@ namespace Rotterdam_Airlines
                         EmailExists = true;
                     }
                 }
-                if (!EmailExists) 
+                if(inputemail == "0")
+                {
+                    Email = false;
+                }
+                else if (inputemail == "")
+                {
+                    Email = false;
+                }
+                else if (!EmailExists) 
                 {
                     UserInterface.SetErrorColor();
                     Console.WriteLine("    niet bestande email ingevoerd");
