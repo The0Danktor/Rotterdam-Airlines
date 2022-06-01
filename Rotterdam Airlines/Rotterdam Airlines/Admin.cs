@@ -720,33 +720,36 @@ namespace Rotterdam_Airlines
                 Console.WriteLine("    Verkeerde input");
                 Console.ReadLine();
             }
-            return true;
+            return false;
         }
 
-        public static void PrintAdminMainScreen()
+        public static bool PrintAdminMainScreen()
         {
+            Console.Clear();
+            UserInterface.PrintLogo();
+            UserInterface.SetMainColor();
+            Console.WriteLine("    Rotterdam Airlines | Admin");
+            Console.WriteLine("    ─────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetDefaultColor();
+            Console.WriteLine("    [1] Gebruiker Opzoeken");
+            Console.WriteLine("    [2] Gebruiker Verwijderen");
+            Console.WriteLine();
+            Console.WriteLine("    [3] Vluchten");
+            Console.WriteLine("    [4] Boekingen");
+            Console.WriteLine();
+            Console.WriteLine("    [5] Uitloggen");
+            Console.WriteLine();
+            Console.WriteLine("    ─────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetMainColor();
+            Console.Write("    Maak een keuze: ");
+            UserInterface.SetDefaultColor();
+            var AdminInput = Console.ReadKey(true);
+
             bool admin_bool = true;
             while (admin_bool)
             {
-                Console.Clear();
-                UserInterface.PrintLogo();
-                UserInterface.SetMainColor();
-                Console.WriteLine("    Rotterdam Airlines | Admin");
-                Console.WriteLine("    ─────────────────────────────────────────────────────────");
-                Console.WriteLine();
-                UserInterface.SetDefaultColor();
-                Console.WriteLine("    [1] Gebruiker Opzoeken");
-                Console.WriteLine("    [2] Gebruiker Verwijderen");
-                Console.WriteLine();
-                Console.WriteLine("    [3] Vluchten");
-                Console.WriteLine("    [4] Boekingen");
-                Console.WriteLine();
-                Console.WriteLine("    ─────────────────────────────────────────────────────────");
-                Console.WriteLine();
-                UserInterface.SetMainColor();
-                Console.Write("    Maak een keuze: ");
-                UserInterface.SetDefaultColor();
-                var AdminInput = Console.ReadKey(true);
                 switch (AdminInput.Key)
                 {
                     case ConsoleKey.D0:
@@ -754,9 +757,21 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     case ConsoleKey.D1:
-                        Console.Clear();
-                        Admin.PrintUserInfoScreen();
-                        Console.ReadLine();
+                        while (admin_bool)
+                        {
+                            Console.Clear();
+                            if (Admin.PrintUserInfoScreen())
+                            {
+                                admin_bool = false;
+                            }
+                            else
+                            {
+                                admin_bool = true;
+                            }
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
                         Console.Clear();
                         break;
                     case ConsoleKey.D2:
@@ -782,21 +797,28 @@ namespace Rotterdam_Airlines
                         break;
                     case ConsoleKey.D3:
                         Admin.PrintAdminFlightScreen();
+                        admin_bool = false;
                         Console.Clear();
                         break;
 
                     case ConsoleKey.D4:
                         Admin.PrintAdminBookingScreen();
+                        admin_bool = false;
                         Console.Clear();
                         break;
+
+                    case ConsoleKey.D5:
+                        return false;
 
                     default:
                         Console.WriteLine();
                         Console.WriteLine("    Verkeerde menu input. Klik een willekeurige toets om het opnieuw te proberen...");
+                        admin_bool = false;
                         Console.ReadKey(true);
                         break;
                 }
             }
+            return true;
         }
 
         private static void PrintAdminBookingScreen()

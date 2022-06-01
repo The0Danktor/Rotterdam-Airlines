@@ -34,8 +34,23 @@ namespace Rotterdam_Airlines
             {
                 if (authorized)
                 {
-                    Console.Clear();
-                    Admin.PrintAdminMainScreen();
+                    bool adminmain_bool = true;
+                    while (adminmain_bool)
+                    {
+                        Console.Clear();
+                        if (Admin.PrintAdminMainScreen())
+                        {   
+                            adminmain_bool = true;
+                            authorized = true;
+                        }
+                        else
+                        {
+                            adminmain_bool = false;
+                            authorized = false;
+                        }
+                        Console.Clear();
+                        break;
+                    }
                     Console.Clear();
                 }
                 else
