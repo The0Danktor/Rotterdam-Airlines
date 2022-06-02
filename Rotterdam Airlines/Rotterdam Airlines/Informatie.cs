@@ -100,12 +100,6 @@ namespace Rotterdam_Airlines
         }
 
 
-        public static void PrintLaatsteNieuws()
-        {
-
-
-        }
-
         public static void PrintOnzeVliegtuigen()
         {
             UserInterface.SetMainColor();
@@ -203,6 +197,31 @@ namespace Rotterdam_Airlines
             Console.Write("    Maak een keuze: ");
             UserInterface.SetDefaultColor();
         }
-
+        public static void PrintLaatsteNieuws()
+        {
+            UserInterface.SetMainColor();
+            Console.WriteLine("    # Rotterdam Airlines | Informatie | Laatste Nieuws");
+            Console.WriteLine("    ───────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetDefaultColor();
+            Console.WriteLine("    [0] Hoofdmenu");
+            Console.WriteLine("    [1] Terug");
+            Console.WriteLine();
+            Console.WriteLine("    ─────────────────────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            Console.WriteLine("    In Iederland is er geen coronabewijs of mandkapje meer nodig!");
+            Console.WriteLine("    Maar let op, in andere landen kan dat anders zijn");
+            Console.WriteLine("    in alle EU landen, Ijsland, Noorwegen en Zwitserland kan je gebruik maken van de Coronacheck app.");
+            Console.WriteLine();
+            Console.WriteLine("    Nergens in Nederland is het meer verplicht om een mondkapje te dragen");
+            Console.WriteLine("    voor mensen met kwetsbare gezondheid is het natuurlijk wel geadviseerd");
+            Console.WriteLine("    in het buitenland kunnen de regels wel anders zijn, dus let daar vooral goed op.");
+            Console.WriteLine();
+            Console.WriteLine("    ─────────────────────────────────────────────────────────────────────────────────");
+            Console.WriteLine();
+            UserInterface.SetMainColor();
+            Console.Write("    Maak een keuze: ");
+            UserInterface.SetDefaultColor();
+        }
     }
 }

@@ -422,6 +422,10 @@ namespace Rotterdam_Airlines
                                         break;
                                     case 2:
                                         Console.Clear();
+                                        UserInterface.PrintLogo();
+                                        Informatie.PrintLaatsteNieuws();
+                                        Console.ReadLine();
+                                        Console.Clear();
                                         break;
                                     case 3:
                                         Console.Clear();
