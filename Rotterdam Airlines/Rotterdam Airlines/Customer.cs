@@ -1131,6 +1131,7 @@ namespace Rotterdam_Airlines
                         if (CurrentUser.CheckNull())
                         {
                             List<Customer> CustomerList = JSON.LoadCustomersJSON();
+                            List<Booking> Bookings = JSON.LoadBookingsJSON();
                             for(int i = 0; i < CustomerList.Count; i++)
                             {
                                 if (CustomerList[i].UserId == CurrentUser.UserId)
@@ -1138,7 +1139,17 @@ namespace Rotterdam_Airlines
                                     CustomerList[i] = CurrentUser;
                                 }
                             }
+
+                            foreach(Booking booking in Bookings)
+                            {
+                                if(booking.CustomerEmail == CurrentUser.Email)
+                                {
+                                    booking.CustomerEmail = CurrentUser.Email;
+                                }
+                            }
+
                             JSON.SaveCustomersJSON(CustomerList);
+                            JSON.SaveBookingsJSON(Bookings);
                             changingAccount = false;
                         }
                         else
