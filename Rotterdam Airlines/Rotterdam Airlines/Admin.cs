@@ -998,6 +998,7 @@ namespace Rotterdam_Airlines
                                 CancelBooking(BookingTarget);
                                 Console.WriteLine();
                                 Console.WriteLine();
+                                UserInterface.SetConfirmColor();
                                 Console.WriteLine("    Boeking succesvol geannuleerd. Klik een willekeurige toets om verder te gaan.");
                                 Console.ReadKey(true);
                             } else
@@ -1149,6 +1150,7 @@ namespace Rotterdam_Airlines
                                 }
                                 Console.WriteLine();
                                 Console.WriteLine();
+                                UserInterface.SetConfirmColor();
                                 Console.WriteLine("    Vlucht succesvol geannuleerd. Klik een willekeurige toets om verder te gaan.");
                                 Console.ReadKey(true);
                                 FlightTarget.Cancelled = true;

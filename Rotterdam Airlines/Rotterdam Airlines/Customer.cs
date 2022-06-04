@@ -1178,6 +1178,8 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                     Console.WriteLine();
                     UserInterface.SetDefaultColor();
+                    Console.WriteLine("    [0] Hoofdmenu");
+                    Console.WriteLine();
                     Console.WriteLine("    [1] Inloggen");
                     Console.WriteLine("    [2] Registreren");
                     Console.WriteLine("    [3] Verder gaan als gast");
@@ -1186,18 +1188,21 @@ namespace Rotterdam_Airlines
                     UserInterface.SetMainColor();
                     Console.Write("    Maak een keuze: ");
                     UserInterface.SetDefaultColor();
-                    int InputContactGegevens = 100;
-                    try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
-                    switch (InputContactGegevens)
+                    var InputContactGegevens = Console.ReadKey();
+                    switch (InputContactGegevens.Key)
                     {
-                        case 1:
+                        case ConsoleKey.D0:
+                            chaning_account = false;
+                            return;
+                            break;
+                        case ConsoleKey.D1:
                             CurrentUser = (Customer)Login(AdminUser, CurrentUser);
                             if (!(CurrentUser == OldUser))
                             {
                                 chaning_account = false;
                             }
                             break;
-                        case 2:
+                        case ConsoleKey.D2:
                             var oldtemp = JSON.LoadCustomersJSON();
                             RegisterCustomer(CurrentUser);
                             var temp = JSON.LoadCustomersJSON();
@@ -1207,13 +1212,14 @@ namespace Rotterdam_Airlines
                                 chaning_account = false;
                             }
                             break;
-                        case 3:
+                        case ConsoleKey.D3:
                             Console.Clear();
                             chaning_account = false;
                             break;
                     }
                 }
             }
+
             Customer BookingCustomer = CurrentUser;
             Flight BookingSelectedFlight = null;
             bool FlightSelected = false;
