@@ -331,6 +331,7 @@ namespace Rotterdam_Airlines
                         if (!UserFound)
                         {
                             UserInterface.SetErrorColor();
+                            Console.WriteLine();
                             Console.WriteLine("    Geen gebruiker gevonden met dit emailadres. Druk op een willekeurige toets om door te gaan ");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);

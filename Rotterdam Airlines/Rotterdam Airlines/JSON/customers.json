@@ -40,5 +40,47 @@
     "IsGuest": false,
     "Email": "f@gmail.com",
     "Password": "testtest"
+  },
+  {
+    "UserId": "hUCyBEfN",
+    "First_name": "",
+    "Prefix": "",
+    "Last_name": "A",
+    "Country": "A",
+    "Gender": "Man",
+    "Birth_date": "11-11-2000",
+    "Phone_number": "11111111",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "a@.",
+    "Password": "aaaaaaaa"
+  },
+  {
+    "UserId": "6zeZWEsp",
+    "First_name": "",
+    "Prefix": "",
+    "Last_name": "A",
+    "Country": "",
+    "Gender": "Man",
+    "Birth_date": "11-11-2000",
+    "Phone_number": "11111111",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "b@.",
+    "Password": "aaaaaaaa"
+  },
+  {
+    "UserId": "FaEscu_B",
+    "First_name": "",
+    "Prefix": "",
+    "Last_name": "C",
+    "Country": "",
+    "Gender": "Man",
+    "Birth_date": "11-11-2000",
+    "Phone_number": "88888888",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "c@.",
+    "Password": "cccccccc"
   }
 ]
