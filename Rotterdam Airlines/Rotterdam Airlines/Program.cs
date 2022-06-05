@@ -394,11 +394,32 @@ namespace Rotterdam_Airlines
                                                     InformationActive = false;
                                                     break;
                                                 case 1:
-                                                    Console.Clear();
-                                                    UserInterface.PrintLogo();
-                                                    Informatie.PrintWinkelen();
-                                                    Console.ReadLine();
-                                                    Console.Clear();
+                                                    bool WinklenActive = true;
+                                                    while (WinklenActive)
+                                                    {
+                                                        Console.Clear();
+                                                        UserInterface.PrintLogo();
+                                                        Informatie.PrintWinkelen();
+                                                        Console.ReadLine();
+                                                        Console.Clear();
+                                                        int winkelen_choice = 100;
+                                                        try { winkelen_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                                                        switch (winkelen_choice)
+                                                        {
+                                                            case 0:
+                                                                WinklenActive = false;
+                                                                FaciliteitenActive = false;                                                                
+                                                                InformationActive = false;
+                                                                
+                                                                Console.Clear();
+                                                                break;
+                                                            case 1:
+                                                                Console.Clear();                                                               
+                                                                WinklenActive = false;
+                                                                break;
+                                                        }
+                                                    }
                                                     break;
                                                 case 2:
                                                     Console.Clear();

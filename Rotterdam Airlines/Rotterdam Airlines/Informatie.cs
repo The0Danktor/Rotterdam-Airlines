@@ -13,7 +13,7 @@ namespace Rotterdam_Airlines
         public static void PrintWinkelen()
         {
             UserInterface.SetMainColor();
-            Console.WriteLine("    # Rotterdam Airlines | Informatie | Faciliteiten | Winkelen");
+            Console.WriteLine("    Rotterdam Airlines | Informatie | Faciliteiten | Winkelen");
             Console.WriteLine("    ───────────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
@@ -41,7 +41,7 @@ namespace Rotterdam_Airlines
         public static void PrintEetgelegenheden()
         {
             UserInterface.SetMainColor();
-            Console.WriteLine("    # Rotterdam Airlines | Informatie | Faciliteiten | Eetgelegenheden");
+            Console.WriteLine("    Rotterdam Airlines | Informatie | Faciliteiten | Eetgelegenheden");
             Console.WriteLine("    ──────────────────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
@@ -71,7 +71,7 @@ namespace Rotterdam_Airlines
 
         {
             UserInterface.SetMainColor();
-            Console.WriteLine("    # Rotterdam Airlines | Informatie | Faciliteiten | Recreatie");
+            Console.WriteLine("    Rotterdam Airlines | Informatie | Faciliteiten | Recreatie");
             Console.WriteLine("    ────────────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
@@ -103,7 +103,7 @@ namespace Rotterdam_Airlines
         public static void PrintOnzeVliegtuigen()
         {
             UserInterface.SetMainColor();
-            Console.WriteLine("    # Rotterdam Airlines | Informatie | Onze vliegtuigen");
+            Console.WriteLine("    Rotterdam Airlines | Informatie | Onze vliegtuigen");
             Console.WriteLine("    ───────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
@@ -159,7 +159,7 @@ namespace Rotterdam_Airlines
         public static void PrintFAQ()
         {
             UserInterface.SetMainColor();
-            Console.WriteLine("    # Rotterdam Airlines | Informatie | Veelgestelde vragen");
+            Console.WriteLine("    Rotterdam Airlines | Informatie | Veelgestelde vragen");
             Console.WriteLine("    ───────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
@@ -200,7 +200,7 @@ namespace Rotterdam_Airlines
         public static void PrintLaatsteNieuws()
         {
             UserInterface.SetMainColor();
-            Console.WriteLine("    # Rotterdam Airlines | Informatie | Laatste Nieuws");
+            Console.WriteLine("    Rotterdam Airlines | Informatie | Laatste Nieuws");
             Console.WriteLine("    ───────────────────────────────────────────────────────");
             Console.WriteLine();
             UserInterface.SetDefaultColor();
