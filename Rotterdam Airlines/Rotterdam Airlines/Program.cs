@@ -394,25 +394,27 @@ namespace Rotterdam_Airlines
                                                     InformationActive = false;
                                                     break;
                                                 case 1:
+                                                    FaciliteitenActive = false;
+                                                    break;
+                                                case 2:
                                                     bool WinklenActive = true;
                                                     while (WinklenActive)
                                                     {
                                                         Console.Clear();
                                                         UserInterface.PrintLogo();
                                                         Informatie.PrintWinkelen();
-                                                        Console.ReadLine();
-                                                        Console.Clear();
+
                                                         int winkelen_choice = 100;
                                                         try { winkelen_choice = int.Parse(Console.ReadLine()); } catch { }
 
                                                         switch (winkelen_choice)
                                                         {
                                                             case 0:
+                                                                Console.Clear();
                                                                 WinklenActive = false;
                                                                 FaciliteitenActive = false;                                                                
                                                                 InformationActive = false;
                                                                 
-                                                                Console.Clear();
                                                                 break;
                                                             case 1:
                                                                 Console.Clear();                                                               
@@ -421,47 +423,139 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 2:
-                                                    Console.Clear();
-                                                    UserInterface.PrintLogo();
-                                                    Informatie.PrintEetgelegenheden();
-                                                    Console.ReadLine();
-                                                    Console.Clear();
-                                                    break;
                                                 case 3:
-                                                    Console.Clear();
-                                                    UserInterface.PrintLogo();
-                                                    Informatie.PrintRecreatie();
-                                                    Console.ReadLine();
-                                                    Console.Clear();
+                                                    bool EetActive = true;
+                                                    while (EetActive)
+                                                    {
+                                                        Console.Clear();
+                                                        UserInterface.PrintLogo();
+                                                        Informatie.PrintEetgelegenheden();
+
+                                                        int eet_choice = 100;
+                                                        try { eet_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                                                        switch (eet_choice)
+                                                        {
+                                                            case 0:
+                                                                Console.Clear();
+                                                                EetActive = false;
+                                                                FaciliteitenActive = false;
+                                                                InformationActive = false;
+
+                                                                break;
+                                                            case 1:
+                                                                Console.Clear();
+                                                                EetActive = false;
+                                                                break;
+                                                        }
+                                                    }
                                                     break;
                                                 case 4:
-                                                    FaciliteitenActive = false;
+                                                    bool RecreatieActive = true;
+                                                    while (RecreatieActive)
+                                                    {
+                                                        Console.Clear();
+                                                        UserInterface.PrintLogo();
+                                                        Informatie.PrintRecreatie();
+
+                                                        int recreatie_choice = 100;
+                                                        try { recreatie_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                                                        switch (recreatie_choice)
+                                                        {
+                                                            case 0:
+                                                                Console.Clear();
+                                                                RecreatieActive = false;
+                                                                FaciliteitenActive = false;
+                                                                InformationActive = false;
+
+                                                                break;
+                                                            case 1:
+                                                                Console.Clear();
+                                                                RecreatieActive = false;
+                                                                break;
+                                                        }
+                                                    }
                                                     break;
                                             }
                                         }
                                         break;
                                     case 2:
-                                        Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        Informatie.PrintLaatsteNieuws();
-                                        Console.ReadLine();
-                                        Console.Clear();
+                                        bool NieuwsActive = true;
+                                        while (NieuwsActive)
+                                        {
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+                                            Informatie.PrintLaatsteNieuws();
+                                            int nieuws_choice = 100;
+                                            try { nieuws_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                                            switch (nieuws_choice)
+                                            {
+                                                case 0:
+                                                    Console.Clear();
+                                                    NieuwsActive = false;
+                                                    InformationActive = false;
+
+                                                    break;
+                                                case 1:
+                                                    Console.Clear();
+                                                    NieuwsActive = false;
+                                                    break;
+                                            }
+                                        }
                                         break;
+                                
+                                
                                     case 3:
-                                        Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        Informatie.PrintOnzeVliegtuigen();
-                                        Console.ReadLine();
-                                        Console.Clear();
+                                        bool VliegtuigenActive = true;
+                                        while (VliegtuigenActive)
+                                        {
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+                                            Informatie.PrintOnzeVliegtuigen();
+                                            int vliegtuigen_choice = 100;
+                                            try { vliegtuigen_choice = int.Parse(Console.ReadLine()); } catch { }
+
+                                            switch (vliegtuigen_choice)
+                                            {
+                                                case 0:
+                                                    Console.Clear();
+                                                    VliegtuigenActive = false;
+                                                    InformationActive = false;
+
+                                                    break;
+                                                case 1:
+                                                    Console.Clear();
+                                                    VliegtuigenActive = false;
+                                                    break;
+                                            }
+                                        }
                                         break;
                                     case 4:
-                                        Console.Clear();
-                                        UserInterface.PrintLogo();
-                                        Informatie.PrintFAQ();
-                                        Console.ReadLine();
+                                        bool FAQActive = true;
+                                        while (FAQActive)
+                                        {
+                                            Console.Clear();
+                                            UserInterface.PrintLogo();
+                                            Informatie.PrintFAQ();
+                                            int FAQ_choice = 100;
+                                            try { FAQ_choice = int.Parse(Console.ReadLine()); } catch { }
 
-                                        Console.Clear();
+                                            switch (FAQ_choice)
+                                            {
+                                                case 0:
+                                                    Console.Clear();
+                                                    FAQActive = false;
+                                                    InformationActive = false;
+
+                                                    break;
+                                                case 1:
+                                                    Console.Clear();
+                                                    FAQActive = false;
+                                                    break;
+                                            }
+                                        }
                                         break;
                                     
                                 }
