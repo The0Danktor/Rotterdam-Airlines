@@ -369,17 +369,17 @@ namespace Rotterdam_Airlines
                                 UserInterface.SetMainColor();
                                 Console.Write("    Maak een keuze: ");
                                 UserInterface.SetDefaultColor();
-                                int informatie_choice = 100;
-                                try { informatie_choice = int.Parse(Console.ReadLine()); } catch { }
+                  
+                                ConsoleKey informatie_choice = Console.ReadKey().Key;
 
                                 switch (informatie_choice)
                                 {
-                                    case 0:
+                                    case ConsoleKey.D0:
                                         InformationActive = false;
                                         Console.Clear();
                                         break;
 
-                                    case 1:
+                                    case ConsoleKey.D1:
                                         bool FaciliteitenActive = true;
                                         while (FaciliteitenActive)
                                         {
@@ -398,54 +398,54 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int faciliteiten_choice = 100;
-                                            try { faciliteiten_choice = int.Parse(Console.ReadLine()); } catch { }
+                                            
+                                            ConsoleKey faciliteiten_choice = Console.ReadKey().Key;
 
                                             switch (faciliteiten_choice)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     Console.Clear();
                                                     FaciliteitenActive = false;
                                                     InformationActive = false;
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     Console.Clear();
                                                     UserInterface.PrintLogo();
                                                     Informatie.PrintWinkelen();
                                                     Console.ReadLine();
                                                     Console.Clear();
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     Console.Clear();
                                                     UserInterface.PrintLogo();
                                                     Informatie.PrintEetgelegenheden();
                                                     Console.ReadLine();
                                                     Console.Clear();
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     Console.Clear();
                                                     UserInterface.PrintLogo();
                                                     Informatie.PrintRecreatie();
                                                     Console.ReadLine();
                                                     Console.Clear();
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     FaciliteitenActive = false;
                                                     break;
                                             }
                                         }
                                         break;
-                                    case 2:
+                                    case ConsoleKey.D2:
                                         Console.Clear();
                                         break;
-                                    case 3:
+                                    case ConsoleKey.D3:
                                         Console.Clear();
                                         UserInterface.PrintLogo();
                                         Informatie.PrintOnzeVliegtuigen();
                                         Console.ReadLine();
                                         Console.Clear();
                                         break;
-                                    case 4:
+                                    case ConsoleKey.D4:
                                         Console.Clear();
                                         UserInterface.PrintLogo();
                                         Informatie.PrintFAQ();
@@ -543,16 +543,16 @@ namespace Rotterdam_Airlines
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
-                            int contact_choice = 100;
-                            try { contact_choice = int.Parse(Console.ReadLine()); } catch { }
+                            
+                            ConsoleKey contact_choice = Console.ReadKey().Key;
 
 
                             switch (contact_choice)
                             {
-                                case 0:
+                                case ConsoleKey.D0:
                                     Console.Clear();
                                     break;
-                                case 1:
+                                case ConsoleKey.D1:
                                     Console.Clear();
                                     List<string> ContactInfo = Contact.GetContactInfo();
                                     if (ContactInfo.Count == 5)
