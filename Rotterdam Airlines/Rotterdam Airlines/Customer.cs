@@ -1205,6 +1205,7 @@ namespace Rotterdam_Airlines
                     {
                         case ConsoleKey.D0:
                             chaning_account = false;
+                            return;
                             break;
                         case ConsoleKey.D1:
                             CurrentUser = (Customer)Login(AdminUser, CurrentUser);

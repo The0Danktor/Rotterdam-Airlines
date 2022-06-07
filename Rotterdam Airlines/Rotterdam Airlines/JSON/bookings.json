@@ -138,5 +138,38 @@
     "BookingDiscount": 0.0,
     "CheckedLuggage": false,
     "Cancelled": false
+  },
+  {
+    "BookingPersons": [
+      {
+        "CustomerFlightNumber": null,
+        "CustomerFirstName": null,
+        "CustomerMiddleName": null,
+        "CustomerLastName": null,
+        "CustomerBirthDate": null,
+        "CustomerGender": null,
+        "CustomerCountry": null,
+        "CustomerBSN": null
+      }
+    ],
+    "SeatList": [
+      {
+        "Id": "D0",
+        "SeatClass": "business",
+        "Occupant": "Yes",
+        "Description": " Business class zitplekken liggen ergens tussen economy en first-class. Het zijn altijd wat grotere en meer comfortabele plekken dan economy.",
+        "Special": "limited legroom",
+        "Price": 72.0
+      }
+    ],
+    "CustomerID": null,
+    "CustomerPhoneNumber": "1010101010",
+    "CustomerEmail": "w@.",
+    "FlightCode": "000199",
+    "BookingID": "000005",
+    "BookingPrice": 72.0,
+    "BookingDiscount": 0.0,
+    "CheckedLuggage": false,
+    "Cancelled": false
   }
 ]
