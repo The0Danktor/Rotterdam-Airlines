@@ -1166,7 +1166,7 @@ namespace Rotterdam_Airlines
             }
         }
 
-        public static void BookFlight(Admin AdminUser ,Customer CurrentUser)
+        public static void BookFlight(Admin AdminUser, Customer CurrentUser)
         {
             
             bool BookingFlight = true;
