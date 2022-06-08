@@ -28,7 +28,7 @@ namespace Rotterdam_Airlines
 
             // CREATE DEFAULT USERS
             Customer CurrentUser = new Customer(null, null, null, null, null, null, null, null, null, null, new List<string>(), true);
-            Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aS*D*@ads-");
+            Admin AdminUser = new Admin("admin@rotterdamairlines.com", "321898aSDads");
             while(true)
             {
                 if (authorized)
