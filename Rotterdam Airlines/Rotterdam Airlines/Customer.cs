@@ -880,7 +880,6 @@ namespace Rotterdam_Airlines
                         switch (ConfirmInput.Key)
                         {
                             case ConsoleKey.D1:
-                                CurrentUser.SetToDefault();
                                 changingAccount = false;
                                 break;
                             default:
