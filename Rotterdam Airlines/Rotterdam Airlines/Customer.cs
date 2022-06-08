@@ -5360,14 +5360,54 @@ namespace Rotterdam_Airlines
         }
         public static void SendCodeMail(string currentEmail, SmtpClient smtpClient, int RandCode)
         {
+            string HTML = @"<!DOCTYPE html>
+                        <html lang=""en"">
+                        <head>
+                            <meta charset = ""UTF-8"">
+                            <meta http - equiv = ""X-UA-Compatible"" content = ""IE=edge"">
+                            <meta name = ""viewport"" content = ""width=device-width, initial-scale=1.0"">
+                            <title> Booking Confirmation </title>
+                            <style>
+                                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+                                 body {
+                                    font-family: 'Poppins', sans-serif;
+                                    padding: 2rem;
+                                }
+                                .email-wrapper {
+                                    border-radius: 2rem;
+                                    max-width: 600px;
+                                    min-height: 800px;
+                                    color: black;
+                                }
+                                .header-wrapper {
+                                    border-radius: 2rem;
+                                    color: white;
+                                    background-color: #506CF6;
+                                    padding: 2rem;
+                                 }
+                                 .header-wrapper p {
+                                    font-size: 1.25rem;
+                                    font-weight: 500;    
+                                 }
+
+                            </style>
+                        </head>
+                        <body>
+                            <div class=""email-wrapper"">
+                                <div class=""header-wrapper"">
+                                    <h1>Wachtwoord Vergeten</h1>
+                                    <p>Je hebt aangegeven dat je je wachtwoord wilt veranderen. De code om dit te doen kun je vinden in het onderwerp van deze email.</p>
+                                </div>
+                            </div>
+                        </body>
+                ";
 
             var currentemail = new MailMessage
-
             {
-
                 From = new MailAddress("RotterdamAirlines2022@outlook.com"),
-                Subject = "Code",
-                Body = String.Format("<h4><b>code:</b> {0} </h4>Email:<h4> {1}", RandCode, currentEmail),
+                Subject = "Code: " + RandCode,
+                Body = HTML,
                 IsBodyHtml = true,
             };
             currentemail.To.Add("RotterdamAirlines2022@outlook.com");
