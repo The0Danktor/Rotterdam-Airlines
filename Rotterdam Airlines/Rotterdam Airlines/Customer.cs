@@ -165,86 +165,155 @@ namespace Rotterdam_Airlines
                         }
                         else
                         {
-                            for (int i = 0; i < Flights.Count; i++)
+                            bool LookingAtBooking = true;
+                            while(LookingAtBooking)
                             {
-                                if (BookingTarget.FlightCode == Flights[i].FlightCode) { FlightTarget = Flights[i]; }
+                                for (int i = 0; i < Flights.Count; i++)
+                                {
+                                    if (BookingTarget.FlightCode == Flights[i].FlightCode) { FlightTarget = Flights[i]; }
+                                }
+                                Console.Clear();
+                                TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
+                                CultureInfo Dutch = new CultureInfo("nl-NL", false);
+                                DateTime DepartureInfo = FlightTarget.Departure;
+                                string Departure = DepartureInfo.ToString("MMMM", Dutch);
+                                Departure = textInfo.ToTitleCase(Departure);
+                                UserInterface.SetDefaultColor();
+                                UserInterface.PrintLogo();
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                if (BookingTarget.Cancelled == true)
+                                {
+                                    Console.WriteLine("    Rotterdam Airlines | Boeking (" + BookingTarget.BookingID + ") - GEANNULEERD");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("    Rotterdam Airlines | Boeking (" + BookingTarget.BookingID + ")");
+                                }
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine("    [0] Terug");
+                                Console.WriteLine();
+                                Console.WriteLine("    [1] Boeking Annuleren");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine();
+                                Console.WriteLine("    " + FlightTarget.FlightCode + "\t  " + FlightTarget.FlightNumber + "\t   " + FlightTarget.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t");
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Persoonsgegevens");
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                UserInterface.SetDefaultColor();
+                                foreach (BookingPerson person in BookingTarget.BookingPersons)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine($"    {person.GetFullname()}");
+                                    Console.WriteLine();
+                                    Console.WriteLine($"        Land                            - {person.CustomerCountry}");
+                                    Console.WriteLine($"        Geslacht                        - {person.CustomerGender}");
+                                    Console.WriteLine($"        Geboortedatum                   - {person.CustomerBirthDate}");
+                                    Console.WriteLine($"        BSN                             - {person.CustomerBSN}");
+                                    Console.WriteLine();
+                                }
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    Contactgegevens");
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine();
+                                Console.WriteLine($"    Email                                   - {BookingTarget.CustomerEmail}");
+                                Console.WriteLine($"    Telefoonnummer                          - {BookingTarget.CustomerPhoneNumber}");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine();
+                                Console.WriteLine("    Stoelen");
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                UserInterface.SetDefaultColor();
+                                foreach (Seat seat in BookingTarget.SeatList)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine($"    Stoel {seat.Id}");
+                                    Console.WriteLine();
+                                    Console.WriteLine($"        Klasse                          - {seat.SeatClass}");
+                                    Console.WriteLine($"        Bijzonderheden                  - {seat.Special}");
+                                    Console.WriteLine($"        Prijs                           - {seat.Price}");
+                                }
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine();
+                                Console.WriteLine("    Prijs");
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                UserInterface.SetDefaultColor();
+                                Console.WriteLine();
+                                foreach (Seat seat in BookingTarget.SeatList)
+                                {
+                                    Console.WriteLine($"    Stoel {seat.Id}                            - €{seat.Price}");
+                                }
+                                Console.WriteLine($"                                        ─────────── +");
+                                Console.WriteLine($"    Totaal                              - €{BookingTarget.BookingPrice}");
+                                Console.WriteLine();
+                                UserInterface.SetMainColor();
+                                Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
+                                Console.WriteLine();
+                                Console.Write("    Maak een keuze: ");
+                                var BookingOverviewInput = Console.ReadKey();
+                                switch (BookingOverviewInput.Key)
+                                {
+                                    case ConsoleKey.D0:
+                                        LookingAtBooking = false;
+                                        break;
+                                    case ConsoleKey.D1:
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.WriteLine("    Weet u zeker dat u boeking (" + BookingTarget.BookingID + ") wil annuleren?");
+                                        Console.WriteLine();
+                                        UserInterface.SetDefaultColor();
+                                        Console.WriteLine("    [1] Ja");
+                                        Console.WriteLine("    [2] Nee");
+                                        Console.WriteLine();
+                                        UserInterface.SetMainColor();
+                                        Console.Write("    Maak een keuze: ");
+                                        var InputCancelBookingConfirmation = Console.ReadKey();
+                                        if (InputCancelBookingConfirmation.Key == ConsoleKey.D1)
+                                        {
+                                            if (!BookingTarget.Cancelled)
+                                            {
+                                                Admin.CancelBooking(BookingTarget);
+                                                Console.WriteLine();
+                                                Console.WriteLine();
+                                                UserInterface.SetConfirmColor();
+                                                Console.WriteLine("    Boeking succesvol geannuleerd. Klik een willekeurige toets om verder te gaan.");
+                                                Console.ReadKey(true);
+                                                LookingAtBooking = false;
+                                                SearchingBookings = false;
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine();
+                                                Console.WriteLine();
+                                                UserInterface.SetErrorColor();
+                                                Console.WriteLine("    Boeking is al geannuleerd. Klik een willekeurige toets om verder te gaan.");
+                                                Console.ReadKey(true);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine();
+                                            Console.WriteLine();
+                                            Console.WriteLine("    Boeking niet geannuleerd. Klik een willekeurige toets om verder te gaan.");
+                                            Console.ReadKey(true);
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
-                            Console.Clear();
-                            TextInfo textInfo = new CultureInfo("nl-NL", false).TextInfo;
-                            CultureInfo Dutch = new CultureInfo("nl-NL", false);
-                            DateTime DepartureInfo = FlightTarget.Departure;
-                            string Departure = DepartureInfo.ToString("MMMM", Dutch);
-                            Departure = textInfo.ToTitleCase(Departure);
-                            UserInterface.SetDefaultColor();
-                            UserInterface.PrintLogo();
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    Rotterdam Airlines | Boeking (" + BookingTarget.BookingID + ")");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            Console.WriteLine();
-                            Console.WriteLine("    Vluchtcode    Vluchtnummer     Bestemming           Vertrek");
-                            UserInterface.SetDefaultColor();
-                            Console.WriteLine();
-                            Console.WriteLine("    " + FlightTarget.FlightCode + "\t  " + FlightTarget.FlightNumber + "\t   " + FlightTarget.Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay + "\t");
-                            Console.WriteLine();
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    Persoonsgegevens");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            UserInterface.SetDefaultColor();
-                            foreach (BookingPerson person in BookingTarget.BookingPersons)
-                            {
-                                Console.WriteLine();
-                                Console.WriteLine($"    {person.GetFullname()}");
-                                Console.WriteLine();
-                                Console.WriteLine($"        Land                            - {person.CustomerCountry}");
-                                Console.WriteLine($"        Geslacht                        - {person.CustomerGender}");
-                                Console.WriteLine($"        Geboortedatum                   - {person.CustomerBirthDate}");
-                                Console.WriteLine($"        BSN                             - {person.CustomerBSN}");
-                                Console.WriteLine();
-                            }
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    Contactgegevens");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            UserInterface.SetDefaultColor();
-                            Console.WriteLine();
-                            Console.WriteLine($"    Email                                   - {BookingTarget.CustomerEmail}");
-                            Console.WriteLine($"    Telefoonnummer                          - {BookingTarget.CustomerPhoneNumber}");
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine();
-                            Console.WriteLine("    Stoelen");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            UserInterface.SetDefaultColor();
-                            foreach (Seat seat in BookingTarget.SeatList)
-                            {
-                                Console.WriteLine();
-                                Console.WriteLine($"    Stoel {seat.Id}");
-                                Console.WriteLine();
-                                Console.WriteLine($"        Klasse                          - {seat.SeatClass}");
-                                Console.WriteLine($"        Bijzonderheden                  - {seat.Special}");
-                                Console.WriteLine($"        Prijs                           - {seat.Price}");
-                            }
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine();
-                            Console.WriteLine("    Prijs");
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            UserInterface.SetDefaultColor();
-                            Console.WriteLine();
-                            foreach (Seat seat in BookingTarget.SeatList)
-                            {
-                                Console.WriteLine($"    Stoel {seat.Id}                            - €{seat.Price}");
-                            }
-                            Console.WriteLine($"                                        ─────────── +");
-                            Console.WriteLine($"    Totaal                              - €{BookingTarget.BookingPrice}");
-                            Console.WriteLine();
-                            UserInterface.SetMainColor();
-                            Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
-                            Console.WriteLine();
-                            Console.WriteLine("    Klik op een willekeurige toets om terug naar het overzicht te gaan");
-                            Console.ReadKey();
                         }
                         break;
                 }
@@ -331,6 +400,7 @@ namespace Rotterdam_Airlines
                         if (!UserFound)
                         {
                             UserInterface.SetErrorColor();
+                            Console.WriteLine();
                             Console.WriteLine("    Geen gebruiker gevonden met dit emailadres. Druk op een willekeurige toets om door te gaan ");
                             UserInterface.SetDefaultColor();
                             Console.ReadKey(true);
@@ -810,7 +880,6 @@ namespace Rotterdam_Airlines
                         switch (ConfirmInput.Key)
                         {
                             case ConsoleKey.D1:
-                                CurrentUser.SetToDefault();
                                 changingAccount = false;
                                 break;
                             default:
@@ -1131,6 +1200,7 @@ namespace Rotterdam_Airlines
                         if (CurrentUser.CheckNull())
                         {
                             List<Customer> CustomerList = JSON.LoadCustomersJSON();
+                            List<Booking> Bookings = JSON.LoadBookingsJSON();
                             for(int i = 0; i < CustomerList.Count; i++)
                             {
                                 if (CustomerList[i].UserId == CurrentUser.UserId)
@@ -1138,7 +1208,17 @@ namespace Rotterdam_Airlines
                                     CustomerList[i] = CurrentUser;
                                 }
                             }
+
+                            foreach(Booking booking in Bookings)
+                            {
+                                if(booking.CustomerEmail == CurrentUser.Email)
+                                {
+                                    booking.CustomerEmail = CurrentUser.Email;
+                                }
+                            }
+
                             JSON.SaveCustomersJSON(CustomerList);
+                            JSON.SaveBookingsJSON(Bookings);
                             changingAccount = false;
                         }
                         else
@@ -1154,7 +1234,7 @@ namespace Rotterdam_Airlines
             }
         }
 
-        public static void BookFlight(Admin AdminUser ,Customer CurrentUser)
+        public static void BookFlight(Admin AdminUser, Customer CurrentUser)
         {
             
             bool BookingFlight = true;
@@ -1178,6 +1258,8 @@ namespace Rotterdam_Airlines
                     Console.WriteLine("    ───────────────────────────────────────────────────────────────────");
                     Console.WriteLine();
                     UserInterface.SetDefaultColor();
+                    Console.WriteLine("    [0] Hoofdmenu");
+                    Console.WriteLine();
                     Console.WriteLine("    [1] Inloggen");
                     Console.WriteLine("    [2] Registreren");
                     Console.WriteLine("    [3] Verder gaan als gast");
@@ -1186,18 +1268,20 @@ namespace Rotterdam_Airlines
                     UserInterface.SetMainColor();
                     Console.Write("    Maak een keuze: ");
                     UserInterface.SetDefaultColor();
-                    int InputContactGegevens = 100;
-                    try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
-                    switch (InputContactGegevens)
+                    var InputContactGegevens = Console.ReadKey();
+                    switch (InputContactGegevens.Key)
                     {
-                        case 1:
+                        case ConsoleKey.D0:
+                            chaning_account = false;
+                            return;
+                        case ConsoleKey.D1:
                             CurrentUser = (Customer)Login(AdminUser, CurrentUser);
                             if (!(CurrentUser == OldUser))
                             {
                                 chaning_account = false;
                             }
                             break;
-                        case 2:
+                        case ConsoleKey.D2:
                             var oldtemp = JSON.LoadCustomersJSON();
                             RegisterCustomer(CurrentUser);
                             var temp = JSON.LoadCustomersJSON();
@@ -1207,13 +1291,14 @@ namespace Rotterdam_Airlines
                                 chaning_account = false;
                             }
                             break;
-                        case 3:
+                        case ConsoleKey.D3:
                             Console.Clear();
                             chaning_account = false;
                             break;
                     }
                 }
             }
+
             Customer BookingCustomer = CurrentUser;
             Flight BookingSelectedFlight = null;
             bool FlightSelected = false;
@@ -1387,9 +1472,7 @@ namespace Rotterdam_Airlines
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
 
-                int Input = 100;
-
-                try { Input = int.Parse(Console.ReadLine()); } catch { }
+                ConsoleKey Input = Console.ReadKey(true).Key;
 
                 switch (Input)
                 {
@@ -1400,7 +1483,7 @@ namespace Rotterdam_Airlines
                         break;
 
                     // VLUCHT SELECTEREN
-                    case 1:
+                    case ConsoleKey.D1:
                         BookingSteps[0][1] = "Y";
                         bool SelectingFlight = true;
                         int CurrentPage = 0;
@@ -1427,7 +1510,7 @@ namespace Rotterdam_Airlines
                                     Departure = textInfo.ToTitleCase(Departure);
                                     Console.WriteLine("    " + flightList[index].FlightCode + "\t  " + flightList[index].FlightNumber + "\t   " + flightList[index].Destination + " \t\t" + DepartureInfo.Day + " " + Departure + " " + DepartureInfo.TimeOfDay);
                                 }
-                                catch (System.ArgumentOutOfRangeException)
+                                catch (ArgumentOutOfRangeException)
                                 {
                                 }
                             }
@@ -1483,24 +1566,24 @@ namespace Rotterdam_Airlines
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
 
-                            int InputSelectFlight = 100;
-                            try { InputSelectFlight = int.Parse(Console.ReadLine()); } catch { }
+                            ConsoleKey InputSelectFlight = Console.ReadKey(true).Key;
+
 
                             switch (InputSelectFlight)
                             {
-                                case 0:
+                                case ConsoleKey.D0:
                                     SelectingFlight = BackToMainMenu();
                                     BookingFlight = SelectingFlight;
                                     Console.Clear();
                                     break;
 
-                                case 1:
+                                case ConsoleKey.D1:
                                     SelectingFlight = false;
                                     BookingSteps[0][1] = "X";
                                     Console.Clear();
                                     break;
 
-                                case 2:
+                                case ConsoleKey.D2:
                                     bool ChangingFilters = true;
                                     while (ChangingFilters)
                                     {
@@ -1530,22 +1613,22 @@ namespace Rotterdam_Airlines
                                         Console.Write("    Maak een keuze: ");
                                         UserInterface.SetDefaultColor();
 
-                                        int InputSelectFlightFilter = 100;
-                                        try { InputSelectFlightFilter = int.Parse(Console.ReadLine()); } catch { }
+                                        
+                                        ConsoleKey InputSelectFlightFilter = Console.ReadKey(true).Key;
 
                                         switch (InputSelectFlightFilter)
                                         {
-                                            case 0:
+                                            case ConsoleKey.D0:
                                                 ChangingFilters = BackToMainMenu();
                                                 SelectingFlight = ChangingFilters;
                                                 BookingFlight = ChangingFilters;
                                                 Console.Clear();
                                                 break;
-                                            case 1:
+                                            case ConsoleKey.D1:
                                                 ChangingFilters = false;
                                                 Console.Clear();
                                                 break;
-                                            case 2:
+                                            case ConsoleKey.D2:
                                                 bool EnteringDestination = true;
                                                 Console.WriteLine();
                                                 UserInterface.SetMainColor();
@@ -1581,7 +1664,7 @@ namespace Rotterdam_Airlines
                                                 Console.Clear();
                                                 break;
 
-                                            case 3:
+                                            case ConsoleKey.D3:
                                                 bool EnteringDate = true;
                                                 while(EnteringDate)
                                                 {
@@ -1604,7 +1687,7 @@ namespace Rotterdam_Airlines
 
                                                 Console.Clear();
                                                 break;
-                                            case 4:
+                                            case ConsoleKey.D4:
                                                 bool EnteringPersons = true;
                                                 while(EnteringPersons)
                                                 {
@@ -1635,7 +1718,7 @@ namespace Rotterdam_Airlines
 
                                                 Console.Clear();
                                                 break;
-                                            case 5:
+                                            case ConsoleKey.D5:
                                                 bool EnteringPrice = true;
                                                 while (EnteringPrice)
                                                 {
@@ -1656,14 +1739,14 @@ namespace Rotterdam_Airlines
                                                 }
                                                 Console.Clear();
                                                 break;
-                                            case 6:
+                                            case ConsoleKey.D6:
                                                 Filters["Bestemming"] = "";
                                                 Filters["Datum"] = "";
                                                 Filters["Aantal Personen"] = 1;
                                                 Filters["Maximum Prijs"] = 1000;
                                                 Console.Clear();
                                                 break;
-                                            case 7:
+                                            case ConsoleKey.D7:
                                                 ChangingFilters = false;
                                                 Console.Clear();
                                                 break;
@@ -1677,7 +1760,7 @@ namespace Rotterdam_Airlines
                                     break;
 
                                 // SORTEREN
-                                case 3:
+                                case ConsoleKey.D3:
                                     UserInterface.SetMainColor();
                                     Console.WriteLine("    ──────────────────────────────────────────────────────────────────────────────────────────────────────");
                                     UserInterface.SetDefaultColor();
@@ -1695,27 +1778,26 @@ namespace Rotterdam_Airlines
                                     Console.Write("    Maak een keuze: ");
                                     UserInterface.SetDefaultColor();
 
-                                    int InputSelectSort = 100;
-                                    try { InputSelectSort = int.Parse(Console.ReadLine()); } catch { }
+                                    ConsoleKey InputSelectSort = Console.ReadKey(true).Key;
 
                                     switch (InputSelectSort)
                                     {
-                                        case 1:
+                                        case ConsoleKey.D1:
                                             Console.Clear();
                                             break;
-                                        case 2:
+                                        case ConsoleKey.D2:
                                             SortType = "date+";
                                             Console.Clear();
                                             break;
-                                        case 3:
+                                        case ConsoleKey.D3:
                                             SortType = "date-";
                                             Console.Clear();
                                             break;
-                                        case 4:
+                                        case ConsoleKey.D4:
                                             SortType = "price-";
                                             Console.Clear();
                                             break;
-                                        case 5:
+                                        case ConsoleKey.D5:
                                             SortType = "price+";
                                             Console.Clear();
                                             break;
@@ -1723,16 +1805,16 @@ namespace Rotterdam_Airlines
                                     break;
                                 
                                 // VORIGE PAGINA
-                                case 4:
+                                case ConsoleKey.D4:
                                     if (CurrentPage != 0) {CurrentPage--;} else {CurrentPage = MaxPages;} Console.Clear();
                                     break;
                                 
                                 // VOLGENDE PAGINA
-                                case 5:
+                                case ConsoleKey.D5:
                                     if (CurrentPage + 1 > MaxPages) {CurrentPage = 0;} else {CurrentPage++;} Console.Clear();
                                     break;
 
-                                case 6:
+                                case ConsoleKey.D6:
                                     bool EnteringFlightCode = true;
                                     while(EnteringFlightCode)
                                     {
@@ -1793,7 +1875,7 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     //PERSOONS GEGEVENS INVULLEN
-                    case 2:
+                    case ConsoleKey.D2:
                         bool ChangingPersoons = true;
                         if(BookingSelectedFlight == null) 
                         {
@@ -1845,8 +1927,7 @@ namespace Rotterdam_Airlines
                                 UserInterface.SetMainColor();
                                 Console.Write("    Maak een keuze: ");
                                 UserInterface.SetDefaultColor();
-                                int InputPersoonsgegevens = 100;
-                                try { InputPersoonsgegevens = int.Parse(Console.ReadLine()); } catch { }
+                                ConsoleKey InputPersoonsgegevens = Console.ReadKey(true).Key;
                                 switch (InputPersoonsgegevens)
                                 {
                                     case 0:
@@ -1854,10 +1935,10 @@ namespace Rotterdam_Airlines
                                         ChangingPersoons = false;
                                         Console.Clear();
                                         break;
-                                    case 1:
+                                    case ConsoleKey.D1:
                                         ChangingPersoons = false;
                                         break;
-                                    case 2:
+                                    case ConsoleKey.D2:
                                         bool EnteringPersons = true;
                                         while (EnteringPersons)
                                         {
@@ -1886,7 +1967,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 3:
+                                    case ConsoleKey.D3:
                                         while (true)
                                         {
                                             Console.WriteLine();
@@ -1908,7 +1989,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 4:
+                                    case ConsoleKey.D4:
                                         while (true)
                                         {
                                             Console.WriteLine();
@@ -1950,7 +2031,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 5:
+                                    case ConsoleKey.D5:
                                         while (true)
                                         {
                                             UserInterface.SetMainColor();
@@ -1975,7 +2056,7 @@ namespace Rotterdam_Airlines
                                         }
                                         Console.Clear();
                                         break;
-                                    case 6:
+                                    case ConsoleKey.D6:
                                         while (true)
                                         {
                                             Console.WriteLine();
@@ -2013,7 +2094,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 7:
+                                    case ConsoleKey.D7:
                                         while (true)
                                         {
                                             Console.WriteLine();
@@ -2057,7 +2138,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 8:
+                                    case ConsoleKey.D8:
                                         Console.WriteLine();
                                         UserInterface.SetMainColor();
                                         Console.Write("    Vul uw BSN in: ");
@@ -2080,7 +2161,7 @@ namespace Rotterdam_Airlines
                                             BookingPersonData[0].CustomerBSN = BSNInput;
                                         }
                                         break;
-                                    case 9:
+                                    case ConsoleKey.D9:
                                         ChangingPersoons = false;
                                         break;
                                 }
@@ -2126,19 +2207,19 @@ namespace Rotterdam_Airlines
                                 UserInterface.SetMainColor();
                                 Console.Write("    Maak een keuze: ");
                                 UserInterface.SetDefaultColor();
-                                int InputPersoonsgegevens = 100;
-                                try { InputPersoonsgegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                                ConsoleKey InputPersoonsgegevens = Console.ReadKey(true).Key;
                                 switch (InputPersoonsgegevens)
                                 {
-                                    case 0:
+                                    case ConsoleKey.D0:
                                         BookingFlight = BackToMainMenu();
                                         ChangingPersoons = false;
                                         Console.Clear();
                                         break;
-                                    case 1:
+                                    case ConsoleKey.D1:
                                         ChangingPersoons = false;
                                         break;
-                                    case 2:
+                                    case ConsoleKey.D2:
                                         bool EnteringPersons = true;
                                         while (EnteringPersons)
                                         {
@@ -2179,7 +2260,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 3:
+                                    case ConsoleKey.D3:
                                         bool ChangingPersoon1 = true;
                                         while (ChangingPersoon1)
                                         {
@@ -2207,19 +2288,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon1gegevens = 100;
-                                            try { InputPersoon1gegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                                            ConsoleKey InputPersoon1gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon1gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon1 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2241,7 +2322,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2283,7 +2364,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -2308,7 +2389,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2346,7 +2427,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2390,7 +2471,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -2418,7 +2499,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 4:
+                                    case ConsoleKey.D4:
                                         bool ChangingPersoon2 = true;
                                         while (ChangingPersoon2)
                                         {
@@ -2446,19 +2527,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon2gegevens = 100;
-                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                                            ConsoleKey InputPersoon2gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon2gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon2 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2480,7 +2561,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2522,7 +2603,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -2547,7 +2628,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2585,7 +2666,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2629,7 +2710,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -2657,7 +2738,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 5:
+                                    case ConsoleKey.D5:
                                         ChangingPersoons = false;
                                         break;
                                 }
@@ -2705,19 +2786,19 @@ namespace Rotterdam_Airlines
                                 UserInterface.SetMainColor();
                                 Console.Write("    Maak een keuze: ");
                                 UserInterface.SetDefaultColor();
-                                int InputPersoonsgegevens = 100;
-                                try { InputPersoonsgegevens = int.Parse(Console.ReadLine()); } catch { }
+                               
+                                ConsoleKey InputPersoonsgegevens = Console.ReadKey(true).Key;
                                 switch (InputPersoonsgegevens)
                                 {
-                                    case 0:
+                                    case ConsoleKey.D0:
                                         BookingFlight = BackToMainMenu();
                                         ChangingPersoons = false;
                                         Console.Clear();
                                         break;
-                                    case 1:
+                                    case ConsoleKey.D1:
                                         ChangingPersoons = false;
                                         break;
-                                    case 2:
+                                    case ConsoleKey.D2:
                                         bool EnteringPersons = true;
                                         while (EnteringPersons)
                                         {
@@ -2746,7 +2827,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 3:
+                                    case ConsoleKey.D3:
                                         bool ChangingPersoon1 = true;
                                         while (ChangingPersoon1)
                                         {
@@ -2774,19 +2855,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon1gegevens = 100;
-                                            try { InputPersoon1gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                            
+                                            ConsoleKey InputPersoon1gegevens = Console.ReadKey().Key;
                                             switch (InputPersoon1gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon1 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2808,7 +2889,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2850,7 +2931,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -2875,7 +2956,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2913,7 +2994,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -2957,7 +3038,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -2985,7 +3066,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 4:
+                                    case ConsoleKey.D4:
                                         bool ChangingPersoon2 = true;
                                         while (ChangingPersoon2)
                                         {
@@ -3013,19 +3094,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon2gegevens = 100;
-                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                           
+                                            ConsoleKey InputPersoon2gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon2gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon2 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3047,7 +3128,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3089,7 +3170,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -3114,7 +3195,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3152,7 +3233,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3196,7 +3277,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -3224,7 +3305,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 5:
+                                    case ConsoleKey.D5:
                                         bool ChangingPersoon3 = true;
                                         while (ChangingPersoon3)
                                         {
@@ -3252,19 +3333,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon2gegevens = 100;
-                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                            
+                                            ConsoleKey InputPersoon2gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon2gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon3 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3286,7 +3367,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3328,7 +3409,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -3353,7 +3434,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3391,7 +3472,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3435,7 +3516,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -3463,7 +3544,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 6:
+                                    case ConsoleKey.D6:
                                         ChangingPersoons = false;
                                         break;
                                 }
@@ -3513,19 +3594,19 @@ namespace Rotterdam_Airlines
                                 UserInterface.SetMainColor();
                                 Console.Write("    Maak een keuze: ");
                                 UserInterface.SetDefaultColor();
-                                int InputPersoonsgegevens = 100;
-                                try { InputPersoonsgegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                                ConsoleKey InputPersoonsgegevens = Console.ReadKey().Key;
                                 switch (InputPersoonsgegevens)
                                 {
-                                    case 0:
+                                    case ConsoleKey.D0:
                                         BookingFlight = BackToMainMenu();
                                         ChangingPersoons = false;
                                         Console.Clear();
                                         break;
-                                    case 1:
+                                    case ConsoleKey.D1:
                                         ChangingPersoons = false;
                                         break;
-                                    case 2:
+                                    case ConsoleKey.D2:
                                         bool EnteringPersons = true;
                                         while (EnteringPersons)
                                         {
@@ -3554,7 +3635,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 3:
+                                    case ConsoleKey.D3:
                                         bool ChangingPersoon1 = true;
                                         while (ChangingPersoon1)
                                         {
@@ -3582,19 +3663,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon1gegevens = 100;
-                                            try { InputPersoon1gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                            
+                                            ConsoleKey InputPersoon1gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon1gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon1 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3616,7 +3697,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3658,7 +3739,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -3683,7 +3764,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3721,7 +3802,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3765,7 +3846,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -3793,7 +3874,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 4:
+                                    case ConsoleKey.D4:
                                         bool ChangingPersoon2 = true;
                                         while (ChangingPersoon2)
                                         {
@@ -3821,19 +3902,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon2gegevens = 100;
-                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                                            ConsoleKey InputPersoon2gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon2gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon2 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3855,7 +3936,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3897,7 +3978,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -3922,7 +4003,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -3960,7 +4041,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4004,7 +4085,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -4032,7 +4113,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 5:
+                                    case ConsoleKey.D5:
                                         bool ChangingPersoon3 = true;
                                         while (ChangingPersoon3)
                                         {
@@ -4060,19 +4141,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon2gegevens = 100;
-                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+                                            
+                                            ConsoleKey InputPersoon2gegevens = Console.ReadKey(true).Key;
                                             switch (InputPersoon2gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon3 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4094,7 +4175,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4136,7 +4217,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -4161,7 +4242,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4199,7 +4280,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4243,7 +4324,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -4271,7 +4352,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 6:
+                                    case ConsoleKey.D6:
                                         bool ChangingPersoon4 = true;
                                         while (ChangingPersoon4)
                                         {
@@ -4299,19 +4380,19 @@ namespace Rotterdam_Airlines
                                             UserInterface.SetMainColor();
                                             Console.Write("    Maak een keuze: ");
                                             UserInterface.SetDefaultColor();
-                                            int InputPersoon2gegevens = 100;
-                                            try { InputPersoon2gegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                                            ConsoleKey InputPersoon2gegevens = Console.ReadKey().Key;
                                             switch (InputPersoon2gegevens)
                                             {
-                                                case 0:
+                                                case ConsoleKey.D0:
                                                     BookingFlight = BackToMainMenu();
                                                     ChangingPersoons = false;
                                                     Console.Clear();
                                                     break;
-                                                case 1:
+                                                case ConsoleKey.D1:
                                                     ChangingPersoon4 = false;
                                                     break;
-                                                case 2:
+                                                case ConsoleKey.D2:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4333,7 +4414,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 3:
+                                                case ConsoleKey.D3:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4375,7 +4456,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 4:
+                                                case ConsoleKey.D4:
                                                     while (true)
                                                     {
                                                         UserInterface.SetMainColor();
@@ -4400,7 +4481,7 @@ namespace Rotterdam_Airlines
                                                     }
                                                     Console.Clear();
                                                     break;
-                                                case 5:
+                                                case ConsoleKey.D5:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4438,7 +4519,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 6:
+                                                case ConsoleKey.D6:
                                                     while (true)
                                                     {
                                                         Console.WriteLine();
@@ -4482,7 +4563,7 @@ namespace Rotterdam_Airlines
                                                         }
                                                     }
                                                     break;
-                                                case 7:
+                                                case ConsoleKey.D7:
                                                     Console.WriteLine();
                                                     UserInterface.SetMainColor();
                                                     Console.Write("    Vul uw BSN in: ");
@@ -4510,7 +4591,7 @@ namespace Rotterdam_Airlines
                                             }
                                         }
                                         break;
-                                    case 7:
+                                    case ConsoleKey.D7:
                                         ChangingPersoons = false;
                                         break;
                                 }
@@ -4519,7 +4600,7 @@ namespace Rotterdam_Airlines
                         BookingSteps[1][1] = "X";
                         break;
                     // CONTACT GEGEVENS INVULLEN
-                    case 3:
+                    case ConsoleKey.D3:
                         if (BookingSelectedFlight == null)
                         {
                             UserInterface.SetErrorColor();
@@ -4553,19 +4634,19 @@ namespace Rotterdam_Airlines
                             UserInterface.SetMainColor();
                             Console.Write("    Maak een keuze: ");
                             UserInterface.SetDefaultColor();
-                            int InputContactGegevens = 100;
-                            try { InputContactGegevens = int.Parse(Console.ReadLine()); } catch { }
+
+                            ConsoleKey InputContactGegevens = Console.ReadKey(true).Key;
                             switch (InputContactGegevens)
                             {
-                                case 0:
+                                case ConsoleKey.D0:
                                     BookingFlight = BackToMainMenu();
                                     ChangingContactGegevens = false;
                                     Console.Clear();
                                     break;
-                                case 1:
+                                case ConsoleKey.D1:
                                     ChangingContactGegevens = false;
                                     break;
-                                case 2:
+                                case ConsoleKey.D2:
                                     while (true)
                                     {
                                         Console.WriteLine();
@@ -4600,7 +4681,7 @@ namespace Rotterdam_Airlines
                                     }
                                     break;
 
-                                case 3:
+                                case ConsoleKey.D3:
                                     Console.WriteLine();
                                     UserInterface.SetMainColor();
                                     Console.Write("    Vul uw telefoonnummer in (Alleen nummers): ");
@@ -4619,7 +4700,7 @@ namespace Rotterdam_Airlines
                                         UserInterface.SetDefaultColor();
                                     }
                                     break;
-                                case 4:
+                                case ConsoleKey.D4:
                                     ChangingContactGegevens = false;
                                     break;
 
@@ -4630,7 +4711,7 @@ namespace Rotterdam_Airlines
                         break;
 
                     // BAGAGE TOEVOEGEN
-                    case 4:
+                    case ConsoleKey.D4:
                         bool AddingLuggage = true;
                         while (AddingLuggage)
                         {
@@ -4701,7 +4782,7 @@ namespace Rotterdam_Airlines
                         break;
 
                     // STOELEN KIEZEN
-                    case 5:
+                    case ConsoleKey.D5:
                         if (BookingPersonData.Count < 1)
                         {
                             UserInterface.SetErrorColor();
@@ -5037,7 +5118,7 @@ namespace Rotterdam_Airlines
                         Console.Clear();
                         break;
                     // BOOKING CONFORMATIONS
-                    case 6:
+                    case ConsoleKey.D6:
                         if (BookingSelectedFlight == null)
                         {
                             UserInterface.SetErrorColor();
@@ -5162,20 +5243,20 @@ namespace Rotterdam_Airlines
                             Console.WriteLine();
                             Console.Write("    Maak uw keuze: ");
                             UserInterface.SetDefaultColor();
-                            int InputConformation = 100;
-                            try { InputConformation = int.Parse(Console.ReadLine()); } catch { }
+                            
+                            ConsoleKey InputConformation = Console.ReadKey(true).Key;
                             switch (InputConformation)
                             {
-                                case 0:
+                                case ConsoleKey.D0:
                                     BookingFlight = BackToMainMenu();
                                     Confirming = false;
                                     Console.Clear();
                                     break;
-                                case 1:
+                                case ConsoleKey.D1:
                                     Confirming = false;
                                     Console.Clear();
                                     break;
-                                case 2:
+                                case ConsoleKey.D2:
                                     Tuple<bool, string> BookingCompleted()
                                     {
                                         if(booking.SeatList.Count < 1) { return new Tuple<bool, string>(false, "    U heeft geen stoelen geselecteerd."); }
@@ -5241,7 +5322,8 @@ namespace Rotterdam_Airlines
             {
 
                 
-                Console.WriteLine();
+                
+                Console.WriteLine("    ");
                 UserInterface.SetMainColor();
                 Console.Write("    Vul uw email in: ");
                 UserInterface.SetDefaultColor();
@@ -5257,7 +5339,15 @@ namespace Rotterdam_Airlines
                         EmailExists = true;
                     }
                 }
-                if (!EmailExists) 
+                if(inputemail == "0")
+                {
+                    Email = false;
+                }
+                else if (inputemail == "")
+                {
+                    Email = false;
+                }
+                else if (!EmailExists) 
                 {
                     UserInterface.SetErrorColor();
                     Console.WriteLine("    niet bestande email ingevoerd");
@@ -5278,14 +5368,54 @@ namespace Rotterdam_Airlines
         }
         public static void SendCodeMail(string currentEmail, SmtpClient smtpClient, int RandCode)
         {
+            string HTML = @"<!DOCTYPE html>
+                        <html lang=""en"">
+                        <head>
+                            <meta charset = ""UTF-8"">
+                            <meta http - equiv = ""X-UA-Compatible"" content = ""IE=edge"">
+                            <meta name = ""viewport"" content = ""width=device-width, initial-scale=1.0"">
+                            <title> Booking Confirmation </title>
+                            <style>
+                                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+                                 body {
+                                    font-family: 'Poppins', sans-serif;
+                                    padding: 2rem;
+                                }
+                                .email-wrapper {
+                                    border-radius: 2rem;
+                                    max-width: 600px;
+                                    min-height: 800px;
+                                    color: black;
+                                }
+                                .header-wrapper {
+                                    border-radius: 2rem;
+                                    color: white;
+                                    background-color: #506CF6;
+                                    padding: 2rem;
+                                 }
+                                 .header-wrapper p {
+                                    font-size: 1.25rem;
+                                    font-weight: 500;    
+                                 }
+
+                            </style>
+                        </head>
+                        <body>
+                            <div class=""email-wrapper"">
+                                <div class=""header-wrapper"">
+                                    <h1>Wachtwoord Vergeten</h1>
+                                    <p>Je hebt aangegeven dat je je wachtwoord wilt veranderen. De code om dit te doen kun je vinden in het onderwerp van deze email.</p>
+                                </div>
+                            </div>
+                        </body>
+                ";
 
             var currentemail = new MailMessage
-
             {
-
                 From = new MailAddress("RotterdamAirlines2022@outlook.com"),
-                Subject = "Code",
-                Body = String.Format("<h4><b>code:</b> {0} </h4>Email:<h4> {1}", RandCode, currentEmail),
+                Subject = "Code: " + RandCode,
+                Body = HTML,
                 IsBodyHtml = true,
             };
             currentemail.To.Add("RotterdamAirlines2022@outlook.com");
@@ -5308,10 +5438,20 @@ namespace Rotterdam_Airlines
                 UserInterface.SetDefaultColor();
                 List<Customer> customers = JSON.LoadCustomersJSON();
                 string inputcode = Console.ReadLine();
-                int InputCode = int.Parse(inputcode);
+                int InputCode = 0;
+                try
+                {
+                    InputCode = int.Parse(inputcode);
+                } catch
+                {
+                    UserInterface.SetErrorColor();
+                    Console.WriteLine();
+                    Console.WriteLine("    Verkeerde invoer. Klik op een willekeurige toets om verder te gaan");
+                    Console.ReadKey();
+                    return;
+                }
                 int y = 0;
                 
-
                 if (Truecode == InputCode)
                 {
                     UserInterface.SetMainColor();

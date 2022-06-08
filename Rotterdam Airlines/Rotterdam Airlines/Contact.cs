@@ -76,16 +76,16 @@ namespace Rotterdam_Airlines
                 UserInterface.SetMainColor();
                 Console.Write("    Maak een keuze: ");
                 UserInterface.SetDefaultColor();
-                int Choice = 100;
-                try {Choice = int.Parse(Console.ReadLine());} catch {}
+                
+                ConsoleKey Choice = Console.ReadKey().Key;
 
                 switch (Choice)
                 {
-                    case 0:
+                    case ConsoleKey.D0:
                         Creating = false;
                         Console.Clear();
                         break;
-                    case 1:
+                    case ConsoleKey.D1:
                         while (true)
                         {
                             UserInterface.SetMainColor();
@@ -109,7 +109,7 @@ namespace Rotterdam_Airlines
                         }
                         Console.Clear();
                         break;
-                    case 2:
+                    case ConsoleKey.D2:
                         while (true)
                         {
                             UserInterface.SetMainColor();
@@ -133,7 +133,7 @@ namespace Rotterdam_Airlines
                         }
                         Console.Clear();
                         break;
-                    case 3:
+                    case ConsoleKey.D3:
                         while (true)
                         {
                             UserInterface.SetMainColor();
@@ -157,7 +157,7 @@ namespace Rotterdam_Airlines
                         }
                         Console.Clear();
                         break;
-                    case 4:
+                    case ConsoleKey.D4:
                         UserInterface.SetMainColor();
                         Console.WriteLine();
                         Console.WriteLine("    Wat is het onderwerp van uw bericht?");
@@ -168,7 +168,7 @@ namespace Rotterdam_Airlines
                         ContactInfo.Add(contact_subject);
                         Console.Clear();
                         break;
-                    case 5:
+                    case ConsoleKey.D5:
                         UserInterface.SetMainColor();
                         Console.WriteLine();
                         Console.WriteLine("    Wat is uw vraag/opmerking?");
@@ -179,7 +179,7 @@ namespace Rotterdam_Airlines
                         ContactInfo.Add(contact_message);
                         Console.Clear();
                         break;
-                    case 6:
+                    case ConsoleKey.D6:
                         bool InputIsNull = false;
                         foreach(var x in ContactInfo)
                         {

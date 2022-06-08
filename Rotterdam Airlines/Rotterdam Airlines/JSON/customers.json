@@ -24,7 +24,7 @@
     "Phone_number": "0634998880",
     "BookingList": [],
     "IsGuest": false,
-    "Email": "lucas2002prins@gmail.com",
+    "Email": "lucas2003prins@gmail.com",
     "Password": "lucasprins"
   },
   {
@@ -40,5 +40,61 @@
     "IsGuest": false,
     "Email": "f@gmail.com",
     "Password": "testtest"
+  },
+  {
+    "UserId": "hUCyBEfN",
+    "First_name": "",
+    "Prefix": "",
+    "Last_name": "A",
+    "Country": "A",
+    "Gender": "Man",
+    "Birth_date": "11-11-2000",
+    "Phone_number": "11111111",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "a@.",
+    "Password": "aaaaaaaa"
+  },
+  {
+    "UserId": "6zeZWEsp",
+    "First_name": "",
+    "Prefix": "",
+    "Last_name": "A",
+    "Country": "",
+    "Gender": "Man",
+    "Birth_date": "11-11-2000",
+    "Phone_number": "11111111",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "b@.",
+    "Password": "aaaaaaaa"
+  },
+  {
+    "UserId": "FaEscu_B",
+    "First_name": "",
+    "Prefix": "",
+    "Last_name": "C",
+    "Country": "",
+    "Gender": "Man",
+    "Birth_date": "11-11-2000",
+    "Phone_number": "88888888",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "c@.",
+    "Password": "cccccccc"
+  },
+  {
+    "UserId": "ymNcDBm9",
+    "First_name": "Lucas",
+    "Prefix": "",
+    "Last_name": "Prins",
+    "Country": "Nederland",
+    "Gender": "Man",
+    "Birth_date": "17-08-2002",
+    "Phone_number": "0634998880",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "lucas2002prins@gmail.com",
+    "Password": "lucasprins"
   }
 ]
