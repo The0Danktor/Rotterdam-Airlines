@@ -665,6 +665,7 @@ namespace Rotterdam_Airlines
                                             {
                                                 authorized = true;
                                             }
+                                            AccountMenu = false;
                                             break;
                                         case ConsoleKey.D2:
                                             Console.Clear();
