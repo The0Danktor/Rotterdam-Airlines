@@ -1284,7 +1284,7 @@ namespace Rotterdam_Airlines
             }
         }
 
-        private static void CancelBooking(Booking CancelBooking)
+        public static void CancelBooking(Booking CancelBooking)
         {
             Console.Clear();
             Console.CursorVisible = false;
