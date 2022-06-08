@@ -1477,7 +1477,7 @@ namespace Rotterdam_Airlines
                 switch (Input)
                 {
                     // HOOFDMENU
-                    case 0:
+                    case ConsoleKey.D0:
                         BookingFlight = BackToMainMenu();
                         Console.Clear();
                         break;
