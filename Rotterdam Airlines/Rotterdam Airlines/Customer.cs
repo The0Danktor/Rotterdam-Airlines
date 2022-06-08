@@ -5430,10 +5430,20 @@ namespace Rotterdam_Airlines
                 UserInterface.SetDefaultColor();
                 List<Customer> customers = JSON.LoadCustomersJSON();
                 string inputcode = Console.ReadLine();
-                int InputCode = int.Parse(inputcode);
+                int InputCode = 0;
+                try
+                {
+                    InputCode = int.Parse(inputcode);
+                } catch
+                {
+                    UserInterface.SetErrorColor();
+                    Console.WriteLine();
+                    Console.WriteLine("    Verkeerde invoer. Klik op een willekeurige toets om verder te gaan");
+                    Console.ReadKey();
+                    return;
+                }
                 int y = 0;
                 
-
                 if (Truecode == InputCode)
                 {
                     UserInterface.SetMainColor();
