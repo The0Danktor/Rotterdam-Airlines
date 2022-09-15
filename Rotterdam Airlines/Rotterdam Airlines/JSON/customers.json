@@ -7,10 +7,10 @@
     "Country": "Nederland",
     "Gender": "Man",
     "Birth_date": "31-01-2004",
-    "Phone_number": "1234567890",
+    "Phone_number": "0627435921",
     "BookingList": [],
     "IsGuest": false,
-    "Email": "jamie@gmail.com",
+    "Email": "jdeleest@live.nl",
     "Password": "testtest"
   },
   {
@@ -82,5 +82,19 @@
     "IsGuest": false,
     "Email": "c@.",
     "Password": "cccccccc"
+  },
+  {
+    "UserId": "ymNcDBm9",
+    "First_name": "Lucas",
+    "Prefix": "",
+    "Last_name": "Prins",
+    "Country": "Nederland",
+    "Gender": "Man",
+    "Birth_date": "17-08-2002",
+    "Phone_number": "0634998880",
+    "BookingList": [],
+    "IsGuest": false,
+    "Email": "lucas2002prins@gmail.com",
+    "Password": "lucasprins"
   }
 ]

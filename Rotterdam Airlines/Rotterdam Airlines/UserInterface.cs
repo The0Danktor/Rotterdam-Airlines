@@ -196,12 +196,12 @@ namespace Rotterdam_Airlines
         public static void PrintFaciliteitenMenu()
         {
             Console.WriteLine($"    [0] Hoofdmenu");
+            Console.WriteLine($"    [1] Terug");
             Console.WriteLine();
-            Console.WriteLine($"    [1] Winkelen");
-            Console.WriteLine($"    [2] Eetgelegenheden");
-            Console.WriteLine($"    [3] Recreatie");
+            Console.WriteLine($"    [2] Winkelen");
+            Console.WriteLine($"    [3] Eetgelegenheden");
+            Console.WriteLine($"    [4] Recreatie");
             Console.WriteLine();
-            Console.WriteLine($"    [4] Terug");
         }
 
         public static void SetMainColor()

@@ -809,7 +809,6 @@ namespace Rotterdam_Airlines
 
                     case ConsoleKey.D5:
                         return false;
-
                     default:
                         Console.WriteLine();
                         Console.WriteLine("    Verkeerde menu input. Klik een willekeurige toets om het opnieuw te proberen...");
@@ -1284,7 +1283,7 @@ namespace Rotterdam_Airlines
             }
         }
 
-        private static void CancelBooking(Booking CancelBooking)
+        public static void CancelBooking(Booking CancelBooking)
         {
             Console.Clear();
             Console.CursorVisible = false;
